@@ -15,4 +15,7 @@
 {"key":"789盘","name":"789盘(切)","type":1,"api":"https://www.rrvipw.com/api.php/provide/vod/","searchable":1,"quickSearch":1}
 {"key":"无尽资源","name":"无尽资源(切)","type":1,"api":"https://api.wujinapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1}
 {"key":"速博资源","name":"速博资源(切)","type":1,"api":"https://subocaiji.com/api.php/provide/vod/","searchable":1,"quickSearch":1}
+{"key":"一点影视","name":"一点影视(切)","type":1,"api":"https://m3u8.movurl.xyz/api.php/provide/vod","searchable":1,"quickSearch":1}
+{"key":"麒麟资源","name":"麒麟资源(切)","type":1,"api":"http://www.qilinzyz.com/api.php/provide/vod/at/xml","searchable":1,"quickSearch":1}
+
 
