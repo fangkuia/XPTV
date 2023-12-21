@@ -17,8 +17,8 @@
 		{"key":"飘花影院","name":"👓|飘花影院|📺(切)","type":1,"api":"http://www.ahjiuman.com/api.php/provide/vod/at/json","searchable":1,"quickSearch":1},
 		{"key":"天翼资源","name":"👓|天翼资源|📺(切)","type":1,"api":"https://www.911ysw.top/tianyi.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"虎牙资源","name":"👓|虎牙资源|📺(切)","type":1,"api":"https://www.huyaapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
-		{"key":"百度资源","name":"👓|百度资源|📺(切)","type":1,"api":"https://api.apibdzy.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
-		{"key":"飘零影院","name":"👓|飘零影院|📺(切)","type":1,"api":"https://p2100.net/api.php/provide/vod/"，"searchable":1,"quickSearch":1},
+		{"key":"百度资源","name":"👓|百度资源|📺(切)","type":1,"api":"https://api.apibdzy.com/api.php/provide/vod/"，"searchable":1,"quickSearch":1},
+		{"key":"飘零影院","name":"👓|飘零影院|📺(切)","type":1,"api":"https://p2100.net/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"无尽资源","name":"👓|无尽资源|📺(切)","type":1,"api":"https://api.wujinapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"速博资源","name":"👓|速博资源|📺(切)","type":1,"api":"https://subocaiji.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"索尼资源","name":"👓|索尼资源|📺(切)","type":1,"api":"https://suoniapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1}]}
