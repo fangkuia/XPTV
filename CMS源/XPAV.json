@@ -1,6 +1,6 @@
 {"sites":[{"key":"森林资源","name":"🕶️|森林资源|🩷(切)","type":1,"api":"https://slapibf.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 	{"key":"探探资源","name":"🕶️|探探资源|🩷(切)","type":1,"api":"https://apittzy.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
-	{"key": "csp_Missav", "name": "🕶️|MISSAV|🩷", "type": 3, "api": "csp_Missav", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1},
+	{"key": "csp_Missav", "name": "🕶️|MISSAV|💗", "type": 3, "api": "csp_Missav", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1},
 	{"key":"奥斯卡资源网","name":"🕶️|奥斯卡资源网|🩷(切)","type":1,"api":"https://aosikazy.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 	{"key":"老鸭资源采集","name":"🕶️|老鸭资源采集|🩷(切)","type":1,"api":"https://api.apilyzy.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 	{"key":"皇冠","name":"🕶️|皇冠|🩷(切)","type":1,"api":"https://hghhh.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
@@ -20,6 +20,6 @@
 	{"key":"抖阴视频","name":"🕶️|抖阴视频|🩷(切)","type":1,"api":"https://www.888dav.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 	{"key":"麻豆视频","name":"🕶️|麻豆视频|🩷(切)","type":1,"api":"http://www.madouse.la/api.php/provide/vod/","searchable":1,"quickSearch":1},
 	{"key":"辣椒资源","name":"🕶️|辣椒资源|🩷(切)","type":1,"api":"https://apilj.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
-	{"key":"伊人","name":"🕶️|伊人|🩷(切)","type":1,"api":"https://api.yrzyapi.com/api.php/provide/vod/"，"searchable":1,"quickSearch":1},
+	{"key":"伊人","name":"🕶️|伊人|🩷(切)","type":1,"api":"https://api.yrzyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 	{"key":"奶香香","name":"🕶️|奶香香|🩷(切)","type":1,"api":"https://Naixxzy.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 	{"key":"老色逼资源","name":"🕶️|老色逼资源|🩷(切)","type":1,"api":"https://apilsbzy1.com/api.php/provide/vod/","searchable":1,"quickSearch":1}]}
