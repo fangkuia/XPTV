@@ -1,4 +1,4 @@
-{"sites":[	{"key": "\u6620\u8ff7", "name": "映迷", "type": 1, "api": "https://www.inmi.app/api.php/provide/vod/", "searchable": 1, "quickSearch": 1}
+{"sites":[{"key": "\u6620\u8ff7", "name": "映迷", "type": 1, "api": "https://www.inmi.app/api.php/provide/vod/", "searchable": 1, "quickSearch": 1}
 		{"key": "haiwaikan", "name": "海外看", "type": 1, "api": "https://haiwaikan.com/api.php/provide/vod/", "searchable": 1, "quickSearch": 1},
 		{"key":"唐人街","name":"唐人街(切)","type":1,"api":"https://www.tangrenjie.tv/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key": "csp_Zxzj", "name": "在线之家", "type": 3, "api": "csp_Zxzj", "searchable": 1, "quickSearch": 1, "changeable": 1, "ext": "https://www.zxzj.pro/"},
@@ -19,5 +19,4 @@
 		{"key":"飘零影院","name":"飘零影院(切)","type":1,"api":"https://p2100.net/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"无尽资源","name":"无尽资源(切)","type":1,"api":"https://api.wujinapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"速博资源","name":"速博资源(切)","type":1,"api":"https://subocaiji.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
-  		{"key":"乐视资源","name":"乐视资源(切)","type":1,"api":"https://leshizyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
-		]}
+  		{"key":"乐视资源","name":"乐视资源(切)","type":1,"api":"https://leshizyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1}]}
