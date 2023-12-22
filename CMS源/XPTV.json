@@ -18,4 +18,5 @@
 		{"key":"飘零影院","name":"👓|飘零影院|📺(切)","type":1,"api":"https://p2100.net/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"无尽资源","name":"👓|无尽资源|📺(切)","type":1,"api":"https://api.wujinapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"速博资源","name":"👓|速博资源|📺(切)","type":1,"api":"https://subocaiji.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
+  		{"key":"乐视资源","name":"👓|乐视资源|📺(切)","type":1,"api":"https://leshizyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"索尼资源","name":"👓|索尼资源|🧩(切)","type":1,"api":"https://suoniapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1}]}
