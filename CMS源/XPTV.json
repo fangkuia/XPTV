@@ -10,7 +10,7 @@
 		{"key":"唐人街","name":"👓|唐人街|🧩(切)","type":1,"api":"https://www.tangrenjie.tv/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"快车资源","name":"👓|快车资源|📺(切)","type":1,"api":"https://caiji.kczyapi.com/api.php/provide/vod/from/kcm3u8/","searchable":1,"quickSearch":1},
 		{"key":"闪电资源","name":"👓|闪电资源|📺(切)","type":1,"api":"http://sdzyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
-		{"key":"樱花资源网","name":"👓|樱花资源网|📺(切)","type":1,"api":"https://m3u8.apiyhzy.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
+		{"key":"樱花资源网","name":"👓|樱花资源|📺(切)","type":1,"api":"https://m3u8.apiyhzy.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"飘花影院","name":"👓|飘花影院|📺(切)","type":1,"api":"http://www.ahjiuman.com/api.php/provide/vod/at/json","searchable":1,"quickSearch":1},
 		{"key":"天翼资源","name":"👓|天翼资源|📺(切)","type":1,"api":"https://www.911ysw.top/tianyi.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"虎牙资源","name":"👓|虎牙资源|📺(切)","type":1,"api":"https://www.huyaapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
