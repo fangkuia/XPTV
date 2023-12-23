@@ -1,3 +1,3 @@
-{"sites":[{"key": "csp_Jiohub", "name": "JOJO", "type": 3, "api": "csp_Jiohub", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1},
-	{"key": "Gitcafe", "name": "小纸条", "type": 3, "api": "csp_Gitcafe", "searchable": 1, "quickSearch": 1, "filterable": 1, "ext": "https://ju990c.i996.me/TS1/token.json"},
-	{"key": "\u73a9\u5076\u54e5", "name": "玩偶哥哥", "type": 3, "api": "csp_WoGG", "searchable": 1, "quickSearch": 1, "changeable": 0, "ext": "http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$https://api.wogg.xyz/$$$\u5173"}]}
+{"sites":[{"key": "csp_Jiohub", "name": "🔵JOJO", "type": 3, "api": "csp_Jiohub", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1},
+	{"key": "Gitcafe", "name": "🔵小纸条", "type": 3, "api": "csp_Gitcafe", "searchable": 1, "quickSearch": 1, "filterable": 1, "ext": "https://ju990c.i996.me/TS1/token.json"},
+	{"key": "\u73a9\u5076\u54e5", "name": "🔵玩偶哥哥", "type": 3, "api": "csp_WoGG", "searchable": 1, "quickSearch": 1, "changeable": 0, "ext": "http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$https://api.wogg.xyz/$$$\u5173"}]}
