@@ -1,0 +1,9 @@
+#XPTV海外
+#玩偶哥哥
+host-suffix, wogg.link, DIRECT
+host-suffix, wogg.xyz, DIRECT
+#小纸条
+host-suffix, gitcafe.net, DIRECT
+
+
+
