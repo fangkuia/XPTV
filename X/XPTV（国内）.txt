@@ -3,6 +3,8 @@ host-suffix, wogg.link, DIRECT
 host-suffix, wogg.xyz, DIRECT
 #小纸条（直连）
 host-suffix, gitcafe.net, DIRECT
+#jojo（直连）
+host-suffix, jiohub.top, DIRECT
 #厂长资源（直连）
 host-suffix, czzy88.com, DIRECT
 host-suffix, czzy22.com, DIRECT
