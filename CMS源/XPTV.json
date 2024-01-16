@@ -23,4 +23,11 @@
   		{"key":"乐视资源","name":"🔴乐视资源","type":1,"api":"https://leshizyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 	        {"key":"魔都资源","name":"🔴魔都动漫","type":1,"api":"https://caiji.moduapi.cc/api.php/provide/vod/","searchable":1,"quickSearch":1},
 	        {"key":"最大资源","name":"🔴最大资源","type":1,"api":"http://zuidazy.me/api.php/provide/vod/","searchable":1,"quickSearch":1},
-                {"key":"奇虎资源","name":"🔴奇虎资源","type":1,"api":"https://caiji.qhzyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1}]}
+                {"key":"奇虎资源","name":"🔴奇虎资源","type":1,"api":"https://caiji.qhzyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
+		{"key":"每天资源","name":"🔴每天资源","type":1,"api":"http://47.113.126.237:1234/api.php/provide/vod/","searchable":1,"quickSearch":1},
+		{"key":"火狐资源","name":"🔴火狐资源","type":1,"api":"https://hhzyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
+		{"key":"享看资源","name":"🔴享看资源","type":1,"api":"https://xkanzy10.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
+		{"key":"新浪资源","name":"🔴新浪资源","type":1,"api":"https://api.xinlangapi.com/xinlangapi.php/provide/vod/","searchable":1,"quickSearch":1},
+		{"key":"快云资源","name":"🔴快云资源","type":1,"api": "https://www.kuaiyunzy.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
+		{"key":"四圈资源","name":"🔴四圈资源","type":1,"api": "https://pg.fenwe078.cf/api.php/provide/vod/","searchable":1,"quickSearch":1},
+		]}
