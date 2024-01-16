@@ -29,5 +29,4 @@
 		{"key":"享看资源","name":"🔴享看资源","type":1,"api":"https://xkanzy10.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"新浪资源","name":"🔴新浪资源","type":1,"api":"https://api.xinlangapi.com/xinlangapi.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"快云资源","name":"🔴快云资源","type":1,"api": "https://www.kuaiyunzy.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
-		{"key":"四圈资源","name":"🔴四圈资源","type":1,"api": "https://pg.fenwe078.cf/api.php/provide/vod/","searchable":1,"quickSearch":1}
-		]}
+		{"key":"四圈资源","name":"🔴四圈资源","type":1,"api": "https://pg.fenwe078.cf/api.php/provide/vod/","searchable":1,"quickSearch":1}]}
