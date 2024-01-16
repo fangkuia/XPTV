@@ -58,6 +58,22 @@ host-suffix, subocaiji.com, DIRECT
 host-suffix, leshizyapi.com, DIRECT
 #探索页（直连）
 host-suffix, infuseku.xyz, DIRECT
+#魔都动漫（直连）
+host-suffix, moduapi.cc, DIRECT
+#最大资源（直连）
+host-suffix, zuidazy.me, DIRECT
+#奇虎资源（直连）
+host-suffix, qhzyapi.com, DIRECT
+#火狐资源（直连）
+host-suffix, hhzyapi.com, DIRECT
+#享看资源（直连）
+host-suffix, xkanzy10.com, DIRECT
+#新浪资源（直连）
+host-suffix, xinlangapi.com, DIRECT
+#快云资源（直连）
+host-suffix, kuaiyunzy.com, DIRECT
+#四圈资源（直连）
+host-suffix, fenwe078.cf, DIRECT
 
 
 
