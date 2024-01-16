@@ -22,4 +22,5 @@
 		{"key":"速博资源","name":"🔴速博资源","type":1,"api":"https://subocaiji.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
   		{"key":"乐视资源","name":"🔴乐视资源","type":1,"api":"https://leshizyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 	        {"key":"魔都资源","name":"🔴魔都动漫","type":1,"api":"https://caiji.moduapi.cc/api.php/provide/vod/","searchable":1,"quickSearch":1},
+	        {"key":"最大资源","name":"🔴最大资源","type":1,"api":"http://zuidazy.me/api.php/provide/vod/","searchable":1,"quickSearch":1},
                 {"key":"奇虎资源","name":"🔴奇虎资源","type":1,"api":"https://caiji.qhzyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1}]}
