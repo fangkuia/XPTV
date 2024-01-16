@@ -21,4 +21,4 @@
 		{"key":"无尽资源","name":"🔴无尽资源(切)","type":1,"api":"https://api.wujinapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"速博资源","name":"🔴速博资源(切)","type":1,"api":"https://subocaiji.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
   		{"key":"乐视资源","name":"🔴乐视资源(切)","type":1,"api":"https://leshizyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
-                 {"key":"魔都资源","name":"🔴魔都资源","type":1,"api":"https://caiji.qhzyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1}]}
+                {"key":"魔都资源","name":"🔴魔都资源","type":1,"api":"https://caiji.qhzyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1}]}
