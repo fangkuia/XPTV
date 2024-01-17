@@ -1,5 +1,5 @@
 #static=XPTV(国内), server-tag-regex=^(?!(中国|🇨🇳|CN|套餐到期)), img-url=https://raw.githubusercontent.com/fangkuia/XPTV/main/X/XPTV1.png
-#https://raw.githubusercontent.com/fangkuia/XPTV/main/X/XPTV%EF%BC%88%E5%9B%BD%E5%86%85%EF%BC%89.list,tag=XPTV(国内), force-policy=XPTV(国内), update-interval=86400, opt-parser=true, enabled=true
+#https://raw.githubusercontent.com/fangkuia/XPTV/main/X/XPTV%EF%BC%88%E5%9B%BD%E5%86%85%EF%BC%89.list,tag=XPTV(国内),  update-interval=86400, opt-parser=true, enabled=true
 #玩偶哥哥（直连）
 host-suffix, wogg.link, DIRECT
 host-suffix, wogg.xyz, DIRECT
