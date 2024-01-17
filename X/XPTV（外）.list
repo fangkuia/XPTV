@@ -1,4 +1,7 @@
-#XPTV海外
+#[policy]
+#static=XPTV(海外), server-tag-regex= (?=.*(中国|🇨🇳|CN))^((?!(台湾|香港)).)*$, img-url=https://raw.githubusercontent.com/fangkuia/XPTV/main/X/XPTV.png
+#[filter_remote]
+#https://raw.githubusercontent.com/fangkuia/XPTV/main/X/XPTV%EF%BC%88%E5%A4%96%EF%BC%89.list,tag=XPTV(海外), force-policy=XPTV(海外), update-interval=86400, opt-parser=true, enabled=true
 #玩偶哥哥
 host-suffix, wogg.link, DIRECT
 host-suffix, wogg.xyz, DIRECT
