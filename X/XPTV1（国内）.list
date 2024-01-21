@@ -95,4 +95,4 @@ host, api.aliyundrive.com, direct
 host-suffix, doubanio.com, direct
 #同步数据
 host, gateway.icloud.com, direct
-host, configuration.apple.com, direct
+
