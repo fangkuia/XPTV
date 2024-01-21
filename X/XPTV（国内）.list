@@ -76,7 +76,30 @@ host-suffix, xinlangapi.com, DIRECT
 host-suffix, kuaiyunzy.com, DIRECT
 #四圈资源（直连）
 host-suffix, fenwe078.cf, DIRECT
-
+#哔嘀影视（直连）
+host-suffix, bdys10.com, DIRECT
+#厂长&低端播放
+host-suffix, cz01.site, direct
+host-suffix, larksuitecdn.com, direct
+host-suffix, fotile.com, direct
+host-suffix, pstatp.com, direct
+host-suffix, ugdtimg.com, direct
+host-suffix, ctyunxs.cn, direct
+host, wxsnsencsvp.wxs.qq.com, direct
+#哔嘀播放
+host-suffix, ibytedtos.com, direct
+host-suffix, toutiao50.com, direct
+host-suffix, ibyteimg.com, direct
+#阿里播放
+host-suffix, alicloudccp.com, direct
+host, openapi.aliyundrive.com, direct
+host, auth.aliyundrive.com, direct
+host, api.aliyundrive.com, direct
+#豆瓣封面
+host-suffix, doubanio.com, direct
+#同步数据
+host, gateway.icloud.com, direct
+host, configuration.apple.com, direct
 
 
 
