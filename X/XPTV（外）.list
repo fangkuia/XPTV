@@ -3,10 +3,10 @@
 #[filter_remote]
 #https://raw.githubusercontent.com/fangkuia/XPTV/main/X/XPTV%EF%BC%88%E5%A4%96%EF%BC%89.list,tag=XPTV(海外), force-policy=XPTV(海外), update-interval=86400, opt-parser=true, enabled=true
 #玩偶哥哥
-host-suffix, wogg.link, DIRECT
-host-suffix, wogg.xyz, DIRECT
+host-suffix, wogg.link, XPTV(海外)
+host-suffix, wogg.xyz, XPTV(海外)
 #小纸条
-host-suffix, gitcafe.net, DIRECT
+host-suffix, gitcafe.net, XPTV(海外)
 
 
 
