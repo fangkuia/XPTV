@@ -3,5 +3,5 @@
 	  {"key": "Czsapp", "name": "🟢厂长资源", "type": 3, "api": "csp_Czsapp", "playerType": 2, "searchable": 1, "quickSearch": 1, "changeable": 1, "ext": "https://czz9.com/"},
 	  {"key":"csp_Bdys","name":"🟢哔嘀影视","type":3,"api":"csp_Bdys","searchable":1,"quickSearch":1,"filterable":1},
 	  {"key": "Olevod", "name": "🟢欧乐影院", "type": 3, "api": "csp_Olevod", "searchable": 1, "quickSearch": 1, "filterable": 1},
-	  {"key":"csp_Zxzj","name":"🟢在线之家","type":3,"api":"csp_Zxzj","searchable":1,"quickSearch":1,"changeable":1,"ext":"https://www.zxzj.pro/"}
+	  {"key":"csp_Zxzj","name":"🟢在线之家","type":3,"api":"csp_Zxzj","searchable":1,"quickSearch":1,"changeable":1,"ext":"https://www.zxzja.com/"}
 	 ]}
