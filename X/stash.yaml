@@ -1,32 +1,4 @@
-mixed-port: 7890
-allow-lan: true
-bind-address: '*'
-mode: rule
-log-level: info
-external-controller: '127.0.0.1:9090'
-dns:
-    enable: true
-    ipv6: false
-    default-nameserver: [223.5.5.5, 119.29.29.29]
-    enhanced-mode: fake-ip
-    fake-ip-range: 198.18.0.1/16
-    use-hosts: true
-    nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
-    fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
-    fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
-proxies:
-    - { name: '🇭🇰 香港 01', type: ss, server: china1.yushe.link, port: 30001, cipher: aes-128-gcm, password: 92bc361f-b565-4154-8a8d-27cd067e7426, udp: true }
-    - { name: '🇭🇰 香港 02 [IEPL]', type: ss, server: iepl.yushe.link, port: 25094, cipher: aes-128-gcm, password: 92bc361f-b565-4154-8a8d-27cd067e7426, udp: true }
-    - { name: '🇹🇼 台湾 01', type: ss, server: china1.yushe.link, port: 30011, cipher: aes-128-gcm, password: 92bc361f-b565-4154-8a8d-27cd067e7426, udp: true }
-    - { name: '🇸🇬 狮城 01', type: ss, server: china1.yushe.link, port: 30021, cipher: aes-128-gcm, password: 92bc361f-b565-4154-8a8d-27cd067e7426, udp: true }
-    - { name: '🇸🇬 狮城 02', type: ss, server: china1.yushe.link, port: 30022, cipher: aes-128-gcm, password: 92bc361f-b565-4154-8a8d-27cd067e7426, udp: true }
-    - { name: '🇯🇵 日本 01', type: ss, server: china2.yushe.link, port: 30031, cipher: aes-128-gcm, password: 92bc361f-b565-4154-8a8d-27cd067e7426, udp: true }
-    - { name: '🇯🇵 日本 02', type: ss, server: china2.yushe.link, port: 30032, cipher: aes-128-gcm, password: 92bc361f-b565-4154-8a8d-27cd067e7426, udp: true }
-    - { name: '🇺🇸 美国 01', type: ss, server: china2.yushe.link, port: 30041, cipher: aes-128-gcm, password: 92bc361f-b565-4154-8a8d-27cd067e7426, udp: true }
-proxy-groups:
-    - { name: YuShe, type: select, proxies: [自动选择, 故障转移, '🇭🇰 香港 01', '🇭🇰 香港 02 [IEPL]', '🇹🇼 台湾 01', '🇸🇬 狮城 01', '🇸🇬 狮城 02', '🇯🇵 日本 01', '🇯🇵 日本 02', '🇺🇸 美国 01'] }
-    - { name: 自动选择, type: url-test, proxies: ['🇭🇰 香港 01', '🇭🇰 香港 02 [IEPL]', '🇹🇼 台湾 01', '🇸🇬 狮城 01', '🇸🇬 狮城 02', '🇯🇵 日本 01', '🇯🇵 日本 02', '🇺🇸 美国 01'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['🇭🇰 香港 01', '🇭🇰 香港 02 [IEPL]', '🇹🇼 台湾 01', '🇸🇬 狮城 01', '🇸🇬 狮城 02', '🇯🇵 日本 01', '🇯🇵 日本 02', '🇺🇸 美国 01'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+#自行复制粘贴到rules里
 rules:
     #玩偶哥哥（直连）
     - 'DOMAIN-SUFFIX, wogg.link, DIRECT'
