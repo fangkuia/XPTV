@@ -96,3 +96,16 @@ host, api.aliyundrive.com, direct
 host-suffix, doubanio.com, direct
 #同步数据
 host, gateway.icloud.com, direct
+#杂七杂八的播放
+host-keyword, ffzy, direct
+host, vip.ffzy-play5.com, direct
+host, vip.ffzy-online6.com, direct
+host, sss.image8899.net, direct
+host, ikcdn01.ikzybf.com, direct
+host, vip.ffzy-play9.com, direct
+host, svip.picffzy.com, direct
+host, vip.imgffzy.com, direct
+host, vip.ffzyread1.com, direct
+host, vip.ffzy-play3.com, direct
+host, vip.ffzyread.com, direct
+host, www.imgikzy.com, direct
