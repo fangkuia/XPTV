@@ -90,6 +90,7 @@ rules:
     - 'DOMAIN-suffix, toutiao50.com, direct'
     - 'DOMAIN-suffix, ibyteimg.com, direct'
     #阿里播放
+    - 'DOMAIN-suffix, aliyundrive.asia, direct'
     - 'DOMAIN-suffix, alicloudccp.com, direct'
     - 'DOMAIN, openapi.aliyundrive.com, direct'
     - 'DOMAIN, auth.aliyundrive.com, direct'
