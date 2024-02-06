@@ -97,7 +97,18 @@ host-suffix, doubanio.com, direct
 #同步数据
 host, gateway.icloud.com, direct
 #杂七杂八的播放
-host-keyword, ffzy, direct
+host-keyword, v.cdnlz, direct
+host-keyword, vip.kuaikan, direct
+host-keyword, vip.ffzy, direct
+host, vod2.kczybf.com, direct
+host, top.1080pzy.co, direct
+host, c3.monidai.com, direct
+host, pan.dy066.com, direct
+host, hey11.cjkypo.com, direct
+host, hnts.ymuuy.com, direct
+host, hnzy.bfvvs.com, direct
+host-suffix, maimn.com, direct
+host, img.lzzyimg.com, direct
 host, vip.ffzy-play5.com, direct
 host, vip.ffzy-online6.com, direct
 host, sss.image8899.net, direct
