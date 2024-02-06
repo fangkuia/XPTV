@@ -16,12 +16,6 @@ host-suffix, zxzj.pro, DIRECT
 #低端影视（直连）
 host-suffix, ddys.pro, DIRECT
 host-suffix, ddys.mov, DIRECT
-#欧乐影院（代理）
-host-suffix, olevod.com, XPTV(国内)
-#海外看（代理）
-host-suffix, haiwaikan.com, XPTV(国内)
-#天翼资源（代理）
-host-suffix, 911ysw.top, XPTV(国内)
 #索尼资源（直连）
 host-suffix, suoniapi.com, DIRECT
 host, v3.sxzyhuij.com, direct
