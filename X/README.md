@@ -1,4 +1,4 @@
-# 国内直连
+# 国内直连(兜底代理final, proxy)
 ## QuantumultX
 https://raw.githubusercontent.com/fangkuia/XPTV/main/X/QuantumultX.list
 ## Loon&Surge&Shadowrocket
