@@ -24,6 +24,11 @@ host-suffix, haiwaikan.com, XPTV(国内)
 host-suffix, 911ysw.top, XPTV(国内)
 #索尼资源（直连）
 host-suffix, suoniapi.com, DIRECT
+host, v3.sxzyhuij.com, direct
+host, v3.suonizy-youku.com, direct
+host, v8.sxzyhuij.com, direct
+host, snzypic.com, direct
+host, v8.suonizy-youku.com, direct
 #非凡资源（直连）
 host-suffix, ffzyapi.com, DIRECT
 #红牛资源（直连）
