@@ -20,6 +20,11 @@ rules:
     - 'DOMAIN-SUFFIX, ddys.mov, DIRECT'
     #索尼资源（直连）
     - 'DOMAIN-SUFFIX, suoniapi.com, DIRECT'
+    - 'DOMAIN, v3.sxzyhuij.com, direct'
+    - 'DOMAIN, v3.suonizy-youku.com, direct'
+    - 'DOMAIN, v8.sxzyhuij.com, direct'
+    - 'DOMAIN, snzypic.com, direct'
+    - 'DOMAIN, v8.suonizy-youku.com, direct'
     #非凡资源（直连）
     - 'DOMAIN-SUFFIX, ffzyapi.com, DIRECT'
     #红牛资源（直连）
@@ -93,4 +98,27 @@ rules:
     - 'DOMAIN-suffix, doubanio.com, direct'
     #同步数据
     - 'DOMAIN, gateway.icloud.com, direct'
-    
+    #杂七杂八的播放
+    - 'DOMAIN-keyword, v.cdnlz, direct'
+    - 'DOMAIN-keyword, vip.kuaikan, direct'
+    - 'DOMAIN-keyword, vip.ffzy, direct'
+    - 'DOMAIN, vod2.kczybf.com, direct'
+    - 'DOMAIN, top.1080pzy.co, direct'
+    - 'DOMAIN, c3.monidai.com, direct'
+    - 'DOMAIN, pan.dy066.com, direct'
+    - 'DOMAIN, hey11.cjkypo.com, direct'
+    - 'DOMAIN, hnts.ymuuy.com, direct'
+    - 'DOMAIN, hnzy.bfvvs.com, direct'
+    - 'DOMAIN-suffix, maimn.com, direct'
+    - 'DOMAIN, img.lzzyimg.com, direct'
+    - 'DOMAIN, vip.ffzy-play5.com, direct'
+    - 'DOMAIN, vip.ffzy-online6.com, direct'
+    - 'DOMAIN, sss.image8899.net, direct'
+    - 'DOMAIN, ikcdn01.ikzybf.com, direct'
+    - 'DOMAIN, vip.ffzy-play9.com, direct'
+    - 'DOMAIN, svip.picffzy.com, direct'
+    - 'DOMAIN, vip.imgffzy.com, direct'
+    - 'DOMAIN, vip.ffzyread1.com, direct'
+    - 'DOMAIN, vip.ffzy-play3.com, direct'
+    - 'DOMAIN, vip.ffzyread.com, direct'
+    - 'DOMAIN, www.imgikzy.com, direct'
