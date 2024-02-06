@@ -22,6 +22,11 @@ host-suffix, ddys.pro, DIRECT
 host-suffix, ddys.mov, DIRECT
 #索尼资源（直连）
 host-suffix, suoniapi.com, DIRECT
+host, v3.sxzyhuij.com, direct
+host, v3.suonizy-youku.com, direct
+host, v8.sxzyhuij.com, direct
+host, snzypic.com, direct
+host, v8.suonizy-youku.com, direct
 #非凡资源（直连）
 host-suffix, ffzyapi.com, DIRECT
 #红牛资源（直连）
@@ -87,6 +92,7 @@ host-suffix, ibytedtos.com, direct
 host-suffix, toutiao50.com, direct
 host-suffix, ibyteimg.com, direct
 #阿里播放
+host-suffix, aliyundrive.asia direct
 host-suffix, alicloudccp.com, direct
 host, openapi.aliyundrive.com, direct
 host, auth.aliyundrive.com, direct
@@ -95,6 +101,30 @@ host, api.aliyundrive.com, direct
 host-suffix, doubanio.com, direct
 #同步数据
 host, gateway.icloud.com, direct
+#杂七杂八的播放
+host-keyword, v.cdnlz, direct
+host-keyword, vip.kuaikan, direct
+host-keyword, vip.ffzy, direct
+host, vod2.kczybf.com, direct
+host, top.1080pzy.co, direct
+host, c3.monidai.com, direct
+host, pan.dy066.com, direct
+host, hey11.cjkypo.com, direct
+host, hnts.ymuuy.com, direct
+host, hnzy.bfvvs.com, direct
+host-suffix, maimn.com, direct
+host, img.lzzyimg.com, direct
+host, vip.ffzy-play5.com, direct
+host, vip.ffzy-online6.com, direct
+host, sss.image8899.net, direct
+host, ikcdn01.ikzybf.com, direct
+host, vip.ffzy-play9.com, direct
+host, svip.picffzy.com, direct
+host, vip.imgffzy.com, direct
+host, vip.ffzyread1.com, direct
+host, vip.ffzy-play3.com, direct
+host, vip.ffzyread.com, direct
+host, www.imgikzy.com, direct
 
 
 
