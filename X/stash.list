@@ -1,251 +1,251 @@
 #自行复制粘贴到rules里
 rules:
-	#玩偶哥哥（直连）
-	- DOMAIN-SUFFIX, wogg.link, DIRECT 
-	- DOMAIN-SUFFIX, wogg.xyz, DIRECT 
-	#小纸条（直连）
-	- DOMAIN-SUFFIX, gitcafe.net, DIRECT 
-	#jojo（直连）
-	- DOMAIN-SUFFIX, jiohub.top, DIRECT 
-	#厂长资源（直连）
-	- DOMAIN-SUFFIX, czzy88.com, DIRECT 
-	- DOMAIN-SUFFIX, czzy22.com, DIRECT 
-	- DOMAIN-SUFFIX, czzy66.com, DIRECT 
-	#在线之家（直连）
-	- DOMAIN-SUFFIX, zxzja.com, DIRECT 
-	- DOMAIN-SUFFIX, zxzjhd.com, DIRECT 
-	- DOMAIN-SUFFIX, zxzj.pro, DIRECT 
-	#低端影视（直连）
-	- DOMAIN-SUFFIX, ddys.pro, DIRECT 
-	- DOMAIN-SUFFIX, ddys.mov, DIRECT 
-	#索尼资源（直连）
-	- DOMAIN-SUFFIX, suoniapi.com, DIRECT 
-	- DOMAIN, v3.sxzyhuij.com, direct 
-	- DOMAIN, v3.suonizy-youku.com, direct 
-	- DOMAIN, v8.sxzyhuij.com, direct 
-	- DOMAIN, snzypic.com, direct 
-	- DOMAIN, v8.suonizy-youku.com, direct 
-	#非凡资源（直连）
-	- DOMAIN-SUFFIX, ffzyapi.com, DIRECT 
-	#红牛资源（直连）
-	- DOMAIN-SUFFIX, hongniuzy2.com, DIRECT 
-	#量子资源（直连）
-	- DOMAIN-SUFFIX, lziapi.com, DIRECT 
-	#快车资源（直连）
-	- DOMAIN-SUFFIX, kczyapi.com, DIRECT 
-	#三九影視（直连）
-	- DOMAIN-SUFFIX, 39kan.com, DIRECT 
-	#闪电资源（直连）
-	- DOMAIN-SUFFIX, sdzyapi.com, DIRECT 
-	#樱花资源（直连）
-	- DOMAIN-SUFFIX, apiyhzy.com, DIRECT 
-	#卧龙资源（直连）
-	- DOMAIN-SUFFIX, wolongzyw.com, DIRECT 
-	#飘花影院（直连）
-	- DOMAIN-SUFFIX, ahjiuman.com, DIRECT 
-	#虎牙资源（直连）
-	- DOMAIN-SUFFIX, huyaapi.com, DIRECT 
-	#百度资源（直连）
-	- DOMAIN-SUFFIX, apibdzy.com, DIRECT 
-	#飘零影院（直连）
-	- DOMAIN-SUFFIX, p2100.net, DIRECT 
-	#无尽资源（直连）
-	- DOMAIN-SUFFIX, wujinapi.com, DIRECT 
-	#速博资源（直连）
-	- DOMAIN-SUFFIX, subocaiji.com, DIRECT 
-	#乐视资源（直连）
-	- DOMAIN-SUFFIX, leshizyapi.com, DIRECT 
-	#探索页（直连）
-	- DOMAIN-SUFFIX, infuseku.xyz, DIRECT 
-	#魔都动漫（直连）
-	- DOMAIN-SUFFIX, moduapi.cc, DIRECT 
-	#最大资源（直连）
-	- DOMAIN-SUFFIX, zuidazy.me, DIRECT 
-	#奇虎资源（直连）
-	- DOMAIN-SUFFIX, qhzyapi.com, DIRECT 
-	#火狐资源（直连）
-	- DOMAIN-SUFFIX, hhzyapi.com, DIRECT 
-	#享看资源（直连）
-	- DOMAIN-SUFFIX, xkanzy10.com, DIRECT 
-	#新浪资源（直连）
-	- DOMAIN-SUFFIX, xinlangapi.com, DIRECT 
-	#快云资源（直连）
-	- DOMAIN-SUFFIX, kuaiyunzy.com, DIRECT 
-	#四圈资源（直连）
-	- DOMAIN-SUFFIX, fenwe078.cf, DIRECT 
-	#哔嘀影视（直连）
-	- DOMAIN-SUFFIX, bdys10.com, DIRECT 
-	#快看资源（直连）
-	- DOMAIN-SUFFIX, kuaikanzy.net, DIRECT 
-	#厂长&低端播放
-	- DOMAIN-suffix, cz01.site, direct 
-	- DOMAIN-suffix, larksuitecdn.com, direct 
-	- DOMAIN-suffix, fotile.com, direct 
-	- DOMAIN-suffix, pstatp.com, direct 
-	- DOMAIN-suffix, ugdtimg.com, direct 
-	- DOMAIN-suffix, ctyunxs.cn, direct 
-	- DOMAIN, wxsnsencsvp.wxs.qq.com, direct 
-	#哔嘀播放
-	- DOMAIN-suffix, ibytedtos.com, direct 
-	- DOMAIN-suffix, toutiao50.com, direct 
-	- DOMAIN-suffix, ibyteimg.com, direct 
-	#阿里播放
-	- DOMAIN-suffix, aliyundrive.asia, direct 
-	- DOMAIN-suffix, alicloudccp.com, direct 
-	- DOMAIN, openapi.aliyundrive.com, direct 
-	- DOMAIN, auth.aliyundrive.com, direct 
-	- DOMAIN, api.aliyundrive.com, direct 
-	#豆瓣封面
-	- DOMAIN-suffix, doubanio.com, direct 
-	#同步数据
-	- DOMAIN, gateway.icloud.com, direct 
-	#杂七杂八的播放
-	- DOMAIN-keyword, v.cdnlz, direct 
-	- DOMAIN-keyword, vip.kuaikan, direct 
-	- DOMAIN-keyword, vip.ffzy, direct 
-	- DOMAIN, vod2.kczybf.com, direct 
-	- DOMAIN, top.1080pzy.co, direct 
-	- DOMAIN, c3.monidai.com, direct 
-	- DOMAIN, pan.dy066.com, direct 
-	- DOMAIN, hey11.cjkypo.com, direct 
-	- DOMAIN, hnts.ymuuy.com, direct 
-	- DOMAIN, hnzy.bfvvs.com, direct 
-	- DOMAIN-suffix, maimn.com, direct 
-	- DOMAIN, img.lzzyimg.com, direct 
-	- DOMAIN, vip.ffzy-play5.com, direct 
-	- DOMAIN, vip.ffzy-online6.com, direct 
-	- DOMAIN, sss.image8899.net, direct 
-	- DOMAIN, ikcdn01.ikzybf.com, direct 
-	- DOMAIN, vip.ffzy-play9.com, direct 
-	- DOMAIN, svip.picffzy.com, direct 
-	- DOMAIN, vip.imgffzy.com, direct 
-	- DOMAIN, vip.ffzyread1.com, direct 
+#玩偶哥哥（直连）
+- DOMAIN-SUFFIX, wogg.link, DIRECT 
+- DOMAIN-SUFFIX, wogg.xyz, DIRECT 
+#小纸条（直连）
+- DOMAIN-SUFFIX, gitcafe.net, DIRECT 
+#jojo（直连）
+- DOMAIN-SUFFIX, jiohub.top, DIRECT 
+#厂长资源（直连）
+- DOMAIN-SUFFIX, czzy88.com, DIRECT 
+- DOMAIN-SUFFIX, czzy22.com, DIRECT 
+- DOMAIN-SUFFIX, czzy66.com, DIRECT 
+#在线之家（直连）
+- DOMAIN-SUFFIX, zxzja.com, DIRECT 
+- DOMAIN-SUFFIX, zxzjhd.com, DIRECT 
+- DOMAIN-SUFFIX, zxzj.pro, DIRECT 
+#低端影视（直连）
+- DOMAIN-SUFFIX, ddys.pro, DIRECT 
+- DOMAIN-SUFFIX, ddys.mov, DIRECT 
+#索尼资源（直连）
+- DOMAIN-SUFFIX, suoniapi.com, DIRECT 
+- DOMAIN, v3.sxzyhuij.com, direct 
+- DOMAIN, v3.suonizy-youku.com, direct 
+- DOMAIN, v8.sxzyhuij.com, direct 
+- DOMAIN, snzypic.com, direct 
+- DOMAIN, v8.suonizy-youku.com, direct 
+#非凡资源（直连）
+- DOMAIN-SUFFIX, ffzyapi.com, DIRECT 
+#红牛资源（直连）
+- DOMAIN-SUFFIX, hongniuzy2.com, DIRECT 
+#量子资源（直连）
+- DOMAIN-SUFFIX, lziapi.com, DIRECT 
+#快车资源（直连）
+- DOMAIN-SUFFIX, kczyapi.com, DIRECT 
+#三九影視（直连）
+- DOMAIN-SUFFIX, 39kan.com, DIRECT 
+#闪电资源（直连）
+- DOMAIN-SUFFIX, sdzyapi.com, DIRECT 
+#樱花资源（直连）
+- DOMAIN-SUFFIX, apiyhzy.com, DIRECT 
+#卧龙资源（直连）
+- DOMAIN-SUFFIX, wolongzyw.com, DIRECT 
+#飘花影院（直连）
+- DOMAIN-SUFFIX, ahjiuman.com, DIRECT 
+#虎牙资源（直连）
+- DOMAIN-SUFFIX, huyaapi.com, DIRECT 
+#百度资源（直连）
+- DOMAIN-SUFFIX, apibdzy.com, DIRECT 
+#飘零影院（直连）
+- DOMAIN-SUFFIX, p2100.net, DIRECT 
+#无尽资源（直连）
+- DOMAIN-SUFFIX, wujinapi.com, DIRECT 
+#速博资源（直连）
+- DOMAIN-SUFFIX, subocaiji.com, DIRECT 
+#乐视资源（直连）
+- DOMAIN-SUFFIX, leshizyapi.com, DIRECT 
+#探索页（直连）
+- DOMAIN-SUFFIX, infuseku.xyz, DIRECT 
+#魔都动漫（直连）
+- DOMAIN-SUFFIX, moduapi.cc, DIRECT 
+#最大资源（直连）
+- DOMAIN-SUFFIX, zuidazy.me, DIRECT 
+#奇虎资源（直连）
+- DOMAIN-SUFFIX, qhzyapi.com, DIRECT 
+#火狐资源（直连）
+- DOMAIN-SUFFIX, hhzyapi.com, DIRECT 
+#享看资源（直连）
+- DOMAIN-SUFFIX, xkanzy10.com, DIRECT 
+#新浪资源（直连）
+- DOMAIN-SUFFIX, xinlangapi.com, DIRECT 
+#快云资源（直连）
+- DOMAIN-SUFFIX, kuaiyunzy.com, DIRECT 
+#四圈资源（直连）
+- DOMAIN-SUFFIX, fenwe078.cf, DIRECT 
+#哔嘀影视（直连）
+- DOMAIN-SUFFIX, bdys10.com, DIRECT 
+#快看资源（直连）
+- DOMAIN-SUFFIX, kuaikanzy.net, DIRECT 
+#厂长&低端播放
+- DOMAIN-suffix, cz01.site, direct 
+- DOMAIN-suffix, larksuitecdn.com, direct 
+- DOMAIN-suffix, fotile.com, direct 
+- DOMAIN-suffix, pstatp.com, direct 
+- DOMAIN-suffix, ugdtimg.com, direct 
+- DOMAIN-suffix, ctyunxs.cn, direct 
+- DOMAIN, wxsnsencsvp.wxs.qq.com, direct 
+#哔嘀播放
+- DOMAIN-suffix, ibytedtos.com, direct 
+- DOMAIN-suffix, toutiao50.com, direct 
+- DOMAIN-suffix, ibyteimg.com, direct 
+#阿里播放
+- DOMAIN-suffix, aliyundrive.asia, direct 
+- DOMAIN-suffix, alicloudccp.com, direct 
+- DOMAIN, openapi.aliyundrive.com, direct 
+- DOMAIN, auth.aliyundrive.com, direct 
+- DOMAIN, api.aliyundrive.com, direct 
+#豆瓣封面
+- DOMAIN-suffix, doubanio.com, direct 
+#同步数据
+- DOMAIN, gateway.icloud.com, direct 
+#杂七杂八的播放
+- DOMAIN-keyword, v.cdnlz, direct 
+- DOMAIN-keyword, vip.kuaikan, direct 
+- DOMAIN-keyword, vip.ffzy, direct 
+- DOMAIN, vod2.kczybf.com, direct 
+- DOMAIN, top.1080pzy.co, direct 
+- DOMAIN, c3.monidai.com, direct 
+- DOMAIN, pan.dy066.com, direct 
+- DOMAIN, hey11.cjkypo.com, direct 
+- DOMAIN, hnts.ymuuy.com, direct 
+- DOMAIN, hnzy.bfvvs.com, direct 
+- DOMAIN-suffix, maimn.com, direct 
+- DOMAIN, img.lzzyimg.com, direct 
+- DOMAIN, vip.ffzy-play5.com, direct 
+- DOMAIN, vip.ffzy-online6.com, direct 
+- DOMAIN, sss.image8899.net, direct 
+- DOMAIN, ikcdn01.ikzybf.com, direct 
+- DOMAIN, vip.ffzy-play9.com, direct 
+- DOMAIN, svip.picffzy.com, direct 
+- DOMAIN, vip.imgffzy.com, direct 
+- DOMAIN, vip.ffzyread1.com, direct 
 
 
 #如果你的配置有包含''就复制以下配置
 #自行复制粘贴到rules里
 rules:
-    #玩偶哥哥（直连）
-    - 'DOMAIN-SUFFIX, wogg.link, DIRECT'
-    - 'DOMAIN-SUFFIX, wogg.xyz, DIRECT'
-    #小纸条（直连）
-    - 'DOMAIN-SUFFIX, gitcafe.net, DIRECT'
-    #jojo（直连）
-    - 'DOMAIN-SUFFIX, jiohub.top, DIRECT'
-    #厂长资源（直连）
-    - 'DOMAIN-SUFFIX, czzy88.com, DIRECT'
-    - 'DOMAIN-SUFFIX, czzy22.com, DIRECT'
-    - 'DOMAIN-SUFFIX, czzy66.com, DIRECT'
-    #在线之家（直连）
-    - 'DOMAIN-SUFFIX, zxzja.com, DIRECT'
-    - 'DOMAIN-SUFFIX, zxzjhd.com, DIRECT'
-    - 'DOMAIN-SUFFIX, zxzj.pro, DIRECT'
-    #低端影视（直连）
-    - 'DOMAIN-SUFFIX, ddys.pro, DIRECT'
-    - 'DOMAIN-SUFFIX, ddys.mov, DIRECT'
-    #索尼资源（直连）
-    - 'DOMAIN-SUFFIX, suoniapi.com, DIRECT'
-    - 'DOMAIN, v3.sxzyhuij.com, direct'
-    - 'DOMAIN, v3.suonizy-youku.com, direct'
-    - 'DOMAIN, v8.sxzyhuij.com, direct'
-    - 'DOMAIN, snzypic.com, direct'
-    - 'DOMAIN, v8.suonizy-youku.com, direct'
-    #非凡资源（直连）
-    - 'DOMAIN-SUFFIX, ffzyapi.com, DIRECT'
-    #红牛资源（直连）
-    - 'DOMAIN-SUFFIX, hongniuzy2.com, DIRECT'
-    #量子资源（直连）
-    - 'DOMAIN-SUFFIX, lziapi.com, DIRECT'
-    #快车资源（直连）
-    - 'DOMAIN-SUFFIX, kczyapi.com, DIRECT'
-    #三九影視（直连）
-    - 'DOMAIN-SUFFIX, 39kan.com, DIRECT'
-    #闪电资源（直连）
-    - 'DOMAIN-SUFFIX, sdzyapi.com, DIRECT'
-    #樱花资源（直连）
-    - 'DOMAIN-SUFFIX, apiyhzy.com, DIRECT'
-    #卧龙资源（直连）
-    - 'DOMAIN-SUFFIX, wolongzyw.com, DIRECT'
-    #飘花影院（直连）
-    - 'DOMAIN-SUFFIX, ahjiuman.com, DIRECT'
-    #虎牙资源（直连）
-    - 'DOMAIN-SUFFIX, huyaapi.com, DIRECT'
-    #百度资源（直连）
-    - 'DOMAIN-SUFFIX, apibdzy.com, DIRECT'
-    #飘零影院（直连）
-    - 'DOMAIN-SUFFIX, p2100.net, DIRECT'
-    #无尽资源（直连）
-    - 'DOMAIN-SUFFIX, wujinapi.com, DIRECT'
-    #速博资源（直连）
-    - 'DOMAIN-SUFFIX, subocaiji.com, DIRECT'
-    #乐视资源（直连）
-    - 'DOMAIN-SUFFIX, leshizyapi.com, DIRECT'
-    #探索页（直连）
-    - 'DOMAIN-SUFFIX, infuseku.xyz, DIRECT'
-    #魔都动漫（直连）
-    - 'DOMAIN-SUFFIX, moduapi.cc, DIRECT'
-    #最大资源（直连）
-    - 'DOMAIN-SUFFIX, zuidazy.me, DIRECT'
-    #奇虎资源（直连）
-    - 'DOMAIN-SUFFIX, qhzyapi.com, DIRECT'
-    #火狐资源（直连）
-    - 'DOMAIN-SUFFIX, hhzyapi.com, DIRECT'
-    #享看资源（直连）
-    - 'DOMAIN-SUFFIX, xkanzy10.com, DIRECT'
-    #新浪资源（直连）
-    - 'DOMAIN-SUFFIX, xinlangapi.com, DIRECT'
-    #快云资源（直连）
-    - 'DOMAIN-SUFFIX, kuaiyunzy.com, DIRECT'
-    #四圈资源（直连）
-    - 'DOMAIN-SUFFIX, fenwe078.cf, DIRECT'
-    #哔嘀影视（直连）
-    - 'DOMAIN-SUFFIX, bdys10.com, DIRECT'
-    #快看资源（直连）
-    - 'DOMAIN-SUFFIX, kuaikanzy.net, DIRECT'
-    #厂长&低端播放
-    - 'DOMAIN-suffix, cz01.site, direct'
-    - 'DOMAIN-suffix, larksuitecdn.com, direct'
-    - 'DOMAIN-suffix, fotile.com, direct'
-    - 'DOMAIN-suffix, pstatp.com, direct'
-    - 'DOMAIN-suffix, ugdtimg.com, direct'
-    - 'DOMAIN-suffix, ctyunxs.cn, direct'
-    - 'DOMAIN, wxsnsencsvp.wxs.qq.com, direct'
-    #哔嘀播放
-    - 'DOMAIN-suffix, ibytedtos.com, direct'
-    - 'DOMAIN-suffix, toutiao50.com, direct'
-    - 'DOMAIN-suffix, ibyteimg.com, direct'
-    #阿里播放
-    - 'DOMAIN-suffix, aliyundrive.asia, direct'
-    - 'DOMAIN-suffix, alicloudccp.com, direct'
-    - 'DOMAIN, openapi.aliyundrive.com, direct'
-    - 'DOMAIN, auth.aliyundrive.com, direct'
-    - 'DOMAIN, api.aliyundrive.com, direct'
-    #豆瓣封面
-    - 'DOMAIN-suffix, doubanio.com, direct'
-    #同步数据
-    - 'DOMAIN, gateway.icloud.com, direct'
-    #杂七杂八的播放
-    - 'DOMAIN-keyword, v.cdnlz, direct'
-    - 'DOMAIN-keyword, vip.kuaikan, direct'
-    - 'DOMAIN-keyword, vip.ffzy, direct'
-    - 'DOMAIN, vod2.kczybf.com, direct'
-    - 'DOMAIN, top.1080pzy.co, direct'
-    - 'DOMAIN, c3.monidai.com, direct'
-    - 'DOMAIN, pan.dy066.com, direct'
-    - 'DOMAIN, hey11.cjkypo.com, direct'
-    - 'DOMAIN, hnts.ymuuy.com, direct'
-    - 'DOMAIN, hnzy.bfvvs.com, direct'
-    - 'DOMAIN-suffix, maimn.com, direct'
-    - 'DOMAIN, img.lzzyimg.com, direct'
-    - 'DOMAIN, vip.ffzy-play5.com, direct'
-    - 'DOMAIN, vip.ffzy-online6.com, direct'
-    - 'DOMAIN, sss.image8899.net, direct'
-    - 'DOMAIN, ikcdn01.ikzybf.com, direct'
-    - 'DOMAIN, vip.ffzy-play9.com, direct'
-    - 'DOMAIN, svip.picffzy.com, direct'
-    - 'DOMAIN, vip.imgffzy.com, direct'
-    - 'DOMAIN, vip.ffzyread1.com, direct'
-    - 'DOMAIN, vip.ffzy-play3.com, direct'
-    - 'DOMAIN, vip.ffzyread.com, direct'
-    - 'DOMAIN, www.imgikzy.com, direct'
-    - 'DOMAIN, vip.ffzyread1.com, direct'
+#玩偶哥哥（直连）
+- 'DOMAIN-SUFFIX, wogg.link, DIRECT'
+- 'DOMAIN-SUFFIX, wogg.xyz, DIRECT'
+#小纸条（直连）
+- 'DOMAIN-SUFFIX, gitcafe.net, DIRECT'
+#jojo（直连）
+- 'DOMAIN-SUFFIX, jiohub.top, DIRECT'
+#厂长资源（直连）
+- 'DOMAIN-SUFFIX, czzy88.com, DIRECT'
+- 'DOMAIN-SUFFIX, czzy22.com, DIRECT'
+- 'DOMAIN-SUFFIX, czzy66.com, DIRECT'
+#在线之家（直连）
+- 'DOMAIN-SUFFIX, zxzja.com, DIRECT'
+- 'DOMAIN-SUFFIX, zxzjhd.com, DIRECT'
+- 'DOMAIN-SUFFIX, zxzj.pro, DIRECT'
+#低端影视（直连）
+- 'DOMAIN-SUFFIX, ddys.pro, DIRECT'
+- 'DOMAIN-SUFFIX, ddys.mov, DIRECT'
+#索尼资源（直连）
+- 'DOMAIN-SUFFIX, suoniapi.com, DIRECT'
+- 'DOMAIN, v3.sxzyhuij.com, direct'
+- 'DOMAIN, v3.suonizy-youku.com, direct'
+- 'DOMAIN, v8.sxzyhuij.com, direct'
+- 'DOMAIN, snzypic.com, direct'
+- 'DOMAIN, v8.suonizy-youku.com, direct'
+#非凡资源（直连）
+- 'DOMAIN-SUFFIX, ffzyapi.com, DIRECT'
+#红牛资源（直连）
+- 'DOMAIN-SUFFIX, hongniuzy2.com, DIRECT'
+#量子资源（直连）
+- 'DOMAIN-SUFFIX, lziapi.com, DIRECT'
+#快车资源（直连）
+- 'DOMAIN-SUFFIX, kczyapi.com, DIRECT'
+#三九影視（直连）
+- 'DOMAIN-SUFFIX, 39kan.com, DIRECT'
+#闪电资源（直连）
+- 'DOMAIN-SUFFIX, sdzyapi.com, DIRECT'
+#樱花资源（直连）
+- 'DOMAIN-SUFFIX, apiyhzy.com, DIRECT'
+#卧龙资源（直连）
+- 'DOMAIN-SUFFIX, wolongzyw.com, DIRECT'
+#飘花影院（直连）
+- 'DOMAIN-SUFFIX, ahjiuman.com, DIRECT'
+#虎牙资源（直连）
+- 'DOMAIN-SUFFIX, huyaapi.com, DIRECT'
+#百度资源（直连）
+- 'DOMAIN-SUFFIX, apibdzy.com, DIRECT'
+#飘零影院（直连）
+- 'DOMAIN-SUFFIX, p2100.net, DIRECT'
+#无尽资源（直连）
+- 'DOMAIN-SUFFIX, wujinapi.com, DIRECT'
+#速博资源（直连）
+- 'DOMAIN-SUFFIX, subocaiji.com, DIRECT'
+#乐视资源（直连）
+- 'DOMAIN-SUFFIX, leshizyapi.com, DIRECT'
+#探索页（直连）
+- 'DOMAIN-SUFFIX, infuseku.xyz, DIRECT'
+#魔都动漫（直连）
+- 'DOMAIN-SUFFIX, moduapi.cc, DIRECT'
+#最大资源（直连）
+- 'DOMAIN-SUFFIX, zuidazy.me, DIRECT'
+#奇虎资源（直连）
+- 'DOMAIN-SUFFIX, qhzyapi.com, DIRECT'
+#火狐资源（直连）
+- 'DOMAIN-SUFFIX, hhzyapi.com, DIRECT'
+#享看资源（直连）
+- 'DOMAIN-SUFFIX, xkanzy10.com, DIRECT'
+#新浪资源（直连）
+- 'DOMAIN-SUFFIX, xinlangapi.com, DIRECT'
+#快云资源（直连）
+- 'DOMAIN-SUFFIX, kuaiyunzy.com, DIRECT'
+#四圈资源（直连）
+- 'DOMAIN-SUFFIX, fenwe078.cf, DIRECT'
+#哔嘀影视（直连）
+- 'DOMAIN-SUFFIX, bdys10.com, DIRECT'
+#快看资源（直连）
+- 'DOMAIN-SUFFIX, kuaikanzy.net, DIRECT'
+#厂长&低端播放
+- 'DOMAIN-suffix, cz01.site, direct'
+- 'DOMAIN-suffix, larksuitecdn.com, direct'
+- 'DOMAIN-suffix, fotile.com, direct'
+- 'DOMAIN-suffix, pstatp.com, direct'
+- 'DOMAIN-suffix, ugdtimg.com, direct'
+- 'DOMAIN-suffix, ctyunxs.cn, direct'
+- 'DOMAIN, wxsnsencsvp.wxs.qq.com, direct'
+#哔嘀播放
+- 'DOMAIN-suffix, ibytedtos.com, direct'
+- 'DOMAIN-suffix, toutiao50.com, direct'
+- 'DOMAIN-suffix, ibyteimg.com, direct'
+#阿里播放
+- 'DOMAIN-suffix, aliyundrive.asia, direct'
+- 'DOMAIN-suffix, alicloudccp.com, direct'
+- 'DOMAIN, openapi.aliyundrive.com, direct'
+- 'DOMAIN, auth.aliyundrive.com, direct'
+- 'DOMAIN, api.aliyundrive.com, direct'
+#豆瓣封面
+- 'DOMAIN-suffix, doubanio.com, direct'
+#同步数据
+- 'DOMAIN, gateway.icloud.com, direct'
+#杂七杂八的播放
+- 'DOMAIN-keyword, v.cdnlz, direct'
+- 'DOMAIN-keyword, vip.kuaikan, direct'
+- 'DOMAIN-keyword, vip.ffzy, direct'
+- 'DOMAIN, vod2.kczybf.com, direct'
+- 'DOMAIN, top.1080pzy.co, direct'
+- 'DOMAIN, c3.monidai.com, direct'
+- 'DOMAIN, pan.dy066.com, direct'
+- 'DOMAIN, hey11.cjkypo.com, direct'
+- 'DOMAIN, hnts.ymuuy.com, direct'
+- 'DOMAIN, hnzy.bfvvs.com, direct'
+- 'DOMAIN-suffix, maimn.com, direct'
+- 'DOMAIN, img.lzzyimg.com, direct'
+- 'DOMAIN, vip.ffzy-play5.com, direct'
+- 'DOMAIN, vip.ffzy-online6.com, direct'
+- 'DOMAIN, sss.image8899.net, direct'
+- 'DOMAIN, ikcdn01.ikzybf.com, direct'
+- 'DOMAIN, vip.ffzy-play9.com, direct'
+- 'DOMAIN, svip.picffzy.com, direct'
+- 'DOMAIN, vip.imgffzy.com, direct'
+- 'DOMAIN, vip.ffzyread1.com, direct'
+- 'DOMAIN, vip.ffzy-play3.com, direct'
+- 'DOMAIN, vip.ffzyread.com, direct'
+- 'DOMAIN, www.imgikzy.com, direct'
+- 'DOMAIN, vip.ffzyread1.com, direct'
