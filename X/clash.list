@@ -1,4 +1,3 @@
-payload:
 #玩偶哥哥（直连）
 - DOMAIN-SUFFIX, wogg.link
 - DOMAIN-SUFFIX, wogg.xyz
@@ -77,25 +76,25 @@ payload:
 #快看资源（直连）
 - DOMAIN-SUFFIX, kuaikanzy.net  
 #厂长&低端播放
-- DOMAIN-suffix, cz01.site  
-- DOMAIN-suffix, larksuitecdn.com  
-- DOMAIN-suffix, fotile.com  
-- DOMAIN-suffix, pstatp.com  
-- DOMAIN-suffix, ugdtimg.com  
-- DOMAIN-suffix, ctyunxs.cn  
+- DOMAIN-SUFFIX, cz01.site  
+- DOMAIN-SUFFIX, larksuitecdn.com  
+- DOMAIN-SUFFIX, fotile.com  
+- DOMAIN-SUFFIX, pstatp.com  
+- DOMAIN-SUFFIX, ugdtimg.com  
+- DOMAIN-SUFFIX, ctyunxs.cn  
 - DOMAIN, wxsnsencsvp.wxs.qq.com  
 #哔嘀播放
-- DOMAIN-suffix, ibytedtos.com  
-- DOMAIN-suffix, toutiao50.com  
-- DOMAIN-suffix, ibyteimg.com  
+- DOMAIN-SUFFIX, ibytedtos.com  
+- DOMAIN-SUFFIX, toutiao50.com  
+- DOMAIN-SUFFIX, ibyteimg.com  
 #阿里播放
-- DOMAIN-suffix, aliyundrive.asia  
-- DOMAIN-suffix, alicloudccp.com  
+- DOMAIN-SUFFIX, aliyundrive.asia  
+- DOMAIN-SUFFIX, alicloudccp.com  
 - DOMAIN, openapi.aliyundrive.com  
 - DOMAIN, auth.aliyundrive.com  
 - DOMAIN, api.aliyundrive.com  
 #豆瓣封面
-- DOMAIN-suffix, doubanio.com  
+- DOMAIN-SUFFIX, doubanio.com  
 #同步数据
 - DOMAIN, gateway.icloud.com  
 #杂七杂八的播放
@@ -109,7 +108,7 @@ payload:
 - DOMAIN, hey11.cjkypo.com  
 - DOMAIN, hnts.ymuuy.com  
 - DOMAIN, hnzy.bfvvs.com  
-- DOMAIN-suffix, maimn.com  
+- DOMAIN-SUFFIX, maimn.com  
 - DOMAIN, img.lzzyimg.com  
 - DOMAIN, vip.ffzy-play5.com  
 - DOMAIN, vip.ffzy-online6.com  
