@@ -5,5 +5,5 @@ https://raw.githubusercontent.com/fangkuia/XPTV/main/X/QuantumultX.list
 https://raw.githubusercontent.com/fangkuia/XPTV/main/X/loon%26surge%26shadowrocket.list
 ## Stash(自行打开链接文本复制到对应app的配置中)
 https://raw.githubusercontent.com/fangkuia/XPTV/main/X/stash.list
-## Clash(自行设置)
+## Clash(自行设置为直连[DIRECT])
 https://raw.githubusercontent.com/fangkuia/XPTV/main/X/clash.list
