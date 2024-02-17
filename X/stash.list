@@ -20,11 +20,11 @@ rules:
 - DOMAIN-SUFFIX, ddys.mov, DIRECT 
 #索尼资源（直连）
 - DOMAIN-SUFFIX, suoniapi.com, DIRECT 
-- DOMAIN, v3.sxzyhuij.com, direct 
-- DOMAIN, v3.suonizy-youku.com, direct 
-- DOMAIN, v8.sxzyhuij.com, direct 
-- DOMAIN, snzypic.com, direct 
-- DOMAIN, v8.suonizy-youku.com, direct 
+- DOMAIN, v3.sxzyhuij.com, DIRECT 
+- DOMAIN, v3.suonizy-youku.com, DIRECT 
+- DOMAIN, v8.sxzyhuij.com, DIRECT 
+- DOMAIN, snzypic.com, DIRECT 
+- DOMAIN, v8.suonizy-youku.com, DIRECT 
 #非凡资源（直连）
 - DOMAIN-SUFFIX, ffzyapi.com, DIRECT 
 #红牛资源（直连）
@@ -78,48 +78,48 @@ rules:
 #快看资源（直连）
 - DOMAIN-SUFFIX, kuaikanzy.net, DIRECT 
 #厂长&低端播放
-- DOMAIN-suffix, cz01.site, direct 
-- DOMAIN-suffix, larksuitecdn.com, direct 
-- DOMAIN-suffix, fotile.com, direct 
-- DOMAIN-suffix, pstatp.com, direct 
-- DOMAIN-suffix, ugdtimg.com, direct 
-- DOMAIN-suffix, ctyunxs.cn, direct 
-- DOMAIN, wxsnsencsvp.wxs.qq.com, direct 
+- DOMAIN-suffix, cz01.site, DIRECT 
+- DOMAIN-suffix, larksuitecdn.com, DIRECT 
+- DOMAIN-suffix, fotile.com, DIRECT 
+- DOMAIN-suffix, pstatp.com, DIRECT 
+- DOMAIN-suffix, ugdtimg.com, DIRECT 
+- DOMAIN-suffix, ctyunxs.cn, DIRECT 
+- DOMAIN, wxsnsencsvp.wxs.qq.com, DIRECT 
 #哔嘀播放
-- DOMAIN-suffix, ibytedtos.com, direct 
-- DOMAIN-suffix, toutiao50.com, direct 
-- DOMAIN-suffix, ibyteimg.com, direct 
+- DOMAIN-suffix, ibytedtos.com, DIRECT 
+- DOMAIN-suffix, toutiao50.com, DIRECT 
+- DOMAIN-suffix, ibyteimg.com, DIRECT 
 #阿里播放
-- DOMAIN-suffix, aliyundrive.asia, direct 
-- DOMAIN-suffix, alicloudccp.com, direct 
-- DOMAIN, openapi.aliyundrive.com, direct 
-- DOMAIN, auth.aliyundrive.com, direct 
-- DOMAIN, api.aliyundrive.com, direct 
+- DOMAIN-suffix, aliyundrive.asia, DIRECT 
+- DOMAIN-suffix, alicloudccp.com, DIRECT 
+- DOMAIN, openapi.aliyundrive.com, DIRECT 
+- DOMAIN, auth.aliyundrive.com, DIRECT 
+- DOMAIN, api.aliyundrive.com, DIRECT 
 #豆瓣封面
-- DOMAIN-suffix, doubanio.com, direct 
+- DOMAIN-suffix, doubanio.com, DIRECT 
 #同步数据
-- DOMAIN, gateway.icloud.com, direct 
+- DOMAIN, gateway.icloud.com, DIRECT 
 #杂七杂八的播放
-- DOMAIN-keyword, v.cdnlz, direct 
-- DOMAIN-keyword, vip.kuaikan, direct 
-- DOMAIN-keyword, vip.ffzy, direct 
-- DOMAIN, vod2.kczybf.com, direct 
-- DOMAIN, top.1080pzy.co, direct 
-- DOMAIN, c3.monidai.com, direct 
-- DOMAIN, pan.dy066.com, direct 
-- DOMAIN, hey11.cjkypo.com, direct 
-- DOMAIN, hnts.ymuuy.com, direct 
-- DOMAIN, hnzy.bfvvs.com, direct 
-- DOMAIN-suffix, maimn.com, direct 
-- DOMAIN, img.lzzyimg.com, direct 
-- DOMAIN, vip.ffzy-play5.com, direct 
-- DOMAIN, vip.ffzy-online6.com, direct 
-- DOMAIN, sss.image8899.net, direct 
-- DOMAIN, ikcdn01.ikzybf.com, direct 
-- DOMAIN, vip.ffzy-play9.com, direct 
-- DOMAIN, svip.picffzy.com, direct 
-- DOMAIN, vip.imgffzy.com, direct 
-- DOMAIN, vip.ffzyread1.com, direct 
+- DOMAIN-keyword, v.cdnlz, DIRECT 
+- DOMAIN-keyword, vip.kuaikan, DIRECT 
+- DOMAIN-keyword, vip.ffzy, DIRECT 
+- DOMAIN, vod2.kczybf.com, DIRECT 
+- DOMAIN, top.1080pzy.co, DIRECT 
+- DOMAIN, c3.monidai.com, DIRECT 
+- DOMAIN, pan.dy066.com, DIRECT 
+- DOMAIN, hey11.cjkypo.com, DIRECT 
+- DOMAIN, hnts.ymuuy.com, DIRECT 
+- DOMAIN, hnzy.bfvvs.com, DIRECT 
+- DOMAIN-suffix, maimn.com, DIRECT 
+- DOMAIN, img.lzzyimg.com, DIRECT 
+- DOMAIN, vip.ffzy-play5.com, DIRECT 
+- DOMAIN, vip.ffzy-online6.com, DIRECT 
+- DOMAIN, sss.image8899.net, DIRECT 
+- DOMAIN, ikcdn01.ikzybf.com, DIRECT 
+- DOMAIN, vip.ffzy-play9.com, DIRECT 
+- DOMAIN, svip.picffzy.com, DIRECT 
+- DOMAIN, vip.imgffzy.com, DIRECT 
+- DOMAIN, vip.ffzyread1.com, DIRECT 
 
 
 #如果你的配置有包含''就复制以下配置
@@ -145,11 +145,11 @@ rules:
 - 'DOMAIN-SUFFIX, ddys.mov, DIRECT'
 #索尼资源（直连）
 - 'DOMAIN-SUFFIX, suoniapi.com, DIRECT'
-- 'DOMAIN, v3.sxzyhuij.com, direct'
-- 'DOMAIN, v3.suonizy-youku.com, direct'
-- 'DOMAIN, v8.sxzyhuij.com, direct'
-- 'DOMAIN, snzypic.com, direct'
-- 'DOMAIN, v8.suonizy-youku.com, direct'
+- 'DOMAIN, v3.sxzyhuij.com, DIRECT'
+- 'DOMAIN, v3.suonizy-youku.com, DIRECT'
+- 'DOMAIN, v8.sxzyhuij.com, DIRECT'
+- 'DOMAIN, snzypic.com, DIRECT'
+- 'DOMAIN, v8.suonizy-youku.com, DIRECT'
 #非凡资源（直连）
 - 'DOMAIN-SUFFIX, ffzyapi.com, DIRECT'
 #红牛资源（直连）
@@ -203,49 +203,49 @@ rules:
 #快看资源（直连）
 - 'DOMAIN-SUFFIX, kuaikanzy.net, DIRECT'
 #厂长&低端播放
-- 'DOMAIN-suffix, cz01.site, direct'
-- 'DOMAIN-suffix, larksuitecdn.com, direct'
-- 'DOMAIN-suffix, fotile.com, direct'
-- 'DOMAIN-suffix, pstatp.com, direct'
-- 'DOMAIN-suffix, ugdtimg.com, direct'
-- 'DOMAIN-suffix, ctyunxs.cn, direct'
-- 'DOMAIN, wxsnsencsvp.wxs.qq.com, direct'
+- 'DOMAIN-suffix, cz01.site, DIRECT'
+- 'DOMAIN-suffix, larksuitecdn.com, DIRECT'
+- 'DOMAIN-suffix, fotile.com, DIRECT'
+- 'DOMAIN-suffix, pstatp.com, DIRECT'
+- 'DOMAIN-suffix, ugdtimg.com, DIRECT'
+- 'DOMAIN-suffix, ctyunxs.cn, DIRECT'
+- 'DOMAIN, wxsnsencsvp.wxs.qq.com, DIRECT'
 #哔嘀播放
-- 'DOMAIN-suffix, ibytedtos.com, direct'
-- 'DOMAIN-suffix, toutiao50.com, direct'
-- 'DOMAIN-suffix, ibyteimg.com, direct'
+- 'DOMAIN-suffix, ibytedtos.com, DIRECT'
+- 'DOMAIN-suffix, toutiao50.com, DIRECT'
+- 'DOMAIN-suffix, ibyteimg.com, DIRECT'
 #阿里播放
-- 'DOMAIN-suffix, aliyundrive.asia, direct'
-- 'DOMAIN-suffix, alicloudccp.com, direct'
-- 'DOMAIN, openapi.aliyundrive.com, direct'
-- 'DOMAIN, auth.aliyundrive.com, direct'
-- 'DOMAIN, api.aliyundrive.com, direct'
+- 'DOMAIN-suffix, aliyundrive.asia, DIRECT'
+- 'DOMAIN-suffix, alicloudccp.com, DIRECT'
+- 'DOMAIN, openapi.aliyundrive.com, DIRECT'
+- 'DOMAIN, auth.aliyundrive.com, DIRECT'
+- 'DOMAIN, api.aliyundrive.com, DIRECT'
 #豆瓣封面
-- 'DOMAIN-suffix, doubanio.com, direct'
+- 'DOMAIN-suffix, doubanio.com, DIRECT'
 #同步数据
-- 'DOMAIN, gateway.icloud.com, direct'
+- 'DOMAIN, gateway.icloud.com, DIRECT'
 #杂七杂八的播放
-- 'DOMAIN-keyword, v.cdnlz, direct'
-- 'DOMAIN-keyword, vip.kuaikan, direct'
-- 'DOMAIN-keyword, vip.ffzy, direct'
-- 'DOMAIN, vod2.kczybf.com, direct'
-- 'DOMAIN, top.1080pzy.co, direct'
-- 'DOMAIN, c3.monidai.com, direct'
-- 'DOMAIN, pan.dy066.com, direct'
-- 'DOMAIN, hey11.cjkypo.com, direct'
-- 'DOMAIN, hnts.ymuuy.com, direct'
-- 'DOMAIN, hnzy.bfvvs.com, direct'
-- 'DOMAIN-suffix, maimn.com, direct'
-- 'DOMAIN, img.lzzyimg.com, direct'
-- 'DOMAIN, vip.ffzy-play5.com, direct'
-- 'DOMAIN, vip.ffzy-online6.com, direct'
-- 'DOMAIN, sss.image8899.net, direct'
-- 'DOMAIN, ikcdn01.ikzybf.com, direct'
-- 'DOMAIN, vip.ffzy-play9.com, direct'
-- 'DOMAIN, svip.picffzy.com, direct'
-- 'DOMAIN, vip.imgffzy.com, direct'
-- 'DOMAIN, vip.ffzyread1.com, direct'
-- 'DOMAIN, vip.ffzy-play3.com, direct'
-- 'DOMAIN, vip.ffzyread.com, direct'
-- 'DOMAIN, www.imgikzy.com, direct'
-- 'DOMAIN, vip.ffzyread1.com, direct'
+- 'DOMAIN-keyword, v.cdnlz, DIRECT'
+- 'DOMAIN-keyword, vip.kuaikan, DIRECT'
+- 'DOMAIN-keyword, vip.ffzy, DIRECT'
+- 'DOMAIN, vod2.kczybf.com, DIRECT'
+- 'DOMAIN, top.1080pzy.co, DIRECT'
+- 'DOMAIN, c3.monidai.com, DIRECT'
+- 'DOMAIN, pan.dy066.com, DIRECT'
+- 'DOMAIN, hey11.cjkypo.com, DIRECT'
+- 'DOMAIN, hnts.ymuuy.com, DIRECT'
+- 'DOMAIN, hnzy.bfvvs.com, DIRECT'
+- 'DOMAIN-suffix, maimn.com, DIRECT'
+- 'DOMAIN, img.lzzyimg.com, DIRECT'
+- 'DOMAIN, vip.ffzy-play5.com, DIRECT'
+- 'DOMAIN, vip.ffzy-online6.com, DIRECT'
+- 'DOMAIN, sss.image8899.net, DIRECT'
+- 'DOMAIN, ikcdn01.ikzybf.com, DIRECT'
+- 'DOMAIN, vip.ffzy-play9.com, DIRECT'
+- 'DOMAIN, svip.picffzy.com, DIRECT'
+- 'DOMAIN, vip.imgffzy.com, DIRECT'
+- 'DOMAIN, vip.ffzyread1.com, DIRECT'
+- 'DOMAIN, vip.ffzy-play3.com, DIRECT'
+- 'DOMAIN, vip.ffzyread.com, DIRECT'
+- 'DOMAIN, www.imgikzy.com, DIRECT'
+- 'DOMAIN, vip.ffzyread1.com, DIRECT'
