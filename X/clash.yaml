@@ -1,121 +1,121 @@
 payload:
 #玩偶哥哥（直连）
-- DOMAIN-SUFFIX, wogg.link
-- DOMAIN-SUFFIX, wogg.xyz
+  -DOMAIN-SUFFIX, wogg.link
+  -DOMAIN-SUFFIX, wogg.xyz
 #小纸条（直连）
-- DOMAIN-SUFFIX, gitcafe.net
+  -DOMAIN-SUFFIX, gitcafe.net
 #jojo（直连）
-- DOMAIN-SUFFIX, jiohub.top
+  -DOMAIN-SUFFIX, jiohub.top
 #厂长资源（直连）
-- DOMAIN-SUFFIX, czzy88.com
-- DOMAIN-SUFFIX, czzy22.com
-- DOMAIN-SUFFIX, czzy66.com
+  -DOMAIN-SUFFIX, czzy88.com
+  -DOMAIN-SUFFIX, czzy22.com
+  -DOMAIN-SUFFIX, czzy66.com
 #在线之家（直连）
-- DOMAIN-SUFFIX, zxzja.com  
-- DOMAIN-SUFFIX, zxzjhd.com  
-- DOMAIN-SUFFIX, zxzj.pro  
+  -DOMAIN-SUFFIX, zxzja.com  
+  -DOMAIN-SUFFIX, zxzjhd.com  
+  -DOMAIN-SUFFIX, zxzj.pro  
 #低端影视（直连）
-- DOMAIN-SUFFIX, ddys.pro  
-- DOMAIN-SUFFIX, ddys.mov  
+  -DOMAIN-SUFFIX, ddys.pro  
+  -DOMAIN-SUFFIX, ddys.mov  
 #索尼资源（直连）
-- DOMAIN-SUFFIX, suoniapi.com  
-- DOMAIN, v3.sxzyhuij.com  
-- DOMAIN, v3.suonizy-youku.com  
-- DOMAIN, v8.sxzyhuij.com  
-- DOMAIN, snzypic.com  
-- DOMAIN, v8.suonizy-youku.com  
+  -DOMAIN-SUFFIX, suoniapi.com  
+  -DOMAIN, v3.sxzyhuij.com  
+  -DOMAIN, v3.suonizy-youku.com  
+  -DOMAIN, v8.sxzyhuij.com  
+  -DOMAIN, snzypic.com  
+  -DOMAIN, v8.suonizy-youku.com  
 #非凡资源（直连）
-- DOMAIN-SUFFIX, ffzyapi.com  
+  -DOMAIN-SUFFIX, ffzyapi.com  
 #红牛资源（直连）
-- DOMAIN-SUFFIX, hongniuzy2.com  
+  -DOMAIN-SUFFIX, hongniuzy2.com  
 #量子资源（直连）
-- DOMAIN-SUFFIX, lziapi.com  
+  -DOMAIN-SUFFIX, lziapi.com  
 #快车资源（直连）
-- DOMAIN-SUFFIX, kczyapi.com  
+  -DOMAIN-SUFFIX, kczyapi.com  
 #三九影視（直连）
-- DOMAIN-SUFFIX, 39kan.com  
+  -DOMAIN-SUFFIX, 39kan.com  
 #闪电资源（直连）
-- DOMAIN-SUFFIX, sdzyapi.com  
+  -DOMAIN-SUFFIX, sdzyapi.com  
 #樱花资源（直连）
-- DOMAIN-SUFFIX, apiyhzy.com  
+  -DOMAIN-SUFFIX, apiyhzy.com  
 #卧龙资源（直连）
-- DOMAIN-SUFFIX, wolongzyw.com  
+  -DOMAIN-SUFFIX, wolongzyw.com  
 #飘花影院（直连）
-- DOMAIN-SUFFIX, ahjiuman.com  
+  -DOMAIN-SUFFIX, ahjiuman.com  
 #虎牙资源（直连）
-- DOMAIN-SUFFIX, huyaapi.com  
+  -DOMAIN-SUFFIX, huyaapi.com  
 #百度资源（直连）
-- DOMAIN-SUFFIX, apibdzy.com  
+  -DOMAIN-SUFFIX, apibdzy.com  
 #飘零影院（直连）
-- DOMAIN-SUFFIX, p2100.net  
+  -DOMAIN-SUFFIX, p2100.net  
 #无尽资源（直连）
-- DOMAIN-SUFFIX, wujinapi.com  
+  -DOMAIN-SUFFIX, wujinapi.com  
 #速博资源（直连）
-- DOMAIN-SUFFIX, subocaiji.com  
+  -DOMAIN-SUFFIX, subocaiji.com  
 #乐视资源（直连）
-- DOMAIN-SUFFIX, leshizyapi.com  
+  -DOMAIN-SUFFIX, leshizyapi.com  
 #探索页（直连）
-- DOMAIN-SUFFIX, infuseku.xyz  
+  -DOMAIN-SUFFIX, infuseku.xyz  
 #魔都动漫（直连）
-- DOMAIN-SUFFIX, moduapi.cc  
+  -DOMAIN-SUFFIX, moduapi.cc  
 #最大资源（直连）
-- DOMAIN-SUFFIX, zuidazy.me  
+  -DOMAIN-SUFFIX, zuidazy.me  
 #奇虎资源（直连）
-- DOMAIN-SUFFIX, qhzyapi.com  
+  -DOMAIN-SUFFIX, qhzyapi.com  
 #火狐资源（直连）
-- DOMAIN-SUFFIX, hhzyapi.com  
+  -DOMAIN-SUFFIX, hhzyapi.com  
 #享看资源（直连）
-- DOMAIN-SUFFIX, xkanzy10.com  
+  -DOMAIN-SUFFIX, xkanzy10.com  
 #新浪资源（直连）
-- DOMAIN-SUFFIX, xinlangapi.com  
+  -DOMAIN-SUFFIX, xinlangapi.com  
 #快云资源（直连）
-- DOMAIN-SUFFIX, kuaiyunzy.com  
+  -DOMAIN-SUFFIX, kuaiyunzy.com  
 #四圈资源（直连）
-- DOMAIN-SUFFIX, fenwe078.cf  
+  -DOMAIN-SUFFIX, fenwe078.cf  
 #哔嘀影视（直连）
-- DOMAIN-SUFFIX, bdys10.com  
+  -DOMAIN-SUFFIX, bdys10.com  
 #快看资源（直连）
-- DOMAIN-SUFFIX, kuaikanzy.net  
+  -DOMAIN-SUFFIX, kuaikanzy.net  
 #厂长&低端播放
-- DOMAIN-SUFFIX, cz01.site  
-- DOMAIN-SUFFIX, larksuitecdn.com  
-- DOMAIN-SUFFIX, fotile.com  
-- DOMAIN-SUFFIX, pstatp.com  
-- DOMAIN-SUFFIX, ugdtimg.com  
-- DOMAIN-SUFFIX, ctyunxs.cn  
-- DOMAIN, wxsnsencsvp.wxs.qq.com  
+  -DOMAIN-SUFFIX, cz01.site  
+  -DOMAIN-SUFFIX, larksuitecdn.com  
+  -DOMAIN-SUFFIX, fotile.com  
+  -DOMAIN-SUFFIX, pstatp.com  
+  -DOMAIN-SUFFIX, ugdtimg.com  
+  -DOMAIN-SUFFIX, ctyunxs.cn  
+  -DOMAIN, wxsnsencsvp.wxs.qq.com  
 #哔嘀播放
-- DOMAIN-SUFFIX, ibytedtos.com  
-- DOMAIN-SUFFIX, toutiao50.com  
-- DOMAIN-SUFFIX, ibyteimg.com  
+  -DOMAIN-SUFFIX, ibytedtos.com  
+  -DOMAIN-SUFFIX, toutiao50.com  
+  -DOMAIN-SUFFIX, ibyteimg.com  
 #阿里播放
-- DOMAIN-SUFFIX, aliyundrive.asia  
-- DOMAIN-SUFFIX, alicloudccp.com  
-- DOMAIN, openapi.aliyundrive.com  
-- DOMAIN, auth.aliyundrive.com  
-- DOMAIN, api.aliyundrive.com  
+  -DOMAIN-SUFFIX, aliyundrive.asia  
+  -DOMAIN-SUFFIX, alicloudccp.com  
+  -DOMAIN, openapi.aliyundrive.com  
+  -DOMAIN, auth.aliyundrive.com  
+  -DOMAIN, api.aliyundrive.com  
 #豆瓣封面
-- DOMAIN-SUFFIX, doubanio.com  
+  -DOMAIN-SUFFIX, doubanio.com  
 #同步数据
-- DOMAIN, gateway.icloud.com  
+  -DOMAIN, gateway.icloud.com  
 #杂七杂八的播放
-- DOMAIN-keyword, v.cdnlz  
-- DOMAIN-keyword, vip.kuaikan  
-- DOMAIN-keyword, vip.ffzy  
-- DOMAIN, vod2.kczybf.com  
-- DOMAIN, top.1080pzy.co  
-- DOMAIN, c3.monidai.com  
-- DOMAIN, pan.dy066.com  
-- DOMAIN, hey11.cjkypo.com  
-- DOMAIN, hnts.ymuuy.com  
-- DOMAIN, hnzy.bfvvs.com  
-- DOMAIN-SUFFIX, maimn.com  
-- DOMAIN, img.lzzyimg.com  
-- DOMAIN, vip.ffzy-play5.com  
-- DOMAIN, vip.ffzy-online6.com  
-- DOMAIN, sss.image8899.net  
-- DOMAIN, ikcdn01.ikzybf.com  
-- DOMAIN, vip.ffzy-play9.com  
-- DOMAIN, svip.picffzy.com  
-- DOMAIN, vip.imgffzy.com  
-- DOMAIN, vip.ffzyread1.com  
+  -DOMAIN-keyword, v.cdnlz  
+  -DOMAIN-keyword, vip.kuaikan  
+  -DOMAIN-keyword, vip.ffzy  
+  -DOMAIN, vod2.kczybf.com  
+  -DOMAIN, top.1080pzy.co  
+  -DOMAIN, c3.monidai.com  
+  -DOMAIN, pan.dy066.com  
+  -DOMAIN, hey11.cjkypo.com  
+  -DOMAIN, hnts.ymuuy.com  
+  -DOMAIN, hnzy.bfvvs.com  
+  -DOMAIN-SUFFIX, maimn.com  
+  -DOMAIN, img.lzzyimg.com  
+  -DOMAIN, vip.ffzy-play5.com  
+  -DOMAIN, vip.ffzy-online6.com  
+  -DOMAIN, sss.image8899.net  
+  -DOMAIN, ikcdn01.ikzybf.com  
+  -DOMAIN, vip.ffzy-play9.com  
+  -DOMAIN, svip.picffzy.com  
+  -DOMAIN, vip.imgffzy.com  
+  -DOMAIN, vip.ffzyread1.com  
