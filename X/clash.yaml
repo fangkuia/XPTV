@@ -2,6 +2,7 @@ payload:
 #玩偶哥哥（直连）
   - DOMAIN-SUFFIX,wogg.link
   - DOMAIN-SUFFIX,wogg.xyz
+  - DOMAIN-SUFFIX, xxooo.cf
 #小纸条（直连）
   - DOMAIN-SUFFIX,gitcafe.net
 #jojo（直连）
