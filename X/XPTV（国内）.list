@@ -22,11 +22,11 @@ host-suffix, ddys.pro, DIRECT
 host-suffix, ddys.mov, DIRECT
 #索尼资源（直连）
 host-suffix, suoniapi.com, DIRECT
-host, v3.sxzyhuij.com, direct
-host, v3.suonizy-youku.com, direct
-host, v8.sxzyhuij.com, direct
-host, snzypic.com, direct
-host, v8.suonizy-youku.com, direct
+host, v3.sxzyhuij.com, DIRECT
+host, v3.suonizy-youku.com, DIRECT
+host, v8.sxzyhuij.com, DIRECT
+host, snzypic.com, DIRECT
+host, v8.suonizy-youku.com, DIRECT
 #非凡资源（直连）
 host-suffix, ffzyapi.com, DIRECT
 #红牛资源（直连）
@@ -80,54 +80,48 @@ host-suffix, bdys10.com, DIRECT
 #快看资源（直连）
 host-suffix, kuaikanzy.net, DIRECT
 #厂长&低端播放
-host-suffix, cz01.site, direct
-host-suffix, larksuitecdn.com, direct
-host-suffix, fotile.com, direct
-host-suffix, pstatp.com, direct
-host-suffix, ugdtimg.com, direct
-host-suffix, ctyunxs.cn, direct
-host, wxsnsencsvp.wxs.qq.com, direct
+host-suffix, cz01.site, DIRECT
+host-suffix, larksuitecdn.com, DIRECT
+host-suffix, fotile.com, DIRECT
+host-suffix, pstatp.com, DIRECT
+host-suffix, ugdtimg.com, DIRECT
+host-suffix, ctyunxs.cn, DIRECT
+host, wxsnsencsvp.wxs.qq.com, DIRECT
 #哔嘀播放
-host-suffix, ibytedtos.com, direct
-host-suffix, toutiao50.com, direct
-host-suffix, ibyteimg.com, direct
+host-suffix, ibytedtos.com, DIRECT
+host-suffix, toutiao50.com, DIRECT
+host-suffix, ibyteimg.com, DIRECT
 #阿里播放
-host-suffix, aliyundrive.asia, direct
-host-suffix, alicloudccp.com, direct
-host, openapi.aliyundrive.com, direct
-host, auth.aliyundrive.com, direct
-host, api.aliyundrive.com, direct
+host-suffix, aliyundrive.asia, DIRECT
+host-suffix, alicloudccp.com, DIRECT
+host, openapi.aliyundrive.com, DIRECT
+host, auth.aliyundrive.com, DIRECT
+host, api.aliyundrive.com, DIRECT
 #豆瓣封面
-host-suffix, doubanio.com, direct
+host-suffix, doubanio.com, DIRECT
 #同步数据
-host, gateway.icloud.com, direct
+host, gateway.icloud.com, DIRECT
 #杂七杂八的播放
-host-keyword, v.cdnlz, direct
-host-keyword, vip.kuaikan, direct
-host-keyword, vip.ffzy, direct
-host, vod2.kczybf.com, direct
-host, top.1080pzy.co, direct
-host, c3.monidai.com, direct
-host, pan.dy066.com, direct
-host, hey11.cjkypo.com, direct
-host, hnts.ymuuy.com, direct
-host, hnzy.bfvvs.com, direct
-host-suffix, maimn.com, direct
-host, img.lzzyimg.com, direct
-host, vip.ffzy-play5.com, direct
-host, vip.ffzy-online6.com, direct
-host, sss.image8899.net, direct
-host, ikcdn01.ikzybf.com, direct
-host, vip.ffzy-play9.com, direct
-host, svip.picffzy.com, direct
-host, vip.imgffzy.com, direct
-host, vip.ffzyread1.com, direct
-host, vip.ffzy-play3.com, direct
-host, vip.ffzyread.com, direct
-host, www.imgikzy.com, direct
-
-
-
-
-
-
+host-keyword, v.cdnlz, DIRECT
+host-keyword, vip.kuaikan, DIRECT
+host-keyword, vip.ffzy, DIRECT
+host, vod2.kczybf.com, DIRECT
+host, top.1080pzy.co, DIRECT
+host, c3.monidai.com, DIRECT
+host, pan.dy066.com, DIRECT
+host, hey11.cjkypo.com, DIRECT
+host, hnts.ymuuy.com, DIRECT
+host, hnzy.bfvvs.com, DIRECT
+host-suffix, maimn.com, DIRECT
+host, img.lzzyimg.com, DIRECT
+host, vip.ffzy-play5.com, DIRECT
+host, vip.ffzy-online6.com, DIRECT
+host, sss.image8899.net, DIRECT
+host, ikcdn01.ikzybf.com, DIRECT
+host, vip.ffzy-play9.com, DIRECT
+host, svip.picffzy.com, DIRECT
+host, vip.imgffzy.com, DIRECT
+host, vip.ffzyread1.com, DIRECT
+host, vip.ffzy-play3.com, DIRECT
+host, vip.ffzyread.com, DIRECT
+host, www.imgikzy.com, DIRECT
