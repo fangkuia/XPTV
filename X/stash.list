@@ -3,6 +3,7 @@ rules:
 #玩偶哥哥（直连）
 - DOMAIN-SUFFIX, wogg.link, DIRECT 
 - DOMAIN-SUFFIX, wogg.xyz, DIRECT 
+- DOMAIN-SUFFIX, xxooo.cf, DIRECT
 #小纸条（直连）
 - DOMAIN-SUFFIX, gitcafe.net, DIRECT 
 #jojo（直连）
@@ -128,6 +129,7 @@ rules:
 #玩偶哥哥（直连）
 - 'DOMAIN-SUFFIX, wogg.link, DIRECT'
 - 'DOMAIN-SUFFIX, wogg.xyz, DIRECT'
+- 'DOMAIN-SUFFIX, xxooo.cf, DIRECT'
 #小纸条（直连）
 - 'DOMAIN-SUFFIX, gitcafe.net, DIRECT'
 #jojo（直连）
