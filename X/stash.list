@@ -1,5 +1,5 @@
 #自行复制粘贴到rules里
-rules:
+#rules:
 #玩偶哥哥（直连）
 - DOMAIN-SUFFIX, wogg.link, DIRECT 
 - DOMAIN-SUFFIX, wogg.xyz, DIRECT 
