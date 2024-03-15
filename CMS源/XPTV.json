@@ -6,7 +6,6 @@
 		{"key": "csp_Ddrk", "name": "🟢低端影视", "type": 3, "api": "csp_Ddrk", "playerType": "2", "searchable": 1, "quickSearch": 1, "changeable": 1},
 		{"key":"csp_Bdys","name":"🟢哔嘀影视","type":3,"api":"csp_Bdys","searchable":1,"quickSearch":1,"filterable":1},
 		{"key":"csp_Zxzj","name":"🟢在线之家","type":3,"api":"csp_Zxzj","searchable":1,"quickSearch":1,"changeable":1,"ext":"https://www.zxzja.com/"},
-	        {"key":"快看资源","name":"🔴快看资源","type":1,"api":"https://www.kuaikanzy.net/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"索尼资源","name":"🔴索尼资源","type":1,"api":"https://suoniapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"非凡资源","name":"🔴非凡资源","type":1,"api":"http://cj.ffzyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"量子资源","name":"🔴量子资源","type":1,"api":"https://cj.lziapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
