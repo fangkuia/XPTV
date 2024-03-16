@@ -1,6 +1,5 @@
 {"sites":[{"key":"森林资源","name":"🟣森林资源","type":1,"api":"https://slapibf.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 	{"key":"探探资源","name":"🟣探探资源","type":1,"api":"https://apittzy.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
-	{"key": "csp_Missav", "name": "🟣MISSAV", "type": 3, "api": "csp_Missav", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1},
 	{"key":"奥斯卡资源网","name":"🟣奥斯卡资源网","type":1,"api":"https://aosikazy.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 	{"key":"老鸭资源采集","name":"🟣老鸭资源采集","type":1,"api":"https://api.apilyzy.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 	{"key":"皇冠","name":"🟣皇冠","type":1,"api":"https://hghhh.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
