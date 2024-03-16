@@ -1,9 +1,4 @@
 {"sites":[	
-		{"key": "Czsapp", "name": "🟢厂长资源", "type": 3, "api": "csp_Czsapp", "playerType": 2, "searchable": 1, "quickSearch": 1, "changeable": 1, "ext": "https://czz9.com/"},
-		{"key": "Olevod", "name": "🟢欧乐影院", "type": 3, "api": "csp_Olevod", "searchable": 1, "quickSearch": 1, "filterable": 1},
-		{"key": "csp_Ddrk", "name": "🟢低端影视", "type": 3, "api": "csp_Ddrk", "playerType": "2", "searchable": 1, "quickSearch": 1, "changeable": 1},
-		{"key":"csp_Bdys","name":"🟢哔嘀影视","type":3,"api":"csp_Bdys","searchable":1,"quickSearch":1,"filterable":1},
-		{"key":"csp_Zxzj","name":"🟢在线之家","type":3,"api":"csp_Zxzj","searchable":1,"quickSearch":1,"changeable":1,"ext":"https://www.zxzja.com/"},
 		{"key": "haiwaikan", "name": "🟡海外看", "type": 1, "api": "https://haiwaikan.com/api.php/provide/vod/", "searchable": 1, "quickSearch": 1},
 		{"key": "yingmi", "name": "🔴映迷资源", "type": 1, "api": "https://www.inmi.app/api.php/provide/vod/", "searchable": 1, "quickSearch": 1},
 		{"key":"索尼资源","name":"🔴索尼资源","type":1,"api":"https://suoniapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
