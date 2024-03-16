@@ -1,5 +1,0 @@
-{"key":"海外看資源","name":"海外看資源(切)","type":1,"api":"https://haiwaikan.com/api.php/provide/vod/","searchable":1,"quickSearch":1}
-{"key":"唐人街","name":"唐人街(切)","type":1,"api":"https://www.tangrenjie.tv/api.php/provide/vod/","searchable":1,"quickSearch":1}
-{"key":"映迷","name":"映迷(切)","type":1,"api":"https://www.inmi.app/api.php/provide/vod/","searchable":1,"quickSearch":1}
-{"key":"索尼资源","name":"索尼资源(切)","type":1,"api":"https://suoniapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1}
-
