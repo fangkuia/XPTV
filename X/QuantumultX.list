@@ -102,6 +102,7 @@ host, gateway.icloud.com, DIRECT
 host-keyword, v.cdnlz, DIRECT
 host-keyword, vip.kuaikan, DIRECT
 host-keyword, vip.ffzy, DIRECT
+host-keyword, 49zyvideoplayurl, DIRECT
 host, vod2.kczybf.com, DIRECT
 host, top.1080pzy.co, DIRECT
 host, c3.monidai.com, DIRECT
