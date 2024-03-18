@@ -21,11 +21,11 @@ DOMAIN-SUFFIX, ddys.pro, DIRECT
 DOMAIN-SUFFIX, ddys.mov, DIRECT
 #索尼资源（直连）
 DOMAIN-SUFFIX, suoniapi.com, DIRECT
-DOMAIN, v3.sxzyhuij.com, DIRECT
-DOMAIN, v3.suonizy-youku.com, DIRECT
-DOMAIN, v8.sxzyhuij.com, DIRECT
-DOMAIN, snzypic.com, DIRECT
-DOMAIN, v8.suonizy-youku.com, DIRECT
+DOMAIN-SUFFIX, v3.sxzyhuij.com, DIRECT
+DOMAIN-SUFFIX, v3.suonizy-youku.com, DIRECT
+DOMAIN-SUFFIX, v8.sxzyhuij.com, DIRECT
+DOMAIN-SUFFIX, snzypic.com, DIRECT
+DOMAIN-SUFFIX, v8.suonizy-youku.com, DIRECT
 #非凡资源（直连）
 DOMAIN-SUFFIX, ffzyapi.com, DIRECT
 #红牛资源（直连）
@@ -95,9 +95,9 @@ DOMAIN-suffix, ibyteimg.com, DIRECT
 #阿里播放
 DOMAIN-suffix, aliyundrive.asia, DIRECT
 DOMAIN-suffix, alicloudccp.com, DIRECT
-DOMAIN, openapi.aliyundrive.com, DIRECT
-DOMAIN, auth.aliyundrive.com, DIRECT
-DOMAIN, api.aliyundrive.com, DIRECT
+DOMAIN-SUFFIX, openapi.aliyundrive.com, DIRECT
+DOMAIN-SUFFIX, auth.aliyundrive.com, DIRECT
+DOMAIN-SUFFIX, api.aliyundrive.com, DIRECT
 #豆瓣封面
 DOMAIN-suffix, doubanio.com, DIRECT
 #同步数据
@@ -106,23 +106,23 @@ DOMAIN, gateway.icloud.com, DIRECT
 DOMAIN-keyword, v.cdnlz, DIRECT
 DOMAIN-keyword, vip.kuaikan, DIRECT
 DOMAIN-keyword, vip.ffzy, DIRECT
-DOMAIN, vod2.kczybf.com, DIRECT
-DOMAIN, top.1080pzy.co, DIRECT
-DOMAIN, c3.monidai.com, DIRECT
-DOMAIN, pan.dy066.com, DIRECT
-DOMAIN, hey11.cjkypo.com, DIRECT
-DOMAIN, hnts.ymuuy.com, DIRECT
-DOMAIN, hnzy.bfvvs.com, DIRECT
+DOMAIN-SUFFIX, vod2.kczybf.com, DIRECT
+DOMAIN-SUFFIX, top.1080pzy.co, DIRECT
+DOMAIN-SUFFIX, c3.monidai.com, DIRECT
+DOMAIN-SUFFIX, pan.dy066.com, DIRECT
+DOMAIN-SUFFIX, hey11.cjkypo.com, DIRECT
+DOMAIN-SUFFIX, hnts.ymuuy.com, DIRECT
+DOMAIN-SUFFIX, hnzy.bfvvs.com, DIRECT
 DOMAIN-suffix, maimn.com, DIRECT
-DOMAIN, img.lzzyimg.com, DIRECT
-DOMAIN, vip.ffzy-play5.com, DIRECT
-DOMAIN, vip.ffzy-online6.com, DIRECT
-DOMAIN, sss.image8899.net, DIRECT
-DOMAIN, ikcdn01.ikzybf.com, DIRECT
-DOMAIN, vip.ffzy-play9.com, DIRECT
-DOMAIN, svip.picffzy.com, DIRECT
-DOMAIN, vip.imgffzy.com, DIRECT
-DOMAIN, vip.ffzyread1.com, DIRECT
-DOMAIN, vip.ffzy-play3.com, DIRECT
-DOMAIN, vip.ffzyread.com, DIRECT
-DOMAIN, www.imgikzy.com, DIRECT
+DOMAIN-SUFFIX, img.lzzyimg.com, DIRECT
+DOMAIN-SUFFIX, vip.ffzy-play5.com, DIRECT
+DOMAIN-SUFFIX, vip.ffzy-online6.com, DIRECT
+DOMAIN-SUFFIX, sss.image8899.net, DIRECT
+DOMAIN-SUFFIX, ikcdn01.ikzybf.com, DIRECT
+DOMAIN-SUFFIX, vip.ffzy-play9.com, DIRECT
+DOMAIN-SUFFIX, svip.picffzy.com, DIRECT
+DOMAIN-SUFFIX, vip.imgffzy.com, DIRECT
+DOMAIN-SUFFIX, vip.ffzyread1.com, DIRECT
+DOMAIN-SUFFIX, vip.ffzy-play3.com, DIRECT
+DOMAIN-SUFFIX, vip.ffzyread.com, DIRECT
+DOMAIN-SUFFIX, www.imgikzy.com, DIRECT
