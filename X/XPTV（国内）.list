@@ -103,6 +103,8 @@ host-suffix, doubanio.com, DIRECT
 #同步数据
 host, gateway.icloud.com, DIRECT
 #杂七杂八的播放
+host, ikunzyapi.com, direct
+host-keyword, ikzybf, direct
 host-keyword, 49zyvideoplayurl, DIRECT
 host-keyword, v.cdnlz, DIRECT
 host-keyword, vip.kuaikan, DIRECT
