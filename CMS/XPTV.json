@@ -1,5 +1,6 @@
 {"sites":[	
 		{"key": "haiwaikan", "name": "🟡海外看", "type": 1, "api": "https://haiwaikan.com/api.php/provide/vod/", "searchable": 1, "quickSearch": 1},
+		{"key":"360资源","name":"🟡360资源","type":1,"api":"https://360zy.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key": "四九资源", "name": "🔴四九资源", "type": 1, "api": "https://49zyw.com/api.php/provide/vod/", "searchable": 1, "quickSearch": 1},
 		{"key":"索尼资源","name":"🔴索尼资源","type":1,"api":"https://suoniapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"ikun资源","name":"🔴ikun资源","type":1,"api":"https://ikunzyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
