@@ -1,4 +1,5 @@
-const m3u8 = $response.body;
+const regex = '<head>';
+const m3u8 = $response.body.replace(regex);
 const lines = m3u8.split("\n");
 
 const haiwaikan = [
