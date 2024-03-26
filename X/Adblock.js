@@ -68,6 +68,4 @@ if (typeof $response != "undefined" && $response.status == 200) {
     console.log(`移除${website}廣告${count}行`);
 
     $done({ body: modifiedM3u8 });
-} else {
-    console.log("未能获取有效的响应主体");
-}
+} 
