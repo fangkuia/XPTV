@@ -1,4 +1,4 @@
-if (typeof $response != "undefined" && $response.status == 200) {
+
 const m3u8 = $response.body;
 const lines = m3u8.split("\n");
 
@@ -68,5 +68,5 @@ let modifiedM3u8 = lines.join("\n");
 console.log(`移除${website}廣告${count}行`)
 
 $done({ body: modifiedM3u8 });
-} 
+
 
