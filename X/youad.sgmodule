@@ -22,4 +22,4 @@ adcontext\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctie
 ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext reject
 
 [MITM]
-hostname = %APPEND% -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com,
+hostname = %APPEND% -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com,*.googleusercontent.com,*.googlesyndication.com,yt3.ggpht.com,*.ytimg.com,
