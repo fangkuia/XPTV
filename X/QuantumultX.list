@@ -102,6 +102,7 @@ host, gateway.icloud.com, DIRECT
 host, ikunzyapi.com, direct
 host-keyword, ikzybf, direct
 host-keyword, v.cdnlz, DIRECT
+host-keyword, kuaiyun, DIRECT
 host-keyword, vip.kuaikan, DIRECT
 host-keyword, vip.ffzy, DIRECT
 host-keyword, 49zyvideoplayurl, DIRECT
