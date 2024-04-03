@@ -99,11 +99,11 @@ DOMAIN-KEYWORD, doubanio.com
 DOMAIN, gateway.icloud.com
 # >杂七杂八的播放
 DOMAIN, ikunzyapi.com
-DOMAIN-keyword, ikzybf
-DOMAIN-keyword, 49zyvideoplayurl
-DOMAIN-keyword, v.cdnlz
-DOMAIN-keyword, vip.kuaikan
-DOMAIN-keyword, vip.ffzy
+DOMAIN-KEYWORD, ikzybf
+DOMAIN-KEYWORD, 49zyvideoplayurl
+DOMAIN-KEYWORD, v.cdnlz
+DOMAIN-KEYWORD, vip.kuaikan
+DOMAIN-KEYWORD, vip.ffzy
 DOMAIN, vod2.kczybf.com
 DOMAIN, top.1080pzy.co
 DOMAIN, c3.monidai.com
