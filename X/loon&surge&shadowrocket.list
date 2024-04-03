@@ -79,8 +79,6 @@ DOMAIN-SUFFIX,xinlangapi.com
 DOMAIN-SUFFIX,kuaiyunzy.com
 #四圈资源（直连）
 DOMAIN-SUFFIX,fenwe078.cf
-#快云资源（直连）
-DST-PORT,1234,DIRECT
 #哔嘀影视（直连）
 DOMAIN-SUFFIX,bdys10.com
 #快看资源（直连）
