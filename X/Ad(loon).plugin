@@ -2,6 +2,10 @@
 #!desc=去除海外看，量子，非凡的ts广告
 #!icon=https://raw.githubusercontent.com/fangkuia/XPTV/main/a1yt1-gx0qf-001.ico
 
+[URL Rewrite]
+# 暴風跑馬燈
+(^https?:\/\/s\d+\.bfengbf\.com\/video)(.+)_z5q\.ts $1$2.ts 302
+
 [Script]
 #http-response ^https?:\/\/m3u\.haiwaikan\.com\/xm3u8\/(.+).m3u8 script-path=https://raw.githubusercontent.com/fangkuia/XPTV/main/X/test.js, requires-body=true, timeout=10, tag=test
 http-response ^https?:\/\/(super|svipsvip|vip)\.ffzy[A-Za-z0-9-]+\.com\/(.+)\/hls\/(.+)\.m3u8 script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true, timeout=10, tag=非凡
