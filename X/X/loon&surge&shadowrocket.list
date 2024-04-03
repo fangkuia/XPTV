@@ -1,0 +1,127 @@
+# >玩偶哥哥
+DOMAIN-KEYWORD,wogg.link
+DOMAIN-KEYWORD,wogg.xyz
+DOMAIN-KEYWORD,tvfan.xxooo.cf
+# >小纸条
+DOMAIN-KEYWORD,gitcafe.net
+DOMAIN-KEYWORD,yunluo.oss-cn-shanghai.aliyuncs.com
+# >哔嘀影视
+DOMAIN-KEYWORD,www.bdys10.com
+DOMAIN-KEYWORD,www.bdys01.com
+# >低端影视
+DOMAIN-KEYWORD,ddys.pro
+DOMAIN-KEYWORD,ddys.mov
+# >在线之家
+DOMAIN-KEYWORD,www.zxzja.com
+DOMAIN-KEYWORD,www.zxzjhd.com
+DOMAIN-KEYWORD,www.zxzj.pro
+# >厂长资源
+DOMAIN-KEYWORD,www.czzy88.com
+DOMAIN-KEYWORD,www.czzy22.com
+DOMAIN-KEYWORD,www.czzy66.com
+# >jojo（直连）
+DOMAIN-KEYWORD, jiohub.top
+# >索尼资源（直连）
+DOMAIN-KEYWORD, suoniapi.com
+DOMAIN, v3.sxzyhuij.com
+DOMAIN, v3.suonizy-youku.com
+DOMAIN, v8.sxzyhuij.com
+DOMAIN, snzypic.com
+DOMAIN, v8.suonizy-youku.com
+# >非凡资源（直连）
+DOMAIN-KEYWORD, ffzyapi.com
+# >红牛资源（直连）
+DOMAIN-KEYWORD, hongniuzy2.com
+# >量子资源（直连）
+DOMAIN-KEYWORD, lziapi.com
+# >快车资源（直连）
+DOMAIN-KEYWORD, kczyapi.com
+# >三九影視（直连）
+DOMAIN-KEYWORD, 39kan.com
+# >闪电资源（直连）
+DOMAIN-KEYWORD, sdzyapi.com
+# >樱花资源（直连）
+DOMAIN-KEYWORD, apiyhzy.com
+# >卧龙资源（直连）
+DOMAIN-KEYWORD, wolongzyw.com
+# >飘花影院（直连）
+DOMAIN-KEYWORD, ahjiuman.com
+# >虎牙资源（直连）
+DOMAIN-KEYWORD, huyaapi.com
+# >百度资源（直连）
+DOMAIN-KEYWORD, apibdzy.com
+# >飘零影院（直连）
+DOMAIN-KEYWORD, p2100.net
+# >无尽资源（直连）
+DOMAIN-KEYWORD, wujinapi.com
+# >速博资源（直连）
+DOMAIN-KEYWORD, subocaiji.com
+# >乐视资源（直连）
+DOMAIN-KEYWORD, leshizyapi.com
+# >探索页（直连）
+DOMAIN-KEYWORD, infuseku.xyz
+# >魔都动漫（直连）
+DOMAIN-KEYWORD, moduapi.cc
+# >最大资源（直连）
+DOMAIN-KEYWORD, zuidazy.me
+# >奇虎资源（直连）
+DOMAIN-KEYWORD, qhzyapi.com
+# >火狐资源（直连）
+DOMAIN-KEYWORD, hhzyapi.com
+# >享看资源（直连）
+DOMAIN-KEYWORD, xkanzy10.com
+# >新浪资源（直连）
+DOMAIN-KEYWORD, xinlangapi.com
+# >快云资源（直连）
+DOMAIN-KEYWORD, kuaiyunzy.com
+# >四圈资源（直连）
+DOMAIN-KEYWORD, fenwe078.cf
+# >快云资源（直连）
+DST-PORT, 1234,DIRECT
+# >哔嘀影视（直连）
+DOMAIN-KEYWORD, bdys10.com
+# >快看资源（直连）
+DOMAIN-KEYWORD, kuaikanzy.net
+# >厂长&低端播放
+DOMAIN-KEYWORD, cz01.site
+DOMAIN-KEYWORD, larksuitecdn.com
+DOMAIN-KEYWORD, fotile.com
+DOMAIN-KEYWORD, pstatp.com
+DOMAIN-KEYWORD, ugdtimg.com
+DOMAIN-KEYWORD, ctyunxs.cn
+DOMAIN, wxsnsencsvp.wxs.qq.com
+# >哔嘀播放
+DOMAIN-KEYWORD, ibytedtos.com
+DOMAIN-KEYWORD, toutiao50.com
+DOMAIN-KEYWORD, ibyteimg.com
+# >豆瓣封面
+DOMAIN-KEYWORD, doubanio.com
+# >同步数据
+DOMAIN, gateway.icloud.com
+# >杂七杂八的播放
+DOMAIN, ikunzyapi.com
+DOMAIN-keyword, ikzybf
+DOMAIN-keyword, 49zyvideoplayurl
+DOMAIN-keyword, v.cdnlz
+DOMAIN-keyword, vip.kuaikan
+DOMAIN-keyword, vip.ffzy
+DOMAIN, vod2.kczybf.com
+DOMAIN, top.1080pzy.co
+DOMAIN, c3.monidai.com
+DOMAIN, pan.dy066.com
+DOMAIN, hey11.cjkypo.com
+DOMAIN, hnts.ymuuy.com
+DOMAIN, hnzy.bfvvs.com
+DOMAIN-KEYWORD, maimn.com
+DOMAIN, img.lzzyimg.com
+DOMAIN, vip.ffzy-play5.com
+DOMAIN, vip.ffzy-online6.com
+DOMAIN, sss.image8899.net
+DOMAIN, ikcdn01.ikzybf.com
+DOMAIN, vip.ffzy-play9.com
+DOMAIN, svip.picffzy.com
+DOMAIN, vip.imgffzy.com
+DOMAIN, vip.ffzyread1.com
+DOMAIN, vip.ffzy-play3.com
+DOMAIN, vip.ffzyread.com
+DOMAIN, www.imgikzy.com
