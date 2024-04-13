@@ -7,6 +7,10 @@ payload:
   - DOMAIN-SUFFIX,gitcafe.net
 #jojo（直连）
   - DOMAIN-SUFFIX,jiohub.top
+#阿里小站（直连）
+  - DOMAIN-SUFFIX, pan666.net
+#云盘资源（直连）
+  - DOMAIN-SUFFIX, yunpan1.cc
 #厂长资源（直连）
   - DOMAIN-SUFFIX,czzy88.com
   - DOMAIN-SUFFIX,czzy22.com
