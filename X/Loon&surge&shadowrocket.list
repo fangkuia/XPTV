@@ -8,6 +8,10 @@ DOMAIN-SUFFIX, xxooo.cf, DIRECT
 DOMAIN-SUFFIX, gitcafe.net, DIRECT
 #jojo（直连）
 DOMAIN-SUFFIX, jiohub.top, DIRECT
+#阿里小站（直连）
+DOMAIN-SUFFIX, pan666.net, DIRECT
+#云盘资源（直连）
+DOMAIN-SUFFIX, yunpan1.cc, DIRECT
 #厂长资源（直连）
 DOMAIN-SUFFIX, czzy88.com, DIRECT
 DOMAIN-SUFFIX, czzy22.com, DIRECT
