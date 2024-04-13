@@ -10,6 +10,7 @@
 		{"key":"暴风影视","name":"🔴暴风影视","type":1,"api":"https://bfzyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key": "红牛资源", "name": "🔴红牛资源", "type": 1, "api": "https://www.hongniuzy2.com/api.php/provide/vod/", "searchable": 0, "quickSearch": 0},
 		{"key":"飞速资源","name":"🔴飞速资源","type":1,"api":"https://www.feisuzyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
+	        {"key":"快看资源","name":"🔴快看资源","type":1,"api": "https://www.kuaikan-api.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"熊掌资源","name":"🔴熊掌资源","type":1,"api":"https://xzcjz.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"39影視","name":"🔴三九影視","type":1,"api":"https://www.39kan.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"快车资源","name":"🔴快车资源","type":1,"api":"https://caiji.kczyapi.com/api.php/provide/vod/from/kcm3u8/","searchable":1,"quickSearch":1},
