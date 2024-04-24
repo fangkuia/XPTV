@@ -26,6 +26,8 @@ host-suffix, zxzj.pro, DIRECT
 #低端影视（直连）
 host-suffix, ddys.pro, DIRECT
 host-suffix, ddys.mov, DIRECT
+#AGE动漫（直连）
+host-suffix, agedm.org, DIRECT
 #索尼资源（直连）
 host-suffix, suoniapi.com, DIRECT
 host, v3.sxzyhuij.com, DIRECT
