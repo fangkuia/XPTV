@@ -24,6 +24,8 @@
 #低端影视（直连）
 - DOMAIN-SUFFIX, ddys.pro, DIRECT 
 - DOMAIN-SUFFIX, ddys.mov, DIRECT 
+#AGE动漫（直连）
+- DOMAIN-SUFFIX, agedm.org, DIRECT
 #索尼资源（直连）
 - DOMAIN-SUFFIX, suoniapi.com, DIRECT 
 - DOMAIN, v3.sxzyhuij.com, DIRECT 
