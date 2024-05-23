@@ -37,7 +37,7 @@ host-suffix, ddys.mov, DIRECT
 host-suffix, agedm.org, DIRECT
 #哔嘀影视（直连）
 host-keyword, bdys, DIRECT
-host-SUFFIX, bdys10.com, DIRECT
+host-suffix, bdys10.com, DIRECT
 #索尼资源（直连）
 host-suffix, suoniapi.com, DIRECT
 host, v3.sxzyhuij.com, DIRECT
