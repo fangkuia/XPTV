@@ -1,16 +1,23 @@
 #玩偶哥哥（直连）
+host-keyword, wogg, DIRECT
 host-suffix, wogg.link, DIRECT
 host-suffix, wogg.xyz, DIRECT
 host-suffix, xxooo.cf, DIRECT
+#玩偶表哥（直连）
+host-keyword, wobge.run, DIRECT
 #小纸条（直连）
 host-suffix, gitcafe.net, DIRECT
 #jojo（直连）
 host-suffix, jiohub.top, DIRECT
 #阿里小站（直连）
+host-keyword, pan666, DIRECT
 host-suffix, pan666.net, DIRECT
 #云盘资源（直连）
+host-keyword,yunpan, DIRECT
 host-suffix, yunpan1.cc, DIRECT
 #厂长资源（直连）
+host-keyword, czzy, DIRECT
+host-keyword, czys, DIRECT
 host-suffix, czzy88.com, DIRECT
 host-suffix, czzy22.com, DIRECT
 host-suffix, czzy66.com, DIRECT
@@ -18,14 +25,19 @@ host-suffix, cz233.com, DIRECT
 host-suffix, czys.top, DIRECT
 host-suffix, czzy77.com, DIRECT
 #在线之家（直连）
+host-keyword, zxzj, DIRECT
 host-suffix, zxzja.com, DIRECT
 host-suffix, zxzjhd.com, DIRECT
 host-suffix, zxzj.pro, DIRECT
 #低端影视（直连）
+host-keyword, ddys, DIRECT
 host-suffix, ddys.pro, DIRECT
 host-suffix, ddys.mov, DIRECT
 #AGE动漫（直连）
 host-suffix, agedm.org, DIRECT
+#哔嘀影视（直连）
+host-keyword, bdys, DIRECT
+host-SUFFIX, bdys10.com, DIRECT
 #索尼资源（直连）
 host-suffix, suoniapi.com, DIRECT
 host, v3.sxzyhuij.com, DIRECT
@@ -81,8 +93,6 @@ host-suffix, xinlangapi.com, DIRECT
 host-suffix, kuaiyunzy.com, DIRECT
 #四圈资源（直连）
 host-suffix, fenwe078.cf, DIRECT
-#哔嘀影视（直连）
-host-suffix, bdys10.com, DIRECT
 #快看资源（直连）
 host-suffix, kuaikanzy.net, DIRECT
 #厂长&低端播放
