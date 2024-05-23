@@ -1,9 +1,12 @@
 #[Rule]
 #将以下内容复制粘贴到[Rule]下即可
 #玩偶哥哥（直连）
+DOMAIN-keyword, wogg, DIRECT
 DOMAIN-SUFFIX, wogg.link, DIRECT
 DOMAIN-SUFFIX, wogg.xyz, DIRECT
 DOMAIN-SUFFIX, xxooo.cf, DIRECT
+#玩偶表哥（直连）
+DOMAIN-keyword, wobge.run, DIRECT
 #小纸条（直连）
 DOMAIN-SUFFIX, gitcafe.net, DIRECT
 #jojo（直连）
@@ -11,23 +14,31 @@ DOMAIN-SUFFIX, jiohub.top, DIRECT
 #阿里小站（直连）
 DOMAIN-SUFFIX, pan666.net, DIRECT
 #云盘资源（直连）
+DOMAIN-keyword,yunpan, DIRECT
 DOMAIN-SUFFIX, yunpan1.cc, DIRECT
 #厂长资源（直连）
+DOMAIN-keyword, czzy, DIRECT
+DOMAIN-keyword, czys, DIRECT
 DOMAIN-SUFFIX, czzy88.com, DIRECT
 DOMAIN-SUFFIX, czzy22.com, DIRECT
 DOMAIN-SUFFIX, czzy66.com, DIRECT
 DOMAIN-SUFFIX, cz233.com, DIRECT
 DOMAIN-SUFFIX, czys.top, DIRECT
 DOMAIN-SUFFIX, czzy77.com, DIRECT
-#AGE动漫（直连）
-DOMAIN-SUFFIX, agedm.org, DIRECT
 #在线之家（直连）
+DOMAIN-keyword, zxzj, DIRECT
 DOMAIN-SUFFIX, zxzja.com, DIRECT
 DOMAIN-SUFFIX, zxzjhd.com, DIRECT
 DOMAIN-SUFFIX, zxzj.pro, DIRECT
 #低端影视（直连）
+DOMAIN-keyword, ddys, DIRECT
 DOMAIN-SUFFIX, ddys.pro, DIRECT
 DOMAIN-SUFFIX, ddys.mov, DIRECT
+#AGE动漫（直连）
+DOMAIN-SUFFIX, agedm.org, DIRECT
+#哔嘀影视（直连）
+DOMAIN-keyword, bdys, DIRECT
+DOMAIN-SUFFIX, bdys10.com, DIRECT
 #索尼资源（直连）
 DOMAIN-SUFFIX, suoniapi.com, DIRECT
 DOMAIN, v3.sxzyhuij.com, DIRECT
@@ -83,8 +94,6 @@ DOMAIN-SUFFIX, kuaiyunzy.com, DIRECT
 DOMAIN-SUFFIX, fenwe078.cf, DIRECT
 #快云资源（直连）
 DST-PORT, 1234,DIRECT
-#哔嘀影视（直连）
-DOMAIN-SUFFIX, bdys10.com, DIRECT
 #快看资源（直连）
 DOMAIN-SUFFIX, kuaikanzy.net, DIRECT
 #厂长&低端播放
