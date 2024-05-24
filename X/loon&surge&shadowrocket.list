@@ -6,45 +6,45 @@
 # RULE-SET,https://raw.githubusercontent.com/fangkuia/XPTV/main/X/loon%26surge%26shadowrocket.list,DIRECT
 
 #玩偶哥哥（直连）
-DOMAIN-keyword, wogg, DIRECT
-DOMAIN-SUFFIX, wogg.link, DIRECT
-DOMAIN-SUFFIX, wogg.xyz, DIRECT
-DOMAIN-SUFFIX, xxooo.cf, DIRECT
+DOMAIN-keyword, wogg
+DOMAIN-SUFFIX, wogg.link
+DOMAIN-SUFFIX, wogg.xyz
+DOMAIN-SUFFIX, xxooo.cf
 #玩偶表哥（直连）
-DOMAIN-keyword, wobge.run, DIRECT
+DOMAIN-keyword, wobge.run
 #小纸条（直连）
-DOMAIN-SUFFIX, gitcafe.net, DIRECT
+DOMAIN-SUFFIX, gitcafe.net
 #jojo（直连）
-DOMAIN-SUFFIX, jiohub.top, DIRECT
+DOMAIN-SUFFIX, jiohub.top
 #阿里小站（直连）
-DOMAIN-keyword,pan666, DIRECT
-DOMAIN-SUFFIX, pan666.net, DIRECT
+DOMAIN-keyword,pan666
+DOMAIN-SUFFIX, pan666.net
 #云盘资源（直连）
-DOMAIN-keyword,yunpan, DIRECT
-DOMAIN-SUFFIX, yunpan1.cc, DIRECT
+DOMAIN-keyword,yunpan
+DOMAIN-SUFFIX, yunpan1.cc
 #厂长资源（直连）
-DOMAIN-keyword, czzy, DIRECT
-DOMAIN-keyword, czys, DIRECT
-DOMAIN-SUFFIX, czzy88.com, DIRECT
-DOMAIN-SUFFIX, czzy22.com, DIRECT
-DOMAIN-SUFFIX, czzy66.com, DIRECT
-DOMAIN-SUFFIX, cz233.com, DIRECT
-DOMAIN-SUFFIX, czys.top, DIRECT
-DOMAIN-SUFFIX, czzy77.com, DIRECT
+DOMAIN-keyword, czzy
+DOMAIN-keyword, czys
+DOMAIN-SUFFIX, czzy88.com
+DOMAIN-SUFFIX, czzy22.com
+DOMAIN-SUFFIX, czzy66.com
+DOMAIN-SUFFIX, cz233.com
+DOMAIN-SUFFIX, czys.top
+DOMAIN-SUFFIX, czzy77.com
 #在线之家（直连）
-DOMAIN-keyword, zxzj, DIRECT
-DOMAIN-SUFFIX, zxzja.com, DIRECT
-DOMAIN-SUFFIX, zxzjhd.com, DIRECT
-DOMAIN-SUFFIX, zxzj.pro, DIRECT
+DOMAIN-keyword, zxzj
+DOMAIN-SUFFIX, zxzja.com
+DOMAIN-SUFFIX, zxzjhd.com
+DOMAIN-SUFFIX, zxzj.pro
 #低端影视（直连）
-DOMAIN-keyword, ddys, DIRECT
-DOMAIN-SUFFIX, ddys.pro, DIRECT
-DOMAIN-SUFFIX, ddys.mov, DIRECT
+DOMAIN-keyword, ddys
+DOMAIN-SUFFIX, ddys.pro
+DOMAIN-SUFFIX, ddys.mov
 #AGE动漫（直连）
-DOMAIN-SUFFIX, agedm.org, DIRECT
+DOMAIN-SUFFIX, agedm.org
 #哔嘀影视（直连）
-DOMAIN-keyword, bdys, DIRECT
-DOMAIN-SUFFIX, bdys10.com, DIRECT
+DOMAIN-keyword, bdys
+DOMAIN-SUFFIX, bdys10.com
 #索尼资源（直连）
 DOMAIN-SUFFIX,suoniapi.com
 DOMAIN,v3.sxzyhuij.com
