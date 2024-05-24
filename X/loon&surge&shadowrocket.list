@@ -6,25 +6,25 @@
 # RULE-SET,https://raw.githubusercontent.com/fangkuia/XPTV/main/X/loon%26surge%26shadowrocket.list,DIRECT
 
 #玩偶哥哥（直连）
-DOMAIN-keyword, wogg
+DOMAIN-KEYWORD, wogg
 DOMAIN-SUFFIX, wogg.link
 DOMAIN-SUFFIX, wogg.xyz
 DOMAIN-SUFFIX, xxooo.cf
 #玩偶表哥（直连）
-DOMAIN-keyword, wobge.run
+DOMAIN-KEYWORD, wobge.run
 #小纸条（直连）
 DOMAIN-SUFFIX, gitcafe.net
 #jojo（直连）
 DOMAIN-SUFFIX, jiohub.top
 #阿里小站（直连）
-DOMAIN-keyword,pan666
+DOMAIN-KEYWORD,pan666
 DOMAIN-SUFFIX, pan666.net
 #云盘资源（直连）
-DOMAIN-keyword,yunpan
+DOMAIN-KEYWORD,yunpan
 DOMAIN-SUFFIX, yunpan1.cc
 #厂长资源（直连）
-DOMAIN-keyword, czzy
-DOMAIN-keyword, czys
+DOMAIN-KEYWORD, czzy
+DOMAIN-KEYWORD, czys
 DOMAIN-SUFFIX, czzy88.com
 DOMAIN-SUFFIX, czzy22.com
 DOMAIN-SUFFIX, czzy66.com
@@ -32,12 +32,12 @@ DOMAIN-SUFFIX, cz233.com
 DOMAIN-SUFFIX, czys.top
 DOMAIN-SUFFIX, czzy77.com
 #在线之家（直连）
-DOMAIN-keyword, zxzj
+DOMAIN-KEYWORD, zxzj
 DOMAIN-SUFFIX, zxzja.com
 DOMAIN-SUFFIX, zxzjhd.com
 DOMAIN-SUFFIX, zxzj.pro
 #低端影视（直连）
-DOMAIN-keyword, ddys
+DOMAIN-KEYWORD, ddys
 DOMAIN-SUFFIX, ddys.pro
 DOMAIN-SUFFIX, ddys.mov
 #AGE动漫（直连）
