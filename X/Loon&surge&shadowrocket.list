@@ -109,7 +109,9 @@ DOMAIN, wxsnsencsvp.wxs.qq.com, DIRECT
 DOMAIN-suffix, ibytedtos.com, DIRECT
 DOMAIN-suffix, toutiao50.com, DIRECT
 DOMAIN-suffix, ibyteimg.com, DIRECT
-#阿里播放
+#网盘播放
+DOMAIN-KEYWORD, quark, DIRECT
+DOMAIN, drive-pc.quark.cn, DIRECT
 DOMAIN-suffix, aliyundrive.asia, DIRECT
 DOMAIN-suffix, alicloudccp.com, DIRECT
 DOMAIN, openapi.aliyundrive.com, DIRECT
