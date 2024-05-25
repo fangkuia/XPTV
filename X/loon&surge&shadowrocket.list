@@ -112,7 +112,10 @@ DOMAIN,wxsnsencsvp.wxs.qq.com
 DOMAIN-SUFFIX,ibytedtos.com
 DOMAIN-SUFFIX,toutiao50.com
 DOMAIN-SUFFIX,ibyteimg.com
-#阿里播放
+#网盘播放
+DOMAIN-KEYWORD, quark
+DOMAIN, drive-pc.quark.cn
+DOMAIN-KEYWORD, aliyun
 DOMAIN-SUFFIX,aliyundrive.asia
 DOMAIN-SUFFIX,alicloudccp.com
 DOMAIN,openapi.aliyundrive.com
