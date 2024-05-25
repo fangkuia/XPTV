@@ -107,7 +107,10 @@ host, wxsnsencsvp.wxs.qq.com, DIRECT
 host-suffix, ibytedtos.com, DIRECT
 host-suffix, toutiao50.com, DIRECT
 host-suffix, ibyteimg.com, DIRECT
-#阿里播放
+#网盘播放
+host-keyword, quark, DIRECT
+host, drive-pc.quark.cn, DIRECT
+host-keyword, aliyun, DIRECT
 host-suffix, aliyundrive.asia, DIRECT
 host-suffix, alicloudccp.com, DIRECT
 host, openapi.aliyundrive.com, DIRECT
