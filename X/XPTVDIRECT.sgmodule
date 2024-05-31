@@ -1,5 +1,4 @@
 [Rule]
-#将以下内容复制粘贴到[Rule]下即可
 #玩偶哥哥（直连）
 DOMAIN-keyword, wogg, DIRECT
 DOMAIN-SUFFIX, wogg.link, DIRECT
