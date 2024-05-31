@@ -1,3 +1,6 @@
+#!url=https://raw.githubusercontent.com/fangkuia/XPTV/main/X/xptv.sgmodule
+#!name=XPTV规则
+#!desc=仅直连
 [Rule]
 #玩偶哥哥（直连）
 DOMAIN-keyword, wogg, DIRECT
