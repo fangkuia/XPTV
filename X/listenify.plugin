@@ -1,0 +1,8 @@
+#!name=listenify
+#!desc=配合LrcAPI获取网易云的封面与歌词
+
+[Script]
+http-request https:\/\/api\.lrc\.cx\/(lyrics|cover) script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/listenify.js, timeout=10, tag=lyrics
+
+[Mitm]
+hostname = api.lrc.cx
