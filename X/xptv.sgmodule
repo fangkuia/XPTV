@@ -123,8 +123,8 @@ DOMAIN-SUFFIX, doubanio.com, DIRECT
 #同步数据
 DOMAIN, gateway.icloud.com, DIRECT
 #杂七杂八的播放
-DOMAIN, ikunzyapi.com, direct
-DOMAIN-KEYWORD, ikzybf, direct
+DOMAIN, ikunzyapi.com, DIRECT
+DOMAIN-KEYWORD, ikzybf, DIRECT
 DOMAIN-KEYWORD, 49zyvideoplayurl, DIRECT
 DOMAIN-KEYWORD, v.cdnlz, DIRECT
 DOMAIN-KEYWORD, vip.kuaikan, DIRECT
