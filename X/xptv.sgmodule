@@ -96,8 +96,6 @@ DOMAIN-SUFFIX, xinlangapi.com, DIRECT
 DOMAIN-SUFFIX, kuaiyunzy.com, DIRECT
 #四圈资源（直连）
 DOMAIN-SUFFIX, fenwe078.cf, DIRECT
-#快云资源（直连）
-DST-PORT, 1234,DIRECT
 #快看资源（直连）
 DOMAIN-SUFFIX, kuaikanzy.net, DIRECT
 #厂长&低端播放
