@@ -1,6 +1,7 @@
 {"sites":[	
 		{"key": "haiwaikan","name": "🟡海外看","type": 1, "api": "https://haiwaikan.com/api.php/provide/vod/","searchable": 1,"quickSearch": 1},
 		{"key":"360资源","name":"🟡360资源","type":1,"api":"https://360zy.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
+		{"key":"黑木","name":"🟡黑木耳","type":1,"api":"https://www.heimuer.tv/api.php/provide/vod"},
 		{"key":"牛牛资源","name":"🔴牛牛资源","type":1,"api":"https://api.niuniuzy.me/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key":"丫丫资源","name":"🔴丫丫资源","type":1,"api":"https://cj.yayazy.net/api.php/provide/vod/","searchable":1,"quickSearch":1},
 		{"key": "U酷资源","name": "🔴U酷资源","type": 1, "api":"https://api.ukuapi.com/api.php/provide/vod/","searchable": 1,"quickSearch": 1},
