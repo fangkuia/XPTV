@@ -1,5 +1,5 @@
 {"sites":[	
-		{"key": "haiwaikan","name": "海外看|CMS","type": 1, "api": "https://haiwaikan.com/api.php/provide/vod/"},
+		{"key":"haiwaikan","name": "海外看|CMS","type": 1, "api": "https://haiwaikan.com/api.php/provide/vod/"},
 		{"key":"360资源","name":"360资源|CMS","type":1,"api":"https://360zy.com/api.php/provide/vod/"},
 		{"key":"黑木","name":"黑木耳|CMS","type":1,"api":"https://www.heimuer.tv/api.php/provide/vod"},
 		{"key":"刺桐","name":"刺桐|CMS","type":1,"api":"http://ys9.cttv.vip/api.php/provide/vod/"},
