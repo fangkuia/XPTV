@@ -1,4 +1,4 @@
-{"sites": [
+{"sites":[
 	  {"key": "VOD", "name": "低端影视|VOD", "type": 3, "api": "csp_Ddrk"}, 
 	  {"key": "VOD", "name": "厂长资源|VOD", "type": 3, "api": "csp_Czsapp"}, 
 	  {"key": "VOD", "name": "哔嘀影视|VOD", "type": 3, "api": "csp_Bdys"}, 
