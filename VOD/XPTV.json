@@ -1,11 +1,11 @@
-{"sites":[
-	  {"key":"csp_Ddrk","name":"🟢低端影视","type": 3,"api":"csp_Ddrk"},
-	  {"key":"Czsapp","name":"🟢厂长资源","type": 3,"api": "csp_Czsapp"},
-	  {"key":"csp_Bdys","name":"🟢哔嘀影视","type":3,"api":"csp_Bdys"},
-	  {"key":"Olevod","name":"🟢欧乐影院","type": 3,"api": "csp_Olevod"},
-	  {"key":"csp_Zxzj","name":"🟢在线之家","type":3,"api":"csp_Zxzj"},
-	  {"key":"csp_age","name":"🟢AGE动漫","type": 3,"api":"csp_age"},
-	  {"key":"csp_girlgirllove","name":"🟢ギリギリ动漫","type": 3,"api":"csp_girlgirllove"},
-	  {"key":"csp_libvio","name":"🟢LIBVIO","type":3,"api":"csp_libvio"},
-	  {"key":"csp_duboku","name":"🟢独播库","type":3,"api":"csp_duboku"}
+{"sites": [
+	  {"key": "csp_Ddrk", "name": "🟢低端影视", "type": 3, "api": "csp_Ddrk"}, 
+	  {"key": "Czsapp", "name": "🟢厂长资源", "type": 3, "api": "csp_Czsapp"}, 
+	  {"key": "csp_Bdys", "name": "🟢哔嘀影视", "type": 3, "api": "csp_Bdys"}, 
+	  {"key": "Olevod", "name": "🟢欧乐影院", "type": 3, "api": "csp_Olevod"}, 
+	  {"key": "csp_Zxzj", "name": "🟢在线之家", "type": 3, "api": "csp_Zxzj"}, 
+	  {"key": "csp_age", "name": "🟢AGE动漫", "type": 3, "api": "csp_age"}, 
+	  {"key": "csp_girlgirllove", "name": "🟢ギリギリ动漫", "type": 3, "api": "csp_girlgirllove"}, 
+	  {"key": "csp_libvio", "name": "🟢LIBVIO", "type": 3, "api": "csp_libvio"}, 
+	  {"key": "csp_duboku", "name": "🟢独播库", "type": 3, "api": "csp_duboku"}
 	  ]}
