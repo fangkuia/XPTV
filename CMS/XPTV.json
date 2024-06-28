@@ -5,6 +5,7 @@
 		{"key":"刺桐","name":"🟡刺桐","type":1,"api":"http://ys9.cttv.vip/api.php/provide/vod/"},
 		{"key":"官网","name":"🟡官网","type":1,"api":"http://gwcms.cttv.vip/api.php/provide/vod/"},
 		{"key":"业余","name":"🟡业余","type":1,"api":"https://yyff.540734621.xyz/api.php/provide/vod/"},
+		{"key":"华为8","name":"🟡华为吧","type":1,"api":"https://hw8.live/api.php/provide/vod/"},
 		{"key":"小黄人","name":"🔴小黄人","type":1,"api":"https://iqyi.xiaohuangrentv.com/api.php/provide/vod/"},
 		{"key":"牛牛资源","name":"🔴牛牛资源","type":1,"api":"https://api.niuniuzy.me/api.php/provide/vod/"},
 		{"key":"丫丫资源","name":"🔴丫丫资源","type":1,"api":"https://cj.yayazy.net/api.php/provide/vod/"},
