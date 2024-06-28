@@ -1,11 +1,11 @@
 {"sites":[
-	  {"key": "VOD", "name": "低端影视|VOD", "type": 3, "api": "csp_Ddrk"}, 
-	  {"key": "VOD", "name": "厂长资源|VOD", "type": 3, "api": "csp_Czsapp"}, 
-	  {"key": "VOD", "name": "哔嘀影视|VOD", "type": 3, "api": "csp_Bdys"}, 
-	  {"key": "VOD", "name": "欧乐影院|VOD", "type": 3, "api": "csp_Olevod"}, 
+	  {"key": "VOD", "name": "低端|VOD", "type": 3, "api": "csp_Ddrk"}, 
+	  {"key": "VOD", "name": "厂长|VOD", "type": 3, "api": "csp_Czsapp"}, 
+	  {"key": "VOD", "name": "哔嘀|VOD", "type": 3, "api": "csp_Bdys"}, 
+	  {"key": "VOD", "name": "🪜欧乐|VOD", "type": 3, "api": "csp_Olevod"},
+	  {"key": "VOD", "name": "独播库|VOD", "type": 3, "api": "csp_duboku"},
 	  {"key": "VOD", "name": "在线之家|VOD", "type": 3, "api": "csp_Zxzj"}, 
-	  {"key": "VOD", "name": "AGE动漫|VOD", "type": 3, "api": "csp_age"}, 
-	  {"key": "VOD", "name": "ギリギリ动漫|VOD", "type": 3, "api": "csp_girlgirllove"}, 
 	  {"key": "VOD", "name": "LIBVIO|VOD", "type": 3, "api": "csp_libvio"}, 
-	  {"key": "VOD", "name": "独播库|VOD", "type": 3, "api": "csp_duboku"}
+	  {"key": "VOD", "name": "AGE动漫|VOD", "type": 3, "api": "csp_age"}, 
+	  {"key": "VOD", "name": "ギリギリ动漫|VOD", "type": 3, "api": "csp_girlgirllove"}
 	  ]}
