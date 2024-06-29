@@ -1,24 +1,24 @@
 payload:
 #玩偶哥哥（直连）
-  - DOMAIN-keyword, wogg
+  - DOMAIN-KEYWORD, wogg
   - DOMAIN-SUFFIX,wogg.link
   - DOMAIN-SUFFIX,wogg.xyz
   - DOMAIN-SUFFIX, xxooo.cf
 #玩偶表哥（直连）
-  - DOMAIN-keyword, wobge.run
+  - DOMAIN-KEYWORD, wobge.run
 #小纸条（直连）
   - DOMAIN-SUFFIX,gitcafe.net
 #jojo（直连）
   - DOMAIN-SUFFIX,jiohub.top
 #阿里小站（直连）
-  - DOMAIN-keyword,pan666
+  - DOMAIN-KEYWORD,pan666
   - DOMAIN-SUFFIX, pan666.net
 #云盘资源（直连）
-  - DOMAIN-keyword,yunpan
+  - DOMAIN-KEYWORD,yunpan
   - DOMAIN-SUFFIX, yunpan1.cc
 #厂长资源（直连）
-  - DOMAIN-keyword, czzy
-  - DOMAIN-keyword, czys
+  - DOMAIN-KEYWORD, czzy
+  - DOMAIN-KEYWORD, czys
   - DOMAIN-SUFFIX,czzy88.com
   - DOMAIN-SUFFIX,czzy22.com
   - DOMAIN-SUFFIX,czzy66.com
@@ -26,18 +26,18 @@ payload:
   - DOMAIN-SUFFIX, czys.top
   - DOMAIN-SUFFIX, czzy77.com
 #在线之家（直连）
-  - DOMAIN-keyword, zxzj
+  - DOMAIN-KEYWORD, zxzj
   - DOMAIN-SUFFIX,zxzja.com  
   - DOMAIN-SUFFIX,zxzjhd.com  
   - DOMAIN-SUFFIX,zxzj.pro  
 #低端影视（直连）
-  - DOMAIN-keyword, ddys
+  - DOMAIN-KEYWORD, ddys
   - DOMAIN-SUFFIX,ddys.pro  
   - DOMAIN-SUFFIX,ddys.mov 
 #AGE动漫（直连）
   - DOMAIN-SUFFIX,agedm.org
 #哔嘀影视（直连）
-  - DOMAIN-keyword, bdys
+  - DOMAIN-KEYWORD, bdys
   - DOMAIN-SUFFIX, bdys10.com
 #索尼资源（直连）
   - DOMAIN-SUFFIX,suoniapi.com  
@@ -122,12 +122,21 @@ payload:
 #同步数据
   - DOMAIN,gateway.icloud.com  
 #杂七杂八的播放
+  - DOMAIN-KEYWORD, simanuo
+  - DOMAIN-SUFFIX, huawei8.live
+  - DOMAIN-SUFFIX, hw8.live
+  - DOMAIN-KEYWORD, heimuer
+  - DOMAIN-KEYWORD, hhuus
+  - DOMAIN-KEYWORD, hhwenjian
+  - DOMAIN, hhmage.com
+  - DOMAIN, xinlangtupian.com
+  - DOMAIN-KEYWORD, xlzyd
   - DOMAIN,ikunzyapi.com
-  - DOMAIN-keyword,ikzybf
-  - DOMAIN-keyword,49zyvideoplayurl
-  - DOMAIN-keyword,v.cdnlz  
-  - DOMAIN-keyword,vip.kuaikan  
-  - DOMAIN-keyword,vip.ffzy  
+  - DOMAIN-KEYWORD,ikzybf
+  - DOMAIN-KEYWORD,49zyvideoplayurl
+  - DOMAIN-KEYWORD,v.cdnlz  
+  - DOMAIN-KEYWORD,vip.kuaikan  
+  - DOMAIN-KEYWORD,vip.ffzy  
   - DOMAIN,vod2.kczybf.com  
   - DOMAIN,top.1080pzy.co  
   - DOMAIN,c3.monidai.com  
