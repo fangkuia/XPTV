@@ -1,5 +1,5 @@
-{"sites":[{"key": "PAN", "name": "小纸条|网盘", "type": 3, "api": "csp_Gitcafe"},
-	  {"key": "PAN", "name": "玩偶哥哥|网盘", "type": 3, "api": "csp_WoGG"},
-	  {"key": "PAN", "name": "阿里小站|网盘", "type": 3, "api": "csp_pan666"},
-	  {"key": "PAN", "name": "云盘资源|网盘", "type": 3, "api": "csp_yunpan"},
-	  {"key": "PAN", "name": "玩偶表哥|网盘", "type": 3, "api": "csp_wobg"}]}
+{"sites":[{"name": "小纸条|网盘", "type": 3, "api": "csp_Gitcafe"},
+	  {"name": "玩偶哥哥|网盘", "type": 3, "api": "csp_WoGG"},
+	  {"name": "阿里小站|网盘", "type": 3, "api": "csp_pan666"},
+	  {"name": "云盘资源|网盘", "type": 3, "api": "csp_yunpan"},
+	  {"name": "玩偶表哥|网盘", "type": 3, "api": "csp_wobg"}]}
