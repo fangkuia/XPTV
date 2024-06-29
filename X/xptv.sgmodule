@@ -123,6 +123,15 @@ DOMAIN-SUFFIX, doubanio.com, DIRECT
 #同步数据
 DOMAIN, gateway.icloud.com, DIRECT
 #杂七杂八的播放
+DOMAIN-KEYWORD, simanuo, DIRECT
+DOMAIN-SUFFIX, huawei8.live, DIRECT
+DOMAIN-SUFFIX, hw8.live, DIRECT
+DOMAIN-KEYWORD, heimuer, DIRECT
+DOMAIN-KEYWORD, hhuus, DIRECT
+DOMAIN-KEYWORD, hhwenjian, DIRECT
+DOMAIN, hhmage.com, DIRECT
+DOMAIN, xinlangtupian.com, DIRECT
+DOMAIN-KEYWORD, xlzyd, DIRECT
 DOMAIN, ikunzyapi.com, DIRECT
 DOMAIN-KEYWORD, ikzybf, DIRECT
 DOMAIN-KEYWORD, 49zyvideoplayurl, DIRECT
