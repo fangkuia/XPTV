@@ -1,2 +1,2 @@
-### XPTV使用大全
-https://xp-tv.xyz/
+### XPTV群组
+https://t.me/seeseeni
