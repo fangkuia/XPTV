@@ -1,5 +1,4 @@
 {"sites": [	
-		{"name": "海外看|点播🪜", "type": 1, "api": "https://haiwaikan.com/api.php/provide/vod/"}, 
 		{"name": "360|点播", "type": 1, "api": "https://360zy.com/api.php/provide/vod/"}, 
 		{"name": "黑木耳|点播", "type": 1, "api": "https://www.heimuer.tv/api.php/provide/vod"}, 
 		{"name": "飞刀|点播", "type": 1, "api": "http://www.feidaozy.com/api.php/provide/vod/"},
