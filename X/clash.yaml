@@ -122,6 +122,9 @@ payload:
 #同步数据
   - DOMAIN,gateway.icloud.com  
 #杂七杂八的播放
+  - DOMAIN-SUFFIX, jiasu.buzz
+  - DOMAIN-KEYWORD, feidaozy
+  - DOMAIN-KEYWORD, modujx
   - DOMAIN-KEYWORD, simanuo
   - DOMAIN-SUFFIX, huawei8.live
   - DOMAIN-SUFFIX, hw8.live
