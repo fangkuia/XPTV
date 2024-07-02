@@ -12,5 +12,10 @@ http-response ^https?:\/\/(v\.cdnlz\d+\.com|vip.*\.lz-cdn\d+\.com)\/(.+)\/hls\/(
 http-response ^https?:\/\/m3u\.haiwaikan\.com\/xm3u8\/(.+).m3u8 script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true, timeout=10, tag=海外看
 http-response ^https?:\/\/s\d+\.bfengbf\.com\/video\/(.+)\.m3u8 script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true, timeout=10, tag=暴风
 http-response ^https?:\/\/vip\.kuaikan-cdn\d+\.com\/.+\/hls\/.+\.m3u8 script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true, timeout=10, tag快看
+http-response ^https:\/\/bfikuncdn\.com\/.+\/hls\/.+\.m3u8 script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true, tag=ikun
+http-response ^https:\/\/play\.modujx\d+\.com\/.+\/hls\/.+\.m3u8 script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true, tag=魔都動漫
+http-response ^https:\/\/vod\.lyhuicheng\.com\/.+\/hls\/.+\.m3u8 script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true, tag=360
+http-response ^https:\/\/ukzy\.ukubf\d+\.com\/.+\/hls\/.+\.m3u8 script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true, tag=U酷資源
+
 [MITM]
-hostname = %APPEND% m3u.haiwaikan.com, v.cdnlz*.com, vip*.lz-cdn*.com, *.ffzy*.com, s*.bfengbf.com, vip.kuaikan-cdn*.com
+hostname = %APPEND% m3u.haiwaikan.com, v.cdnlz*.com, vip*.lz-cdn*.com, *.ffzy*.com, s*.bfengbf.com, vip.kuaikan-cdn*.com, bfikuncdn.com, play.modujx*.com, vod.lyhuicheng.com, ukzy.ukubf*.com
