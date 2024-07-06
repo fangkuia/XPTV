@@ -123,6 +123,18 @@ DOMAIN-SUFFIX, doubanio.com, DIRECT
 #同步数据
 DOMAIN, gateway.icloud.com, DIRECT
 #杂七杂八的播放
+DOMAIN-KEYWORD, thehanju, DIRECT
+DOMAIN-SUFFIX, jiasu.buzzan, DIRECT
+DOMAIN-KEYWORD, subaibaiys, DIRECT
+DOMAIN-SUFFIX, xhscdn.com, DIRECT
+DOMAIN-SUFFIX, wangchuanxin, DIRECT
+DOMAIN-SUFFIX, vod-qcloud.com, DIRECT
+DOMAIN-KEYWORD, hhplayer, DIRECT
+DOMAIN-KEYWORD, saohuo, DIRECT
+DOMAIN-KEYWORD, bttwo, DIRECT
+DOMAIN-SUFFIX, dandanplay.net, DIRECT
+DOMAIN-SUFFIX, mcloud.139.com, DIRECT
+DOMAIN-SUFFIX, jiasu.buzz, DIRECT
 DOMAIN-SUFFIX, jiasu.buzz, DIRECT
 DOMAIN-KEYWORD, feidaozy, DIRECT
 DOMAIN-KEYWORD, modujx, DIRECT
