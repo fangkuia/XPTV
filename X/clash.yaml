@@ -122,6 +122,17 @@ payload:
 #同步数据
   - DOMAIN,gateway.icloud.com  
 #杂七杂八的播放
+  - DOMAIN-KEYWORD, thehanju
+  - DOMAIN-KEYWORD, hanjukankan
+  - DOMAIN-KEYWORD, subaibaiys
+  - DOMAIN-SUFFIX, xhscdn.com
+  - DOMAIN-SUFFIX, wangchuanxin
+  - DOMAIN-SUFFIX, vod-qcloud.com
+  - DOMAIN-KEYWORD, hhplayer
+  - DOMAIN-KEYWORD, saohuo
+  - DOMAIN-KEYWORD, bttwo
+  - DOMAIN-SUFFIX, dandanplay.net
+  - DOMAIN-SUFFIX, mcloud.139.com
   - DOMAIN-SUFFIX, jiasu.buzz
   - DOMAIN-KEYWORD, feidaozy
   - DOMAIN-KEYWORD, modujx
