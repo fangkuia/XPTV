@@ -122,6 +122,15 @@ payload:
 #同步数据
   - DOMAIN,gateway.icloud.com  
 #杂七杂八的播放
+  - DOMAIN-KEYWORD, .cn
+  - DOMAIN, tencent-1257389134.cos.ap-nanjing.myqcloud.com.qqhd.net
+  - DOMAIN, gvideo.qpic.cn
+  - DOMAIN, media-hncs-fy-person.hn12oss.ctyunxs.cn
+  - DOMAIN, qchannelvideo.photo.qq.com
+  - DOMAIN, sf16-sg.larksuitecdn.com
+  - DOMAIN, op.xn--it-if7c19g5s4bps5c.com
+  - DOMAIN, tjdownload.pan.wo.cn
+  - DOMAIN-SUFFIX, nkvod.com
   - DOMAIN-SUFFIX, 13to.com
   - DOMAIN-KEYWORD, thehanju
   - DOMAIN-KEYWORD, hanjukankan
