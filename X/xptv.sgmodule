@@ -123,6 +123,15 @@ DOMAIN-SUFFIX, doubanio.com, DIRECT
 #同步数据
 DOMAIN, gateway.icloud.com, DIRECT
 #杂七杂八的播放
+DOMAIN-KEYWORD, .cn, DIRECT
+DOMAIN, tencent-1257389134.cos.ap-nanjing.myqcloud.com.qqhd.net, DIRECT
+DOMAIN, gvideo.qpic.cn, DIRECT
+DOMAIN, media-hncs-fy-person.hn12oss.ctyunxs.cn, DIRECT
+DOMAIN, qchannelvideo.photo.qq.com, DIRECT
+DOMAIN, sf16-sg.larksuitecdn.com, DIRECT
+DOMAIN, op.xn--it-if7c19g5s4bps5c.com, DIRECT
+DOMAIN, tjdownload.pan.wo.cn, DIRECT
+DOMAIN-SUFFIX, nkvod.com, DIRECT
 DOMAIN-SUFFIX, 13to.com, DIRECT
 DOMAIN-KEYWORD, thehanju, DIRECT
 DOMAIN-KEYWORD, hanjukankan, DIRECT
