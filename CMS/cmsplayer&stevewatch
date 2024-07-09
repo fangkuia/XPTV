@@ -39,7 +39,8 @@
 		{"name": "飘零|点播", "type": 1, "api": "https://p2100.net/api.php/provide/vod/"}, 
 		{"name": "无尽|点播", "type": 1, "api": "https://api.wujinapi.com/api.php/provide/vod/"}, 
 		{"name": "速博|点播", "type": 1, "api": "https://subocaiji.com/api.php/provide/vod/"}, 
-	  {"name": "魔都|点播", "type": 1, "api": "https://caiji.moduapi.cc/api.php/provide/vod/"}, 
-	  {"name": "最大|点播", "type": 1, "api": "http://zuidazy.me/api.php/provide/vod/"}, 
+	  	{"name": "魔都|点播", "type": 1, "api": "https://caiji.moduapi.cc/api.php/provide/vod/"}, 
+	  	{"name": "最大|点播", "type": 1, "api": "http://zuidazy.me/api.php/provide/vod/"}, 
 		{"name": "火狐|点播", "type": 1, "api": "https://hhzyapi.com/api.php/provide/vod/"}, 
-		{"name": "新浪|点播", "type": 1, "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/"}]
+		{"name": "新浪|点播", "type": 1, "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/"}
+]
