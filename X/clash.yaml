@@ -125,7 +125,7 @@ payload:
   - DOMAIN-SUFFIX, bfengbf.com
   - DOMAIN-SUFFIX, bfikuncdn.com
   - DOMAIN-KEYWORD, .cn
-  - DOMAIN, tencent-1257389134.cos.ap-nanjing.myqcloud.com.qqhd.net
+  - DOMAIN-KEYWORD, tencent-1257389134.cos
   - DOMAIN, gvideo.qpic.cn
   - DOMAIN, media-hncs-fy-person.hn12oss.ctyunxs.cn
   - DOMAIN, qchannelvideo.photo.qq.com
