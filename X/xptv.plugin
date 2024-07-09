@@ -121,6 +121,7 @@ DOMAIN-SUFFIX, doubanio.com, DIRECT
 #同步数据
 DOMAIN, gateway.icloud.com, DIRECT
 #杂七杂八的播放
+DOMAIN-SUFFIX, bfengbf.com, DIRECT
 DOMAIN-SUFFIX, bfikuncdn.com, DIRECT
 DOMAIN-KEYWORD, .cn, DIRECT
 DOMAIN, tencent-1257389134.cos.ap-nanjing.myqcloud.com.qqhd.net, DIRECT
