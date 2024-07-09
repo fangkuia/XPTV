@@ -122,6 +122,7 @@ payload:
 #同步数据
   - DOMAIN,gateway.icloud.com  
 #杂七杂八的播放
+  - DOMAIN-KEYWORD, ffzy
   - DOMAIN-KEYWORD, cdnlz
   - DOMAIN-KEYWORD, lzcdn
   - DOMAIN-SUFFIX, bfengbf.com
