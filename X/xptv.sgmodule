@@ -126,7 +126,7 @@ DOMAIN, gateway.icloud.com, DIRECT
 DOMAIN-SUFFIX, bfengbf.com, DIRECT
 DOMAIN-SUFFIX, bfikuncdn.com, DIRECT
 DOMAIN-KEYWORD, .cn, DIRECT
-DOMAIN, tencent-1257389134.cos.ap-nanjing.myqcloud.com.qqhd.net, DIRECT
+DOMAIN-KEYWORD, tencent-1257389134.cos, DIRECT
 DOMAIN, gvideo.qpic.cn, DIRECT
 DOMAIN, media-hncs-fy-person.hn12oss.ctyunxs.cn, DIRECT
 DOMAIN, qchannelvideo.photo.qq.com, DIRECT
