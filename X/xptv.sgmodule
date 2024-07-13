@@ -123,6 +123,7 @@ DOMAIN-SUFFIX, doubanio.com, DIRECT
 #同步数据
 DOMAIN, gateway.icloud.com, DIRECT
 #杂七杂八的播放
+DOMAIN-KEYWORD, hmrvideo, DIRECT
 DOMAIN-SUFFIX, ykusu.ykusu, DIRECT
 DOMAIN-SUFFIX, myqcloud.com, DIRECT
 DOMAIN-SUFFIX, esuxun.com, DIRECT
