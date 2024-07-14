@@ -123,7 +123,6 @@ payload:
   - DOMAIN,gateway.icloud.com  
 #杂七杂八的播放
   - DOMAIN-KEYWORD, ghw9zwp5
-  - DOMAIN-KEYWORD, zeqaht.com
   - DOMAIN-SUFFIX, ywxohs.com
   - DOMAIN-SUFFIX, miyoushe.com
   - DOMAIN-KEYWORD, media-oss
