@@ -123,6 +123,15 @@ DOMAIN-SUFFIX, doubanio.com, DIRECT
 #同步数据
 DOMAIN, gateway.icloud.com, DIRECT
 #杂七杂八的播放
+host-keyword, ghw9zwp5, DIRECT
+host-keyword, zeqaht.com, DIRECT
+DOMAIN-SUFFIX, ywxohs.com, DIRECT
+DOMAIN-SUFFIX, miyoushe.com, DIRECT
+host-keyword, media-oss, DIRECT
+DOMAIN-SUFFIX, netease.com, DIRECT
+DOMAIN-SUFFIX, aliyuncs.com, DIRECT
+DOMAIN-SUFFIX, xmcdn.com, DIRECT
+host-keyword, anfuns, DIRECT
 DOMAIN-KEYWORD, hmrvideo, DIRECT
 DOMAIN-SUFFIX, ykusu.ykusu, DIRECT
 DOMAIN-SUFFIX, myqcloud.com, DIRECT
