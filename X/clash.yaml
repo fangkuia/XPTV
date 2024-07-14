@@ -130,7 +130,7 @@ payload:
   - DOMAIN-SUFFIX, netease.com
   - DOMAIN-SUFFIX, aliyuncs.com
   - DOMAIN-SUFFIX, xmcdn.com
-  - DOMAIN-KEYWORD, anfuns
+  - DOMAIN-SUFFIX, anfuns.org
   - DOMAIN-KEYWORD, hmrvideo
   - DOMAIN-SUFFIX, ykusu.ykusu
   - DOMAIN-SUFFIX, myqcloud.com
