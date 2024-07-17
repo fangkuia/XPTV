@@ -121,6 +121,9 @@ DOMAIN-SUFFIX, doubanio.com, DIRECT
 #同步数据
 DOMAIN, gateway.icloud.com, DIRECT
 #杂七杂八的播放
+DOMAIN-SUFFIX, 115.com, DIRECT
+DOMAIN-SUFFIX, mgtv.com, DIRECT
+DOMAIN-SUFFIX, timizy.com, DIRECT
 DOMAIN-KEYWORD, ghw9zwp5, DIRECT
 DOMAIN-SUFFIX, ywxohs.com, DIRECT
 DOMAIN-SUFFIX, miyoushe.com, DIRECT
