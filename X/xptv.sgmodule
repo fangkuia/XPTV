@@ -123,6 +123,7 @@ DOMAIN-SUFFIX, doubanio.com, DIRECT
 #同步数据
 DOMAIN, gateway.icloud.com, DIRECT
 #杂七杂八的播放
+DOMAIN-KEYWORD, ts.com, DIRECT
 DOMAIN, n45lxpvts.com, DIRECT
 DOMAIN, yk7ynj4ts.com, DIRECT
 DOMAIN, r8qgyo0ts.com, DIRECT
