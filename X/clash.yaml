@@ -109,6 +109,7 @@ payload:
   - DOMAIN-SUFFIX,toutiao50.com  
   - DOMAIN-SUFFIX,ibyteimg.com  
 #网盘播放
+  - DOMAIN-KEYWORD, ts.com
   - DOMAIN-KEYWORD, quark
   - DOMAIN, drive-pc.quark.cn
   - DOMAIN-KEYWORD, aliyun
