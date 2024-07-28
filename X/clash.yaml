@@ -156,7 +156,6 @@ payload:
   - DOMAIN-KEYWORD, lzcdn
   - DOMAIN-SUFFIX, bfengbf.com
   - DOMAIN-SUFFIX, bfikuncdn.com
-  - DOMAIN-KEYWORD, .cn
   - DOMAIN-KEYWORD, tencent-1257389134.cos
   - DOMAIN, gvideo.qpic.cn
   - DOMAIN, media-hncs-fy-person.hn12oss.ctyunxs.cn
