@@ -121,6 +121,7 @@ DOMAIN-SUFFIX, doubanio.com, DIRECT
 #同步数据
 DOMAIN, gateway.icloud.com, DIRECT
 #杂七杂八的播放
+DOMAIN-KEYWORD, heimuer, DIRECT
 DOMAIN-SUFFIX, m3u8.girigirilove.com, DIRECT
 DOMAIN-SUFFIX, cloudflarestorage.com, DIRECT
 DOMAIN-SUFFIX, ho7k.com, DIRECT
