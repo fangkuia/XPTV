@@ -28,7 +28,7 @@ jobs:
         sudo apt-get install -y jq
 
         # 將指定的 JSON 文件合併到一個文件中並放在根目錄
-        jq -s '[.[][] | .sites[]] | {sites: .}' CMS/XPTV.json CMS/XPAV.json VOD/XPTV.json VOD/XPAV.json VOD/pan.json > allinone.json
+        jq -s '[.[] | select(.sites) | .sites[]] | {sites: .}' CMS/XPTV.json CMS/XPAV.json VOD/XPTV.json VOD/XPAV.json VOD/pan.json > allinone.json
 
     - name: Commit and push changes
       run: |
