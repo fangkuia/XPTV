@@ -1,0 +1,85 @@
+name: |-
+  去廣告｜CMS
+desc: |-
+  去除插入式廣告
+icon: |-
+  https://raw.githubusercontent.com/fangkuia/XPTV/main/a1yt1-gx0qf-001.ico
+
+http:
+
+  mitm:
+    - "m3u.haiwaikan.com"
+    - "v.cdnlz*.com"
+    - "vip*.lz-cdn*.com"
+    - "*.ffzy*.com"
+    - "s*.bfengbf.com"
+    - "vip.kuaikan*.com"
+    - "bfikuncdn.com"
+    - "play.modujx*.com"
+    - "vod.lyhuicheng.com"
+    - "ukzy.ukubf*.com"
+
+  url-rewrite:
+# 暴風跑馬燈
+    - >-
+      (^https?:\/\/s\d+\.bfengbf\.com\/video)(.+)_z5q\.ts $1$2.ts 302
+
+  script:
+    - match: ^https?:\/\/m3u\.haiwaikan\.com\/xm3u8\/(.+).m3u8
+      name: "海外看"
+      type: response
+      require-body: true
+      max-size: 0
+
+    - match: ^https?:\/\/(v\.cdnlz\d+\.com|vip.*\.lz-cdn\d+\.com)\/(.+)\/hls\/(.+).m3u8
+      name: "量子"
+      type: response
+      require-body: true
+      max-size: 0
+
+    - match: ^https?:\/\/(super|svipsvip|vip)\.ffzy[A-Za-z0-9-]+\.com\/(.+)\/hls\/(.+)\.m3u8
+      name: "非凡"
+      type: response
+      require-body: true
+      max-size: 0
+
+    - match: ^https?:\/\/s\d+\.bfengbf\.com\/video\/(.+)\.m3u8
+      name: "暴風"
+      type: response
+      require-body: true
+      max-size: 0
+
+    - match: ^https?:\/\/vip\.kuaikan-(cdn|play)\d+\.com\/.+\/hls\/.+\.m3u8
+      name: "快看"
+      type: response
+      require-body: true
+      max-size: 0
+
+    - match: ^https:\/\/bfikuncdn\.com\/.+\/hls\/.+\.m3u8
+      name: "ikun"
+      type: response
+      require-body: true
+      max-size: 0
+
+    - match: ^https:\/\/play\.modujx\d+\.com\/.+\/hls\/.+\.m3u8
+      name: "魔都"
+      type: response
+      require-body: true
+      max-size: 0
+
+    - match: ^https:\/\/vod\.lyhuicheng\.com\/.+\/hls\/.+\.m3u8
+      name: "360"
+      type: response
+      require-body: true
+      max-size: 0
+
+    - match: ^https:\/\/ukzy\.ukubf\d+\.com\/.+\/hls\/.+\.m3u8
+      name: "u酷"
+      type: response
+      require-body: true
+      max-size: 0
+
+script-providers:
+  "cmsAdblock":
+    url: https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js
+    interval: 86400
