@@ -1,5 +1,5 @@
 {"sites": [	
-		{"name": "360|点播", "type": 1, "api": "https://360zy.com/api.php/provide/vod/"}, 
+		{"name": "360 | 点播", "type": 1, "api": "https://360zy.com/api.php/provide/vod/"}, 
 		{"name": "飞刀|点播", "type": 1, "api": "http://www.feidaozy.com/api.php/provide/vod/"},
 		{"name": "墨斗|点播", "type": 1, "api": "https://www.mdzyapi.com/api.php/provide/vod/"}, 
 		{"name": "黑木耳|点播", "type": 1, "api": "https://json.heimuer.xyz/api.php/provide/vod/"}, 
