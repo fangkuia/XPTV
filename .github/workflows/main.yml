@@ -1,0 +1,41 @@
+name: Combine JSON Files on Change
+
+on:
+  push:
+    paths:
+      - 'CMS/XPTV.json'
+      - 'CMS/XPAV.json'
+      - 'VOD/XPTV.json'
+      - 'VOD/XPAV.json'
+      - 'VOD/pan.json'
+
+jobs:
+  combine-json:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Combine JSON files
+      run: |
+        # 安裝 jq 來處理 JSON 文件
+        sudo apt-get install -y jq
+
+        # 將指定的 JSON 文件合併到一個文件中並放在根目錄
+        jq -s 'reduce .[] as $item ({}; . * $item)' CMS/XPTV.json CMS/XPAV.json VOD/XPTV.json VOD/XPAV.json VOD/pan.json > allinone.json
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+        git add allinone.json
+        git commit -m 'Combine JSON files into allinone.json'
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
