@@ -1,7 +1,7 @@
 {
   "sites": [
     {
-      "name": "360| 点播",
+      "name": "360|点播",
       "type": 1,
       "api": "https://360zy.com/api.php/provide/vod/"
     },
