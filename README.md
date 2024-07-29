@@ -1,5 +1,4 @@
 ## 有问题请前往群组：[XPTV](https://t.me/seeseeni)
-#### 点击即可前往对应页面
 #### 资源：[VOV&PAN](https://github.com/fangkuia/XPTV/tree/main/VOD)  | [CMS](https://github.com/fangkuia/XPTV/tree/main/CMS)
 #### 基本资源整合：https://github.moeyy.xyz/https://raw.githubusercontent.com/fangkuia/XPTV/main/allinone.json （包含了以上所有资源）
 #### 代理：[直连规则](https://github.com/fangkuia/XPTV/tree/main/X)
