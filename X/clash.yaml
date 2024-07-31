@@ -123,6 +123,7 @@ payload:
 #同步数据
   - DOMAIN,gateway.icloud.com  
 #杂七杂八的播放
+  - DOMAIN-SUFFIX, mediap.svc.ms
   - DOMAIN-SUFFIX, novipnoad.net
   - DOMAIN-SUFFIX, yangkeduo.com
   - DOMAIN, n45lxpvts.com
