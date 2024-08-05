@@ -121,6 +121,15 @@ DOMAIN-SUFFIX, doubanio.com, DIRECT
 #同步数据
 DOMAIN, gateway.icloud.com, DIRECT
 #杂七杂八的播放
+DOMAIN-SUFFIX, akamaized.net, DIRECT
+DOMAIN-SUFFIX, wegame.com.cn, DIRECT
+DOMAIN-SUFFIX, tc.qq.com, DIRECT
+DOMAIN-SUFFIX, centos.chat, DIRECT
+DOMAIN-SUFFIX, bilfun.cc, DIRECT
+DOMAIN-SUFFIX, novipnoad.net, DIRECT
+DOMAIN-SUFFIX, yangkeduo.com, DIRECT
+DOMAIN-SUFFIX, xingya.com.cn, DIRECT
+DOMAIN-SUFFIX, whjzjx.cn, DIRECT
 DOMAIN-SUFFIX, mediap.svc.ms, DIRECT
 DOMAIN-SUFFIX, novipnoad.net, DIRECT
 DOMAIN-SUFFIX, yangkeduo.com, DIRECT
@@ -218,3 +227,4 @@ DOMAIN, vip.ffzyread1.com, DIRECT
 DOMAIN, vip.ffzy-play3.com, DIRECT
 DOMAIN, vip.ffzyread.com, DIRECT
 DOMAIN, www.imgikzy.com, DIRECT
+GEOIP,CN,DIRECT
