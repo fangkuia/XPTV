@@ -123,9 +123,16 @@ payload:
 #同步数据
   - DOMAIN,gateway.icloud.com  
 #杂七杂八的播放
-  - DOMAIN-SUFFIX, mediap.svc.ms
+  - DOMAIN-SUFFIX, akamaized.net
+  - DOMAIN-SUFFIX, wegame.com.cn
+  - DOMAIN-SUFFIX, tc.qq.com
+  - DOMAIN-SUFFIX, centos.chat
+  - DOMAIN-SUFFIX, bilfun.cc
   - DOMAIN-SUFFIX, novipnoad.net
   - DOMAIN-SUFFIX, yangkeduo.com
+  - DOMAIN-SUFFIX, xingya.com.cn
+  - DOMAIN-SUFFIX, whjzjx.cn
+  - DOMAIN-SUFFIX, mediap.svc.ms
   - DOMAIN, n45lxpvts.com
   - DOMAIN, yk7ynj4ts.com
   - DOMAIN, r8qgyo0ts.com
@@ -214,4 +221,4 @@ payload:
   - DOMAIN,svip.picffzy.com  
   - DOMAIN,vip.imgffzy.com  
   - DOMAIN,vip.ffzyread1.com  
-
+  - GEOIP,CN
