@@ -123,6 +123,10 @@ payload:
 #同步数据
   - DOMAIN,gateway.icloud.com  
 #杂七杂八的播放
+  - DOMAIN-SUFFIX, zaqohu.com
+  - DOMAIN-SUFFIX, xjqxz.top
+  - DOMAIN-SUFFIX, wjm.xpgtv.net
+   -DOMAIN-SUFFIX, vvmlm.com
   - DOMAIN-SUFFIX, akamaized.net
   - DOMAIN-SUFFIX, wegame.com.cn
   - DOMAIN-SUFFIX, tc.qq.com
