@@ -22,6 +22,13 @@
             "type": 3,
             "api": "csp_hjkk",
             "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/hjkk.js"
+        },
+        {
+            "key": "csp_jpyy",
+            "name": "金牌影院",
+            "type": 3,
+            "api": "csp_jpyy",
+            "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/jpyy.js"
         }
     ]
 }
