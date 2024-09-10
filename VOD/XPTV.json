@@ -15,6 +15,13 @@
             "type": 3,
             "api": "csp_4kav",
             "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/4kav.js"
+        },
+        {
+            "key": "csp_hjkk",
+            "name": "韓劇看看",
+            "type": 3,
+            "api": "csp_hjkk",
+            "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/hjkk.js"
         }
     ]
 }
