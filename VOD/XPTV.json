@@ -8,6 +8,13 @@
         { "name": "在线之家|VOD", "type": 3, "api": "csp_Zxzj" },
         { "name": "LIBVIO|VOD", "type": 3, "api": "csp_libvio" },
         { "name": "AGE动漫|VOD", "type": 3, "api": "csp_age" },
-        { "name": "ギリギリ动漫|VOD", "type": 3, "api": "csp_girlgirllove" }
+        { "name": "ギリギリ动漫|VOD", "type": 3, "api": "csp_girlgirllove" },
+        {
+            "key": "csp_4kav",
+            "name": "4k-av",
+            "type": 3,
+            "api": "csp_4kav",
+            "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/4kav.js"
+        }
     ]
 }
