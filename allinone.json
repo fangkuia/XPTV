@@ -432,6 +432,12 @@
       "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/bttwo.js"
     },
     {
+      "name": "NO視頻",
+      "type": 3,
+      "api": "csp_novipnoad",
+      "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/novipnoad.js"
+    },
+    {
       "name": "MISSAV",
       "type": 3,
       "api": "csp_Missav"
