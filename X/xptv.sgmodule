@@ -123,6 +123,7 @@ DOMAIN-SUFFIX, doubanio.com, DIRECT
 #同步数据
 DOMAIN, gateway.icloud.com, DIRECT
 #杂七杂八的播放
+DOMAIN, ppvod01.blbtgg.com, DIRECT
 DOMAIN-SUFFIX, zaqohu.com, DIRECT
 DOMAIN-SUFFIX, xjqxz.top, DIRECT
 DOMAIN-SUFFIX, wjm.xpgtv.net, DIRECT
