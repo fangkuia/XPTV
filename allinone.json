@@ -444,6 +444,12 @@
       "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/xingya.js"
     },
     {
+      "name": "瓜子",
+      "type": 3,
+      "api": "csp_guazi",
+      "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/gzys.js"
+    },
+    {
       "name": "MISSAV",
       "type": 3,
       "api": "csp_Missav"
