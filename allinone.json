@@ -474,6 +474,12 @@
       "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/tiantian.js"
     },
     {
+      "name": "囧次元",
+      "type": 3,
+      "api": "csp_jcy",
+      "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/jcy.js"
+    },
+    {
       "name": "MISSAV",
       "type": 3,
       "api": "csp_Missav"
