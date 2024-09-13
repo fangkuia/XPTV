@@ -74,6 +74,12 @@
             "type": 3,
             "api": "csp_iyftv",
             "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/iyftv.js"
+        },
+        {
+            "name": "短劇天堂",
+            "type": 3,
+            "api": "csp_duanjutt",
+            "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/duanjutt.js"
         }
     ]
 }
