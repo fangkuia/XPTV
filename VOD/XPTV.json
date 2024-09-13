@@ -80,6 +80,12 @@
             "type": 3,
             "api": "csp_duanjutt",
             "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/duanjutt.js"
+        },
+        {
+            "name": "天天影視",
+            "type": 3,
+            "api": "csp_tiantian",
+            "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/tiantian.js"
         }
     ]
 }
