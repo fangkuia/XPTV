@@ -480,6 +480,12 @@
       "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/jcy.js"
     },
     {
+      "name": "小蘋果",
+      "type": 3,
+      "api": "csp_apple",
+      "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/apple.js"
+    },
+    {
       "name": "MISSAV",
       "type": 3,
       "api": "csp_Missav"
