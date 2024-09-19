@@ -399,19 +399,22 @@
       "name": "4k-av",
       "type": 3,
       "api": "csp_4kav",
-      "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/4kav.js"
+      "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/4kav.js",
+      "ext2": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/tv/js/4kav.js"
     },
     {
       "name": "韓劇看看",
       "type": 3,
       "api": "csp_hjkk",
-      "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/hjkk.js"
+      "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/hjkk.js",
+      "ext2": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/tv/js/hjkk.js"
     },
     {
       "name": "金牌影院",
       "type": 3,
       "api": "csp_jpyy",
-      "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/jpyy.js"
+      "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/jpyy.js",
+      "ext2": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/tv/js/jpyy.js"
     },
     {
       "name": "燒火電影",
