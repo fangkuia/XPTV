@@ -40,7 +40,8 @@
             "name": "素白白影視",
             "type": 3,
             "api": "csp_subaibai",
-            "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/subaibai.js"
+            "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/subaibai.js",
+            "ext2": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/tv/js/subaibai.js"
         },
         {
             "name": "兩個BT",
