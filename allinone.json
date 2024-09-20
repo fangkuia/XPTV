@@ -506,13 +506,15 @@
       "name": "麻豆社",
       "type": 3,
       "api": "csp_madou",
-      "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/madou.js"
+      "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/madou.js",
+      "ext2": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/tv/js/madou.js"
     },
     {
       "name": "玩偶姐姐",
       "type": 3,
       "api": "csp_hkdoll",
-      "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/hkdoll.js"
+      "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/hkdoll.js",
+      "ext2": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/tv/js/hkdoll.js"
     },
     {
       "name": "小纸条|网盘",
