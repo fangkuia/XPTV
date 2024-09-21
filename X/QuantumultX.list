@@ -1,9 +1,11 @@
 #玩偶哥哥（直连）
-host-keyword, wogg, XPTV(海外)
-host-suffix, wogg.link, XPTV(海外)
-host-suffix, wogg.xyz, XPTV(海外)
-host-suffix, xxooo.cf, XPTV(海外)
+host-keyword, wogg
+host-suffix, wogg.link
+host-suffix, wogg.xyz
+host-suffix, xxooo.cf
 #小纸条（直连）
-host-suffix, gitcafe.net, XPTV(海外)
+host-keyword, gitcafe
 #杂七杂八的播放
-host-suffix, mobile-stream.api.mgtv.com, XPTV(海外)
+host-suffix, mobile-stream.api.mgtv.com
+host-suffix, www.novipnoad.net
+host, anime.girigirilove.com
