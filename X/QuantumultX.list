@@ -1,11 +1,11 @@
 #玩偶哥哥（直连）
-host-keyword, wogg
-host-suffix, wogg.link
-host-suffix, wogg.xyz
-host-suffix, xxooo.cf
+DOMAIN-KEYWORD, wogg
+DOMAIN-SUFFIX, wogg.link
+DOMAIN-SUFFIX, wogg.xyz
+DOMAIN-SUFFIX, xxooo.cf
 #小纸条（直连）
-host-keyword, gitcafe
+DOMAIN-KEYWORD, gitcafe
 #杂七杂八的播放
-host-suffix, mobile-stream.api.mgtv.com
-host-suffix, www.novipnoad.net
-host, anime.girigirilove.com
+DOMAIN-SUFFIX, mobile-stream.api.mgtv.com
+DOMAIN-SUFFIX, www.novipnoad.net
+DOMAIN, anime.girigirilove.com
