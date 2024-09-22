@@ -517,6 +517,13 @@
       "ext2": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/tv/js/hkdoll.js"
     },
     {
+      "name": "Hanime1",
+      "type": 3,
+      "api": "csp_Hanime1",
+      "ext": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/tv/js/hanime.js",
+      "ext2": "https://git.886.be/https://raw.githubusercontent.com/Yswag/xptv-extensions/tv/js/hanime.js"
+    },
+    {
       "name": "小纸条|网盘",
       "type": 3,
       "api": "csp_Gitcafe"
