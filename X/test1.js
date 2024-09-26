@@ -7,7 +7,7 @@ async function getConfig() {
     let config = appConfig
     let host = $cache.get('alist_tvbox_host')
     if (!host) {
-        host = 'http://192.168.3.6:4567/'
+        host = 'http://192.168.3.6:4567'
         config.site = host
         config.tabs = [
             {
@@ -51,7 +51,7 @@ async function getCards(ext) {
     let cards = []
     let { url, page = 1 } = ext
 
-    if (url === 'http://192.168.3.6:4567/') {
+    if (url === 'http://192.168.3.6:4567') {
         cards = [
             {
                 vod_id: '-1',
