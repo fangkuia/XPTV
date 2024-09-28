@@ -6,11 +6,6 @@
       "api": "https://360zy.com/api.php/provide/vod/"
     },
     {
-      "name": "飞刀|点播",
-      "type": 1,
-      "api": "http://www.feidaozy.com/api.php/provide/vod/"
-    },
-    {
       "name": "墨斗|点播",
       "type": 1,
       "api": "https://www.mdzyapi.com/api.php/provide/vod/"
@@ -31,31 +26,6 @@
       "api": "https://jinyingzy.com/api.php/provide/vod/"
     },
     {
-      "name": "丽丽|点播",
-      "type": 1,
-      "api": "https://lililili.cc/api.php/provide/vod/"
-    },
-    {
-      "name": "乐视|点播",
-      "type": 1,
-      "api": "https://leshiapi.com/api.php/provide/vod/"
-    },
-    {
-      "name": "爱酷|点播",
-      "type": 1,
-      "api": "https://cj.json.icu/aiku.php/provide/vod/"
-    },
-    {
-      "name": "暴风|点播",
-      "type": 1,
-      "api": "https://app.dybfun.com/api.php/provide/vod/"
-    },
-    {
-      "name": "鱼乐|点播",
-      "type": 1,
-      "api": "https://api.ylzy.me/api.php/provide/vod/"
-    },
-    {
       "name": "OK|点播",
       "type": 1,
       "api": "https://okzyw9.com/api.php/provide/vod/"
@@ -64,16 +34,6 @@
       "name": "宝片|点播",
       "type": 1,
       "api": "https://zpsps.com/api.php/provide/vod/"
-    },
-    {
-      "name": "映迷|点播",
-      "type": 1,
-      "api": "https://www.inmi.app/api.php/provide/vod/at/xml"
-    },
-    {
-      "name": "官网|点播",
-      "type": 1,
-      "api": "http://gwcms.cttv.vip/api.php/provide/vod/"
     },
     {
       "name": "小黄人|点播",
@@ -94,16 +54,6 @@
       "name": "影图|点播",
       "type": 1,
       "api": "https://cj.vodimg.top/api.php/provide/vod/"
-    },
-    {
-      "name": "阿里|点播",
-      "type": 1,
-      "api": "http://aliys.cn:90/api.php/provide/vod/"
-    },
-    {
-      "name": "小猫咪|点播",
-      "type": 1,
-      "api": "http://zy.xiaomaomi.cc/api.php/provide/vod/"
     },
     {
       "name": "U酷|点播",
@@ -149,11 +99,6 @@
       "name": "红牛|点播",
       "type": 1,
       "api": "https://www.hongniuzy2.com/api.php/provide/vod/"
-    },
-    {
-      "name": "飞速|点播",
-      "type": 1,
-      "api": "https://www.feisuzyapi.com/api.php/provide/vod/"
     },
     {
       "name": "快车|点播",
