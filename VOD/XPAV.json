@@ -1,6 +1,10 @@
 {
     "sites": [
-        { "name": "MISSAV", "type": 3, "api": "csp_Missav" },
+        {
+            "name": "MISSAV", 
+            "type": 3, 
+            "api": "csp_Missav" 
+        },
         {
             "name": "麻豆社",
             "type": 3,
