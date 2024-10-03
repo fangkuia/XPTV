@@ -4,15 +4,15 @@
             "name": "AList-TvBox",
             "type": 3,
             "api": "csp_TvBox",
-            "ext": "https://hub.gitmirror.com/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/tv/js/alist_tvbox.js",
-            "ext2": "https://hub.gitmirror.com/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/tv/js/alist_tvbox.js"
+            "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/tv/js/alist_tvbox.js",
+            "ext2": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/tv/js/alist_tvbox.js"
         },
        {
             "name": "小雅AList",
             "type": 3,
             "api": "csp_xiaoya",
-            "ext": "https://hub.gitmirror.com/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/tv/js/alist_xiaoya.js",
-            "ext2": "https://hub.gitmirror.com/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/tv/js/alist_xiaoya.js"
+            "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/tv/js/alist_xiaoya.js",
+            "ext2": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/tv/js/alist_xiaoya.js"
         }
     ]
 }
