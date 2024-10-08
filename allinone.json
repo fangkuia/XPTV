@@ -432,6 +432,13 @@
       "ext2": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/jcy.js"
     },
     {
+      "name": "hdmoli",
+      "type": 3,
+      "api": "csp_hdmoli",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/hdmoli.js",
+      "ext2": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/hdmoli.js"
+    },
+    {
       "name": "MISSAV",
       "type": 3,
       "api": "csp_Missav"
