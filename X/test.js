@@ -1,100 +1,136 @@
-const haiwaikan = [
-	":16.0599,",
-	":15.2666,",
-	":15.1666,",
-	":15.08,",
-	":12.33,",
-	":10.85,",
-	":10.3333,",
-	":10.106555,",
-	":10.0099,",
-	":8.641966,",
-	":8.1748,",
-	":7.907899,",
-	":5.939267,",
-	":5.538866,",
-	":5.53,",
-	":3.970633,",
-	":3.937267,",
-	":3.93,",
-	":3.136466,",
-	":3.103100,",
-	":3.10,",
-	":2.936266,",
-	":2.602600,",
-	":2.235567,",
-	":2.002000,",
-	":2.00,",
-	":1.968633,",
-	":1.96,",
-	":1.36,",
-	":1.334666,",
-	":1.768432,",
-	":1.368033,",
-	":0.266932,",
-	":0.26,",
-];
 
-const lzzy = [":7.166667,", ":7.041667,", ":4.166667,", ":2.833333,", ":2.733333,", ":2.500000,", ":0.458333,"];
+/*
+{
+  "follows": [
+    {"name": "徐雅","code": "@e_seoa"}, 
+    {"name": "陈一发儿", "code": "@chenyifaer"}
+  ]
+}
+*/
+let $config = argsify($config_str)
 
-const ffzy = [":6.400000,", ":3.700000,", ":2.800000,", ":1.766667,"];
-
-const url = $request.url;
-const lines = $response.body.split("\n");
-
-let adCount = 0;
-
-switch (true) {
-	case url.includes("v.cdnlz"):
-	case url.includes("lz-cdn"):
-		filterAds(lzzy);
-		break;
-	case url.includes("m3u.haiwaikan"):
-		haiwaikanHostsCount();
-		filterAds(haiwaikan);
-		break;
-	case url.includes("ffzy"):
-		filterAds(ffzy);
-		break;
-	default:
-		break;
+let appConfig = {
+    ver: 1,
+    title: '油管',
+    site: 'https://www.youtube.com',
 }
 
-function filterAds(valuesToRemove) {
-	for (let i = 0; i < lines.length; i++) {
-		if (valuesToRemove.some((value) => lines[i].includes(value))) {
-			console.log("Match:" + valuesToRemove.find(value => lines[i].includes(value)));
-			if (lines[i].endsWith(".ts")) {
-				console.log("Remove ad(by host):" + lines[i]);
-				lines.splice(i - 1, 2);
-				adCount++;
-			} else if (lines[i + 1].endsWith(".ts")) {
-				console.log("Remove ad(by duration):" + lines[i + 1]);
-				lines.splice(i, 2);
-				adCount++;
-			}
-		}
-	}
-	
-	console.log(`移除廣告${adCount}行`);
-	$done({ body: lines.join("\n") });
+async function getConfig() {
+  let tabs = []
+  $config.follows.forEach( each => {
+    tabs.push({
+      name: each.name,
+      ext: {
+        code: each.code,
+      }
+    })
+  })
+  return jsonify({
+      ver: 1,
+      title: '油管',
+      site: 'https://www.youtube.com',
+      tabs
+  })
 }
 
-function haiwaikanHostsCount() {
-	const hostsCount = {};
-	lines.forEach((line) => {
-		if (line.includes(".ts")) {
-			const hostname = getHost(line);
-			hostsCount[hostname] = (hostsCount[hostname] || 0) + 1;
-		}
-	});
+async function getCards(ext) {
+  ext = argsify(ext)
+  code = ext.code
+  const url = `https://www.youtube.com/${code}/streams`
+  const headers = {
+    Origin: 'https://www.youtube.com',
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
+  }
+  const { data } = await $fetch.get(url, {
+    headers
+  });
+  $print(`***url: ${url}`)
+  // $print(data)
+  let matches = data.match(/var ytInitialData = (.*)}}};/);
+  let jsdata = matches[1] + '}}}'
+  let parsedResponse = JSON.parse(jsdata);
+  let items = parsedResponse.contents.twoColumnBrowseResultsRenderer.tabs[1].tabRenderer.content.richGridRenderer.contents
+  let cards = []
+  items.forEach( each => {
+    if (each.richItemRenderer != undefined) {
+      cards.push({
+        vod_id: each.richItemRenderer.content.videoRenderer.videoId,
+        vod_name: each.richItemRenderer.content.videoRenderer.title.runs[0].text,
+        vod_pic: each.richItemRenderer.content.videoRenderer.thumbnail.thumbnails.at(-1).url,
+        vod_remarks: '',
+        ext: {
+          id: each.richItemRenderer.content.videoRenderer.videoId
+        }
+      })
+    }
+  })
 
-	const keys = Object.keys(hostsCount);
-	if (keys.length > 1) {
-		haiwaikan.push(keys[1]);
-	} else return;
+  return jsonify({
+      list: cards,
+  })
 }
 
-function getHost(url) {
-  return url.toLowerCase().match(/^https?:\/\/(.*?)\//)[1];
+async function getTracks(ext) {
+    ext = argsify(ext)
+    let tracks = []
+    tracks.push({
+      name: '播放',
+      pan: '',
+      ext
+    })
+
+    return jsonify({
+        list: [
+            {
+                title: '默认分组',
+                tracks,
+            },
+        ],
+    })
+}
+
+async function getPlayinfo(ext) {
+  ext = argsify(ext)
+  let videoId = ext.id
+  $print(`***id: ${videoId}`)
+  const apiKey = 'AIzaSyB-63vPrdThhKuerbB2N_l7Kwwcxj6yUAc'
+  const headers = {
+    'X-YouTube-Client-Name': '5',
+    'X-YouTube-Client-Version': '19.09.3',
+    Origin: 'https://www.youtube.com',
+    'User-Agent': 'com.google.ios.youtube/19.09.3 (iPhone14,3; U; CPU iOS 15_6 like Mac OS X)',
+    'content-type': 'application/json'
+  }
+
+  const b = {
+    context: {
+      client: {
+        clientName: 'IOS',
+        clientVersion: '19.09.3',
+        deviceModel: 'iPhone14,3',
+        userAgent: 'com.google.ios.youtube/19.09.3 (iPhone14,3; U; CPU iOS 15_6 like Mac OS X)',
+        hl: 'en',
+        timeZone: 'UTC',
+        utcOffsetMinutes: 0
+      }
+    },
+    videoId,
+    playbackContext: { contentPlaybackContext: { html5Preference: 'HTML5_PREF_WANTS' } },
+    contentCheckOk: true,
+    racyCheckOk: true
+  }
+
+  const { data } = await $fetch.post(`https://www.youtube.com/youtubei/v1/player?key${apiKey}&prettyPrint=false`, JSON.stringify(b), {
+    headers
+  })
+
+  let playurl = argsify(data).streamingData.hlsManifestUrl
+  $print(`***playurl: ${playurl}`)
+  return jsonify({ urls: [playurl] })
+}
+
+async function search(ext) {
+    return jsonify({
+        list: [],
+    })
 }
