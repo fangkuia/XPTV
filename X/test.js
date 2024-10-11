@@ -33,9 +33,7 @@ async function initSession() {
     const headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
     }
-    const { data } = await $fetch.get(url, {
-        headers,
-    })
+    const { data } = await $fetch.get(url, { headers })
     // 这里可以解析 Bilibili 的相关配置
 }
 
@@ -51,20 +49,24 @@ async function getCards(ext) {
         'Content-Type': 'application/json',
     }
 
-    const { data } = await $fetch.get(url, { headers })
-    const videos = argsify(data).data.list.vlist
+    try {
+        const { data } = await $fetch.get(url, { headers })
+        const videos = argsify(data).data.list.vlist
 
-    videos.forEach((item) => {
-        cards.push({
-            vod_id: item.bvid,
-            vod_name: item.title,
-            vod_pic: item.pic,
-            vod_remarks: item.pubdate,
-            ext: {
-                id: item.bvid,
-            },
+        videos.forEach((item) => {
+            cards.push({
+                vod_id: item.bvid,
+                vod_name: item.title,
+                vod_pic: item.pic,
+                vod_remarks: item.pubdate,
+                ext: {
+                    id: item.bvid,
+                },
+            })
         })
-    })
+    } catch (error) {
+        console.error('Error fetching cards:', error)
+    }
 
     return jsonify({
         list: cards,
@@ -79,7 +81,7 @@ async function getChannelId(uid) {
     }
     const response = await $fetch.get(url, { headers })
     const $ = cheerio.load(response.data)
-    const link = $('link[rel="canonical"]').attr('href')
+        const link = $('link[rel="canonical"]').attr('href')
     const channelId = link.split('/space/')[1]
     return channelId
 }
@@ -111,9 +113,14 @@ async function getPlayinfo(ext) {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
     }
 
-    const { data } = await $fetch.get(url, { headers })
-    let playurl = argsify(data).data.durl[0].url
-    return jsonify({ urls: [playurl] })
+    try {
+        const { data } = await $fetch.get(url, { headers })
+        let playurl = argsify(data).data.durl[0].url
+        return jsonify({ urls: [playurl] })
+    } catch (error) {
+        console.error('Error fetching play info:', error)
+        return jsonify({ urls: [] }) // 返回空数组以防止错误
+    }
 }
 
 async function search(ext) {
@@ -126,22 +133,27 @@ async function search(ext) {
         'Content-Type': 'application/json',
     }
 
-    const { data } = await $fetch.get(url, { headers })
-    const videos = argsify(data).data.result
+    try {
+        const { data } = await $fetch.get(url, { headers })
+        const videos = argsify(data).data.result
 
-    videos.forEach((item) => {
-        cards.push({
-            vod_id: item.bvid,
-            vod_name: item.title,
-            vod_pic: item.pic,
-            vod_remarks: item.pubdate,
-            ext: {
-                id: item.bvid,
-            },
+        videos.forEach((item) => {
+            cards.push({
+                vod_id: item.bvid,
+                vod_name: item.title,
+                vod_pic: item.pic,
+                vod_remarks: item.pubdate,
+                ext: {
+                    id: item.bvid,
+                },
+            })
         })
-    })
+    } catch (error) {
+        console.error('Error searching videos:', error)
+    }
 
     return jsonify({
         list: cards,
     })
 }
+
