@@ -15,7 +15,7 @@ async function getConfig() {
         tabs.push({
             name: each.name,
             ext: {
-                code: each.code,
+                uid: each.uid, // 使用 uid 替代 code
             },
         })
     })
@@ -41,11 +41,11 @@ async function initSession() {
 
 async function getCards(ext) {
     ext = argsify(ext)
-    let code = ext.code
+    let uid = ext.uid // 使用 uid
     let page = ext.page
     let cards = []
 
-    const url = `https://api.bilibili.com/x/space/arc/search?mid=${code}&pn=${page}&ps=20`
+    const url = `https://api.bilibili.com/x/space/arc/search?mid=${uid}&pn=${page}&ps=20`
     const headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
         'Content-Type': 'application/json',
@@ -71,8 +71,8 @@ async function getCards(ext) {
     })
 }
 
-async function getChannelId(code) {
-    const url = `https://space.bilibili.com/${code}`
+async function getChannelId(uid) {
+    const url = `https://space.bilibili.com/${uid}`
     const headers = {
         Origin: 'https://www.bilibili.com',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
@@ -122,7 +122,7 @@ async function search(ext) {
     const text = ext.text
     const url = `https://api.bilibili.com/x/web-interface/search/type?keyword=${text}&search_type=video`
     const headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
         'Content-Type': 'application/json',
     }
 
@@ -145,4 +145,3 @@ async function search(ext) {
         list: cards,
     })
 }
-
