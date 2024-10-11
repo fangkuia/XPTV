@@ -38,20 +38,20 @@ async function initSession() {
 }
 
 async function getCards(ext) {
-    ext = argsify(ext)
-    let uid = ext.uid // 使用 uid
-    let page = ext.page
-    let cards = []
+    ext = argsify(ext);
+    let uid = ext.uid;
+    let page = ext.page || 1; // 默认页码为 1
+    let cards = [];
 
-    const url = `https://api.bilibili.com/x/space/arc/search?mid=${uid}&pn=${page}&ps=20`
+    const url = `https://api.bilibili.com/x/space/arc/search?mid=${uid}&pn=${page}&ps=20`;
     const headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
         'Content-Type': 'application/json',
-    }
+    };
 
     try {
-        const { data } = await $fetch.get(url, { headers })
-        const videos = argsify(data).data.list.vlist
+        const { data } = await $fetch.get(url, { headers });
+        const videos = argsify(data).data.list.vlist;
 
         videos.forEach((item) => {
             cards.push({
@@ -62,15 +62,15 @@ async function getCards(ext) {
                 ext: {
                     id: item.bvid,
                 },
-            })
-        })
+            });
+        });
     } catch (error) {
-        console.error('Error fetching cards:', error)
+        console.error('Error fetching cards:', error);
     }
 
     return jsonify({
         list: cards,
-    })
+    });
 }
 
 async function getChannelId(uid) {
