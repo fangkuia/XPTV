@@ -1,8 +1,8 @@
 /*
 {
   "follows": [
-    {"name": "bilibili 大会员", "code": "@bilibili"}, 
-    {"name": "bilibili 官方账号", "code": "@bilibili_official"}
+    {"name": "bilibili 大会员", "uid": "233233"}, 
+    {"name": "bilibili 官方账号", "uid": "1"} 
   ]
 }
 */
@@ -20,7 +20,7 @@ async function getConfig() {
     tabs.push({
       name: each.name,
       ext: {
-        code: each.code,
+        uid: each.uid,
       }
     })
   })
@@ -34,8 +34,8 @@ async function getConfig() {
 
 async function getCards(ext) {
   ext = argsify(ext)
-  code = ext.code
-  const url = `https://api.bilibili.com/x/space/arc/search?mid=${code}&ps=30&tid=0&pn=1&keyword=&order=pubdate&jsonp=jsonp`
+  uid = ext.uid
+  const url = `https://api.bilibili.com/x/space/arc/search?mid=${uid}&ps=30&tid=0&pn=1&keyword=&order=pubdate&jsonp=jsonp`
   const headers = {
     Origin: 'https://www.bilibili.com',
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
