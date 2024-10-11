@@ -15,7 +15,7 @@ async function getConfig() {
         tabs.push({
             name: each.name,
             ext: {
-                uid: each.uid, // 使用 uid 替代 code
+                uid: each.uid,
             },
         })
     })
@@ -33,57 +33,42 @@ async function initSession() {
     const headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
     }
-    const { data } = await $fetch.get(url, { headers })
-    // 这里可以解析 Bilibili 的相关配置
+    const { data } = await $fetch.get(url, {
+        headers,
+    })
+    // 哔哩哔哩的 API 可能不需要像 YouTube 那样的初始化
 }
 
 async function getCards(ext) {
-    ext = argsify(ext);
-    let uid = ext.uid;
-    let page = ext.page || 1; // 默认页码为 1
-    let cards = [];
+    ext = argsify(ext)
+    let uid = ext.uid
+    let page = ext.page
+    let cards = []
 
-    const url = `https://api.bilibili.com/x/space/arc/search?mid=${uid}&pn=${page}&ps=20`;
+    const url = `https://api.bilibili.com/x/space/arc/search?mid=${uid}&pn=${page}&ps=30`
     const headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
         'Content-Type': 'application/json',
-    };
-
-    try {
-        const { data } = await $fetch.get(url, { headers });
-        const videos = argsify(data).data.list.vlist;
-
-        videos.forEach((item) => {
-            cards.push({
-                vod_id: item.bvid,
-                vod_name: item.title,
-                vod_pic: item.pic,
-                vod_remarks: item.pubdate,
-                ext: {
-                    id: item.bvid,
-                },
-            });
-        });
-    } catch (error) {
-        console.error('Error fetching cards:', error);
     }
+
+    const { data } = await $fetch.get(url, { headers })
+    const videos = argsify(data).data.list.vlist
+
+    videos.forEach((item) => {
+        cards.push({
+            vod_id: item.bvid,
+            vod_name: item.title,
+            vod_pic: item.pic,
+            vod_remarks: item.pubdate ? new Date(item.pubdate * 1000).toLocaleString() : '',
+            ext: {
+                id: item.bvid,
+            },
+        })
+    })
 
     return jsonify({
         list: cards,
-    });
-}
-
-async function getChannelId(uid) {
-    const url = `https://space.bilibili.com/${uid}`
-    const headers = {
-        Origin: 'https://www.bilibili.com',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
-    }
-    const response = await $fetch.get(url, { headers })
-    const $ = cheerio.load(response.data)
-        const link = $('link[rel="canonical"]').attr('href')
-    const channelId = link.split('/space/')[1]
-    return channelId
+    })
 }
 
 async function getTracks(ext) {
@@ -107,53 +92,47 @@ async function getTracks(ext) {
 
 async function getPlayinfo(ext) {
     ext = argsify(ext)
-    let videoId = ext.id
-    const url = `https://api.bilibili.com/x/player/playurl?bvid=${videoId}`
+    let bvid = ext.id
+    const apiKey = 'YOUR_API_KEY' // 如果需要 API 密钥
     const headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
+        'Content-Type': 'application/json',
     }
 
-    try {
-        const { data } = await $fetch.get(url, { headers })
-        let playurl = argsify(data).data.durl[0].url
-        return jsonify({ urls: [playurl] })
-    } catch (error) {
-        console.error('Error fetching play info:', error)
-        return jsonify({ urls: [] }) // 返回空数组以防止错误
-    }
+    const { data } = await $fetch.get(`https://api.bilibili.com/x/player/playurl?bvid=${bvid}&cid=YOUR_CID&qn=80`, {
+        headers,
+    })
+
+    let playurl = argsify(data).data.durl[0].url
+    return jsonify({ urls: [playurl] })
 }
 
 async function search(ext) {
     ext = argsify(ext)
     let cards = []
     const text = ext.text
-    const url = `https://api.bilibili.com/x/web-interface/search/type?keyword=${text}&search_type=video`
+    const url = `https://api.bilibili.com/x/web-interface/search/type?search_type=video&keyword=${encodeURIComponent(text)}`
     const headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
         'Content-Type': 'application/json',
     }
 
-    try {
-        const { data } = await $fetch.get(url, { headers })
-        const videos = argsify(data).data.result
+    const { data } = await $fetch.get(url, { headers })
+    const videos = argsify(data).data.result
 
-        videos.forEach((item) => {
-            cards.push({
-                vod_id: item.bvid,
-                vod_name: item.title,
-                vod_pic: item.pic,
-                vod_remarks: item.pubdate,
-                ext: {
-                    id: item.bvid,
-                },
-            })
+    videos.forEach((item) => {
+        cards.push({
+            vod_id: item.bvid,
+            vod_name: item.title,
+            vod_pic: item.pic,
+            vod_remarks: item.pubdate ? new Date(item.pubdate * 1000).toLocaleString() : '',
+            ext: {
+                id: item.bvid,
+            },
         })
-    } catch (error) {
-        console.error('Error searching videos:', error)
-    }
+    })
 
     return jsonify({
         list: cards,
     })
 }
-
