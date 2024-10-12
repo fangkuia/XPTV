@@ -24,8 +24,13 @@
             "name": "南風短劇 | PAN",
             "type": 3,
             "api": "csp_nanfdj",
-            "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/nanfdj.js",
-            "ext2": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/nanfdj.js"
+            "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/nanfdj.js"
+        },
+        {
+            "name": "多多影音 | PAN",
+            "type": 3,
+            "api": "csp_yydsys",
+            "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/yydsys.js"
         }
     ]
 }
