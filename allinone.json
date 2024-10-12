@@ -501,6 +501,12 @@
       "type": 3,
       "api": "csp_labi",
       "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/labipan.js"
+    },
+    {
+      "name": "木偶 | PAN",
+      "type": 3,
+      "api": "csp_labi",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/muou.js"
     }
   ]
 }
