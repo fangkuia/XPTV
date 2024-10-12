@@ -122,7 +122,7 @@ async function getTracks(ext) {
 
     const playlist = $('.module-player-list .module-row-one')
     playlist.each((_, e) => {
-        const name = $(e).find('.module-row-title h4').text()
+        const name = $(e).find('.module-row-title h4').text().replace('第1集', '')
         // 網盤的分享連結
         const panShareUrl = $(e).find('.module-row-title p').text()
         tracks.push({
