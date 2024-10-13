@@ -507,6 +507,18 @@
       "type": 3,
       "api": "csp_muou",
       "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/muou.js"
+    },
+    {
+      "name": "小米 | PAN",
+      "type": 3,
+      "api": "csp_mihdr",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/mihdr.js"
+    },
+    {
+      "name": "云盘资源网 | PAN",
+      "type": 3,
+      "api": "csp_yunpanres",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/yunpanres.js"
     }
   ]
 }
