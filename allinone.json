@@ -21,6 +21,11 @@
       "api": "https://hw8.live/api.php/provide/vod/"
     },
     {
+      "name": "腐剧|点播",
+      "type": 1,
+      "api": "http://www.fuju2024.cc:8013/ruifenglb_api.php/provide/vod/"
+    },
+    {
       "name": "金鹰|点播",
       "type": 1,
       "api": "https://jinyingzy.com/api.php/provide/vod/"
