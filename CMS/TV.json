@@ -3,6 +3,7 @@
         { "name": "墨斗|点播", "type": 1, "api": "https://www.mdzyapi.com/api.php/provide/vod/" },
         { "name": "黑木耳|点播", "type": 1, "api": "https://json02.heimuer.xyz/api.php/provide/vod/" },
         { "name": "华为吧|点播", "type": 1, "api": "https://hw8.live/api.php/provide/vod/" },
+        { "name": "腐剧|点播", "type": 1, "api": "http://www.fuju2024.cc:8013/ruifenglb_api.php/provide/vod/" },
         { "name": "金鹰|点播", "type": 1, "api": "https://jinyingzy.com/api.php/provide/vod/" },
         { "name": "OK|点播", "type": 1, "api": "https://okzyw9.com/api.php/provide/vod/" },
         { "name": "宝片|点播", "type": 1, "api": "https://zpsps.com/api.php/provide/vod/" },
