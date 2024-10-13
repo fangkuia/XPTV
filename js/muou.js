@@ -167,7 +167,7 @@ async function search(ext) {
 
     const videos = $('#main .module-search-item')
     videos.each((_, e) => {
-        const href = $(e).find('.module-item-pic a').attr('href')
+        const href = $(e).find('.video-info-header h3 a').attr('href')
         const title = $(e).find('.module-item-pic img').attr('alt')
         const cover = $(e).find('.module-item-pic img').attr('data-src')
         const remarks = $(e).find('.video-serial').text()
