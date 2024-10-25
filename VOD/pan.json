@@ -55,6 +55,12 @@
             "type": 3,
             "api": "csp_yunpanres",
             "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/yunpanres.js"
+        },
+        {
+            "name": "校长影视 | PAN",
+            "type": 3,
+            "api": "csp_xzys",
+            "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/xzys.js"
         }
     ]
 }
