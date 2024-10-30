@@ -459,6 +459,12 @@
       "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/hanime.js"
     },
     {
+      "name": "秋名山見(live)",
+      "type": 3,
+      "api": "csp_harunasan",
+      "ext": "https://ghp.ci/https://gist.githubusercontent.com/Yswag/d9f072b75dab5b1b107c523dd148eea3/raw/harunasan.js"
+    },
+    {
       "name": "小纸条 | PAN",
       "type": 3,
       "api": "csp_Gitcafe"
