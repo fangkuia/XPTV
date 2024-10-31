@@ -525,6 +525,12 @@
       "type": 3,
       "api": "csp_xzys",
       "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/xzys.js"
+    },
+    {
+      "name": "正奕 | PAN",
+      "type": 3,
+      "api": "csp_wobgg",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/wobg.js"
     }
   ]
 }
