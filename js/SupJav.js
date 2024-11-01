@@ -235,7 +235,7 @@ async function search(ext) {
     $('.post').each((_, e) => {
         const href = $(e).find('a').attr('href')
         const title = $(e).find('a').attr('title')
-        const cover = $(e).find('a img').attr('src')
+        const cover = $(e).find('a img').attr('data-original')
         const remarks = $(e).find('.con .meta .date').text()
         cards.push({
             vod_id: href,
