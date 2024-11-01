@@ -465,6 +465,12 @@
       "ext": "https://ghp.ci/https://gist.githubusercontent.com/Yswag/d9f072b75dab5b1b107c523dd148eea3/raw/harunasan.js"
     },
     {
+      "name": "SupJav",
+      "type": 3,
+      "api": "csp_SupJav",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/SupJav.js"
+    },
+    {
       "name": "小纸条 | PAN",
       "type": 3,
       "api": "csp_Gitcafe"
