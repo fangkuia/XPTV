@@ -82,7 +82,7 @@ async function getCards(ext) {
             vod_id: href,
             vod_name: title,
             vod_pic: cover,
-            vod_remarks: remarks,
+            vod_remarks: '',
             ext: {
                 url: href,
             },
