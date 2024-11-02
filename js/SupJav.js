@@ -19,6 +19,7 @@ const appConfig = {
             ext: {
                 id: 'category/censored-jav',
             },
+            ui: 1,
         },
         {
             name: '无码',
