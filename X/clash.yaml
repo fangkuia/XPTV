@@ -125,7 +125,6 @@ payload:
 #杂七杂八的播放
   - DOMAIN,v.damoli.pro
   - DOMAIN,hdmoli.pro
-  - DOMAIN-SUFFIX,4k-av.com
   - DOMAIN,ppvod01.blbtgg.com
   - DOMAIN-SUFFIX,zaqohu.com
   - DOMAIN-SUFFIX,xjqxz.top
