@@ -436,6 +436,12 @@
       "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/nmlive.js"
     },
     {
+      "name": "小蘋果",
+      "type": 3,
+      "api": "csp_apple",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/apple.js"
+    },
+    {
       "name": "MISSAV",
       "type": 3,
       "api": "csp_Missav"
