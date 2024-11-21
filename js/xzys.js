@@ -101,7 +101,7 @@ async function getTracks(ext) {
     playlist.each((_, e) => {
         const name = $(e).find('.btn-info').text()
         const panShareUrl = $(e).find('a').attr('href')
-        if (!/夸克|阿里|UC|115/.test(name)) return
+        if (!/夸克|阿里|UC|115|天翼/.test(name)) return
         tracks.push({
             name: name.trim(),
             pan: panShareUrl,
