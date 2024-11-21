@@ -71,7 +71,7 @@
         {
             "name": "雷鲸 | PAN",
             "type": 3,
-            "api": "csp_wobgg",
+            "api": "csp_leijing",
             "ext": "https://ghp.ci/https://gist.githubusercontent.com/occupy-pluto/d9bd7dc541a10681870c7bc76fe8f12a/raw/b5866bf8430336cb8eedef269a752b61a8804645/lei_189.js"
         }
     ]
