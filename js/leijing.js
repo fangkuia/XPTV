@@ -99,8 +99,12 @@ async function getTracks(ext) {
 	const $ = cheerio.load(data)
 	const pans = new Set();
 	$('a').each((index, each) => {
-	  const href = ($(each).attr('href') ?? "").replace('http://', 'https://')
-	  if (href.startsWith('https://cloud.189.cn/t/') && !pans.has(href)) {
+	  const href = ($(each).attr('href') ?? "").replace('http://', 'https://');
+	  const text = $(each).text().trim();
+	  if ((href.startsWith('https://cloud.189.cn/t/') && !pans.has(href)) || 
+      (text.startsWith('https://cloud.189.cn/t/') && !pans.has(text))) {
+		const validLink = href.startsWith('https://cloud.189.cn/t/') ? href : text;
+    pans.add(validLink);
 		pans.add(href)
 		tracks.push({
 		  name: "网盘",
