@@ -15,33 +15,33 @@ const appConfig = {
 		  {
 			  name: '电影',
 			  ext: {
-				  id: '?tagId=42204681950354',
+				id: '?tagId=42204681950354',
 			  },
 		  },
 		  {
 			  name: '动漫',
 			  ext: {
-				  id: '?tagId=42204792950357',
+				id: '?tagId=42204792950357',
 			  },
 		  },
 		  {
 			  name: '纪录片',
 			  ext: {
-				  id: '?tagId=42204697150356',
+				id: '?tagId=42204697150356',
 			  },
 		  },
 		  {
 			  name: '综艺',
 			  ext: {
-				  id: '?tagId=42210356650363',
+				id: '?tagId=42210356650363',
 			  },
 		  },
 		  {
-				name: '影视原盘',
-				ext: {
-					id: '?tagId=42212287587456',
-				},
-			},
+			  name: '影视原盘',
+			  ext: {
+				id: '?tagId=42212287587456',
+			  },
+		  },
 	  ],
   }
 
@@ -101,9 +101,9 @@ async function getTracks(ext) {
 	$('a').each((index, each) => {
 	  const href = ($(each).attr('href') ?? "").replace('http://', 'https://');
 	  const text = $(each).text().trim();
-	  if ((href.startsWith('https://cloud.189.cn/t/') && !pans.has(href)) || 
-      (text.startsWith('https://cloud.189.cn/t/') && !pans.has(text))) {
-		const validLink = href.startsWith('https://cloud.189.cn/t/') ? href : text;
+	  if ((href.startsWith('https://cloud.189.cn/') && !pans.has(href)) || 
+      (text.startsWith('https://cloud.189.cn/') && !pans.has(text))) {
+		const validLink = href.startsWith('https://cloud.189.cn/') ? href : text;
     		pans.add(validLink);
 		pans.add(href);
 		tracks.push({
