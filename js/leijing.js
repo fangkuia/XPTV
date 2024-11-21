@@ -104,8 +104,8 @@ async function getTracks(ext) {
 	  if ((href.startsWith('https://cloud.189.cn/t/') && !pans.has(href)) || 
       (text.startsWith('https://cloud.189.cn/t/') && !pans.has(text))) {
 		const validLink = href.startsWith('https://cloud.189.cn/t/') ? href : text;
-    pans.add(validLink);
-		pans.add(href)
+    		pans.add(validLink);
+		pans.add(href);
 		tracks.push({
 		  name: "网盘",
 		  pan: href,
