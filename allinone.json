@@ -444,7 +444,8 @@
     {
       "name": "MISSAV",
       "type": 3,
-      "api": "csp_Missav"
+      "api": "csp_miss",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/missav.js"
     },
     {
       "name": "麻豆社",
