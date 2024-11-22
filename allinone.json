@@ -478,6 +478,18 @@
       "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/SupJav.js"
     },
     {
+      "name": "91jav (無海報)",
+      "type": 3,
+      "api": "csp_91jav",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/91jav.js"
+    },
+    {
+      "name": "hohoj",
+      "type": 3,
+      "api": "csp_hohoj",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/hohoj.js"
+    },
+    {
       "name": "玩偶哥哥 | PAN",
       "type": 3,
       "api": "csp_WoGG"
