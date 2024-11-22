@@ -99,7 +99,6 @@ async function getTracks(ext) {
     var tracks = []
     let url = ext.url
 
-    // 发送请求
     const { data } = await $fetch.get(url, {
         headers: {
           'Referer': 'https://www.leijing.xyz/',
@@ -110,9 +109,9 @@ async function getTracks(ext) {
     const $ = cheerio.load(data);
     const pans = new Set();
     
-    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const urlRegex = /(https?:\/\/[^\s（]+)/g;
     
-    $('p,a').each((index, each) => {
+    $('div,p,a').each((index, each) => {
       
         const href = ($(each).attr('href') ?? "").replace('http://', 'https://');
         const text = $(each).text().trim();
