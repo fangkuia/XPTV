@@ -3,7 +3,7 @@
         {
             "name": "MISSAV", 
             "type": 3, 
-            "api": "csp_Missav" 
+            "api": "csp_Missav1" 
             "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/missav.js"
         },
         {
