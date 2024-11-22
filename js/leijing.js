@@ -67,11 +67,14 @@ async function getCards(ext) {
 	const $ = cheerio.load(data);
 
 $('.topicItem').each((index, each) => {
+
   if ($(each).find('.cms-lock-solid').length > 0) return;
+	
   const href = $(each).find('h2 a').attr('href');
   const title = $(each).find('h2 a').text().trim().replace(/\s+/g, ' ');
   const r = $(each).find('.summary').text();
   const tag = $(each).find('.tag').text();
+	
   if (/content/.test(r) && !/cloud/.test(r)) return;
   if (/软件|游戏|书籍|图片|公告|音乐|课程/.test(tag)) return;
 
@@ -154,10 +157,12 @@ async function search(ext) {
 
 $('.topicItem').each((index, each) => {
   if ($(each).find('.cms-lock-solid').length > 0) return;
+  
   const href = $(each).find('h2 a').attr('href');
   const title = $(each).find('h2 a').text().trim().replace(/\s+/g, ' ');
   const r = $(each).find('.summary').text();
   const tag = $(each).find('.tag').text();
+	
   if (/content/.test(r) && !/cloud/.test(r)) return;
   if (/软件|游戏|书籍|图片|公告|音乐|课程/.test(tag)) return;
 
