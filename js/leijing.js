@@ -64,19 +64,28 @@ async function getCards(ext) {
 		}
 	});
 
-	const $ = cheerio.load(data)
-	$('.topicItem h2 a').each((index, each) => {
-	  const href = $(each).attr('href')
-	  cards.push({
-		vod_id: href,
-		vod_name: $(each).text(),
-		vod_pic: '',
-		vod_remarks: '',
-		ext: {
-			url: `https://www.leijing.xyz/${href}`,
-		},
-	  })
-	});
+	const $ = cheerio.load(data);
+
+$('.topicItem').each((index, each) => {
+  if ($(each).find('.cms-lock-solid').length > 0) return;
+  const href = $(each).find('h2 a').attr('href');
+  const title = $(each).find('h2 a').text().trim().replace(/\s+/g, ' ');
+  const r = $(each).find('.summary').text();
+  const tag = $(each).find('.tag').text();
+  if (/content/.test(r) && !/cloud/.test(r)) return;
+  if (/软件|游戏|书籍|图片|公告|音乐|课程/.test(tag)) return;
+
+  cards.push({
+	vod_id: href,
+	vod_name: title,
+	vod_pic: '',
+	vod_remarks: '',
+	ext: {
+	  url: `https://www.leijing.xyz/${href}`,
+	},
+  });
+});
+
 
 	return jsonify({
 		list: cards,
@@ -141,20 +150,28 @@ async function search(ext) {
 	})
 
 
-	const $ = cheerio.load(data)
-	
-	$('.topicItem h2 a').each((index, each) => {
-	  const href = $(each).attr('href')
-	  cards.push({
-		vod_id: href,
-		vod_name: $(each).text(),
-		vod_pic: '',
-		vod_remarks: '',
-		ext: {
-			url: `https://www.leijing.xyz/${href}`,
-		},
-	  })
-	});
+	const $ = cheerio.load(data);
+
+$('.topicItem').each((index, each) => {
+  if ($(each).find('.cms-lock-solid').length > 0) return;
+  const href = $(each).find('h2 a').attr('href');
+  const title = $(each).find('h2 a').text().trim().replace(/\s+/g, ' ');
+  const r = $(each).find('.summary').text();
+  const tag = $(each).find('.tag').text();
+  if (/content/.test(r) && !/cloud/.test(r)) return;
+  if (/软件|游戏|书籍|图片|公告|音乐|课程/.test(tag)) return;
+
+  cards.push({
+	vod_id: href,
+	vod_name: title,
+	vod_pic: '',
+	vod_remarks: '',
+	ext: {
+	  url: `https://www.leijing.xyz/${href}`,
+	},
+  });
+});
+
 	return jsonify({
 		list: cards,
 	})
