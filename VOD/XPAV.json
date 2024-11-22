@@ -47,6 +47,12 @@
             "type": 3,
             "api": "csp_hohoj",
             "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/hohoj.js"
-        }
+        },
+        {
+            "name": "KoreaPornMovie",
+            "type": 3,
+            "api": "csp_KPM",
+            "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/KoreaPornMovie.js"
+        },
     ]
 }
