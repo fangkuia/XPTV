@@ -107,38 +107,31 @@ async function getTracks(ext) {
     });
     
     const $ = cheerio.load(data);
-    const pans = new Set();
-    
-    const urlRegex = /(https?:\/\/[^\s（]+)/g;
-    
-    $('div,p,a').each((index, each) => {
-      
-        const href = ($(each).attr('href') ?? "").replace('http://', 'https://');
-        const text = $(each).text().trim();
-    
-        if (href.startsWith('https://cloud.189.cn/') && !pans.has(href)) {
-            pans.add(href);
-            tracks.push({
-                name: "网盘",
-                pan: href,
-                ext: {}
-            });
-        }
-    
-        const urls = text.match(urlRegex);
-        if (urls) {
-            urls.forEach(url => {
-                if (url.startsWith('https://cloud.189.cn/') && !pans.has(url)) {
-                    pans.add(url);
-                    tracks.push({
-                        name: "网盘",
-                        pan: url,
-                        ext: {}
-                    });
-                }
-            });
-        }
-    });
+const pans = new Set();
+
+const urlRegex = /(https?:\/\/[^\s（]+)/g;
+
+const processUrl = (url) => {
+    if (url.startsWith('https://cloud.189.cn/') && !pans.has(url)) {
+        pans.add(url);
+        tracks.push({
+            name: "网盘",
+            pan: url,
+            ext: {}
+        });
+    }
+};
+
+$('div,p,a').each((index, each) => {
+    const href = ($(each).attr('href') ?? "").replace('http://', 'https://');
+    processUrl(href);
+
+    const text = $(each).text().trim();
+    const urls = text.match(urlRegex);
+    if (urls) {
+        urls.forEach(processUrl);
+    }
+});
     
     return jsonify({ list: [{
         title: "默认分组",
