@@ -25,7 +25,6 @@
         { "name": "闪电|点播", "type": 1, "api": "http://sdzyapi.com/api.php/provide/vod/" },
         { "name": "樱花|点播", "type": 1, "api": "https://m3u8.apiyhzy.com/api.php/provide/vod/" },
         { "name": "卧龙|点播", "type": 1, "api": "https://collect.wolongzyw.com/api.php/provide/vod/" },
-        { "name": "飘花|点播", "type": 1, "api": "http://www.ahjiuman.com/api.php/provide/vod/at/json" },
         { "name": "虎牙|点播", "type": 1, "api": "https://www.huyaapi.com/api.php/provide/vod/" },
         { "name": "飘零|点播", "type": 1, "api": "https://p2100.net/api.php/provide/vod/" },
         { "name": "无尽|点播", "type": 1, "api": "https://api.wujinapi.com/api.php/provide/vod/" },
