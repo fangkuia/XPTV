@@ -56,7 +56,6 @@ async function getCards(ext) {
 
     const url = appConfig.site + `/${id}&page=${page}`
 
-    // 发送请求
     const { data } = await $fetch.get(url, {
         headers: {
           'Referer': 'https://www.leijing.xyz/',
@@ -100,7 +99,6 @@ async function getTracks(ext) {
     var tracks = []
     let url = ext.url
 
-    // 发送请求
     const { data } = await $fetch.get(url, {
         headers: {
           'Referer': 'https://www.leijing.xyz/',
@@ -111,16 +109,12 @@ async function getTracks(ext) {
     const $ = cheerio.load(data);
     const pans = new Set();
     
-    // 正则表达式用于匹配 URL
     const urlRegex = /(https?:\/\/[^\s]+)/g;
     
     $('p,a').each((index, each) => {
-        // 获取 href 属性并替换 http 为 https
         const href = ($(each).attr('href') ?? "").replace('http://', 'https://');
-        // 获取文本内容并去除前后空白
         const text = $(each).text().trim();
     
-        // 检查 href 是否有效
         if (href.startsWith('https://cloud.189.cn/') && !pans.has(href)) {
             pans.add(href);
             tracks.push({
@@ -130,7 +124,6 @@ async function getTracks(ext) {
             });
         }
     
-        // 使用正则表达式从文本中提取 URL
         const urls = text.match(urlRegex);
         if (urls) {
             urls.forEach(url => {
