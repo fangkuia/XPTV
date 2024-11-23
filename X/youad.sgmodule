@@ -1,7 +1,0 @@
-#!name=test
-[Header Rewrite]
-http-request .*\.sharepoint\.com header-del Authorization
-
-[MITM]
-hostname= *.sharepoint.com
-
