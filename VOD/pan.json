@@ -1,9 +1,9 @@
 {
     "sites": [
         { 
-            "name": "玩偶 | PAN", 
+            "name": "玩偶哥哥 | PAN", 
             "type": 3, 
-            "api": "csp_wogg" 
+            "api": "csp_wogg",
             "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/wogg.js"
         },
         { 
