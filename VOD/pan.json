@@ -6,16 +6,6 @@
             "api": "csp_wogg",
             "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/wogg.js"
         },
-        { 
-            "name": "阿里小站 | PAN", 
-            "type": 3, 
-            "api": "csp_pan666" 
-        },
-        { 
-            "name": "云盘资源 | PAN", 
-            "type": 3, 
-            "api": "csp_yunpan" 
-        },
         {
             "name": "南風短劇 | PAN",
             "type": 3,
