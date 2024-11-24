@@ -1,29 +1,9 @@
 {
     "sites": [
         { 
-            "name": "低端|VOD", 
-            "type": 3, 
-            "api": "csp_Ddrk" 
-        },
-        { 
-            "name": "厂长|VOD", 
-            "type": 3, 
-            "api": "csp_Czsapp" 
-        },
-        { 
-            "name": "绝缘|VOD", 
-            "type": 3, 
-            "api": "csp_Bdys" 
-        },
-        { 
             "name": "欧乐|VOD🪜", 
             "type": 3, 
             "api": "csp_Olevod" 
-        },
-        { 
-            "name": "独播库|VOD", 
-            "type": 3, 
-            "api": "csp_duboku" 
         },
         { 
             "name": "在线之家|VOD", 
@@ -40,11 +20,6 @@
             "type": 3, 
             "api": "csp_age",
             "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/age.js"
-        },
-        {
-            "name": "ギリギリ动漫|VOD", 
-            "type": 3, 
-            "api": "csp_girlgirllove" 
         },
         {
             "name": "4k-av",
