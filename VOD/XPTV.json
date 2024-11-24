@@ -38,7 +38,8 @@
         { 
             "name": "AGE动漫|VOD", 
             "type": 3, 
-            "api": "csp_age" 
+            "api": "csp_age",
+            "ext": "https://gist.githubusercontent.com/occupy-pluto/e3a7bb98d5027d0f6dfa85fc2ac11a78/raw/d2656fa8fb51dbe5239f688ea36422f9bf8a0457/agedm.js"
         },
         {
             "name": "ギリギリ动漫|VOD", 
