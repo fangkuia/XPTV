@@ -126,11 +126,6 @@
       "api": "https://collect.wolongzyw.com/api.php/provide/vod/"
     },
     {
-      "name": "飘花|点播",
-      "type": 1,
-      "api": "http://www.ahjiuman.com/api.php/provide/vod/at/json"
-    },
-    {
       "name": "虎牙|点播",
       "type": 1,
       "api": "https://www.huyaapi.com/api.php/provide/vod/"
@@ -338,7 +333,8 @@
     {
       "name": "AGE动漫|VOD",
       "type": 3,
-      "api": "csp_age"
+      "api": "csp_age",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/age.js"
     },
     {
       "name": "ギリギリ动漫|VOD",
@@ -490,9 +486,16 @@
       "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/hohoj.js"
     },
     {
+      "name": "KoreaPornMovie",
+      "type": 3,
+      "api": "csp_KPM",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/KoreaPornMovie.js"
+    },
+    {
       "name": "玩偶哥哥 | PAN",
       "type": 3,
-      "api": "csp_WoGG"
+      "api": "csp_wogg",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/wogg.js"
     },
     {
       "name": "阿里小站 | PAN",
