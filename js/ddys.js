@@ -1,4 +1,3 @@
-//老登
 const cheerio = createCheerio()
 const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
 const headers = {
@@ -123,54 +122,93 @@ async function getCards(ext) {
 }
 
 async function getTracks(ext) {
-  ext = argsify(ext)
-  let groups = []
-  let url = ext.url
+    ext = argsify(ext);
+    let groups = [];
+    let url = ext.url;
 
-  const { data } = await $fetch.get(url, {
-      headers
-  })
-  
-  const $ = cheerio.load(data)
+    const { data } = await $fetch.get(url, {
+        headers
+    });
 
-  const trackText = $('script.wp-playlist-script').text()
-  const tracks = JSON.parse(trackText).tracks
-  let group1 = {
-    title: '在线',
-    tracks: []
-  }
-  tracks.forEach(each => {
-    group1.tracks.push({
-      name: each.caption,
-      pan: '',
-      ext: each
-    })
-  })
-  groups.push(group1)
+    const $ = cheerio.load(data);
 
-  let group2 = {
-    title: '',
-    tracks: []
-  }
-  $('a').each((_, each) => {
-    const v = $(each).attr('href')
-    if (v.startsWith('https://drive.uc.cn/s')) {
-      group2.tracks.push({
-        name: 'uc网盘',
-        pan: v,
-      })
-    } else if (v.startsWith('https://pan.quark.cn/s/')) {
-      group2.tracks.push({
-        name: '夸克网盘',
-        pan: v,
-      })
+    const seasonNumbers = [];
+    $('.page-links .post-page-numbers').each((_, each) => {
+        const seasonNumber = $(each).text();
+        if (!isNaN(seasonNumber)) {
+            seasonNumbers.push(seasonNumber);
+        }
+    });
+
+    if (seasonNumbers.length === 0) {
+        let onlineGroup = {
+            title: '在线',
+            tracks: []
+        };
+
+        const trackText = $('script.wp-playlist-script').text();
+        const tracks = JSON.parse(trackText).tracks;
+
+        tracks.forEach(each => {
+            onlineGroup.tracks.push({
+                name: each.caption,
+                pan: '',
+                ext: each
+            });
+        });
+
+        groups.push(onlineGroup);
+    } else {
+        for (const season of seasonNumbers) {
+            let seasonGroup = {
+                title: `季数 ${season}`,
+                tracks: []
+            };
+
+            const seasonUrl = `${url}${season}/`;
+            const seasonData = await $fetch.get(seasonUrl, {
+                headers
+            });
+            const season$ = cheerio.load(seasonData.data);
+
+            const trackText = season$('script.wp-playlist-script').text();
+            const tracks = JSON.parse(trackText).tracks;
+
+            tracks.forEach(each => {
+                seasonGroup.tracks.push({
+                    name: each.caption,
+                    pan: '',
+                    ext: each
+                });
+            });
+
+            groups.push(seasonGroup);
+        }
     }
-  })
-  if (group2.tracks.length > 0) {
-    groups.push(group2)
-  }
 
-  return jsonify({ list: groups })
+    let group2 = {
+        title: '',
+        tracks: []
+    };
+    $('a').each((_, each) => {
+        const v = $(each).attr('href');
+        if (v.startsWith('https://drive.uc.cn/s')) {
+            group2.tracks.push({
+                name: 'uc网盘',
+                pan: v,
+            });
+        } else if (v.startsWith('https://pan.quark.cn/s/')) {
+            group2.tracks.push({
+                name: '夸克网盘',
+                pan: v,
+            });
+        }
+    });
+    if (group2.tracks.length > 0) {
+        groups.push(group2);
+    }
+
+    return jsonify({ list: groups });
 }
 
 async function getPlayinfo(ext) {
