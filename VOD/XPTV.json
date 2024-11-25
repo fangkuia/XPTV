@@ -19,7 +19,8 @@
             "name": "AGE动漫|VOD", 
             "type": 3, 
             "api": "csp_age",
-            "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/age.js"
+            "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/age.js",
+            "ext": "https://ghp.ci/https://gist.githubusercontent.com/occupy-pluto/e3a7bb98d5027d0f6dfa85fc2ac11a78/raw/d2656fa8fb51dbe5239f688ea36422f9bf8a0457/agedm.js"
         },
         {
             "name": "4k-av",
