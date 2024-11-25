@@ -1,36 +1,36 @@
 {
     "sites": [
         { 
-            "name": "欧乐|VOD🪜", 
+            "name": "欧乐🪜", 
             "type": 3, 
             "api": "csp_Olevod" 
         },
         { 
-            "name": "在线之家|VOD", 
+            "name": "在线之家", 
             "type": 3, 
             "api": "csp_Zxzj" 
         },
         { 
-            "name": "LIBVIO|VOD", 
+            "name": "LIBVIO", 
             "type": 3, 
             "api": "csp_libvio" 
         },
         { 
-            "name": "低端影视|VOD", 
+            "name": "低端影视", 
             "type": 3, 
             "api": "csp_ddys",
             "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/ddys.js",
             "ext2": "https://ghp.ci/https://gist.githubusercontent.com/occupy-pluto/06ace7797b4c2727430a98657fff424f/raw/458c6aed5fb63a391913f52efd74e34d53146730/ddys.js",
         },
         { 
-            "name": "ギリギリ动漫|VOD", 
+            "name": "ギリギリ动漫", 
             "type": 3, 
             "api": "csp_ai",
             "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/ai.js",
             "ext2": "https://ghp.ci/https://gist.githubusercontent.com/occupy-pluto/5185fa59944d5b8af625b2c83604d397/raw/72a08d19b0df289e749f3534e7a012e1d9e126f4/girl.js",
         },
         { 
-            "name": "AGE动漫|VOD", 
+            "name": "AGE动漫", 
             "type": 3, 
             "api": "csp_age",
             "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/age.js",
