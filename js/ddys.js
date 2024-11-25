@@ -161,7 +161,7 @@ async function getTracks(ext) {
     } else {
         for (const season of seasonNumbers) {
             let seasonGroup = {
-                title: `季数 ${season}`,
+                title: `第${season}季`,
                 tracks: []
             };
 
