@@ -76,11 +76,11 @@ async function getCards(ext) {
 		const href = $(e).find('.module-item-pic a').attr('href')
 		const title = $(e).find('.module-item-pic img').attr('alt')
 		const cover = $(e).find('.module-item-pic img').attr('data-src')
-		const text = $(e).find('.module-item-text').eq(0).text()
-		const lb = $(e).find('.module-item-caption span').eq(1).text().replace('玩偶', '')
+		const text = $(e).find('.module-item-text').eq(0).text().replace('/更新|更新至/全', '')
+		//const lb = $(e).find('.module-item-caption span').eq(1).text().replace('玩偶', '')
 		const dq = $(e).find('.module-item-caption span').eq(2).text().replace(/中国大陆|中国中国大陆/, '国产').replace('中国香港', '港剧').replace('中国台湾', '台剧')
 		
-		const remarks = (`${lb} ${dq} ${text}`).trim()
+		const remarks = (`${dq} ${text}`).trim()
 		let obj = {
 			vod_id: href,
 			vod_name: title,
