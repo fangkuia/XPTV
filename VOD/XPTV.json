@@ -19,8 +19,8 @@
             "name": "低端影视", 
             "type": 3, 
             "api": "csp_ddys",
-            "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/ddys.js",
-            "ext2": "https://ghp.ci/https://gist.githubusercontent.com/occupy-pluto/06ace7797b4c2727430a98657fff424f/raw/458c6aed5fb63a391913f52efd74e34d53146730/ddys.js",
+            "ext": "https://ghp.ci/https://gist.githubusercontent.com/occupy-pluto/06ace7797b4c2727430a98657fff424f/raw/458c6aed5fb63a391913f52efd74e34d53146730/ddys.js",
+            "ext2": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/ddys.js",
         },
         { 
             "name": "ギリギリ动漫", 
