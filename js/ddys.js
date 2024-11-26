@@ -213,19 +213,10 @@ async function getTracks(ext) {
 
 async function getPlayinfo(ext) {
     ext = argsify(ext)
-    const { srctype, src1, src3 } = ext
+    const { srctype, src0, } = ext
     let url = ''
-    if (srctype == '1') {
-      url = 'https://ddys.pro/getvddr2/video?id=' + src1 + "&type=json"
-      $print('***url1: ' + url)
-      const { data } = await $fetch.get(url, {
-        headers
-      })
-      url = argsify(data)?.url ?? ''
-    } else if (srctype == '4') {
-      url = 'https://v.ddys.pro' + src3
-    } else if (srctype == '2') {
-      url = 'https://v.ddys.pro' + src1
+    if (srctype) {
+      url = 'https://v.ddys.pro' + src0
     }
 
     $print('***url: ' + url)
