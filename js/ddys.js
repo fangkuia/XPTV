@@ -225,7 +225,7 @@ async function getPlayinfo(ext) {
     } else if (srctype == '4') {
       url = 'https://v.ddys.pro' + src3
     }else if (srctype == '2') {
-      url = 'https://ddys.pro' + src1
+      url = 'https://v.ddys.pro' + src1
     }
 
     $print('***url: ' + url)
