@@ -19,21 +19,21 @@
             "name": "低端影视", 
             "type": 3, 
             "api": "csp_ddys",
-            "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/ddys.js",
+            "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/ddys.js"
         },
          { 
             "name": "ギリギリ动漫", 
             "type": 3, 
             "api": "csp_ai",
             "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/ai.js",
-            "ext2": "https://ghp.ci/https://gist.githubusercontent.com/occupy-pluto/5185fa59944d5b8af625b2c83604d397/raw/72a08d19b0df289e749f3534e7a012e1d9e126f4/girl.js",
+            "ext2": "https://ghp.ci/https://gist.githubusercontent.com/occupy-pluto/5185fa59944d5b8af625b2c83604d397/raw/72a08d19b0df289e749f3534e7a012e1d9e126f4/girl.js"
         },
         { 
             "name": "独播库", 
             "type": 3, 
             "api": "csp_duboku",
             "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/duboku.js",
-            "ext2": "https://ghp.ci/https://gist.githubusercontent.com/occupy-pluto/f6cf4425bf7d1815a26323ade89ea593/raw/e681ea88557c1bf71f328665375ba392bf3955cd/duboku.js",
+            "ext2": "https://ghp.ci/https://gist.githubusercontent.com/occupy-pluto/f6cf4425bf7d1815a26323ade89ea593/raw/e681ea88557c1bf71f328665375ba392bf3955cd/duboku.js"
         },
         { 
             "name": "AGE动漫", 
