@@ -55,6 +55,12 @@
             "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/leijing.js"
         },
         {
+            "name": "欧哥 | PAN",
+            "type": 3,
+            "api": "csp_ouge",
+            "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/ouge.js"
+        },
+        {
             "name": "云盘吧 | PAN",
             "type": 3,
             "api": "csp_yunpan8",
