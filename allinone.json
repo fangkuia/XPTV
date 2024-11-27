@@ -296,7 +296,7 @@
       "api": "https://apilsbzy1.com/api.php/provide/vod/"
     },
     {
-      "name": "czzy",
+      "name": "厂长资源",
       "type": 3,
       "api": "csp_czzy",
       "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/czzy.js"
