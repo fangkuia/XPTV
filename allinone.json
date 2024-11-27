@@ -546,6 +546,12 @@
       "type": 3,
       "api": "csp_leijing",
       "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/leijing.js"
+    },
+    {
+      "name": "yunpan8",
+      "type": 3,
+      "api": "csp_yunpan8",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/yunpan8.js"
     }
   ]
 }
