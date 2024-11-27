@@ -296,6 +296,12 @@
       "api": "https://apilsbzy1.com/api.php/provide/vod/"
     },
     {
+      "name": "czzy",
+      "type": 3,
+      "api": "csp_czzy",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/czzy.js"
+    },
+    {
       "name": "欧乐🪜",
       "type": 3,
       "api": "csp_Olevod"
