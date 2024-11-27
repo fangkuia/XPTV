@@ -6,6 +6,12 @@
             "api": "csp_czzy",
             "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/czzy.js"
         },
+        {
+            "name": "哔滴影视",
+            "type": 3,
+            "api": "csp_bde4",
+            "ext": "https://ghp.ci/https://gist.githubusercontent.com/occupy-pluto/a417f28f7313f6eea4214f58b4946142/raw/bdys.js"
+        },
         { 
             "name": "欧乐🪜", 
             "type": 3, 
