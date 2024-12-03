@@ -53,6 +53,12 @@
             "type": 3,
             "api": "csp_KPM",
             "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/KoreaPornMovie.js"
+        },
+        {
+            "name": "pppHub",
+            "type": 3,
+            "api": "csp_ppron",
+            "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/ppp.js"
         }
     ]
 }
