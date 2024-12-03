@@ -450,6 +450,12 @@
       "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/KoreaPornMovie.js"
     },
     {
+      "name": "pppHub",
+      "type": 3,
+      "api": "csp_ppron",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/ppp.js"
+    },
+    {
       "name": "玩偶哥哥 | PAN",
       "type": 3,
       "api": "csp_wogg",
