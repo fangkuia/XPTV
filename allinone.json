@@ -456,6 +456,18 @@
       "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/ppp.js"
     },
     {
+      "name": "avtoday",
+      "type": 3,
+      "api": "csp_avtoday",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/avtoday.js"
+    },
+    {
+      "name": "xhamster",
+      "type": 3,
+      "api": "csp_xhamster",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/xhamster.js"
+    },
+    {
       "name": "玩偶哥哥 | PAN",
       "type": 3,
       "api": "csp_wogg",
