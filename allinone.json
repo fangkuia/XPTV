@@ -468,6 +468,12 @@
       "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/xhamster.js"
     },
     {
+      "name": "pornhub",
+      "type": 3,
+      "api": "csp_pornhub",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/pornhub.js"
+    },
+    {
       "name": "玩偶哥哥 | PAN",
       "type": 3,
       "api": "csp_wogg",
