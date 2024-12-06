@@ -9,7 +9,7 @@ payload:
 #小海报
  - DOMAIN-SUFFIX, doubanio.com
 #大封面
- - DOMAIN-SUFFIX, tmdb.org
+ - DOMAIN, image.tmdb.org
 #弹幕
  - DOMAIN, dandanplay.net
 #网盘规则
