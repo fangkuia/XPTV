@@ -12,7 +12,7 @@ DOMAIN, metrics.icloud.com, DIRECT
 #小海报
 DOMAIN-SUFFIX, doubanio.com, DIRECT
 #大封面
-DOMAIN-SUFFIX, tmdb.org, DIRECT
+DOMAIN, image.tmdb.org, DIRECT
 #弹幕
 DOMAIN, dandanplay.net, DIRECT
 #网盘规则
