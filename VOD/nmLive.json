@@ -1,0 +1,10 @@
+{
+    "sites": [
+        {
+            "name": "nmlive",
+            "type": 3,
+            "api": "csp_nmlive",
+            "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/nmlive.js"
+        }
+    ]
+}
