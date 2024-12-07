@@ -1,0 +1,10 @@
+{
+    "sites": [
+        { 
+            "name": "Youtube", 
+            "type": 3, 
+            "api": "csp_youtube",
+            "ext": "https://gist.githubusercontent.com/Yswag/98b86b68755f698e2f601962f76c036a/raw/you.js"
+        }
+    ]
+}
