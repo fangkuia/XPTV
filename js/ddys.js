@@ -226,7 +226,8 @@ async function getPlayinfo(ext) {
         'Referer': 'https://ddys.pro/',
         'Origin': 'https://ddys.pro',
         'User-Agent': UA,
-      }]
+      }],
+      ui: 1,
     })
     // return jsonify({urls: []})
 }
