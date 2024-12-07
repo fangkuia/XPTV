@@ -1,0 +1,10 @@
+{
+    "sites": [
+       {
+            "name": "小雅AList",
+            "type": 3,
+            "api": "csp_xiaoya",
+            "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/alist_xiaoya.js"
+        }
+    ]
+}
