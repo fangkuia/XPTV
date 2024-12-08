@@ -65,6 +65,12 @@
             "type": 3,
             "api": "csp_yunpan8",
             "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/yunpan8.js"
+        },
+        {
+            "name": "小米UC | PAN(昊)",
+            "type": 3,
+            "api": "csp_js/mucpan",
+            "ext": "https://raw.githubusercontent.com/kingreevice/my_xptv/refs/heads/main/js/mucpan.js" 
         }
     ]
 }
