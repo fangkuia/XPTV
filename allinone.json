@@ -255,23 +255,29 @@
       "name": "哔滴影视",
       "type": 3,
       "api": "csp_bde4",
-      "ext": "https://ghp.ci/https://gist.githubusercontent.com/occupy-pluto/a417f28f7313f6eea4214f58b4946142/raw/bdys.js"
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/bdys.js",
+      "ext2": "https://ghp.ci/https://gist.githubusercontent.com/occupy-pluto/a417f28f7313f6eea4214f58b4946142/raw/bdys.js"
     },
     {
       "name": "欧乐🪜",
       "type": 3,
       "api": "csp_Olevod",
-      "ext": "https://ghp.ci/https://gist.githubusercontent.com/occupy-pluto/ce9bf8248a15acb87e6b55e382fb8e4b/raw/ole.js"
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/ole.js",
+      "ext2": "https://ghp.ci/https://gist.githubusercontent.com/occupy-pluto/ce9bf8248a15acb87e6b55e382fb8e4b/raw/ole.js"
     },
     {
       "name": "在线之家",
       "type": 3,
-      "api": "csp_Zxzj"
+      "api": "csp_Zxzj",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/zxzj.js",
+      "ext2": "https://ghp.ci/https://gist.githubusercontent.com/occupy-pluto/13a199a1a85c619f948d40e6c5a12c21/raw/zxzj.js"
     },
     {
       "name": "LIBVIO",
       "type": 3,
-      "api": "csp_libvio"
+      "api": "csp_libvio",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/libvio.js",
+      "ext2": "https://ghp.ci/https://gist.githubusercontent.com/occupy-pluto/67cc3a53a26c631e32ed2f37e19e479d/raw/libvio.js"
     },
     {
       "name": "低端影视",
