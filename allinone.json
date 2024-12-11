@@ -486,6 +486,18 @@
       "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/jable.js"
     },
     {
+      "name": "桃花族",
+      "type": 3,
+      "api": "csp_taohuazu",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/taohuazu.js"
+    },
+    {
+      "name": "花都影視",
+      "type": 3,
+      "api": "csp_hdys",
+      "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/hdys.js"
+    },
+    {
       "name": "玩偶哥哥 | PAN",
       "type": 3,
       "api": "csp_wogg",
