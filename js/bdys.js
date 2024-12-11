@@ -1,6 +1,6 @@
 const cheerio = createCheerio()
 const CryptoJS = createCryptoJS()
-const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+const UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_2 like Mac OS X) AppleWebKit/604.1.14 (KHTML, like Gecko)'
 const headers = {
   'Referer': 'https://www.xlys01.com/',
   'Origin': 'https://www.xlys01.com',
@@ -68,6 +68,11 @@ async function getCards(ext) {
   })
 
   const $ = cheerio.load(data)
+  const t1 = $('title').text()
+  if (t1 === 'Just a moment...') {
+    $utils.openSafari(appConfig.site, UA)
+  }
+  
   $('.card-link').each((_, each) => {
     const path = $(each).find('a').attr('href')
     cards.push({
