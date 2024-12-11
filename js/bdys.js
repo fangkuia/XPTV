@@ -143,11 +143,29 @@ async function getPlayinfo(ext) {
   const data2 = (await $fetch.get(lines, {
     headers
   })).data
-  let url3 = JSON.parse(data2).data.url3
-  let play = url3.indexOf(',') !== -1 ? url3.split(',')[0].trim() : url3.trim()
-  return jsonify({
-    urls: [play],
-  })
+  
+  if (JSON.parse(data2).data.url3) {
+    let url3 = JSON.parse(data2).data.url3
+    let play = url3.indexOf(',') !== -1 ? url3.split(',')[0].trim() : url3.trim()
+    return jsonify({
+      urls: [play],
+    })
+  } else if (JSON.parse(data2).data.tos) {
+    let god = `${appConfig.site}/god/${pid}?type=1`
+    let res = await $fetch.post(god, {
+      t: currentTimeMillis,
+      sg: encryptedString,
+      verifyCode: 888,
+    }, {
+      'User-Agent': headers,
+      'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+    })
+    
+    let playUrl = argsify(res.data).url
+    return jsonify({
+      urls: [playUrl],
+    })
+  }
 }
 
 async function search(ext) {
