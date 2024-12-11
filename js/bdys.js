@@ -165,6 +165,21 @@ async function getPlayinfo(ext) {
     return jsonify({
       urls: [playUrl],
     })
+  } else {
+    let god = `${appConfig.site}/god/${pid}`
+    let res = await $fetch.post(god, {
+      t: currentTimeMillis,
+      sg: encryptedString,
+      verifyCode: 666,
+    }, {
+      'User-Agent': headers,
+      'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+    })
+    
+    let playUrl = argsify(res.data).url
+    return jsonify({
+      urls: [playUrl],
+    })
   }
 }
 
