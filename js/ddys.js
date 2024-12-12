@@ -1,5 +1,5 @@
 const cheerio = createCheerio()
-const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0"
+const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
 const headers = {
   'Referer': 'https://ddys.pro/',
   'Origin': 'https://ddys.pro',
@@ -223,8 +223,8 @@ async function getPlayinfo(ext) {
     return jsonify({
       urls: [url],
       headers: [{
-        'Referer': 'https://ddys.pro/',
-        'Origin': 'https://ddys.pro',
+        'Referer': 'https://ddys.mov/',
+        'Origin': 'https://ddys.mov',
         'User-Agent': UA,
       }],
       ui: 1,
