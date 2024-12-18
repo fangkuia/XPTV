@@ -4,7 +4,7 @@
             "name": "nmlive",
             "type": 3,
             "api": "csp_nmlive",
-            "ext": "https://ghp.ci/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/nmlive.js"
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/nmlive.js"
         }
     ]
 }
