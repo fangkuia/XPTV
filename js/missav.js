@@ -276,18 +276,35 @@ async function getTracks(ext) {
             'User-Agent': UA,
         },
     })
+    const match1 = data.match(/sixyik\.com\\\/(.+)\\\/seek\\\/_0\.jpg/)
+    const match2 = data.match(/https\|video\|(.+)\|source1280/)
+    if (match1 && match1[1]) {
+        let uuid = match1[1]
+        if (match2[1] == '1080p') {
+            tracks.push({
+                name: '1080P',
+                pan: '',
+                ext: {
+                    url: m3u8Prefix + uuid + '/1080p/video.m3u8',
+                }
+            })
 
-    const match = data.match(/sixyik\.com\\\/(.+)\\\/seek\\\/_0\.jpg/)
-    if (match && match[1]) {
-        let uuid = match[1]
-        let m3u8 = m3u8Prefix + uuid + m3u8Suffix
-
+        }
+        if (match2[1] == '720p') {
+            tracks.push({
+                name: '720P',
+                pan: '',
+                ext: {
+                    url: m3u8Prefix + uuid + '/720p/video.m3u8',
+                }
+            })
+        }
         tracks.push({
-            name: '播放',
+            name: '自动',
             pan: '',
             ext: {
-                url: m3u8,
-            },
+                url: m3u8Prefix + uuid + m3u8Suffix,
+            }
         })
     }
 
