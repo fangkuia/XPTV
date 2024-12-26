@@ -76,7 +76,7 @@
             "name": "闪电UC | PAN",
             "type": 3,
             "api": "csp_shandian",
-            "ext": "https://gist.githubusercontent.com/fangkuia/096af648e9b0b104a9e226fdca6015b9/raw/shandian.js" 
+            "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/shandian.js" 
         },
         {
             "name": "奥秘 | PAN",
