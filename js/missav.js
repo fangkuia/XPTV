@@ -1,5 +1,5 @@
-const UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1 Edg/131.0.0.0'
 const cheerio = createCheerio()
+const UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_2 like Mac OS X) AppleWebKit/604.1.14 (KHTML, like Gecko)'
 
 const appConfig = {
     ver: 1,
@@ -237,6 +237,10 @@ async function getCards(ext) {
     })
 
     const $ = cheerio.load(data)
+    const t1 = $('title').text()
+    if (t1 === 'Just a moment...') {
+    $utils.openSafari(appConfig.site, UA)
+      }
 
     const videos = $('.thumbnail')
     videos.each((_, e) => {
