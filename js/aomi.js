@@ -60,7 +60,6 @@ async function getCards(ext) {
 		const cover = $(e).find('.module-item-pic img').attr('data-src')
 		const remarks = $(e).find('.module-item-text').text()
 		
-		if (/六趣/.test(title)) return;
 		cards.push({
 			vod_id: href,
 			vod_name: title,
@@ -138,7 +137,6 @@ async function search(ext) {
 		const cover = $(e).find('.module-item-pic img').attr('data-src')
 		const remarks = $(e).find('.video-serial').text()
 		
-		if (/六趣/.test(title)) return;
 		cards.push({
 			vod_id: href,
 			vod_name: title,
