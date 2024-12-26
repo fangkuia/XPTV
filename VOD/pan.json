@@ -71,6 +71,24 @@
             "type": 3,
             "api": "csp_js/mucpan",
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/kingreevice/my_xptv/refs/heads/main/js/mucpan.js" 
+        },
+        {
+            "name": "闪电UC | PAN",
+            "type": 3,
+            "api": "csp_shandian",
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/kingreevice/my_xptv/refs/heads/main/js/shandian.js" 
+        },
+        {
+            "name": "奥秘 | PAN",
+            "type": 3,
+            "api": "csp_aomi",
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/kingreevice/my_xptv/refs/heads/main/js/aomi.js" 
+        },
+        {
+            "name": "六趣 | PAN",
+            "type": 3,
+            "api": "csp_luiqu",
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/kingreevice/my_xptv/refs/heads/main/js/luiqu.js" 
         }
     ]
 }
