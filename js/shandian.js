@@ -5,7 +5,7 @@ const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 const appConfig = {
 	ver: 1,
 	title: '闪电',
-	site: 'http://feimaouc.cloud:666'，
+	site: 'http://feimaouc.cloud:666',
 	tabs: [
 		{
 			name: '電影',
@@ -98,8 +98,8 @@ async function getTracks(ext) {
 
 	const playlist = $('.module-player-list .module-row-one')
 	playlist.each((_, e) => {
-		const name = $(e).find('.module-row-title h4')。text()。replace('- 第1集'， '')
-		const panShareUrl = $(e).find('.module-row-title p')。text()
+		const name = $(e).find('.module-row-title h4').text().replace('- 第1集', '')
+		const panShareUrl = $(e).find('.module-row-title p').text()
 		tracks.push({
 			name: name.trim(),
 			pan: panShareUrl,
@@ -138,10 +138,10 @@ async function search(ext) {
 
 	const videos = $('#main .module-search-item')
 	videos.each((_, e) => {
-		const href = $(e).find('.video-info-header h3 a')。attr('href')
-		const title = $(e).find('.video-info-header h3 a')。attr('title')
-		const cover = $(e).find('.module-item-pic img')。attr('data-src')
-		const remarks = $(e).find('.video-serial')。text()
+		const href = $(e).find('.video-info-header h3 a').attr('href')
+		const title = $(e).find('.video-info-header h3 a').attr('title')
+		const cover = $(e).find('.module-item-pic img').attr('data-src')
+		const remarks = $(e).find('.video-serial').text()
 		
 		cards.push({
 			vod_id: href,
@@ -149,7 +149,7 @@ async function search(ext) {
 			vod_pic: cover,
 			vod_remarks: remarks,
 			ext: {
-				url: `${appConfig.site}${href}`，
+				url: `${appConfig.site}${href}`,
 			},
 		})
 	})
