@@ -89,6 +89,12 @@
             "type": 3,
             "api": "csp_luiqu",
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/liuqu.js" 
+        },
+        {
+            "name": "小盘盘 | PAN",
+            "type": 3,
+            "api": "csp_xpanpan",
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/xpanpan.js" 
         }
     ]
 }
