@@ -8,7 +8,7 @@
     {
       "name": "旺旺|点播",
       "type": 1,
-      "api": "https://api.wwzy.tv/api.php/provide/vod"
+      "api": "https://api.wwzy.tv/api.php/provide/vod/"
     },
     {
       "name": "墨斗|点播",
