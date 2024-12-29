@@ -1,5 +1,6 @@
 [	
         { "name": "360|点播", "type": 1, "api": "https://360zy.com/api.php/provide/vod/" },
+        { "name": "旺旺|点播", "type": 1, "api": "https://api.wwzy.tv/api.php/provide/vod" },
         { "name": "墨斗|点播", "type": 1, "api": "https://www.mdzyapi.com/api.php/provide/vod/" },
         { "name": "黑木耳|点播", "type": 1, "api": "https://json02.heimuer.xyz/api.php/provide/vod/" },
         { "name": "华为吧|点播", "type": 1, "api": "https://hw8.live/api.php/provide/vod/" },
