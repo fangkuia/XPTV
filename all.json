@@ -6,6 +6,11 @@
       "api": "https://360zy.com/api.php/provide/vod/"
     },
     {
+      "name": "旺旺|点播",
+      "type": 1,
+      "api": "https://api.wwzy.tv/api.php/provide/vod/"
+    },
+    {
       "name": "墨斗|点播",
       "type": 1,
       "api": "https://www.mdzyapi.com/api.php/provide/vod/"
@@ -592,6 +597,12 @@
       "type": 3,
       "api": "csp_luiqu",
       "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/liuqu.js"
+    },
+    {
+      "name": "白嫖 | PAN",
+      "type": 3,
+      "api": "csp_baipiao",
+      "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/baipiao.js"
     },
     {
       "name": "小盘盘 | PAN",
