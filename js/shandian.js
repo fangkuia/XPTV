@@ -5,7 +5,7 @@ const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 const appConfig = {
 	ver: 1,
 	title: '闪电',
-	site: 'http://feimaouc.cloud:666',
+	site: 'http://1.95.79.193',
 	tabs: [
 		{
 			name: '電影',
