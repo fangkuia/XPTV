@@ -55,7 +55,7 @@ async function getCards(ext) {
 	
 	ext = argsify(ext)
 	let cards = []
-	let { page = 1， id } = ext
+	let { page = 1, id } = ext
 
 	const url = appConfig.site + `/index.php/vod/show/id/${id}/page/${page}.html`
 	const { data } = await $fetch.get(url, {
@@ -67,7 +67,7 @@ async function getCards(ext) {
 	const $ = cheerio.load(data)
 
 	const videos = $('#main .module-item')
-	videos.each((_， e) => {
+	videos.each((_, e) => {
 		const href = $(e).find('.module-item-pic a').attr('href')
 		const title = $(e).find('.module-item-pic a').attr('title')
 		const cover = $(e).find('.module-item-pic img').attr('data-src')
