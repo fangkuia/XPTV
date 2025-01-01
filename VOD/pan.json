@@ -97,6 +97,18 @@
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/baipiao.js" 
         },
         {
+            "name": "虎斑 | PAN",
+            "type": 3,
+            "api": "csp_huban",
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/huban.js" 
+        },
+        {
+            "name": "下饭 | PAN",
+            "type": 3,
+            "api": "csp_xiafan",
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/xiafan.js" 
+        },
+        {
             "name": "小盘盘 | PAN",
             "type": 3,
             "api": "csp_xpanpan",
