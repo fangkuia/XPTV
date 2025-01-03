@@ -509,6 +509,12 @@
       "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/rou.js"
     },
     {
+      "name": "avdb",
+      "type": 3,
+      "api": "csp_avdb",
+      "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/avdb.js"
+    },
+    {
       "name": "玩偶哥哥 | PAN",
       "type": 3,
       "api": "csp_wogg",
