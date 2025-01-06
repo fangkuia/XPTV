@@ -112,7 +112,7 @@
             "name": "观影 | PAN",
             "type": 3,
             "api": "csp_guanying",
-            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/kingreevice/my_xptv/refs/heads/main/js/guanying.js" 
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/guanying.js" 
         },
         {
             "name": "天逸搜 | PAN搜索",
