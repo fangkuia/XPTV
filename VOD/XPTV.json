@@ -139,6 +139,12 @@
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/jcy.js"
         },
         {
+            "name": "追光影视",
+            "type": 3,
+            "api": "csp_sgsd",
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/sgsd.js"
+        },
+        {
             "name": "hdmoli",
             "type": 3,
             "api": "csp_hdmoli",
