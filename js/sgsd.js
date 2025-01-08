@@ -102,7 +102,9 @@ async function getTracks(ext) {
     const playlist = $('.clearfix > li > a')
     playlist.each((_, e) => {
         const href = $(e).attr('href')
-        const name = $(e).find('p').text()
+        const fullName = $(e).find('p').text()
+        const match = fullName.match(/第(\d+)集/)
+        const name = match ? `第${match[1]}集` : fullName;
               tracks.push({
                   name,
                   pan: "",
