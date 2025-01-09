@@ -71,8 +71,9 @@ $('.topicItem').each((index, each) => {
     
   const href = $(each).find('h2 a').attr('href');
   const title = $(each).find('h2 a').text()
-  const match = title.match(/([\u4e00-\u9fa5]+(?:\s*[\u4e00-\u9fa5]*)*)/g);
-  const dramaName = match ? match[0] : title; 
+  const regex = /(?:【.*?】)?(?:（.*?）)?([^\s.（]+(?:\s+[^\s.（]+)*)/;
+  const match = title.match(regex);
+  const dramaName = match ? match[1] : title; 
   const r = $(each).find('.summary').text();
   const tag = $(each).find('.tag').text();
     
@@ -167,8 +168,9 @@ $('.topicItem').each((index, each) => {
   
   const href = $(each).find('h2 a').attr('href');
   const title = $(each).find('h2 a').text()
-  const match = title.match(/([\u4e00-\u9fa5]+(?:\s*[\u4e00-\u9fa5]*)*)/g);
-  const dramaName = match ? match[0] : title; 
+  const regex = /(?:【.*?】)?(?:（.*?）)?([^\s.（]+(?:\s+[^\s.（]+)*)/;
+  const match = title.match(regex);
+  const dramaName = match ? match[1] : title; 
   const r = $(each).find('.summary').text();
   const tag = $(each).find('.tag').text();
     
