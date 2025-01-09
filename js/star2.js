@@ -20,12 +20,6 @@ const appConfig = {
 			},
 		},
 		{
-			name: '国劇',
-			ext: {
-				id: 'ju',
-			},
-		},
-		{
 			name: '外劇',
 			ext: {
 				id: 'wj',
