@@ -1,4 +1,4 @@
-const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+const UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_2 like Mac OS X) AppleWebKit/604.1.14 (KHTML, like Gecko)'
 const cheerio = createCheerio()
 
 const appConfig = {
@@ -58,6 +58,10 @@ async function getCards(ext) {
     });
 
     const $ = cheerio.load(data);
+    const t1 = $('title').text()
+    if (t1 === 'Just a moment...') {
+      $utils.openSafari(appConfig.site, UA)
+    }
 
     $('.bloglo-entry-content-wrapper').each((index, each) => {
         
