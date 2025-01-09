@@ -161,6 +161,12 @@
             "type": 3,
             "api": "csp_apple",
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/apple.js"
+        },
+        {
+            "name": "皮皮蝦",
+            "type": 3,
+            "api": "csp_ppxys",
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/ppxys.js"
         }
     ]
 }
