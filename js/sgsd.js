@@ -74,7 +74,7 @@ async function getCards(ext) {
             vod_id: `${e.id}`, 
             vod_name: e.title,
             vod_pic: e.poster,
-            vod_pubdate: e.createTime, 
+            vod_pubdate: e.createTime.split('T')[0], 
             ext: {
                 url: `${appConfig.site}/column/serial/movie/${e.id}`,
             },
@@ -164,7 +164,7 @@ async function search(ext) {
             vod_id: `${e.id}`, 
             vod_name: e.title,
             vod_pic: e.poster,
-            vod_pubdate: e.createTime, 
+            vod_pubdate: e.createTime.split('T')[0], 
             ext: {
                 url: `${appConfig.site}/column/serial/movie/${e.id}`,
             },
