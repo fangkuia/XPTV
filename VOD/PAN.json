@@ -115,6 +115,12 @@
             "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/seedhub.js" 
         },
         {
+            "name": "Star2 | PAN",
+            "type": 3,
+            "api": "csp_star2",
+            "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/star2.js" 
+        },
+        {
             "name": "观影 | PAN",
             "type": 3,
             "api": "csp_guanying",
