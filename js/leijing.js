@@ -70,8 +70,8 @@ $('.topicItem').each((index, each) => {
   if ($(each).find('.cms-lock-solid').length > 0) return;
     
   const href = $(each).find('h2 a').attr('href');
-  const title = $(each).find('h2 a').text().trim().replace(/\s+/g, ' ');
-  const match = title.match(/(?<=^|[（$$\s])([^（\[$$）\s]+(?:\s[^（$$$$）\s]+)*?(?=[）\]\s]|$)/);
+  const title = $(each).find('h2 a').text()
+  const match = title.match(/([\u4e00-\u9fa5]+(?:\s*[\u4e00-\u9fa5]*)*)/g);
   const dramaName = match ? match[0] : title; 
   const r = $(each).find('.summary').text();
   const tag = $(each).find('.tag').text();
@@ -166,8 +166,8 @@ $('.topicItem').each((index, each) => {
   if ($(each).find('.cms-lock-solid').length > 0) return;
   
   const href = $(each).find('h2 a').attr('href');
-  const title = $(each).find('h2 a').text().trim().replace(/\s+/g, ' ');
-  const match = title.match(/(?<=^|[（$$\s])([^（\[$$）\s]+(?:\s[^（$$$$）\s]+)*?(?=[）\]\s]|$)/);
+  const title = $(each).find('h2 a').text()
+  const match = title.match(/([\u4e00-\u9fa5]+(?:\s*[\u4e00-\u9fa5]*)*)/g);
   const dramaName = match ? match[0] : title; 
   const r = $(each).find('.summary').text();
   const tag = $(each).find('.tag').text();
