@@ -659,6 +659,12 @@
       "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/guanying.js"
     },
     {
+      "name": "TG搜 | PAN",
+      "type": 3,
+      "api": "csp_guanying",
+      "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/tgs.js"
+    },
+    {
       "name": "天逸搜 | PAN搜索",
       "type": 3,
       "api": "csp_tianyiso",
