@@ -96,17 +96,16 @@ async function search(ext) {
         const $ = cheerio.load(data);
         if ($('div.tgme_widget_message_bubble').length === 0) continue;
         $('div.tgme_widget_message_bubble').each((_, element) => {
-            let nameHtml = $(element).find('.tgme_widget_message_text').html();
-            const title = nameHtml.split('<br>')[0].replace(/<b[^>]*>|<\/b>|<a[^>]*>|<\/a>|<mark[^>]*>|<\/mark>|<i[^>]*>|<\/i>/g, '')
-            .replace(/【[^】]*】/g, '') 
+        let nameHtml = $(element).find('.tgme_widget_message_text').html();
+        const title = nameHtml.split('<br>')[0]
+            .replace(/<b[^>]*>|<\/b>|<a[^>]*>|<\/a>|<mark[^>]*>|<\/mark>|<i[^>]*>|<\/i>/g, '')
+            .replace(/【[^】]*】/g, '')
+            .replace(/$.*?$|（.*?）|$$.*?$$/g, '') 
             .replace(/.*?：/, '') 
-            .replace(/$.*?$.*/g, '') 
-            .replace(/$$.*?$$.*$/g, '') 
             .replace(/4K.*$/g, '') 
-            .replace(/更新.*$/g, '')
-            .trim(); 
-            nameHtml = title; 
-            let hrefs = [];
+            .replace(/更新.*$/g, '') 
+            .trim();
+            nameHtml = title;
             $(element).find('.tgme_widget_message_text > a').each((_, element) => {
                 const href = $(element).attr('href');
                 if (href.includes('t.me')) return;
