@@ -79,21 +79,23 @@ async function getCards(ext) {
             let cover = ''
             let remarks = ''
             try {
-                const html = $(element).find('.tgme_widget_message_text').html()
+                const html = $(element).find('.tgme_widget_message_text').html().replace(/<b[^>]*>|<\/b>|<a[^>]*>|<\/a>|<mark[^>]*>|<\/mark>|<i[^>]*>|<\/i>/g, '').replace(/【[^】]*】/g, '')
                    html.split('<br>').forEach((e) => {
                        const titletext = e.trim()
                        if (/(名称|名字|短剧|资源标题)(：|:)/.test(titletext)) {
                            title = titletext
                                .split(/：|:/)[1]
                                .trim()
-                               .split(/（|\(|\[/)[0]
-                       } else if (/(.+)\s(更新?至|全).*集/.test(titletext)) {
-                           title = titletext.split(' ')[0]
+                               .split(/（|\(|\[|(更新?至|全)/)[0]
+                       } else if (/（|\(|\[|(更新?至|全)/.test(titletext)) {
+                           title = titletext.split(/（|\(|\[|(更新?至|全)/)[0]
+                       } else if (/(.+)\s(更新?至|全)/.test(titletext)) {
+                           title = titletext.split(/更新?至|全/)[0]
                        } else if (/S\d+/.test(titletext)) {
                            title = titletext.split('S')[0]
                        }
                    })
-                   title = title.replace(/<b[^>]*>|<\/b>|<a[^>]*>|<\/a>|<mark[^>]*>|<\/mark>|<i[^>]*>|<\/i>/g, '').replace(/【[^】]*】/g, '')
+                   title = title.replace(/<b>/, '').replace(/4K.*$/g, '')
 
 
                 $(element)
@@ -203,21 +205,23 @@ async function search(ext) {
             let cover = ''
             let remarks = ''
             try {
-                const html = $(element).find('.tgme_widget_message_text').html()
+                const html = $(element).find('.tgme_widget_message_text').html().replace(/<b[^>]*>|<\/b>|<a[^>]*>|<\/a>|<mark[^>]*>|<\/mark>|<i[^>]*>|<\/i>/g, '').replace(/【[^】]*】/g, '')
                    html.split('<br>').forEach((e) => {
                        const titletext = e.trim()
                        if (/(名称|名字|短剧|资源标题)(：|:)/.test(titletext)) {
                            title = titletext
                                .split(/：|:/)[1]
                                .trim()
-                               .split(/（|\(|\[/)[0]
-                       } else if (/(.+)\s(更新?至|全).*集/.test(titletext)) {
-                           title = titletext.split(' ')[0]
+                               .split(/（|\(|\[|(更新?至|全)/)[0]
+                       } else if (/（|\(|\[|(更新?至|全)/.test(titletext)) {
+                           title = titletext.split(/（|\(|\[|(更新?至|全)/)[0]
+                       } else if (/(.+)\s(更新?至|全)/.test(titletext)) {
+                           title = titletext.split(/更新?至|全/)[0]
                        } else if (/S\d+/.test(titletext)) {
                            title = titletext.split('S')[0]
                        }
                    })
-                   title = title.replace(/<b[^>]*>|<\/b>|<a[^>]*>|<\/a>|<mark[^>]*>|<\/mark>|<i[^>]*>|<\/i>/g, '').replace(/【[^】]*】/g, '')
+                   title = title.replace(/<b>/, '').replace(/4K.*$/g, '')
 
                 $(element)
                     .find('.tgme_widget_message_text > a')
