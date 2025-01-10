@@ -81,31 +81,33 @@ async function search(ext) {
             let nameHtml = $(element).find('.tgme_widget_message_text').html();
             const title = nameHtml.split('<br>')[0].replace(/<b[^>]*>|<\/b>|<a[^>]*>|<\/a>|<mark[^>]*>|<\/mark>/g, '').replace(/【[^】]*】/g, '')
             .replace(/.*?：/, '') 
-            .replace(/$.*?$|（.*?）|$$.*?$$/g, '') 
-            .replace(/4K.*$/g, '') 
+            .replace(/$.*?$|（.*?）|$$.*?$$/g, '')
+            .replace(/4K.*$/g, '')
             .replace(/更新.*$/g, '')
             .trim(); 
             nameHtml = title; 
             let hrefs = [];
-            $(element).find('.tgme_widget_message_text > a').each((_, element) => {
-                const href = $(element).attr('href');
-                if (href.includes('t.me')) return;
-                hrefs.push(href);
+                $(element).find('.tgme_widget_message_text > a').each((_, element) => {
+                    const href = $(element).attr('href');
+                    if (href.match(/https:\/\/(.+)\/s\/(.+)/)) {
+                        hrefs.push(href);
+                    }
+                });
+                const cover = $(element)
+                    .find('.tgme_widget_message_photo_wrap')
+                    .attr('style')
+                    .match(/image\:url\('(.+)'\)/)[1];
+                const remarks = hrefs[0].match(/https:\/\/(.+)\/s\//)[1];
+                cards.push({
+                    vod_id: hrefs[0],
+                    vod_name: title,
+                    vod_pic: cover,
+                    vod_remarks: remarks,
+                    ext: {
+                        url: hrefs,
+                    },
+                });
             });
-            const cover = $(element)
-                .find('.tgme_widget_message_photo_wrap')
-                .attr('style')
-                .match(/image\:url\('(.+)'\)/)[1];
-            cards.push({
-                vod_id: hrefs[0],
-                vod_name: title,
-                vod_pic: cover,
-                vod_remarks: '',
-                ext: {
-                    url: hrefs,
-                },
-            });
-        });
     }
     return jsonify({
         list: cards,
