@@ -16,6 +16,7 @@ let appConfig = {
     site: 'https://t.me/s/',
     tabs: [{
         name: '只能搜索',
+        ui: 1,
         ext: {
             id: '',
         },
@@ -78,36 +79,42 @@ async function search(ext) {
         const $ = cheerio.load(data);
         if ($('div.tgme_widget_message_bubble').length === 0) continue;
         $('div.tgme_widget_message_bubble').each((_, element) => {
-            let nameHtml = $(element).find('.tgme_widget_message_text').html();
-            const title = nameHtml.split('<br>')[0].replace(/<b[^>]*>|<\/b>|<a[^>]*>|<\/a>|<mark[^>]*>|<\/mark>|<i[^>]*>|<\/i>/g, '').replace(/【[^】]*】/g, '')
-            .replace(/.*?：/, '') 
-            .replace(/$.*?$|（.*?）|$$.*?$$/g, '')
-            .replace(/4K.*$/g, '')
-            .replace(/更新.*$/g, '')
-            .trim(); 
-            nameHtml = title; 
+            let title = '';
             let hrefs = [];
+            let cover = '';
+            let remarks = '';
+            try {
+                const titletext = $(element).find('.tgme_widget_message_text').text()
+                if (titletext.includes('名称：')) {
+                    title = titletext.split('描述：')[0].replace('名称：', '').trim();
+                } else {
+                    title = $(element).find('.tgme_widget_message_text mark').text();
+                }
                 $(element).find('.tgme_widget_message_text > a').each((_, element) => {
                     const href = $(element).attr('href');
                     if (href.match(/https:\/\/(.+)\/s\/(.+)/)) {
                         hrefs.push(href);
                     }
                 });
-                const cover = $(element)
+                cover = $(element)
                     .find('.tgme_widget_message_photo_wrap')
                     .attr('style')
                     .match(/image\:url\('(.+)'\)/)[1];
-                const remarks = hrefs[0].match(/https:\/\/(.+)\/s\//)[1];
-                cards.push({
-                    vod_id: hrefs[0],
-                    vod_name: title,
-                    vod_pic: cover,
-                    vod_remarks: remarks,
-                    ext: {
-                        url: hrefs,
-                    },
-                });
+                remarks = hrefs[0].match(/https:\/\/(.+)\/s\//)[1];
+            } catch (e) {
+                $utils.toastError(`${channel}搜索失败`);
+            }
+            if (remarks === '') return;
+            cards.push({
+                vod_id: hrefs[0],
+                vod_name: title,
+                vod_pic: cover,
+                vod_remarks: remarks,
+                ext: {
+                    url: hrefs,
+                },
             });
+        });
     }
     return jsonify({
         list: cards,
