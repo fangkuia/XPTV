@@ -1,4 +1,3 @@
-//来自群友“tou tie”
 const cheerio = createCheerio()
 /*
 {	
@@ -84,9 +83,15 @@ async function search(ext) {
             let cover = '';
             let remarks = '';
             try {
-                const titletext = $(element).find('.tgme_widget_message_text').text()
-                if (titletext.includes('名称：')) {
-                    title = titletext.split('描述：')[0].replace('名称：', '').trim();
+                nameHtml = $(element).find('.tgme_widget_message_text').html();
+                if (nameHtml.includes('：')) {
+                    title = nameHtml.split('<br>')[0].replace(/<b[^>]*>|<\/b>|<a[^>]*>|<\/a>|<mark[^>]*>|<\/mark>|<i[^>]*>|<\/i>/g, '').replace(/【[^】]*】/g, '')
+                    .replace(/.*?：/, '') 
+                    .replace(/$.*?$|（.*?）|$$.*?$$/g, '')
+                    .replace(/4K.*$/g, '')
+                    .replace(/更新.*$/g, '')
+                    .trim(); 
+                    nameHtml = title; 
                 } else {
                     title = $(element).find('.tgme_widget_message_text mark').text();
                 }
@@ -99,8 +104,13 @@ async function search(ext) {
                 cover = $(element)
                     .find('.tgme_widget_message_photo_wrap')
                     .attr('style')
-                    .match(/image\:url\('(.+)'\)/)[1];
-                remarks = hrefs[0].match(/https:\/\/(.+)\/s\//)[1];
+                    .match(/image\:url\('(.+)'\)/)[1]
+                remarks = hrefs[0].match(/https:\/\/(.+)\/s\//)[1].replace(/(115\.com)|(anxia\.com)/, '115')
+                .replace(/(pan\.quark\.cn)/, '夸克')
+                .replace(/(drive\.uc\.cn)/, 'UC')
+                .replace(/(www\.aliyundrive\.com)/, '阿里')
+                .replace(/(cloud\.189\.cn)/, '天翼')
+                .trim();
             } catch (e) {
                 $utils.toastError(`${channel}搜索失败`);
             }
