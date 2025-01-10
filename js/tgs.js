@@ -79,7 +79,7 @@ async function search(ext) {
         if ($('div.tgme_widget_message_bubble').length === 0) continue;
         $('div.tgme_widget_message_bubble').each((_, element) => {
             let nameHtml = $(element).find('.tgme_widget_message_text').html();
-            const title = nameHtml.split('<br>')[0].trim();
+            const title = nameHtml.split('<br>')[0].replace(/<b[^>]*>|<\/b>|<a[^>]*>|<\/a>|<mark[^>]*>|<\/mark>/g, '').replace(/【[^】]*】/g, '').trim();
             nameHtml = title; 
             let hrefs = [];
             $(element).find('.tgme_widget_message_text > a').each((_, element) => {
