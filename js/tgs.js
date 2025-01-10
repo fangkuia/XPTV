@@ -16,7 +16,6 @@ let appConfig = {
 	site: 'https://t.me/s/',
 	tabs: [{
 		name: '只能搜索',
-		ui: 1,
 		ext: {
 			id: '',
 		},
