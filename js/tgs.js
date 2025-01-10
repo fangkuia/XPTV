@@ -108,7 +108,7 @@ async function search(ext) {
                 remarks = hrefs[0].match(/https:\/\/(.+)\/s\//)[1].replace(/(115\.com)|(anxia\.com)/, '115')
                 .replace(/(pan\.quark\.cn)/, '夸克')
                 .replace(/(drive\.uc\.cn)/, 'UC')
-                .replace(/(www\.aliyundrive\.com)/, '阿里')
+                .replace(/(www\.aliyundrive\.com)|(www\.alipan\.com)/, '阿里')
                 .replace(/(cloud\.189\.cn)/, '天翼')
                 .trim();
             } catch (e) {
