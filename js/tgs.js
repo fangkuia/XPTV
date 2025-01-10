@@ -79,7 +79,7 @@ async function getCards(ext) {
             let cover = ''
             let remarks = ''
             try {
-                const html = $(element).find('.tgme_widget_message_text').html().replace(/<b[^>]*>|<\/b>|<a[^>]*>|<\/a>|<mark[^>]*>|<\/mark>|<i[^>]*>|<\/i>|<b[^>]*>|<\/b>/g, '').replace(/【[^】]*】/g, '')
+                const html = $(element).find('.tgme_widget_message_text').html().replace(/<b[^>]*>|<\/b>|<a[^>]*>|<\/a>|<mark[^>]*>|<\/mark>|<i[^>]*>|<\/i>|<div[^>]*>|<\/div>/g, '').replace(/【[^】]*】/g, '')
                    html.split('<br>').forEach((e) => {
                        const titletext = e.trim()
                        if (/(名称|名字|短剧|资源标题)(：|:)/.test(titletext)) {
@@ -205,7 +205,7 @@ async function search(ext) {
             let cover = ''
             let remarks = ''
             try {
-                const html = $(element).find('.tgme_widget_message_text').html().replace(/<b[^>]*>|<\/b>|<a[^>]*>|<\/a>|<mark[^>]*>|<\/mark>|<i[^>]*>|<\/i>|<b[^>]*>|<\/b>/g, '').replace(/【[^】]*】/g, '')
+                const html = $(element).find('.tgme_widget_message_text').html().replace(/<b[^>]*>|<\/b>|<a[^>]*>|<\/a>|<mark[^>]*>|<\/mark>|<i[^>]*>|<\/i>|<div[^>]*>|<\/div>/g, '').replace(/【[^】]*】/g, '')
                    html.split('<br>').forEach((e) => {
                        const titletext = e.trim()
                        if (/(名称|名字|短剧|资源标题)(：|:)/.test(titletext)) {
