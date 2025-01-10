@@ -107,7 +107,6 @@ async function search(ext) {
             });
         });
     }
-    await Promise.all(fetchPromises);
     return jsonify({
         list: cards,
     });
