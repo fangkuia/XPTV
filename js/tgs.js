@@ -134,7 +134,7 @@ async function getCards(ext) {
             })
         })
 
-        let nextPage = $('link[rel="prev"]').attr('href')
+        let nextPage = $('.js-messages_more_wrap a').attr('href')
         nextPage = nextPage ? `https://t.me${nextPage}` : ''
         if (nextPage) {
             let config = {
