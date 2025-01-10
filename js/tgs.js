@@ -78,7 +78,9 @@ async function search(ext) {
         const $ = cheerio.load(data);
         if ($('div.tgme_widget_message_bubble').length === 0) continue;
         $('div.tgme_widget_message_bubble').each((_, element) => {
-            const title = $(element).find('.tgme_widget_message_text mark').text();
+            let nameHtml = $(element).find('.tgme_widget_message_text').html();
+            const title = nameHtml.split('<br>')[0].trim();
+            nameHtml = title; 
             let hrefs = [];
             $(element).find('.tgme_widget_message_text > a').each((_, element) => {
                 const href = $(element).attr('href');
