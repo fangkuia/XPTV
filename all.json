@@ -515,6 +515,18 @@
       "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/rou.js"
     },
     {
+      "name": "Taiav",
+      "type": 3,
+      "api": "csp_Taiav",
+      "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/taiav.js"
+    },
+    {
+      "name": "JavMove",
+      "type": 3,
+      "api": "csp_JavMove",
+      "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/javmove.js"
+    },
+    {
       "name": "有爱爱",
       "type": 3,
       "api": "csp_uaa",
