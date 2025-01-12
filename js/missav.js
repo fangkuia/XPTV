@@ -281,7 +281,7 @@ async function getTracks(ext) {
             'User-Agent': UA,
         },
     })
-    const match1 = data.match(/sixyik\.com\\\/(.+)\\\/seek\\\/_0\.jpg/)
+    const match1 = data.match(/nineyu\.com\\\/(.+)\\\/seek\\\/_0\.jpg/)
     const match2 = data.match(/https\|video\|(.+)\|source1280/)
     if (match1 && match1[1]) {
         let uuid = match1[1]
