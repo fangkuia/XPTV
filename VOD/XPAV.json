@@ -120,6 +120,12 @@
             "api": "csp_uaa",
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/uua.js"
         },
+         {
+            "name": "pandatv",
+            "type": 3,
+            "api": "csp_pandatv",
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/pandatv.js"
+        },
         {
             "name": "avdb",
             "type": 3,
