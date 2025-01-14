@@ -91,16 +91,13 @@ async function getTracks(ext) {
 	playlist.each((_, e) => {
 		
 		$(e).find('li a').each((_, link) => {
-			const href = $(link).attr('href');
-			const regex = /redirect_to=(.*?)&movie_title=/;
-			const match = href.match(regex);
+			const href = $(link).attr('data-link');
 
-			if (match && match[1]) { 
 				tracks.push({
 					name: '网盘',
-					pan: match[1], 
+					pan: href, 
 				});
-			}
+			
 		});
 	});
 	
