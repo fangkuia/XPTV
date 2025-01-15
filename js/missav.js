@@ -1,10 +1,16 @@
+const UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1 Edg/131.0.0.0'
 const cheerio = createCheerio()
-const UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_2 like Mac OS X) AppleWebKit/604.1.14 (KHTML, like Gecko)'
+/*
+{	
+    "enload": true
+}
+*/
+let $config = argsify($config_str)
 
 const appConfig = {
     ver: 1,
     title: 'missav',
-    site: 'https://missav.ws',
+    site: 'https://missav.ai',
     tabs: [
         {
             name: '中文字幕',
@@ -25,6 +31,13 @@ const appConfig = {
             ui: 1,
             ext: {
                 id: 'dm509/cn/release',
+            },
+        },
+        {
+            name: '我的收藏',
+            ui: 1,
+            ext: {
+                id: 'saved',
             },
         },
         {
@@ -219,14 +232,54 @@ const appConfig = {
     ],
 }
 
+async function getactress() {
+
+    const url = appConfig.site + '/saved/actresses'
+    const { data } = await $fetch.get(url, {
+        headers: {
+            'User-Agent': UA,
+        },
+    })
+    const $ = cheerio.load(data)
+    const actresss = $('.max-w-full.p-8.text-nord4.bg-nord1.rounded-lg')
+    if (actresss.length == 0) {
+        $utils.openSafari(url, UA)
+    }
+    let list = []
+    actresss.find('.space-y-4').each((_, e) => {
+        const href = $(e).find('a:first').attr('href').replace(`${appConfig.site}/`, '')
+        const name = $(e).find('img').attr('alt')
+        list.push({
+            name: name,
+            ui: 1,
+            ext: {
+                id: href,
+            },
+        })
+    })
+
+    return list
+
+}
+
 async function getConfig() {
-    return jsonify(appConfig)
+    let config = { ...appConfig };
+    if ($config.enload) {
+        list = await getactress()
+        config.tabs = config.tabs.concat(list)
+    }
+    return jsonify(config)
 }
 
 async function getCards(ext) {
     ext = argsify(ext)
     let cards = []
     let { page = 1, id } = ext
+    if (id == 'saved' && $config.length == 0) {
+        return jsonify({
+            list: [],
+        })
+    }
 
     const url = appConfig.site + `/${id}?page=${page}`
 
@@ -235,14 +288,14 @@ async function getCards(ext) {
             'User-Agent': UA,
         },
     })
+    if (data.includes('Just a moment...')) {
+        $utils.openSafari(url, UA)
+    }
 
     const $ = cheerio.load(data)
-    const t1 = $('title').text()
-    if (t1 === 'Just a moment...') {
-    $utils.openSafari(appConfig.site, UA)
-      }
 
     const videos = $('.thumbnail')
+
     videos.each((_, e) => {
         const href = $(e).find('.text-secondary').attr('href')
         const title = $(e).find('.text-secondary').text().trim().replace(/\s+/g, ' ')
