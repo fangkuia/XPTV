@@ -234,7 +234,7 @@ async function search(ext) {
                     $(element)
                         .find('.tgme_widget_message_text > a')
                         .each((_, element) => {
-                            const href = $(element).attr('href')
+                            const href = $(element).attr('href').replace('anxia.com', '115.com')
                             if (href.match(/https:\/\/(.+)\/(s|t)\/(.+)/)) {
                                 hrefs.push(href)
                             }
