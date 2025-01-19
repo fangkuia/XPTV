@@ -1,4 +1,4 @@
-const UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1 Edg/131.0.0.0'
+const UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_2 like Mac OS X) AppleWebKit/604.1.14 (KHTML, like Gecko)'
 const cheerio = createCheerio()
 /*
 {	
@@ -246,17 +246,21 @@ async function getactress() {
         $utils.openSafari(url, UA)
     }
     let list = []
-    actresss.find('.space-y-4').each((_, e) => {
-        const href = $(e).find('a:first').attr('href').replace(`${appConfig.site}/`, '')
-        const name = $(e).find('img').attr('alt')
-        list.push({
-            name: name,
-            ui: 1,
-            ext: {
-                id: href,
-            },
+    try {
+        actresss.find('.space-y-4').each((_, e) => {
+            const href = $(e).find('a:first').attr('href').replace(`${appConfig.site}/`, '')
+            const name = $(e).find('img').attr('alt')
+            list.push({
+                name: name,
+                ui: 1,
+                ext: {
+                    id: href,
+                },
+            })
         })
-    })
+    } catch (e) { 
+        $utils.toastError(`没有找到收藏的女优`)
+    }
 
     return list
 
@@ -348,12 +352,30 @@ async function getTracks(ext) {
             })
 
         }
-        if (match2[1] == '720p') {
+        else if (match2[1] == '720p') {
             tracks.push({
                 name: '720P',
                 pan: '',
                 ext: {
                     url: m3u8Prefix + uuid + '/720p/video.m3u8',
+                }
+            })
+        }
+        else if (match2[1] == '1920x1080') {
+            tracks.push({
+                name: '720P',
+                pan: '',
+                ext: {
+                    url: m3u8Prefix + uuid + '/1920x1080/video.m3u8',
+                }
+            })
+        }
+        else if (match2[1] == '1280x720') {
+            tracks.push({
+                name: '720P',
+                pan: '',
+                ext: {
+                    url: m3u8Prefix + uuid + '/1280x720/video.m3u8',
                 }
             })
         }
