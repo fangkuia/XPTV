@@ -363,7 +363,7 @@ async function getTracks(ext) {
         }
         else if (match2[1] == '1920x1080') {
             tracks.push({
-                name: '720P',
+                name: '1080P',
                 pan: '',
                 ext: {
                     url: m3u8Prefix + uuid + '/1920x1080/video.m3u8',
