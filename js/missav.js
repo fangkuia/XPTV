@@ -338,47 +338,26 @@ async function getTracks(ext) {
             'User-Agent': UA,
         },
     })
-    const match1 = data.match(/nineyu\.com\\\/(.+)\\\/seek\\\/_0\.jpg/)
-    const match2 = data.match(/https\|video\|(.+)\|source1280/)
-    if (match1 && match1[1]) {
-        let uuid = match1[1]
-        if (match2[1] == '1080p') {
-            tracks.push({
-                name: '1080P',
+    const match = data.match(/nineyu\.com\\\/(.+)\\\/seek\\\/_0\.jpg/)
+    if (match && match[1]) {
+        let uuid = match[1]
+        const { data: data1} = await $fetch.get(m3u8Prefix + uuid + m3u8Suffix, {
+            headers: {
+                'User-Agent': UA,
+            }
+        })
+        const lines = data1.split('\n');
+        const matches = lines.filter(line => line.includes('/video.m3u8'));
+        matches.forEach(match => {
+            const name = match.replace('/video.m3u8', '')
+            tracks.unshift({
+                name: name,
                 pan: '',
                 ext: {
-                    url: m3u8Prefix + uuid + '/1080p/video.m3u8',
+                    url: `${m3u8Prefix}${uuid}/${match}`,
                 }
             })
-
-        }
-        else if (match2[1] == '720p') {
-            tracks.push({
-                name: '720P',
-                pan: '',
-                ext: {
-                    url: m3u8Prefix + uuid + '/720p/video.m3u8',
-                }
-            })
-        }
-        else if (match2[1] == '1920x1080') {
-            tracks.push({
-                name: '1080P',
-                pan: '',
-                ext: {
-                    url: m3u8Prefix + uuid + '/1920x1080/video.m3u8',
-                }
-            })
-        }
-        else if (match2[1] == '1280x720') {
-            tracks.push({
-                name: '720P',
-                pan: '',
-                ext: {
-                    url: m3u8Prefix + uuid + '/1280x720/video.m3u8',
-                }
-            })
-        }
+        })
         tracks.push({
             name: '自动',
             pan: '',
