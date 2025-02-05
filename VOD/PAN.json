@@ -124,7 +124,7 @@
             "name": "观影 | PAN",
             "type": 3,
             "api": "csp_guanying",
-            "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/guanying.js" 
+            "ext": "https://raw.githubusercontent.com/kingreevice/my_xptv/refs/heads/main/js/guanying.js" 
         },
         {
             "name": "TG搜 | PAN",
