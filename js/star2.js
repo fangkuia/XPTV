@@ -5,7 +5,7 @@ const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 const appConfig = {
 	ver: 1,
 	title: 'star2',
-	site: 'https://www.1.star2.cn',
+	site: 'https://aa.star2.cn',
 	tabs: [
 		{
 			name: '電影',
