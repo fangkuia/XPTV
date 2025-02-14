@@ -5,7 +5,7 @@ const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 const appConfig = {
 	ver: 1,
 	title: '下饭',
-	site: 'http://txfyyds.top',
+	site: 'http://www.xn--ghqy10g1w0a.xyz',
 	tabs: [
 		{
 			name: '電影',
