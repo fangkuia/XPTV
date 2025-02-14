@@ -12,7 +12,7 @@ const UA = 'MOBILE_UA'
 let appConfig = {
     ver: 1,
     title: 'tg搜索',
-    site: 'https://tgs.xptvhelper.link/s/',
+    site: 'https://t.me/s/',
     // tabs: [
     //     {
     //         name: '只能搜索',
