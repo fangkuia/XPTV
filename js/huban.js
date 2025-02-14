@@ -5,7 +5,7 @@ const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 const appConfig = {
 	ver: 1,
 	title: '虎斑',
-	site: 'https://wp.huban.xyz',
+	site: 'http://103.45.162.207:20720',
 	tabs: [
 		{
 			name: '電影',
