@@ -126,7 +126,7 @@
             "api": "csp_guanying",
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/kingreevice/my_xptv/refs/heads/main/js/GYING_2025_2.js" 
         },
-         {
+        {
             "name": "TG搜 | PAN",
             "type": 3,
             "api": "csp_tgsxp",
