@@ -90,7 +90,7 @@
             "api": "csp_luiqu",
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/liuqu.js" 
         },
-         {
+        {
             "name": "白嫖 | PAN",
             "type": 3,
             "api": "csp_baipiao",
