@@ -4,7 +4,7 @@ const UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_2 like Mac OS X) AppleWebKit/6
 const appConfig = {
 	ver: 1,
 	title: '玩偶哥哥',
-	site: 'https://www.wogg.net',
+	site: 'https://www.wogg.one',
 
 	tabs: [
 		{
