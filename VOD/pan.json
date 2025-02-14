@@ -130,7 +130,7 @@
             "name": "TG搜 | PAN",
             "type": 3,
             "api": "csp_tgs",
-            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/xptgs.js" 
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/tgs_xp.js" 
         },
         {
             "name": "天逸搜 | PAN搜索",
