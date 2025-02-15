@@ -124,7 +124,7 @@ async function getTracks(ext) {
     playlist.each((_, e) => {
         const name = $(e).find('.module-row-title h4').text().replace('- 第1集', '')
         // 網盤的分享連結
-        const panShareUrl = $(e).find('.module-row-title p').text()
+        const panShareUrl = $(e).find('.module-row-title p').text().replace(/(anxia\.com)|(115cdn\.com)/, '115.com')
         tracks.push({
             name: name.trim(),
             pan: panShareUrl,
