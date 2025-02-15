@@ -104,7 +104,7 @@ async function getCards(ext) {
                 $(element)
                     .find('.tgme_widget_message_text > a')
                     .each((_, element) => {
-                        const href = $(element).attr('href').replace('anxia.com', '115.com')
+                        const href = $(element).attr('href').replace(/(115\.com)|(anxia\.com)|(115cdn\.com)/, '115.com')
                         if (href.match(/https:\/\/(.+)\/(s|t)\/(.+)/)) {
                             hrefs.push(href)
                         }
@@ -113,7 +113,7 @@ async function getCards(ext) {
                     .find('.tgme_widget_message_photo_wrap')
                     .attr('style')
                     .match(/image\:url\('(.+)'\)/)[1]
-                remarks = hrefs[0].match(/https:\/\/(.+)\/(s|t)\//)[1].replace(/(115\.com)|(anxia\.com)/, '115')
+                remarks = hrefs[0].match(/https:\/\/(.+)\/(s|t)\//)[1].replace(/(115\.com)|(anxia\.com)|(115cdn\.com)/, '115')
                     .replace(/(pan\.quark\.cn)/, '夸克')
                     .replace(/(drive\.uc\.cn)/, 'UC')
                     .replace(/(www\.aliyundrive\.com)|(www\.alipan\.com)/, '阿里')
