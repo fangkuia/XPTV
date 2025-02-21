@@ -4,9 +4,7 @@ on:
   push:
     paths:
       - 'CMS/XPTV.json'
-      - 'CMS/XPAV.json'
       - 'VOD/TV.json'
-      - 'VOD/AV.json'
       - 'VOD/PAN.json'
 
 jobs:
@@ -28,7 +26,7 @@ jobs:
         sudo apt-get install -y jq
 
         # 將指定的 JSON 文件合併到一個文件中並放在根目錄
-        jq -s '[.[] | select(.sites) | .sites[]] | {sites: .}' CMS/XPTV.json CMS/XPAV.json VOD/TV.json VOD/AV.json VOD/PAN.json > all.json
+        jq -s '[.[] | select(.sites) | .sites[]] | {sites: .}' CMS/XPTV.json VOD/TV.json VOD/PAN.json > all.json
 
     - name: Commit and push changes
       run: |
