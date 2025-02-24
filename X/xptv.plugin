@@ -3,6 +3,7 @@
 #!desc=仅直连
 [Rule]
 #已标注了大部分可直连的地址,遇到无法直连的情况自行调整
+DOMAIN-SUFFIX, xptvhelper.link, DIRECT
 #XPTV主站-部分地区可以直连自行尝试
 #DOMAIN, infuseku.xyz, DIRECT
 #iCloud同步
