@@ -67,13 +67,13 @@
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/avtoday.js"
         },
         {
-            "name": "xhamster",
+            "name": "xHamster",
             "type": 3,
             "api": "csp_xhamster",
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/xhamster.js"
         },
         {
-            "name": "pornhub",
+            "name": "Pornhub",
             "type": 3,
             "api": "csp_pornhub",
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/pornhub.js"
@@ -121,13 +121,13 @@
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/uua.js"
         },
         {
-            "name": "avdb",
+            "name": "AVDB",
             "type": 3,
             "api": "csp_avdb",
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/avdb.js"
         },
         {
-            "name": "kanav",
+            "name": "KanAV",
             "type": 3,
             "api": "csp_kanav",
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/kanav.js"
