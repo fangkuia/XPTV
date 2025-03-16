@@ -12,48 +12,56 @@ let appConfig = {
   tabs: [
     {
       name: '中文字幕',
+      ui: 1,
       ext: {
         id: 1,
       },
     },
     {
       name: '日韩有码',
+      ui: 1,
       ext: {
         id: 2,
       },
     },
     {
       name: '日韩无码',
+      ui: 1,
       ext: {
         id: 3,
       },
     },
     {
       name: '国产AV',
+      ui: 1,
       ext: {
         id: 4,
       },
     },
     {
       name: '自拍泄密',
+      ui: 1,
       ext: {
         id: 30,
       },
     },
     {
       name: '探花约炮',
+      ui: 1,
       ext: {
         id: 31,
       },
     },
     {
       name: '主播录制',
+      ui: 1,
       ext: {
         id: 32,
       },
     },
     {
       name: '动漫番剧',
+      ui: 1,
       ext: {
         id: 20,
       },
