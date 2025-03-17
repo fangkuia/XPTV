@@ -130,7 +130,7 @@
             "name": "kbjfan",
             "type": 3,
             "api": "csp_kbjfan",
-            "ext": "hhttps://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/kbjfan.js"
+            "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/kbjfan.js"
         }
     ]
 }
