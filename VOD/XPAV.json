@@ -131,6 +131,12 @@
             "type": 3,
             "api": "csp_kanav",
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/kanav.js"
+        },
+        {
+            "name": "kbjfan",
+            "type": 3,
+            "api": "csp_kbjfan",
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/kbjfan.js"
         }
     ]
 }
