@@ -39,6 +39,7 @@ async function getTabs() {
 
         list.push({
             name,
+            ui: 1,
             ext: {
                 url: appConfig.site + href,
             },
