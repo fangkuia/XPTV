@@ -131,6 +131,12 @@
             "type": 3,
             "api": "csp_kbjfan",
             "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/kbjfan.js"
+        },
+        {
+            "name": "twivideo",
+            "type": 3,
+            "api": "csp_twivideo",
+            "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/twivideo.js"
         }
     ]
 }
