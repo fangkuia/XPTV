@@ -179,7 +179,7 @@
       "name": "厂长资源",
       "type": 3,
       "api": "csp_czzy",
-      "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/czzy.js"
+      "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/czzy.js"
     },
     {
       "name": "哔滴影视",
@@ -482,7 +482,7 @@
       "ext": "https://ghp.xptvhelper.link/https://gist.githubusercontent.com/occupy-pluto/874d9b180bcaff91e2dac06d38ed8474/raw/tianyiso.js"
     },
     {
-      "name": "云巢",
+      "name": "云巢 | PAN",
       "type": 3,
       "api": "csp_js/yunchao",
       "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/kingreevice/my_xptv/refs/heads/main/js/yunchao.js"
