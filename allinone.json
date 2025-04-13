@@ -266,12 +266,6 @@
       "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/subaibai.js"
     },
     {
-      "name": "兩個BT",
-      "type": 3,
-      "api": "csp_bttwo",
-      "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/bttwo.js"
-    },
-    {
       "name": "NO視頻",
       "type": 3,
       "api": "csp_novipnoad",
@@ -308,12 +302,6 @@
       "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/tiantian.js"
     },
     {
-      "name": "囧次元",
-      "type": 3,
-      "api": "csp_jcy",
-      "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/jcy.js"
-    },
-    {
       "name": "追光影视",
       "type": 3,
       "api": "csp_sgsd",
@@ -338,10 +326,16 @@
       "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/apple.js"
     },
     {
-      "name": "皮皮蝦",
+      "name": "老地方",
       "type": 3,
-      "api": "csp_ppxys",
-      "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/ppxys.js"
+      "api": "csp_laodifang",
+      "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/laodifang.js"
+    },
+    {
+      "name": "嗷嗚動漫",
+      "type": 3,
+      "api": "csp_aowu",
+      "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/aowu.js"
     },
     {
       "name": "玩偶哥哥 | PAN",
