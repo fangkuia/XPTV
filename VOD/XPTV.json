@@ -161,6 +161,12 @@
             "type": 3,
             "api": "csp_aowu",
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/aowu.js"
+        },
+        {
+            "name": "小紅影視",
+            "type": 3,
+            "api": "csp_xiaohys",
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/xiaohys.js"
         }
     ]
 }
