@@ -167,6 +167,12 @@
             "type": 3,
             "api": "csp_xiaohys",
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/xiaohys.js"
+        },
+        {
+            "name": "絕對影視",
+            "type": 3,
+            "api": "csp_jdys",
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/jdys.js"
         }
     ]
 }
