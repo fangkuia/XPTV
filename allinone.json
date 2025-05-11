@@ -344,6 +344,12 @@
       "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/xiaohys.js"
     },
     {
+      "name": "零度影視",
+      "type": 3,
+      "api": "csp_zero",
+      "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/zero.js"
+    },
+    {
       "name": "玩偶哥哥 | PAN",
       "type": 3,
       "api": "csp_wogg",
