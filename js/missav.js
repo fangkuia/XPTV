@@ -240,6 +240,9 @@ async function getactress() {
             'User-Agent': UA,
         },
     })
+    if (data.includes('Just a moment...')) {
+        $utils.openSafari(url, UA)
+    }
     const $ = cheerio.load(data)
     const actresss = $('.max-w-full.p-8.text-nord4.bg-nord1.rounded-lg')
     if (actresss.length == 0) {
@@ -249,7 +252,7 @@ async function getactress() {
     try {
         actresss.find('.space-y-4').each((_, e) => {
             const href = $(e).find('a:first').attr('href').replace(`${appConfig.site}/`, '')
-            const name = $(e).find('img').attr('alt')
+            const name = $(e).find('h4').text()
             list.push({
                 name: name,
                 ui: 1,
@@ -258,12 +261,10 @@ async function getactress() {
                 },
             })
         })
-    } catch (e) { 
+    } catch (e) {
         $utils.toastError(`没有找到收藏的女优`)
     }
-
     return list
-
 }
 
 async function getConfig() {
@@ -341,7 +342,7 @@ async function getTracks(ext) {
     const match = data.match(/nineyu\.com\\\/(.+)\\\/seek\\\/_0\.jpg/)
     if (match && match[1]) {
         let uuid = match[1]
-        const { data: data1} = await $fetch.get(m3u8Prefix + uuid + m3u8Suffix, {
+        const { data: data1 } = await $fetch.get(m3u8Prefix + uuid + m3u8Suffix, {
             headers: {
                 'User-Agent': UA,
             }
