@@ -60,8 +60,16 @@ payload:
  - DOMAIN-SUFFIX, msstatic.com
  - DOMAIN, lemonlive.deno.dev
 #VOD源
+#金牌影视主页与播放
+ - DOMAIN-KEYWORD, cfkj86.com
+#哔滴影视主页与播放
+ - DOMAIN-KEYWORD, v.xlys.ltd.ua
+#零度主页与播放
+ - DOMAIN-SUFFIX, zero.mitotv.com
+ #影视天堂主页与播放
+ - DOMAIN-WEYWORD, ysttv.com
 #低端主页与播放
- - DOMAIN-SUFFIX, ddys.pro
+ - DOMAIN-WEYWORD, ddys.pro
 #AGE主页
  - DOMAIN-SUFFIX, agedm.org
 #ギリギリ主页
@@ -74,7 +82,7 @@ payload:
 #播放
  - DOMAIN, wjm.kemfsj.com
 #4k-av播放
- - DOMAIN, www.4k-av.com
+ - DOMAIN-KEYWORD, 4k-av.com
 #囧动漫主页
  - IP-CIDR, 43.142.232.217/32, , no-resolve
 #播放
@@ -94,16 +102,16 @@ payload:
 #播放
  - DOMAIN-SUFFIX, mcloud.139.com
  - DOMAIN-SUFFIX, libvio.cloud
+ - DOMAIN-KEYWORD, libvio.cc
 #anfuns相关
  - DOMAIN-SUFFIX, anfuns.org
  - DOMAIN-SUFFIX, bytegiftia.top
- - DOMAIN-SUFFIX, lenovo.com.cn
  - DOMAIN, image.zhihuishu.com
  - DOMAIN, presale.111.com.cn
 #hdmoli主页
  - DOMAIN, hdmoli.pro
 #播放
- - DOMAIN, v.damoli.pro
+ - DOMAIN-KEYWORD, damoli.pro
 #哔嘀影视主页
  - DOMAIN, www.xlys01.com
 #播放
@@ -123,7 +131,7 @@ payload:
 #NO視頻主页
  - DOMAIN, www.novipnoad.net
 #播放
- - DOMAIN-SUFFIX, novipnoad.net
+ - DOMAIN-WILDCARD, novipnoad.net*
 #韩剧看看主页
  - DOMAIN, www.hanjukankan.com
  - DOMAIN, glzx.thekutv.com
@@ -155,7 +163,7 @@ payload:
  - IP-CIDR, 163.123.192.17/32, , no-resolve
  - DOMAIN, c.xpgtv.net
 #厂长主页
- - DOMAIN, www.czzyvideo.com
+ - DOMAIN, www.czzymovie.com
 #播放
  - DOMAIN, qimgs.qunarzz.com
  - DOMAIN, lf16-fe.resso.me
@@ -168,9 +176,9 @@ payload:
 #天天主页
  - DOMAIN, op.ysdqjs.cn
 #在线之家主页--播放地址是ctyunxs.cn,在天翼里有
- - DOMAIN-SUFFIX, zxzja.com
+ - DOMAIN-KEYWORD, zxzja.com
 #素白白主页--播放地址是dc.xhscdn.com,在厂长里有
- - DOMAIN, www.subaibaiys.com
+ - DOMAIN-KEYWORD, www.subaibai.com
 #CMS源
 #360主页
  - DOMAIN, 360zy.com
@@ -243,10 +251,10 @@ payload:
 #播放
  - DOMAIN-KEYWORD, bbffvip.com
  - DOMAIN-KEYWORD, rrcdnbf
-#小黄人主页
- - DOMAIN, iqyi.xiaohuangrentv.com
+#小红影视主页
+ - DOMAIN, www.xiaohys.com
 #播放
- - DOMAIN-KEYWORD, .jisu.com
+ - DOMAIN-KEYWORD, xiaohys.com
 #牛牛主页
  - DOMAIN, pic.niuniuzy.info
 #播放
