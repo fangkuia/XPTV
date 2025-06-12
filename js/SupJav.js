@@ -70,6 +70,10 @@ async function getCards(ext) {
     })
 
     const $ = cheerio.load(data)
+    const t1 = $('title').text()
+      if (t1 === 'Just a moment...') {
+        $utils.openSafari(appConfig.site, UA)
+      }
 
     const videos = $('.post')
     videos.each((_, e) => {
