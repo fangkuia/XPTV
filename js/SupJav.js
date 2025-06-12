@@ -78,7 +78,7 @@ async function getCards(ext) {
     videos.each((_, e) => {
         const href = $(e).find('a').attr('href')
         const title = $(e).find('a').attr('title')
-        const cover = $(e).find('a img').attr('src')
+        const cover = $(e).find('a img').attr('src').replace('!320x216.jpg', '')
         const remarks = $(e).find('.con .meta .date').text()
 
         cards.push({
