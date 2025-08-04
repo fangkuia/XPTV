@@ -10,7 +10,7 @@ const headers = {
 const appConfig = {
   ver: 1,
   title: "AGE",
-  site: "https://m.agedm.org/#/",
+  site: "https://www.agedm.vip/#/",
   tabs: [{
     name: '最近更新',
     ext: {
