@@ -29,7 +29,7 @@ async function getCards(ext) {
   let id = ext.id
   let page = ext.page || 1
 
-  const url = `https://www.agedm.vip/v2/catalog?genre=all&label=all&letter=all&order=time&region=all&resource=all&season=all&status=all&year=all&size=20&page=${page}`
+  const url = `https://api.agedm.vip/v2/catalog?genre=all&label=all&letter=all&order=time&region=all&resource=all&season=all&status=all&year=all&size=20&page=${page}`
 
   const { data } = await $fetch.get(url, {
     headers
@@ -42,7 +42,7 @@ async function getCards(ext) {
       vod_pic: each.cover,
       vod_remarks: each.uptodate,
       ext: {
-        url: `https://www.agedm.vip/v2/detail/${each.id}`,
+        url: `https://api.agedm.vip/v2/detail/${each.id}`,
       },
     });
   })
@@ -118,7 +118,7 @@ async function search(ext) {
   let text = encodeURIComponent(ext.text)
   let page = ext.page || 1
 
-  const url = `https://www.agedm.vip/v2/search?query=${text}&page=${page}`
+  const url = `https://api.agedm.vip/v2/search?query=${text}&page=${page}`
   const { data } = await $fetch.get(url, {
     headers
   })
@@ -130,7 +130,7 @@ async function search(ext) {
       vod_pic: each.cover,
       vod_remarks: each.uptodate,
       ext: {
-        url: `https://www.agedm.vip/v2/detail/${each.id}`,
+        url: `https://api.agedm.vip/v2/detail/${each.id}`,
       },
     });
   })
