@@ -57,8 +57,7 @@
             "name": "AGE动漫", 
             "type": 3, 
             "api": "csp_age",
-            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/age.js",
-            "ext2": "https://ghp.xptvhelper.link/https://gist.githubusercontent.com/occupy-pluto/e3a7bb98d5027d0f6dfa85fc2ac11a78/raw/agedm.js"
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/age.js"
         },
         {
             "name": "4k-av",
