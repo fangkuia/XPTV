@@ -385,11 +385,11 @@ payload:
 #XPAV源
 #Hanime1播放
  - DOMAIN, vdownload.hembed.com
-#MISSAV播放
- - DOMAIN, surrit.com
 #SupJav-ST播放
  - DOMAIN, streamtape.com
  - DOMAIN-SUFFIX, tapecontent.net
+ # JavMove 播放
+ - DOMAIN, jfejuyvxee.cfd
 #秋名山见主页
  - DOMAIN, api.maiyoux.com
 #播放
