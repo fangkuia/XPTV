@@ -2,29 +2,29 @@
 const cheerio = createCheerio()
 const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
 const headers = {
-  'Referer': 'https://anime.girigirilove.com/',
-  'Origin': 'https://anime.girigirilove.com',
+  'Referer': 'https://bgm.girigirilove.com/',
+  'Origin': 'https://bgm.girigirilove.com',
   'User-Agent': UA,
 }
 
 const appConfig = {
   ver: 1,
   title: "ギリギリ动漫",
-  site: "https://anime.girigirilove.com",
+  site: "https://bgm.girigirilove.com",
   tabs: [{
     name: '日番',
     ext: {
-      url: 'https://anime.girigirilove.com/show/2--------{page}---/'
+      url: 'https://bgm.girigirilove.com/show/2--------{page}---/'
     },
   }, {
     name: '美番',
     ext: {
-      url: 'https://anime.girigirilove.com/show/3--------{page}---/'
+      url: 'https://bgm.girigirilove.com/show/3--------{page}---/'
     },
   }, {
     name: '剧场版',
     ext: {
-      url: 'https://anime.girigirilove.com/show/21--------{page}---/'
+      url: 'https://bgm.girigirilove.com/show/21--------{page}---/'
     },
   }]
 }

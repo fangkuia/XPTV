@@ -1,7 +1,6 @@
 const cheerio = createCheerio()
 
-const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
-
+const UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_2 like Mac OS X) AppleWebKit/604.1.14 (KHTML, like Gecko)'
 const appConfig = {
     ver: 1,
     title: 'SupJav',
@@ -70,12 +69,16 @@ async function getCards(ext) {
     })
 
     const $ = cheerio.load(data)
+    const t1 = $('title').text()
+      if (t1 === 'Just a moment...') {
+        $utils.openSafari(appConfig.site, UA)
+      }
 
     const videos = $('.post')
     videos.each((_, e) => {
         const href = $(e).find('a').attr('href')
         const title = $(e).find('a').attr('title')
-        const cover = $(e).find('a img').attr('data-original')
+        const cover = $(e).find('a img').attr('src').replace('!320x216.jpg', '')
         const remarks = $(e).find('.con .meta .date').text()
 
         cards.push({

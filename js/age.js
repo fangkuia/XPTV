@@ -2,15 +2,15 @@
 const cheerio = createCheerio()
 const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
 const headers = {
-  'Referer': 'https://m.agedm.org/',
-  'Origin': 'https://m.agedm.org',
+  'Referer': 'https://www.agedm.io/',
+  'Origin': 'https://www.agedm.io/',
   'User-Agent': UA,
 }
 
 const appConfig = {
   ver: 1,
   title: "AGE",
-  site: "https://m.agedm.org/#/",
+  site: "https://www.agedm.io/#/",
   tabs: [{
     name: '最近更新',
     ext: {
@@ -29,7 +29,7 @@ async function getCards(ext) {
   let id = ext.id
   let page = ext.page || 1
 
-  const url = `https://api.agedm.org/v2/catalog?genre=all&label=all&letter=all&order=time&region=all&resource=all&season=all&status=all&year=all&size=20&page=${page}`
+  const url = `https://api.agedm.io/v2/catalog?genre=all&label=all&letter=all&order=time&region=all&resource=all&season=all&status=all&year=all&size=20&page=${page}`
 
   const { data } = await $fetch.get(url, {
     headers
@@ -42,7 +42,7 @@ async function getCards(ext) {
       vod_pic: each.cover,
       vod_remarks: each.uptodate,
       ext: {
-        url: `https://api.agedm.org/v2/detail/${each.id}`,
+        url: `https://api.agedm.io/v2/detail/${each.id}`,
       },
     });
   })
@@ -118,7 +118,7 @@ async function search(ext) {
   let text = encodeURIComponent(ext.text)
   let page = ext.page || 1
 
-  const url = `https://api.agedm.org/v2/search?query=${text}&page=${page}`
+  const url = `https://api.agedm.io/v2/search?query=${text}&page=${page}`
   const { data } = await $fetch.get(url, {
     headers
   })
@@ -130,7 +130,7 @@ async function search(ext) {
       vod_pic: each.cover,
       vod_remarks: each.uptodate,
       ext: {
-        url: `https://api.agedm.org/v2/detail/${each.id}`,
+        url: `https://api.agedm.io/v2/detail/${each.id}`,
       },
     });
   })
