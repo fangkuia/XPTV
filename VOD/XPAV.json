@@ -124,7 +124,7 @@
             "name": "AVDB",
             "type": 3,
             "api": "csp_avdb",
-            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/avdb.js"
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/joel-zhu/XPTV/refs/heads/patch-1/js/avdb.js"
         },
         {
             "name": "KanAV",
