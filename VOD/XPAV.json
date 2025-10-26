@@ -7,6 +7,12 @@
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/missav.js"
         },
         {
+            "name": "EXPORNTOONS", 
+            "type": 3, 
+            "api": "csp_EXPORNTOONS",
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/EXPORNTOONS.js"
+        },
+        {
             "name": "麻豆社",
             "type": 3,
             "api": "csp_madou",
