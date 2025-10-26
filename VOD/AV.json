@@ -13,6 +13,12 @@
             "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/EXPORNTOONS.js"
         },
         {
+            "name": "SpankBang", 
+            "type": 3, 
+            "api": "csp_SpankBang",
+            "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/SpankBang.js"
+        },
+        {
             "name": "麻豆社",
             "type": 3,
             "api": "csp_madou",
