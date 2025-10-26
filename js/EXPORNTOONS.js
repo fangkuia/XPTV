@@ -138,7 +138,7 @@ async function search(ext) {
 
 	let text = encodeURIComponent(ext.text)
 	let page = ext.page || 1
-	let url = `${appConfig.site}/${text}?p=${page}`
+	let url = `${appConfig.site}/video/${text}?p=${page}`
 	const { data } = await $fetch.get(url, {
 		headers: {
 			'User-Agent': UA,
