@@ -134,13 +134,8 @@ async function search(ext) {
 
   let text = encodeURIComponent(ext.text)
   let page = ext.page || 1
-  if (page > 1) {
-    return jsonify({
-      list: cards,
-    })
-  }
 
-  const url = appConfig.site + `/search/-------------/?wd=${text}`
+  const url = appConfig.site + `/search/${text}----------${page}---/`
   const { data } = await $fetch.get(url, {
     headers
   })
