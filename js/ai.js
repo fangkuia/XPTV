@@ -146,19 +146,19 @@ async function search(ext) {
   })
   
   const $ = cheerio.load(data)
-  $('.public-list-box').each((_, each) => {
-    cards.push({
-      vod_id: $(each).find('a.public-list-exp').attr('href'),
-      vod_name: $(each).find('.thumb-txt').text(),
-      vod_pic: appConfig.site + $(each).find('img.gen-movie-img').attr('data-src'),
-      vod_remarks: $(each).find('.public-list-prb').text(),
-      ext: {
-        url: appConfig.site + $(each).find('a.public-list-exp').attr('href'),
-      },
-    })
+$('.flex.rel.overflow').each((_, each) => {
+  cards.push({
+    vod_id: $(each).find('a[target="_blank"]').attr('href'),
+    vod_name: $(each).find('h3.slide-info-title').text().trim(),
+    vod_pic: appConfig.site + $(each).find('img.gen-movie-img').attr('data-src'),
+    vod_remarks: $(each).find('.slide-info-remarks.cor5').text().trim(),
+    ext: {
+      url: appConfig.site + $(each).find('a[target="_blank"]').attr('href'),
+    },
   })
+})
 
-  return jsonify({
+ return jsonify({
       list: cards,
   })
 }
