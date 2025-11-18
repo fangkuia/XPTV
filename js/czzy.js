@@ -285,33 +285,63 @@ async function search(ext) {
 
     let text = encodeURIComponent(ext.text)
     let page = ext.page || 1
-    let url = `${appConfig.site}/daoyongjiek0shibushiyoubing?q=${text}$f=_all&p=${page}`
+    // let url = `${appConfig.site}/daoyongjiek0shibushiyoubing?q=${text}$f=_all&p=${page}`
+    let url = `https://czzy.xn--m7r412advb92j21st65a.tk/czzysearch.php?wd=${text}`
+    if (page > 1) return jsonify({ list: [] })
 
-    const { data } = await $fetch.get(url, {
-        headers: {
-            'User-Agent': UA,
-        },
-    })
-
-    const $ = cheerio.load(data)
-
-    $('div.bt_img > ul li').each((_, element) => {
-        const href = $(element).find('a').attr('href')
-        const title = $(element).find('img.thumb').attr('alt')
-        const cover = $(element).find('img.thumb').attr('data-original')
-        const subTitle = $(element).find('.jidi span').text()
-        const hdinfo = $(element).find('.hdinfo .qb').text()
-        cards.push({
-            vod_id: href,
-            vod_name: title,
-            vod_pic: cover,
-            vod_remarks: subTitle || hdinfo,
-            url: href,
-            ext: {
-                url: href,
+    try {
+        const { data } = await $fetch.get(url, {
+            headers: {
+                'User-Agent': UA,
             },
         })
-    })
+
+        let results = data.split('$$$')
+
+        results.forEach((part, _) => {
+            let info = part.split('|')
+
+            let id = info[0]
+            let name = info[1]
+            let image = info[2]
+            let remark = info[3]
+
+            let url = `${appConfig.site}/movie/${id}.html`
+
+            cards.push({
+                vod_id: id.toString(),
+                vod_name: name,
+                vod_pic: image,
+                vod_remarks: remark,
+                url: url,
+                ext: {
+                    url: url,
+                },
+            })
+        })
+    } catch (error) {
+        $print(error)
+    }
+
+    // const $ = cheerio.load(data)
+
+    // $('div.bt_img > ul li').each((_, element) => {
+    //     const href = $(element).find('a').attr('href')
+    //     const title = $(element).find('img.thumb').attr('alt')
+    //     const cover = $(element).find('img.thumb').attr('data-original')
+    //     const subTitle = $(element).find('.jidi span').text()
+    //     const hdinfo = $(element).find('.hdinfo .qb').text()
+    //     cards.push({
+    //         vod_id: href,
+    //         vod_name: title,
+    //         vod_pic: cover,
+    //         vod_remarks: subTitle || hdinfo,
+    //         url: href,
+    //         ext: {
+    //             url: href,
+    //         },
+    //     })
+    // })
 
     return jsonify({
         list: cards,
