@@ -17,8 +17,15 @@ async function getConfig() {
 }
 
 async function getTabs() {
-    let list = []
-    let ignore = ['关于', '公告', '官方', '备用', '群', '地址', '求片']
+    let list = [
+        {
+            name: '电影',
+            ext: {
+                url: appConfig.site + '/movie_bt/movie_bt_series/dyy',
+            },
+        },
+    ]
+    let ignore = ['关于', '公告', '官方', '备用', '群', '地址', '求片', '分类']
     function isIgnoreClassName(className) {
         return ignore.some((element) => className.includes(element))
     }
