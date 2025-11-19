@@ -36,12 +36,6 @@
             "api": "csp_libvio",
             "ext": "https://ghp.xptvhelper.link/https://gist.githubusercontent.com/occupy-pluto/67cc3a53a26c631e32ed2f37e19e479d/raw/c5244f43a051335729ce33f10f2e82e2e899f0a5/libvio.js"
         },
-        { 
-            "name": "低端影视", 
-            "type": 3, 
-            "api": "csp_ddys",
-            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/ddys.js"
-        },
          { 
             "name": "ギリギリ动漫", 
             "type": 3, 
@@ -85,12 +79,6 @@
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/saohuo.js"
         },
         {
-            "name": "素白白影視",
-            "type": 3,
-            "api": "csp_subaibai",
-            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/subaibai.js"
-        },
-        {
             "name": "NO視頻",
             "type": 3,
             "api": "csp_novipnoad",
@@ -121,12 +109,6 @@
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/iyftv.js"
         },
         {
-            "name": "天天影視",
-            "type": 3,
-            "api": "csp_tiantian",
-            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/tiantian.js"
-        },
-        {
             "name": "追光影视",
             "type": 3,
             "api": "csp_sgsd",
@@ -137,12 +119,6 @@
             "type": 3,
             "api": "csp_ystt",
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/ystt.js"
-        },
-        {
-            "name": "hdmoli",
-            "type": 3,
-            "api": "csp_hdmoli",
-            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/hdmoli.js"
         },
         {
             "name": "小蘋果",
