@@ -149,6 +149,12 @@
             "type": 3,
             "api": "csp_zero",
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/zero.js"
+        },
+        {
+            "name": "荐片",
+            "type": 3,
+            "api": "csp_jianpian",
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/jianpian.js"
         }
     ]
 }
