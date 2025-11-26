@@ -151,14 +151,17 @@ async function getPlayinfo(ext) {
       sg: encryptedString,
       verifyCode: 888,
     }, {
-      'User-Agent': UA,
-      'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+      headers:{
+        'User-Agent': UA,
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'X-Requested-With': 'XMLHttpRequest'
+      }
     })
     
     let playUrl = argsify(res.data).url
     return jsonify({
       urls: [playUrl],
-      headers: [headers]
+      headers: [{'User-Agent': UA}]
     })
   } else if (JSON.parse(data2).data.url3) {
     let url3 = JSON.parse(data2).data.url3
