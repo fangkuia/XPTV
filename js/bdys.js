@@ -144,26 +144,28 @@ async function getPlayinfo(ext) {
     headers
   })).data
   
-  if (JSON.parse(data2).data.url3) {
-    let url3 = JSON.parse(data2).data.url3
-    let play = url3.indexOf(',') !== -1 ? url3.split(',')[0].trim() : url3.trim()
-    return jsonify({
-      urls: [play],
-    })
-  } else if (JSON.parse(data2).data.tos) {
+  if (JSON.parse(data2).data.tos) {
     let god = `${appConfig.site}/god/${pid}?type=1`
     let res = await $fetch.post(god, {
       t: currentTimeMillis,
       sg: encryptedString,
       verifyCode: 888,
     }, {
-      'User-Agent': headers,
+      'User-Agent': UA,
       'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
     })
     
     let playUrl = argsify(res.data).url
     return jsonify({
       urls: [playUrl],
+      headers: [headers]
+    })
+  } else if (JSON.parse(data2).data.url3) {
+    let url3 = JSON.parse(data2).data.url3
+    let play = url3.indexOf(',') !== -1 ? url3.split(',')[0].trim() : url3.trim()
+    return jsonify({
+      urls: [play],
+      headers: [headers]
     })
   } else {
     let god = `${appConfig.site}/god/${pid}`
@@ -179,6 +181,7 @@ async function getPlayinfo(ext) {
     let playUrl = argsify(res.data).url
     return jsonify({
       urls: [playUrl],
+      headers: [headers]
     })
   }
 }
