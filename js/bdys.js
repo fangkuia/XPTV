@@ -144,7 +144,14 @@ async function getPlayinfo(ext) {
     headers
   })).data
   
-  if (JSON.parse(data2).data.tos) {
+  if (JSON.parse(data2).data.url3) {
+    let url3 = JSON.parse(data2).data.url3
+    let play = url3.indexOf(',') !== -1 ? url3.split(',')[1].trim() : url3.trim()
+    return jsonify({
+      urls: [play],
+      headers: [headers]
+    })
+  } else if (JSON.parse(data2).data.tos) {
     let god = `${appConfig.site}/god/${pid}?type=1`
     let res = await $fetch.post(god, {
       t: currentTimeMillis,
@@ -163,13 +170,6 @@ async function getPlayinfo(ext) {
       urls: [playUrl],
       headers: [{'User-Agent': UA}]
     })
-  } else if (JSON.parse(data2).data.url3) {
-    let url3 = JSON.parse(data2).data.url3
-    let play = url3.indexOf(',') !== -1 ? url3.split(',')[1].trim() : url3.trim()
-    return jsonify({
-      urls: [play],
-      headers: [headers]
-    })
   } else {
     let god = `${appConfig.site}/god/${pid}`
     let res = await $fetch.post(god, {
@@ -177,8 +177,11 @@ async function getPlayinfo(ext) {
       sg: encryptedString,
       verifyCode: 666,
     }, {
-      'User-Agent': headers,
-      'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+      headers:{
+        'User-Agent': UA,
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'X-Requested-With': 'XMLHttpRequest'
+      }
     })
     
     let playUrl = argsify(res.data).url
