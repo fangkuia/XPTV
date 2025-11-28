@@ -272,22 +272,10 @@
       "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/gzys.js"
     },
     {
-      "name": "anfuns",
-      "type": 3,
-      "api": "csp_anfuns",
-      "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/anfuns.js"
-    },
-    {
       "name": "愛壹帆",
       "type": 3,
       "api": "csp_iyftv",
       "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/iyftv.js"
-    },
-    {
-      "name": "追光影视",
-      "type": 3,
-      "api": "csp_sgsd",
-      "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/sgsd.js"
     },
     {
       "name": "影视天堂",
@@ -318,12 +306,6 @@
       "type": 3,
       "api": "csp_xiaohys",
       "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/xiaohys.js"
-    },
-    {
-      "name": "零度影視",
-      "type": 3,
-      "api": "csp_zero",
-      "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/zero.js"
     },
     {
       "name": "荐片",
