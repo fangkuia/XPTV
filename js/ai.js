@@ -73,24 +73,43 @@ async function getTracks(ext) {
   
   const $ = cheerio.load(data)
   let gn = []
+  
+  // 获取所有分类标签名称
   $('a.swiper-slide').each((_, each) => {
-    gn.push($(each).text().replace(/[0-9]/g, ''))
+    // 提取文本并清理
+    let text = $(each).text()
+    // 移除数字和可能的多余空格
+    let cleanText = text.replace(/[0-9]/g, '').replace(/\s+/g, ' ').trim()
+    gn.push(cleanText)
   })
 
+  // 如果只有一个分类且gn为空，设置默认分类名
+  if (gn.length === 0) {
+    gn = ['默认']
+  }
+
+  // 遍历每个选集列表
   $('div.anthology-list-box').each((i, each) => {
+    let groupTitle = gn[i] || `选集${i + 1}`
     let group = {
-      title: gn[i],
+      title: groupTitle,
       tracks: [],
     }
-    $(each).find('li.box > a').each((_, item) => {
+    
+    // 获取该分类下的所有视频项
+    $(each).find('a.this-link').each((_, item) => {
+      let trackName = $(item).text().trim()
+      let trackUrl = $(item).attr('href')
+      
       group.tracks.push({
-        name: $(item).text(),
+        name: trackName,
         pan: '',
         ext: {
-          url: appConfig.site + $(item).attr('href')
+          url: appConfig.site + trackUrl
         }
       })
     })
+    
     groups.push(group)
   })
   
@@ -115,31 +134,26 @@ async function search(ext) {
 
   let text = encodeURIComponent(ext.text)
   let page = ext.page || 1
-  if (page > 1) {
-    return jsonify({
-      list: cards,
-    })
-  }
 
-  const url = appConfig.site + `/search/-------------/?wd=${text}`
+  const url = appConfig.site + `/search/${text}----------${page}---/`
   const { data } = await $fetch.get(url, {
     headers
   })
   
   const $ = cheerio.load(data)
-  $('.public-list-box').each((_, each) => {
-    cards.push({
-      vod_id: $(each).find('a.public-list-exp').attr('href'),
-      vod_name: $(each).find('.thumb-txt').text(),
-      vod_pic: appConfig.site + $(each).find('img.gen-movie-img').attr('data-src'),
-      vod_remarks: $(each).find('.public-list-prb').text(),
-      ext: {
-        url: appConfig.site + $(each).find('a.public-list-exp').attr('href'),
-      },
-    })
+$('.flex.rel.overflow').each((_, each) => {
+  cards.push({
+    vod_id: $(each).find('a[target="_blank"]').attr('href'),
+    vod_name: $(each).find('h3.slide-info-title').text().trim(),
+    vod_pic: appConfig.site + $(each).find('img.gen-movie-img').attr('data-src'),
+    vod_remarks: $(each).find('.slide-info-remarks.cor5').text().trim(),
+    ext: {
+      url: appConfig.site + $(each).find('a[target="_blank"]').attr('href'),
+    },
   })
+})
 
-  return jsonify({
+ return jsonify({
       list: cards,
   })
 }

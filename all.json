@@ -179,7 +179,13 @@
       "name": "厂长资源",
       "type": 3,
       "api": "csp_czzy",
-      "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/czzy.js"
+      "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/czzy.js"
+    },
+    {
+      "name": "fmovies",
+      "type": 3,
+      "api": "csp_fmovies",
+      "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/fmovies.js"
     },
     {
       "name": "哔滴影视",
@@ -203,13 +209,7 @@
       "name": "LIBVIO",
       "type": 3,
       "api": "csp_libvio",
-      "ext": "https://gist.githubusercontent.com/occupy-pluto/67cc3a53a26c631e32ed2f37e19e479d/raw/c5244f43a051335729ce33f10f2e82e2e899f0a5/libvio.js"
-    },
-    {
-      "name": "低端影视",
-      "type": 3,
-      "api": "csp_ddys",
-      "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/ddys.js"
+      "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/libvio.js"
     },
     {
       "name": "ギリギリ动漫",
@@ -254,12 +254,6 @@
       "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/saohuo.js"
     },
     {
-      "name": "素白白影視",
-      "type": 3,
-      "api": "csp_subaibai",
-      "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/subaibai.js"
-    },
-    {
       "name": "NO視頻",
       "type": 3,
       "api": "csp_novipnoad",
@@ -278,28 +272,10 @@
       "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/gzys.js"
     },
     {
-      "name": "anfuns",
-      "type": 3,
-      "api": "csp_anfuns",
-      "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/anfuns.js"
-    },
-    {
       "name": "愛壹帆",
       "type": 3,
       "api": "csp_iyftv",
       "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/iyftv.js"
-    },
-    {
-      "name": "天天影視",
-      "type": 3,
-      "api": "csp_tiantian",
-      "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/tiantian.js"
-    },
-    {
-      "name": "追光影视",
-      "type": 3,
-      "api": "csp_sgsd",
-      "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/sgsd.js"
     },
     {
       "name": "影视天堂",
@@ -308,22 +284,10 @@
       "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/ystt.js"
     },
     {
-      "name": "hdmoli",
-      "type": 3,
-      "api": "csp_hdmoli",
-      "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/hdmoli.js"
-    },
-    {
       "name": "小蘋果",
       "type": 3,
       "api": "csp_apple",
       "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/apple.js"
-    },
-    {
-      "name": "老地方",
-      "type": 3,
-      "api": "csp_laodifang",
-      "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/laodifang.js"
     },
     {
       "name": "嗷嗚動漫",
@@ -338,10 +302,22 @@
       "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/xiaohys.js"
     },
     {
-      "name": "零度影視",
+      "name": "荐片",
       "type": 3,
-      "api": "csp_zero",
-      "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/zero.js"
+      "api": "csp_jianpian",
+      "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/jianpian.js"
+    },
+    {
+      "name": "人人",
+      "type": 3,
+      "api": "csp_rrmj",
+      "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/rrmj.js"
+    },
+    {
+      "name": "anime1",
+      "type": 3,
+      "api": "csp_anime1",
+      "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/anime1.js"
     },
     {
       "name": "玩偶哥哥 | PAN",

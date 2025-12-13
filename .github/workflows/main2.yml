@@ -1,0 +1,64 @@
+name: Process and Proxy JSON Files on Change
+
+on:
+  push:
+    paths:
+      - 'CMS/XPTV.json'
+      - 'VOD/XPTV.json'
+      - 'VOD/pan.json'
+
+jobs:
+  process-json:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Process JSON files
+      run: |
+        # 安装 jq 来处理 JSON 文件
+        sudo apt-get install -y jq
+
+        # 处理 CMS/XPTV.json
+        if [ -f "CMS/XPTV.json" ]; then
+          echo "处理 CMS/XPTV.json..."
+          # 创建临时文件
+          jq '.sites |= map(if .ext and (.ext | contains("https://raw.githubusercontent.com")) then .ext = "https://ghp.xptvhelper.link/" + .ext else . end)' CMS/XPTV.json > CMS/XPTV_processed.json
+          mv CMS/XPTV_processed.json CMS/XPTV.json
+        fi
+
+        # 处理 VOD/XPTV.json
+        if [ -f "VOD/XPTV.json" ]; then
+          echo "处理 VOD/XPTV.json..."
+          jq '.sites |= map(if .ext and (.ext | contains("https://raw.githubusercontent.com")) then .ext = "https://ghp.xptvhelper.link/" + .ext else . end)' VOD/XPTV.json > VOD/XPTV_processed.json
+          mv VOD/XPTV_processed.json VOD/XPTV.json
+        fi
+
+        # 处理 VOD/pan.json
+        if [ -f "VOD/pan.json" ]; then
+          echo "处理 VOD/pan.json..."
+          jq '.sites |= map(if .ext and (.ext | contains("https://raw.githubusercontent.com")) then .ext = "https://ghp.xptvhelper.link/" + .ext else . end)' VOD/pan.json > VOD/pan_processed.json
+          mv VOD/pan_processed.json VOD/pan.json
+        fi
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+        
+        # 检查是否有文件被修改
+        if git diff --name-only | grep -q "\.json$"; then
+          git add CMS/XPTV.json VOD/XPTV.json VOD/pan.json
+          git commit -m '添加 ghp.xptvhelper.link 代理到 JSON 文件'
+          git push
+        else
+          echo "没有文件需要更新"
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
