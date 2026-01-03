@@ -31,6 +31,7 @@ async function getTabs() {
     const t1 = $('title').text()
       if (t1 === 'Just a moment...') {
     $utils.openSafari(appConfig.site, UA)
+           return []
       }
     let allClass = $('#main-nav-home > a.nav-item')
 
@@ -75,6 +76,7 @@ async function getCards(ext) {
     const t1 = $('title').text()
       if (t1 === 'Just a moment...') {
     $utils.openSafari(appConfig.site, UA)
+           return []
       }
     let videolist = $('.home-rows-videos-wrapper > a')
     if (videolist.length === 0) videolist = $('.content-padding-new > .row > .search-doujin-videos.col-xs-6')
@@ -145,7 +147,6 @@ async function getTracks(ext) {
         })
     }
     
-    // 添加不同清晰度的选项
     sourceTags.each((index, element) => {
         const src = $(element).attr('src')
         const size = $(element).attr('size') || 'unknown'
@@ -194,7 +195,7 @@ async function getPlayinfo(ext) {
         
         playUrl = videoElement.attr('src')
     } else {
-        // 根据清晰度选择对应的source标签
+
         const sourceElement = videoElement.find(`source[size="${quality}"]`)
         if (sourceElement.length > 0) {
             playUrl = sourceElement.attr('src')
