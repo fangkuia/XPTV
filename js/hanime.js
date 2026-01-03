@@ -16,45 +16,32 @@ async function getConfig() {
 }
 
 async function getTabs() {
-    let list = []
-    let ignore = ['新番預告', 'H漫畫', '無碼黃油'] 
-    function isIgnoreClassName(className) {
-        return ignore.some((element) => className.includes(element))
-    }
-
-    const { data } = await $fetch.get(appConfig.site, {
-        headers: {
-            'User-Agent': UA,
-        },
-    })
+    const { data } = await $fetch.get(appConfig.site, { headers: { 'User-Agent': UA } })
     const $ = cheerio.load(data)
-    const t1 = $('title').text()
-      if (t1 === 'Just a moment...') {
-    $utils.openSafari(appConfig.site, UA)
-           return []
-      }
-    let allClass = $('#main-nav-home > a.nav-item')
-
-    allClass.each((i, e) => {
-        const name = $(e).text()
-        const href = $(e).attr('href')
-        const isIgnore = isIgnoreClassName(name)
-        if (isIgnore) return
-
-        let ui = 1
-        if (name.includes('裏番') || name.includes('泡麵番')) {
-            ui = 0 
+    
+    if ($('title').text().includes('Just a moment')) {
+        $utils.openSafari(appConfig.site, UA)
+        return []
+    }
+    
+    const list = []
+    $('#main-nav-home > a.nav-item').each((i, e) => {
+        const name = $(e).text().trim()
+        let href = $(e).attr('href')
+        
+        if (name.includes('新番預告') || name.includes('H漫畫') || name.includes('無碼黃油')) return
+        
+        if (href && href.startsWith('/')) {
+            href = 'https://hanime1.me' + href
         }
-
+        
         list.push({
             name,
-            ui: ui,
-            ext: {
-                url: encodeURI(href),
-            },
+            ui: name.includes('裏番') || name.includes('泡麵番') ? 0 : 1,
+            ext: { url: href }
         })
     })
-
+    
     return list
 }
 async function getCards(ext) {
@@ -250,11 +237,11 @@ async function search(ext) {
     }
     
         cards.push({
-            ui: 1,
             vod_id: finalHref,
             vod_name: title,
             vod_pic: cover,
             vod_remarks: '',
+            ui: 1,
             ext: {
                 url: finalHref,
             },
