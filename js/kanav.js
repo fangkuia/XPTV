@@ -157,7 +157,13 @@ async function getTracks(ext) {
 async function getPlayinfo(ext) {
   const playUrl = JSON.parse(ext).url;
 
-  return JSON.stringify({ urls: [playUrl] });
+  return JSON.stringify({
+    urls: [playUrl],
+    headers: [{
+      'User-Agent': UA,
+      'referer': 'https://kanav.ad/'
+    }]
+  });
 }
 
 async function search(ext) {
