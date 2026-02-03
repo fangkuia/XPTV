@@ -107,12 +107,9 @@ async function getCards(ext) {
             })
             
             stats.subtitle = $(element).find('.subtitle a').text().trim()
-            
             const duration = $(element).find('.duration').text().trim()
             
             const remarks = []
-            if (duration) remarks.push(duration)
-            if (stats.subtitle) remarks.push(stats.subtitle)
             if (stats.likes) remarks.push(stats.likes)
             if (stats.views) remarks.push(stats.views)
             
@@ -135,6 +132,7 @@ async function getCards(ext) {
                 vod_id: finalHref,
                 vod_name: title,
                 vod_pic: cover,
+                vod_duration: duration,
                 vod_remarks: remarks.join(' · '),
                 ext: {
                     url: finalHref,
@@ -171,6 +169,7 @@ async function getCards(ext) {
                 vod_id: finalHref,
                 vod_name: title,
                 vod_pic: cover,
+                vod_duration: '',
                 vod_remarks: '',
                 ext: {
                     url: finalHref,
@@ -310,9 +309,9 @@ async function search(ext) {
         
         const title = $(element).find('.title').text().trim()
         const cover = $(element).find('.main-thumb').attr('src')
-        
         const subtitle = $(element).find('.subtitle a').text().trim()
-
+        const duration = $(element).find('.duration').text().trim()
+        
         const stats = {
             likes: '',
             views: ''
@@ -327,16 +326,12 @@ async function search(ext) {
             }
         })
         
-        const duration = $(element).find('.duration').text().trim()
-        
         let finalHref = href
         if (href && href.startsWith('/')) {
             finalHref = `https://hanime1.me${href}`
         }
         
         const remarks = []
-        if (duration) remarks.push(duration)
-        if (subtitle) remarks.push(subtitle)
         if (stats.likes) remarks.push(stats.likes)
         if (stats.views) remarks.push(stats.views)
         
@@ -345,6 +340,7 @@ async function search(ext) {
             vod_id: finalHref,
             vod_name: title,
             vod_pic: cover,
+            vod_duration: duration,
             vod_remarks: remarks.join(' · '),
             ext: {
                 url: finalHref,
