@@ -149,6 +149,12 @@
             "type": 3,
             "api": "csp_twivideo",
             "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/twivideo.js"
-        }
+        },
+        {
+            "name": "javxx",
+            "type": 3,
+            "api": "csp_javxx",
+            "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/javxx.js"
+        },
     ]
 }
