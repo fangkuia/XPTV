@@ -3915,17 +3915,27 @@ ${ae}`),X.destroy(z)}function W(z,X){z.headers["accept-version"]!==void 0&&(z.he
             display: flex;\r
             align-items: center;\r
             justify-content: space-between;\r
-            padding: 16px;\r
+            padding: 12px 16px;\r
             background: #f7fafc;\r
-            border-radius: 12px;\r
+            border-radius: 10px;\r
             border: 1px solid var(--border-color);\r
             transition: all 0.15s;\r
+            gap: 12px;\r
         }\r
 \r
         /* \u6587\u4EF6\u5939\u6837\u5F0F */\r
         .file-item.folder {\r
             background: #edf2f7;\r
             border: 1px solid #cbd5e0;\r
+            display: block;\r
+            padding: 10px 12px;\r
+        }\r
+\r
+        /* \u6587\u4EF6\u5939\u5185\u90E8\u7684\u6587\u4EF6\u4FE1\u606F\u4F7F\u7528 flex \u5E03\u5C40 */\r
+        .file-item.folder > .file-info {\r
+            display: flex;\r
+            align-items: center;\r
+            margin-right: 0;\r
         }\r
 \r
         .folder-item {\r
@@ -3942,6 +3952,15 @@ ${ae}`),X.destroy(z)}function W(z,X){z.headers["accept-version"]!==void 0&&(z.he
             display: flex;\r
             align-items: center;\r
             width: 100%;\r
+            gap: 8px;\r
+        }\r
+\r
+        .folder-header .file-name {\r
+            font-size: 15px;\r
+        }\r
+\r
+        .folder-header .file-meta {\r
+            font-size: 12px;\r
         }\r
 \r
         .folder-icon {\r
@@ -3978,18 +3997,18 @@ ${ae}`),X.destroy(z)}function W(z,X){z.headers["accept-version"]!==void 0&&(z.he
         }\r
 \r
         .file-name {\r
-            font-size: 16px;\r
+            font-size: 15px;\r
             font-weight: 600;\r
             color: var(--text-main);\r
-            margin-bottom: 6px;\r
+            margin-bottom: 4px;\r
             word-break: break-all;\r
-            line-height: 1.4;\r
+            line-height: 1.3;\r
         }\r
 \r
         .file-meta {\r
             display: flex;\r
-            gap: 12px;\r
-            font-size: 13px;\r
+            gap: 10px;\r
+            font-size: 12px;\r
             color: var(--text-sub);\r
             flex-wrap: wrap;\r
         }\r
@@ -4004,15 +4023,15 @@ ${ae}`),X.destroy(z)}function W(z,X){z.headers["accept-version"]!==void 0&&(z.he
             background: var(--danger);\r
             color: white;\r
             border: none;\r
-            padding: 12px 20px;\r
-            border-radius: 10px;\r
-            font-size: 15px;\r
+            padding: 10px 16px;\r
+            border-radius: 8px;\r
+            font-size: 14px;\r
             font-weight: 600;\r
             cursor: pointer;\r
             transition: all 0.15s;\r
             white-space: nowrap;\r
-            min-height: 44px;\r
-            min-width: 80px;\r
+            min-height: 40px;\r
+            min-width: 70px;\r
             user-select: none;\r
             -webkit-user-select: none;\r
         }\r
