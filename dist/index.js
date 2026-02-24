@@ -4297,11 +4297,11 @@ ${ae}`),X.destroy(z)}function W(z,X){z.headers["accept-version"]!==void 0&&(z.he
                 if (file.type === 'folder') {\r
                     // \u6587\u4EF6\u5939\r
                     const childrenHTML = file.children && file.children.length > 0\r
-                        ? file.children.map(child => generateFileItemHTML(child, type, level + 1)).join('')\r
+                        ? file.children.map(child => generateFileItemHTML(child, type, 0)).join('')\r
                         : '<div class="empty-state" style="padding: 16px 0;"><div class="empty-text" style="font-size: 13px;">\u7A7A\u6587\u4EF6\u5939</div></div>';\r
 \r
                     return \`\r
-                        <div class="file-item folder folder-item" data-path="\${encodeURIComponent(file.path)}" data-type="folder" data-expanded="false">\r
+                        <div class="file-item folder folder-item" data-path="\${encodeURIComponent(file.path)}" data-type="folder" data-expanded="false" data-level="\${level}" style="margin-left: \${level * 20}px;">\r
                             <div class="file-info">\r
                                 <div class="folder-header">\r
                                     <span class="folder-icon">\u25B6</span>\r
@@ -4327,7 +4327,7 @@ ${ae}`),X.destroy(z)}function W(z,X){z.headers["accept-version"]!==void 0&&(z.he
                         <div class="file-item" data-path="\${encodeURIComponent(file.path)}" data-type="\${type}" style="margin-left: \${level * 20}px;">\r
                             <div class="file-info">\r
                                 <div class="file-name">\r
-                                    \${file.name}\r
+                                    \u{1F4C4} \${file.name}\r
                                     \${file.path === currentDbFile && file.name.toLowerCase().endsWith('.json') ? '<span class="badge-current">\u5F53\u524D\u4F7F\u7528</span>' : ''}\r
                                 </div>\r
                                 <div class="file-meta">\r
@@ -4365,14 +4365,15 @@ ${ae}`),X.destroy(z)}function W(z,X){z.headers["accept-version"]!==void 0&&(z.he
                     </div>\r
                 \`;\r
 \r
-                // \u7ED1\u5B9A\u6587\u4EF6\u5939\u70B9\u51FB\u4E8B\u4EF6\r
-                container.querySelectorAll('.folder-item').forEach(folderItem => {\r
-                    folderItem.addEventListener('click', function(e) {\r
-                        // \u5982\u679C\u70B9\u51FB\u7684\u662F\u5220\u9664\u6309\u94AE\uFF0C\u4E0D\u5904\u7406\r
-                        if (e.target.closest('.delete-button')) return;\r
-\r
+                // \u7ED1\u5B9A\u6587\u4EF6\u5939\u70B9\u51FB\u4E8B\u4EF6\uFF08\u53EA\u7ED1\u5B9A\u5230 folder-header\uFF09\r
+                container.querySelectorAll('.folder-header').forEach(header => {\r
+                    header.addEventListener('click', function(e) {\r
                         e.stopPropagation();\r
-                        this.classList.toggle('expanded');\r
+                        // \u627E\u5230\u7236\u7EA7 folder-item \u5E76\u5207\u6362\u5C55\u5F00\u72B6\u6001\r
+                        const folderItem = this.closest('.folder-item');\r
+                        if (folderItem) {\r
+                            folderItem.classList.toggle('expanded');\r
+                        }\r
                     });\r
                 });\r
             }\r
