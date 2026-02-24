@@ -3962,7 +3962,12 @@ ${ae}`),X.destroy(z)}function W(z,X){z.headers["accept-version"]!==void 0&&(z.he
             display: none;\r
         }\r
 \r
-        .folder-item.expanded .folder-children {\r
+        /* \u53EA\u63A7\u5236\u76F4\u63A5\u5B50\u5143\u7D20\u7684\u663E\u793A */\r
+        .folder-item > .folder-children {\r
+            display: none;\r
+        }\r
+\r
+        .folder-item.expanded > .folder-children {\r
             display: block;\r
         }\r
 \r
