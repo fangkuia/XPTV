@@ -1,11 +1,13 @@
-//来自群友“tou tie”
 const cheerio = createCheerio()
 
+//来自群友“tou tie”
+
 // 设置User Agent，模拟iPhone浏览器
-const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0'
+const UA =
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0'
 
 let appConfig = {
-    ver: 1,
+    ver: 20260224,
     title: '肉视频',
     site: 'https://rou.video',
     tabs: [
@@ -95,13 +97,76 @@ async function getCards(ext) {
 async function getTracks(ext) {
     ext = argsify(ext)
     let tracks = []
-    let url = ext.url.match(/https?:\/\/rou\.video\/v\/(\w+)/)[1]
-    let playUrl = `https://rou.video/api/v/${url}`
+    const url = ext.url
+
+    const { data } = await $fetch.get(url, {
+        headers: {
+            'User-Agent': UA,
+        },
+    })
+    const $ = cheerio.load(data)
+    const scriptContent = $('#__NEXT_DATA__').html()
+    const jsonData = JSON.parse(scriptContent)
+    const ev = jsonData.props.pageProps.ev
+    const decodedEv = decodeEv(ev)
+
+    const playurl = decodedEv.videoUrl
+
+    function decodeEv(ev) {
+        const decoded = _atob(ev.d)
+            .split('')
+            .map((c) => String.fromCharCode(c.charCodeAt(0) - ev.k))
+            .join('')
+        return JSON.parse(decoded)
+    }
+
+    function _atob(b64) {
+        var chars = {
+            ascii: function () {
+                return 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='
+            },
+            indices: function () {
+                if (!this.cache) {
+                    this.cache = {}
+                    var ascii = chars.ascii()
+
+                    for (var c = 0; c < ascii.length; c++) {
+                        var chr = ascii[c]
+                        this.cache[chr] = c
+                    }
+                }
+                return this.cache
+            },
+        }
+        var indices = chars.indices(),
+            pos = b64.indexOf('='),
+            padded = pos > -1,
+            len = padded ? pos : b64.length,
+            i = -1,
+            data = ''
+
+        while (i < len) {
+            var code =
+                (indices[b64[++i]] << 18) | (indices[b64[++i]] << 12) | (indices[b64[++i]] << 6) | indices[b64[++i]]
+            if (code !== 0) {
+                data += String.fromCharCode((code >>> 16) & 255, (code >>> 8) & 255, code & 255)
+            }
+        }
+
+        if (padded) {
+            data = data.slice(0, pos - b64.length)
+        }
+
+        return data
+    }
+
+    // let url = ext.url.match(/https?:\/\/rou\.video\/v\/(\w+)/)[1]
+    // let playUrl = `https://rou.video/api/v/${url}`
     tracks.push({
         name: '播放',
         pan: '',
         ext: {
-            url: playUrl,
+            url: playurl,
         },
     })
 
@@ -117,16 +182,7 @@ async function getTracks(ext) {
 
 async function getPlayinfo(ext) {
     ext = argsify(ext)
-    const url = ext.url
-    const { data } = await $fetch.get(url, {
-        headers: {
-            'User-Agent': UA,
-        },
-    })
-    const reslut = argsify(data)
-
-    const playurl = reslut.video.videoUrl
-
+    const playurl = ext.url
 
     return jsonify({ urls: [playurl], headers: [{ 'User-Agent': UA }] })
 }
