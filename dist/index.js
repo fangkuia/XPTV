@@ -2785,7 +2785,28 @@ ${ae}`),X.destroy(z)}function W(z,X){z.headers["accept-version"]!==void 0&&(z.he
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\r
             color: white;\r
             padding: 30px;\r
+            padding-top: 20px;\r
             text-align: center;\r
+            position: relative;\r
+        }\r
+\r
+        .back-link {\r
+            position: absolute;\r
+            left: 20px;\r
+            top: 50%;\r
+            transform: translateY(-50%);\r
+            color: white;\r
+            text-decoration: none;\r
+            font-size: 14px;\r
+            display: flex;\r
+            align-items: center;\r
+            gap: 4px;\r
+            opacity: 0.9;\r
+            transition: opacity 0.2s;\r
+        }\r
+\r
+        .back-link:hover {\r
+            opacity: 1;\r
         }\r
 \r
         .header h1 {\r
@@ -3090,6 +3111,29 @@ ${ae}`),X.destroy(z)}function W(z,X){z.headers["accept-version"]!==void 0&&(z.he
                 width: 100%;\r
                 margin: 2px 0;\r
             }\r
+\r
+            /* \u8FD4\u56DE\u94FE\u63A5\u79FB\u52A8\u7AEF\u9002\u914D */\r
+            .back-link {\r
+                position: static;\r
+                transform: none;\r
+                margin-bottom: 10px;\r
+                align-self: flex-start;\r
+            }\r
+\r
+            .header {\r
+                padding: 20px 15px;\r
+                display: flex;\r
+                flex-direction: column;\r
+                align-items: center;\r
+            }\r
+\r
+            .header h1 {\r
+                font-size: 24px;\r
+            }\r
+\r
+            .header p {\r
+                font-size: 12px;\r
+            }\r
         }\r
 \r
         /* \u786E\u4FDD\u6309\u94AE\u53EF\u89C1 */\r
@@ -3121,6 +3165,7 @@ ${ae}`),X.destroy(z)}function W(z,X){z.headers["accept-version"]!==void 0&&(z.he
 <body>\r
     <div class="container">\r
         <div class="header">\r
+            <a href="/website/" class="back-link">\u2190 \u8FD4\u56DE\u9996\u9875</a>\r
             <h1>\u{1F310} CMS \u91C7\u96C6\u6E90\u914D\u7F6E</h1>\r
             <p>\u914D\u7F6E\u548C\u7BA1\u7406 CMS \u91C7\u96C6\u6E90,\u6BCF\u4E2A\u6E90\u5C06\u4F5C\u4E3A\u72EC\u7ACB\u7684 Spider \u6CE8\u518C</p>\r
         </div>\r
