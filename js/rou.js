@@ -182,7 +182,7 @@ async function getTracks(ext) {
 
 async function getPlayinfo(ext) {
     ext = argsify(ext)
-    const playurl = ext.url
+    const playurl = ext.url.replace('.jpg', '.m3u8')
 
     return jsonify({ urls: [playurl], headers: [{ 'User-Agent': UA }] })
 }
