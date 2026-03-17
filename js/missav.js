@@ -296,19 +296,16 @@ async function getCards(ext) {
 
     let url = appConfig.site + `/${id}?page=${page}`
     
-    // 处理过滤选项 - filters.filters 对应 key 为 'filters' 的筛选项
     if (filters.filters && filters.filters !== '') {
         url += `&filters=${encodeURIComponent(filters.filters)}`
     }
     
-    // 处理排序选项 - filters.sort 对应 key 为 'sort' 的筛选项
     if (filters.sort && filters.sort !== '') {
         url += `&sort=${encodeURIComponent(filters.sort)}`
     } else {
-        url += `&sort=released_at`  // 默认按发行日期排序
+        url += `&sort=released_at`  
     }
     
-    // 处理其他筛选条件
     if (filters.keyword) {
         url += `&keyword=${encodeURIComponent(filters.keyword)}`
     }
@@ -361,9 +358,9 @@ async function getCards(ext) {
         list: cards,
         filter: [
             {
-                key: 'filters',  // 对应 filters.filters
+                key: 'filters',  
                 name: '过滤',
-                init: '',        // 默认显示"所有"
+                init: '',      
                 value: [
                     { n: '所有', v: '' },
                     { n: '单人作品', v: 'individual' },
@@ -372,9 +369,9 @@ async function getCards(ext) {
                 ],
             },
             {
-                key: 'sort',     // 对应 filters.sort
+                key: 'sort',    
                 name: '排序',
-                init: 'released_at',  // 默认按发行日期排序
+                init: 'released_at',  
                 value: [
                     { n: '发行日期', v: 'released_at' },
                     { n: '最近更新', v: 'published_at' },
