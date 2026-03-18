@@ -63,10 +63,13 @@ const headers = {
 }
 
 async function getConfig() {
-    const { respHeaders } = await $fetch.get(appConfig.site + '/zzzzz', {
-        headers,
-    })
-    headers['Cookie'] = respHeaders['Set-Cookie'].split(';')[0]
+    if (!headers['Cookie']){
+        const { respHeaders } = await $fetch.get(appConfig.site + '/zzzzz', {
+            headers,
+        })
+        headers['Cookie'] = respHeaders['Set-Cookie'].split(';')[0]
+    }
+    
     return jsonify(appConfig)
 }
 
