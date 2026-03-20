@@ -155,6 +155,12 @@
             "type": 3,
             "api": "csp_7sefun",
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/7sefun.js"
+        },
+    {
+            "name": "山有木兮",
+            "type": 3,
+            "api": "csp_symx",
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/symx.js"
         }
   ]
 }
