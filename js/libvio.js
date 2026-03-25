@@ -1,57 +1,23 @@
 const cheerio = createCheerio()
-const UA =
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36'
+const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36'
 const headers = {
-    Referer: 'https://www.libvio.cc/',
-    Origin: 'https://www.libvio.cc',
-    'User-Agent': UA,
+  'Referer': 'https://www.libvio.la/',
+  'Origin': 'https://www.libvio.la',
+  'User-Agent': UA,
 }
-
 const appConfig = {
-    ver: 1,
-    title: 'LIBVIO',
-    site: 'https://www.libvio.cc',
-    tabs: [
-        {
-            name: '首页',
-            ext: {
-                url: '/',
-                hasMore: false,
-            },
-        },
-        {
-            name: '电影',
-            ext: {
-                url: '/type/1-1.html',
-            },
-        },
-        {
-            name: '剧集',
-            ext: {
-                url: '/type/2-1.html',
-            },
-        },
-        {
-            name: '动漫',
-            ext: {
-                url: '/type/4-1.html',
-            },
-        },
-        {
-            name: '日韩剧',
-            ext: {
-                url: '/type/15-1.html',
-            },
-        },
-        {
-            name: '欧美剧',
-            ext: {
-                url: '/type/16-1.html',
-            },
-        },
-    ],
+  ver: 1,
+  title: 'LIBVIO',
+  site: 'https://www.libvio.la',  // 改这里：从 libvio.cc 改成 libvio.la
+  tabs: [
+    { name: '首页', ext: { url: '/', hasMore: false } },
+    { name: '电影', ext: { url: '/type/1-1.html' } },
+    { name: '剧集', ext: { url: '/type/2-1.html' } },
+    { name: '动漫', ext: { url: '/type/4-1.html' } },
+    { name: '日韩剧', ext: { url: '/type/15-1.html' } },
+    { name: '欧美剧', ext: { url: '/type/16-1.html' } },
+  ],
 }
-
 async function getConfig() {
     return jsonify(appConfig)
 }
@@ -98,107 +64,94 @@ async function getCards(ext) {
     })
 }
 
+// getTracks 改成这样（兼容新结构）：
 async function getTracks(ext) {
-    const { url } = argsify(ext)
-    let groups = []
-
-    const { data } = await $fetch.get(url, {
-        headers,
+  const { url } = argsify(ext)
+  let groups = []
+  const { data } = await $fetch.get(url, { headers })
+  const $ = cheerio.load(data)
+  
+  // 方式1: 从 playlist-panel 抓播放列表
+  $('div.playlist-panel').each((_, panel) => {
+    const $panel = $(panel)
+    const title = $panel.find('.panel-head h3').text().trim()
+    if (!title || title.includes('猜你喜欢')) return
+    if (title.includes('下载')) return
+    
+    let group = { title, tracks: [] }
+    $panel.find('.stui-content__playlist li').each((_, item) => {
+      const a = $(item).find('a')
+      group.tracks.push({
+        name: a.text().trim(),
+        pan: '',
+        ext: { url: appConfig.site + a.attr('href') },
+      })
     })
-
-    const $ = cheerio.load(data)
-
-    const heads = $('div.stui-vodlist__head').toArray()
-
-    for (const head of heads) {
-        let title = $(head).find('.stui-pannel__head').text().trim()
-
-        if (title.includes('猜你喜欢')) continue
-
-        if (!title.includes('下载')) {
-            let group = {
-                title,
-                tracks: [],
-            }
-
-            $(head)
-                .find('.stui-content__playlist > li')
-                .each((_, item) => {
-                    group.tracks.push({
-                        name: $(item).text(),
-                        pan: '',
-                        ext: {
-                            url: appConfig.site + $(item).find('a').attr('href'),
-                        },
-                    })
-                })
-
-            if (group.tracks.length > 0) groups.push(group)
-        } else {
-            let panUrl = $(head).find('ul.stui-content__playlist>li>a').attr('href')
-            let { data: panData } = await $fetch.get(appConfig.site + panUrl, { headers })
-
-            let config = JSON.parse(panData.match(/var player_.*?=(.*?)</)[1])
-            let pan = decodeURIComponent(config.url)
-
-            groups.push({
-                title,
-                tracks: [
-                    {
-                        name: '合集',
-                        pan,
-                    },
-                ],
-            })
-        }
+    if (group.tracks.length > 0) groups.push(group)
+  })
+  
+  // 方式2: 如果没有 playlist-panel，从立即播放按钮抓
+  if (groups.length === 0) {
+    const playBtn = $('a[href^="/play/"]').attr('href')
+    if (playBtn) {
+      groups.push({
+        title: '立即播放',
+        tracks: [{ name: '第1集', pan: '', ext: { url: appConfig.site + playBtn } }],
+      })
     }
-
-    return jsonify({ list: groups })
+  }
+  
+  // 网盘下载
+  $('div.netdisk-panel, div.playlist-panel.netdisk-panel').each((_, panel) => {
+    const $panel = $(panel)
+    const title = $panel.find('.panel-head h3').text().trim()
+    if (!title || !title.includes('下载')) return
+    $panel.find('.netdisk-list a').each((_, item) => {
+      const a = $(item)
+      groups.push({
+        title: title,
+        tracks: [{ name: a.find('.netdisk-name').text().trim() || '合集', pan: a.attr('href') }],
+      })
+    })
+  })
+  
+  return jsonify({ list: groups })
 }
 
+// getPlayinfo 改成这样（加 encrypt=3 处理）：
 async function getPlayinfo(ext) {
-    const { url } = argsify(ext)
-
+  ext = argsify(ext)
+  const { url, pan } = ext
+  
+  if (pan) {
+    return jsonify({ urls: [pan] })
+  }
+  
+  if (url) {
     try {
-        const { data } = await $fetch.get(url, {
-            headers,
-        })
-        let obj = JSON.parse(data.match(/var player_.*?=(.*?)</)[1])
-        let player = obj.url
-        if (player.startsWith('http')) {
-            return jsonify({
-                urls: [player],
-                headers: [headers],
-            })
+      const { data } = await $fetch.get(url, { headers })
+      const match = data.match(/var player_.*?=(.*?)</)
+      if (match) {
+        const obj = JSON.parse(match[1])
+        let playerUrl = obj.url
+        
+        if (obj.encrypt === '1') {
+          playerUrl = unescape(playerUrl)
+        } else if (obj.encrypt === '2') {
+          playerUrl = unescape(base64decode(playerUrl))
+        } else if (obj.encrypt === '3') {  // base64
+          playerUrl = base64decode(playerUrl)
         }
-
-        const from = obj.from
-        const jsRes = (
-            await $fetch.get(`${appConfig.site}/static/player/${from}.js`, {
-                headers,
-            })
-        ).data
-        const parse = jsRes.match(/src="(.*)url=/)[1]
-
-        const data2 = (
-            await $fetch.get(`${appConfig.site}${parse}${dictToURI({ url: obj.url, id: obj.id, nid: obj.nid })}`, {
-                headers,
-            })
-        ).data
-        const cdn = data2.match(/var vid = '(http.*)';/)[1]
-        $print(`***cdn: ` + cdn)
-        if (cdn.startsWith('http')) {
-            return jsonify({
-                urls: [cdn],
-            })
+        
+        if (playerUrl.startsWith('http')) {
+          return jsonify({ urls: [playerUrl], headers: [headers] })
         }
-    } catch (error) {
-        $print(error)
+      }
+    } catch (e) {
+      $print('getPlayinfo error: ' + e.message)
     }
-
-    return jsonify({
-        urls: [],
-    })
+  }
+  return jsonify({ urls: [] })
 }
 
 async function search(ext) {
