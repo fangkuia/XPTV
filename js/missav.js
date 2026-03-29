@@ -441,7 +441,11 @@ async function getPlayinfo(ext) {
     ext = argsify(ext)
     const url = ext.url
 
-    return jsonify({ urls: [url] })
+    return jsonify({ urls: [url],
+        headers: [{
+            'User-Agent': UA,
+            'Referer': appConfig.site
+        }] })
 }
 
 async function search(ext) {
