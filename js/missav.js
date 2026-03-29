@@ -403,6 +403,7 @@ async function getTracks(ext) {
         const { data: data1 } = await $fetch.get(m3u8Prefix + uuid + m3u8Suffix, {
             headers: {
                 'User-Agent': UA,
+                'Referer': url
             }
         })
         const lines = data1.split('\n');
