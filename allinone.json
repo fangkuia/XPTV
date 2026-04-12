@@ -176,18 +176,6 @@
       "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/"
     },
     {
-      "name": "厂长资源",
-      "type": 3,
-      "api": "csp_czzy",
-      "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/czzy.js"
-    },
-    {
-      "name": "fmovies",
-      "type": 3,
-      "api": "csp_fmovies",
-      "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/fmovies.js"
-    },
-    {
       "name": "哔滴影视",
       "type": 3,
       "api": "csp_bde4",
@@ -284,22 +272,10 @@
       "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/ystt.js"
     },
     {
-      "name": "小蘋果",
-      "type": 3,
-      "api": "csp_apple",
-      "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/apple.js"
-    },
-    {
       "name": "嗷嗚動漫",
       "type": 3,
       "api": "csp_aowu",
       "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/aowu.js"
-    },
-    {
-      "name": "小紅影視",
-      "type": 3,
-      "api": "csp_xiaohys",
-      "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/xiaohys.js"
     },
     {
       "name": "荐片",
