@@ -97,12 +97,6 @@
             "ext": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/ystt.js"
         },
         {
-            "name": "小蘋果",
-            "type": 3,
-            "api": "csp_apple",
-            "ext": "https://raw.githubusercontent.com/Yswag/xptv-extensions/main/js/apple.js"
-        },
-        {
             "name": "嗷嗚動漫",
             "type": 3,
             "api": "csp_aowu",
