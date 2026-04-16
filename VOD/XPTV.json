@@ -131,6 +131,12 @@
       "type": 3,
       "api": "csp_7sefun",
       "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/7sefun.js"
+    },
+    {
+      "name": "茶杯狐",
+      "type": 3,
+      "api": "csp_cupfox",
+      "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/cupfox.js"
     }
   ]
 }
