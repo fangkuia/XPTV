@@ -167,6 +167,12 @@
             "type": 3,
             "api": "csp_beeg",
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/beeg.js"
+        },
+        {
+            "name": "蜜桃臀",
+            "type": 3,
+            "api": "csp_mitaotun",
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/mitaotun.js"
         }
     ]
 }
