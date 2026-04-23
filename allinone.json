@@ -320,6 +320,24 @@
       "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/lmm85.js"
     },
     {
+      "name": "ppnix",
+      "type": 3,
+      "api": "csp_ppnix",
+      "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/ppnix.js"
+    },
+    {
+      "name": "河馬短劇",
+      "type": 3,
+      "api": "csp_kuaikaw",
+      "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/kuaikaw.js"
+    },
+    {
+      "name": "壹影視",
+      "type": 3,
+      "api": "csp_yiys",
+      "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/yiys.js"
+    },
+    {
       "name": "玩偶哥哥 | PAN",
       "type": 3,
       "api": "csp_wogg",
