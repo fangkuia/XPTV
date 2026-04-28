@@ -238,7 +238,7 @@ async function getPlayinfo(ext) {
 
     if (JSON.parse(data2).data.url3) {
         let url3 = JSON.parse(data2).data.url3
-        let play = url3.indexOf(',') !== -1 ? url3.split(',')[1].trim() : url3.trim()
+        let play = url3.indexOf(',') !== -1 ? url3.split(',')[0].trim() : url3.trim()
         return jsonify({
             urls: [play],
             headers: [headers],
