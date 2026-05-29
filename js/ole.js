@@ -528,7 +528,7 @@ async function getCards(ext) {
 			vod_id: String(e.id),
 			vod_name: e.name,
 			vod_pic: `https://static.olelive.com/${e.pic}`,
-			vod_remarks: e.remark || '',
+			vod_remarks: e.remarks || '',
 			ext: { id: String(e.id) },
 		})
 	})
@@ -590,7 +590,7 @@ async function search(ext) {
 					vod_id: String(e.id),
 					vod_name: e.name,
 					vod_pic: `https://static.olelive.com/${e.pic}`,
-					vod_remarks: e.remark || '',
+					vod_remarks: e.remarks || '',
 					ext: { id: String(e.id) },
 				})
 			})
