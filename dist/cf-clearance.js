@@ -24,6 +24,18 @@ CF.CONFIG = {
   CHALLENGE_HEADER_KEY: 'cf-mitigated',
   CHALLENGE_HEADER_VALUE: 'challenge',
   NOTIFY_TITLE: 'CF 盾',
+  // Safari 导航请求标准 header（注入分支强制覆盖，伪装成浏览器避免指纹检测）。
+  // 值取自真实 Safari 导航抓包；iOS/Safari 升级后可能需更新。
+  SAFARI_NAV_HEADERS: {
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'zh-CN,zh-Hans;q=0.9',
+    'Accept-Encoding': 'gzip, deflate, br, zstd',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'none',
+    'Sec-Fetch-User': '?1',
+    'Priority': 'u=0, i'
+  },
   // UA 兜底（$loon 取不到系统版本时）
   FALLBACK_UA_VERSION: '17_0',
   FALLBACK_UA_VERSION_DOTTED: '17.0'
@@ -228,10 +240,21 @@ CF.handleRequest = function (domain) {
     return;
   }
 
-  // 全量覆盖 Cookie 头为存储的完整 cookie 串，UA 用存储的 Safari UA
+  // 全量覆盖 Cookie 头 + 强制伪装 Safari 导航 header，消除 App 请求头指纹矛盾
   var newHeaders = CF.shallowCopy(headers);
   newHeaders['Cookie'] = cached.cookies || ('cf_clearance=' + cached.cf_clearance);
   newHeaders['User-Agent'] = cached.ua || uaHeader;
+  // 强制覆盖 Safari 导航标准 header（App 原带的 HTTP 库特征会暴露指纹）
+  var navHeaders = CF.CONFIG.SAFARI_NAV_HEADERS;
+  var navKeys = Object.keys(navHeaders);
+  for (var i = 0; i < navKeys.length; i++) {
+    newHeaders[navKeys[i]] = navHeaders[navKeys[i]];
+  }
+  // 删除 Content-Length（GET 导航请求不该有；大小写不敏感）
+  var ck = Object.keys(newHeaders);
+  for (var j = 0; j < ck.length; j++) {
+    if (ck[j].toLowerCase() === 'content-length') delete newHeaders[ck[j]];
+  }
   $done({ headers: newHeaders });
 };
 
