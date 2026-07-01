@@ -179,7 +179,16 @@ CF.clearCookie = function (domain) {
 
 CF.notify = function (subtitle, content, attach) {
   try {
-    $notification.post(CF.CONFIG.NOTIFY_TITLE, subtitle, content, attach);
+    if (attach) {
+      // 部分 Loon 版本可能不支持 attach（第4参数），先尝试带 attach 调用
+      try {
+        $notification.post(CF.CONFIG.NOTIFY_TITLE, subtitle, content, attach);
+        return;
+      } catch (e) {
+        // attach 不被支持 → 降级为无 attach
+      }
+    }
+    $notification.post(CF.CONFIG.NOTIFY_TITLE, subtitle, content);
   } catch (e) { /* 通知失败不影响主流程 */ }
 };
 
@@ -222,6 +231,14 @@ CF.handleRequest = function (domain) {
   // 适用于「第三方 App 访问」场景（App 自身 UA 与 Safari 不同）。
   var cached = CF.loadCookie(domain);
   if (!cached || !cached.cf_clearance) {
+    // 首次访问引导：该域无缓存 token，提示用户 Safari 手动过盾（仅一次，免重复打扰）
+    var visitKey = 'cf_visit_' + domain.replace(/\./g, '_');
+    try {
+      if (!$persistentStore.read(visitKey)) {
+        CF.notify('首次访问 ' + domain, '无缓存 cf_clearance，请在 Safari 打开该站点完成 CF 验证');
+        $persistentStore.write('1', visitKey);
+      }
+    } catch (e) {}
     $done({});  // 无缓存 → 放行，让响应检测兜底
     return;
   }
