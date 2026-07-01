@@ -178,7 +178,7 @@ CF.notify = function (subtitle, content, attach) {
 
 // ============ 请求分支：学习 + 注入 ============
 
-// domain 为归一化主域（来自清单匹配），存储 key 基于它。
+// domain 为归一化主域（eTLD+1），存储 key 基于它。
 CF.handleRequest = function (domain) {
   var req = $request;
   var headers = (req && req.headers) || {};
@@ -194,7 +194,8 @@ CF.handleRequest = function (domain) {
     if (!prev || prev.cf_clearance !== existing) {
       CF.saveCookie(domain, {
         cf_clearance: existing,
-        ua: uaHeader,           // ground truth：过盾请求的实际 UA
+        cookies: cookieHeader,   // 完整 Cookie 头，注入时全量复用
+        ua: uaHeader,            // ground truth：过盾请求的实际 UA
         savedAt: Date.now(),
         domain: domain
       });
@@ -209,10 +210,10 @@ CF.handleRequest = function (domain) {
   }
 
   // ---- 注入分支：无 cf_clearance，用缓存覆盖请求头 ----
-  // 一律用存储的 Safari UA + cf_clearance 覆盖，不校验 App 原始 UA。
-  // 原理：cf_clearance 绑定「过盾时的 UA + IP」。Loon 拦截请求后重写
-  // 整个请求头（UA + Cookie），让 CF 看到的是 Safari 身份，从而放行。
-  // 适用于「第三方 App 访问」场景（App 自身 UA 与 Safari 不同）。
+  // 全量覆盖 Cookie 头为存储的 cookies 串（含 cf_clearance + 其他 cookie），
+  // UA 用存储的 Safari UA 覆盖。原理：cf_clearance 绑定「过盾时的 UA + IP」，
+  // Loon 重写整个请求头让 CF 看到 Safari 身份从而放行；其余 cookie 一并复用，
+  // 让第三方 App 拿到过盾时的完整身份。
   var cached = CF.loadCookie(domain);
   if (!cached || !cached.cf_clearance) {
     // 首次访问引导：该域无缓存 token，提示用户 Safari 手动过盾（仅一次，免重复打扰）
@@ -227,10 +228,9 @@ CF.handleRequest = function (domain) {
     return;
   }
 
-  // 合并 Cookie 并用存储的 Safari UA 覆盖 App 的 UA
-  var merged = CF.mergeClearance(cookieHeader, cached.cf_clearance);
+  // 全量覆盖 Cookie 头为存储的完整 cookie 串，UA 用存储的 Safari UA
   var newHeaders = CF.shallowCopy(headers);
-  newHeaders['Cookie'] = merged;
+  newHeaders['Cookie'] = cached.cookies || ('cf_clearance=' + cached.cf_clearance);
   newHeaders['User-Agent'] = cached.ua || uaHeader;
   $done({ headers: newHeaders });
 };
