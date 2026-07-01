@@ -13,7 +13,7 @@ CF.CONFIG = {
   STORE_PREFIX: 'cf_clearance_',
   INPUT_DOMAINS: 'domains',
   // 内置默认域名列表（#!input domains 为空时使用，用户可通过插件 UI 覆盖）
-  DEFAULT_DOMAINS: 'missav.live,jabl.tv,51cg1.com,hanime1.me,m.pandalive.co.kr,jp.spankbang.com,api.pandalive.co.kr',
+  DEFAULT_DOMAINS: 'missav.live,jable.tv,51cg1.com,hanime1.me,m.pandalive.co.kr,zh.spankbang.com,api.pandalive.co.kr',
   // challenge 检测：状态码（必要条件之一）
   CHALLENGE_STATUS: [403, 503],
   // challenge 检测：body 特征（任一命中即满足特征条件）
