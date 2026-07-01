@@ -1,4 +1,4 @@
-// cf-clearance.js
+// cf-clearance.js v1.0.0
 // Cloudflare Clearance 绕过脚本 for Loon
 // 配套插件：cf-bypass.plugin
 //
@@ -8,6 +8,7 @@
 // - http-response 检测分支：响应命中 challenge → 清缓存 + 通知用户重新过盾
 
 var CF = {};
+CF.VERSION = '1.0.0';
 
 CF.CONFIG = {
   STORE_PREFIX: 'cf_clearance_',
