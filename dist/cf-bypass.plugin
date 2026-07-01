@@ -5,8 +5,8 @@
 #!homepage =
 
 [Script]
-http-request ^https?://([^/]+\.)?(missav\.live|jable\.tv|51cg1\.com|hanime1\.me|m\.pandalive\.co\.kr|zh\.spankbang\.com|api\.pandalive\.co\.kr)(?![^?]*\.(ts|m3u8|mp4|webm|flv)(\?|/|$))(/|$) script-path=https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/dist/cf-clearance.js, requires-body=false, timeout=10, tag=cf_req, enable=true
-http-response ^https?://([^/]+\.)?(missav\.live|jable\.tv|51cg1\.com|hanime1\.me|m\.pandalive\.co\.kr|zh\.spankbang\.com|api\.pandalive\.co\.kr)(?![^?]*\.(ts|m3u8|mp4|webm|flv)(\?|/|$))(/|$) script-path=https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/dist/cf-clearance.js, requires-body=false, timeout=10, tag=cf_resp, enable=true
+http-request ^https?://([^/]+\.)?(missav\.live|jable\.tv|51cg1\.com|hanime1\.me|m\.pandalive\.co\.kr|zh\.spankbang\.com|noodlemagazine\.com|api\.pandalive\.co\.kr)(?![^?]*\.(ts|m3u8|mp4|webm|flv)(\?|/|$))(/|$) script-path=https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/dist/cf-clearance.js, requires-body=false, timeout=10, tag=cf_req, enable=true
+http-response ^https?://([^/]+\.)?(missav\.live|jable\.tv|51cg1\.com|hanime1\.me|m\.pandalive\.co\.kr|zh\.spankbang\.com|noodlemagazine\.com|api\.pandalive\.co\.kr)(?![^?]*\.(ts|m3u8|mp4|webm|flv)(\?|/|$))(/|$) script-path=https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/dist/cf-clearance.js, requires-body=false, timeout=10, tag=cf_resp, enable=true
 
 [mitm]
-hostname = %APPEND% missav.live, jable.tv, 51cg1.com, surrit.com, hanime1.me, *.pandalive.co.kr, zh.spankbang.com
+hostname = %APPEND% missav.live, jable.tv, 51cg1.com, surrit.com, hanime1.me, *.pandalive.co.kr, zh.spankbang.com, noodlemagazine.com
