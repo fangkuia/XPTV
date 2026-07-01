@@ -239,8 +239,8 @@ CF.handleRequest = function (domain) {
 // 命中则清该域缓存 + 通知 + 放行原响应。
 // 刻意不伪造响应，让 Safari 显示盾页以便用户当场过盾。
 CF.handleResponse = function (domain) {
-  // Loon 的 $response.status 可能是字符串，转数字确保 indexOf 严格匹配
-  var status = Number($response && $response.status) || 0;
+  // Loon 的 $response.status 可能是数字、字符串，甚至 "403 Forbidden" 完整状态行
+  var status = parseInt($response && $response.status, 10) || 0;
 
   if (CF.isChallenge(status)) {
     CF.clearCookie(domain);
