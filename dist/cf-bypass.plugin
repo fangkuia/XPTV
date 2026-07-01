@@ -1,6 +1,6 @@
 #!name = Cloudflare Clearance 绕过
 #!version = 1.0.0
-#!desc = 手动过盾 + cf_clearance 缓存复用；内置域名列表，无需手动配置
+#!desc = 手动过盾 + cf_clearance 缓存复用；在 [Script]/[mitm] 配置目标域名
 #!author =
 #!icon = shield.lefthalf.filled
 #!homepage =

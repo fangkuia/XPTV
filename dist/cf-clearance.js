@@ -12,9 +12,6 @@ CF.VERSION = '1.0.0';
 
 CF.CONFIG = {
   STORE_PREFIX: 'cf_clearance_',
-  INPUT_DOMAINS: 'domains',
-  // 内置默认域名列表（#!input domains 为空时使用，用户可通过插件 UI 覆盖）
-  DEFAULT_DOMAINS: 'missav.live,jable.tv,51cg1.com,hanime1.me,m.pandalive.co.kr,zh.spankbang.com,api.pandalive.co.kr,noodlemagazine.com',
   // challenge 检测：状态码（必要条件之一）
   CHALLENGE_STATUS: [403, 503],
   // challenge 检测：body 特征（任一命中即满足特征条件）
@@ -53,31 +50,17 @@ CF.shallowCopy = function (obj) {
   return copy;
 };
 
-// ============ 多站点解析 ============
+// ============ host 解析 / 归一化 ============
 
-// 解析 #!input domains（逗号分隔主域）为去空去重的数组
-CF.parseDomains = function (raw) {
-  if (!raw) return [];
-  return String(raw)
-    .split(',')
-    .map(function (s) { return s.trim(); })
-    .filter(function (s) { return s.length > 0; });
-};
-
-// 从请求 host 找出命中的清单主域；返回清单项本身（用于归一化存储 key）。
-// 匹配规则：host === domain，或 host 以 "." + domain 结尾（严格后缀，防前缀混淆）。
-CF.extractRegistrableDomain = function (host, domains) {
-  if (!host || !domains || domains.length === 0) return null;
-  for (var i = 0; i < domains.length; i++) {
-    var d = domains[i];
-    if (host === d) return d;
-    if (host.length > d.length + 1 &&
-        host.charAt(host.length - d.length - 1) === '.' &&
-        host.slice(host.length - d.length) === d) {
-      return d;
-    }
-  }
-  return null;
+// 轻量 eTLD+1 归一化：取 host 最后两段作存储主域（无外部依赖、无配置）。
+// 如 www.example.com → example.com；example.com → example.com。
+// 对二级后缀（example.co.uk）会误判，但覆盖绝大多数常见站点。
+// host 无点或只剩一段时原样返回（localhost / 内网名）。
+CF.registrableDomain = function (host) {
+  if (!host) return '';
+  var parts = host.split('.');
+  if (parts.length <= 2) return host;
+  return parts.slice(-2).join('.');
 };
 
 // 从 URL 提取 host（去掉端口）。要求带协议头（://）；否则视为非法返回空串。
@@ -255,6 +238,8 @@ CF.handleRequest = function (domain) {
 // ============ 响应分支：失效检测 ============
 
 // 命中则清该域缓存 + 通知 + 放行原响应。
+// domain 可为清单归一化主域，也可为非清单域名的原始 host（响应阶段对任意
+// 被触发的域名都做检测）；clearCookie 对无缓存域名为 no-op，安全。
 // 刻意不伪造响应，让 Safari 显示盾页以便用户当场过盾。
 CF.handleResponse = function (domain) {
   // Loon 的 $response.status 可能是数字、字符串，甚至 "403 Forbidden" 完整状态行
@@ -273,32 +258,26 @@ CF.handleResponse = function (domain) {
 
 // ============ 入口分发 ============
 
-// 读 #!input domains；为空时使用 CF.CONFIG.DEFAULT_DOMAINS 内置列表。
-// 从 $request.url 取 host 匹配；不命中则透传。
-// 命中且无 $response → 走 request 分支；有 $response → 走 response 分支。
+// 从 $request.url 取 host，归一化为 eTLD+1 主域作存储 key。
+// 分阶段分流：
+// - 请求阶段（无 $response）：学习（带 cf_clearance → 入库）或注入（无 → 覆盖请求头）
+// - 响应阶段（有 $response）：任意被触发的域名都做 challenge 检测，403/503 必通知
+// 域名是否触发脚本由 cf-bypass.plugin 的 [Script] 正则 + [mitm] hostname 决定，
+// 脚本对所有被触发的域名生效，无需内置域名清单。
 CF.dispatch = function () {
   try {
-    var domainsRaw = '';
-    try { domainsRaw = $persistentStore.read(CF.CONFIG.INPUT_DOMAINS); } catch (e) {}
-    if (!domainsRaw) {
-      domainsRaw = CF.CONFIG.DEFAULT_DOMAINS;
-    }
-    var domains = CF.parseDomains(domainsRaw);
-
     if (typeof $request === 'undefined' || !$request || !$request.url) {
       $done({});
       return;
     }
     var host = CF.hostFromUrl($request.url);
-    var matched = CF.extractRegistrableDomain(host, domains);
-    if (!matched) {
-      $done({});
-      return;
-    }
+    if (!host) { $done({}); return; }
+    var domain = CF.registrableDomain(host);  // 归一化主域，用于存储 key
+
     if (typeof $response === 'undefined' || !$response) {
-      CF.handleRequest(matched);
+      CF.handleRequest(domain);
     } else {
-      CF.handleResponse(matched);
+      CF.handleResponse(domain);
     }
   } catch (e) {
     CF.notify('插件异常', String(e && e.message || e));
@@ -339,11 +318,11 @@ CF.selfTest = function () {
   check('extractClearance 未命中', function () {
     CF_assert(CF.extractClearance('a=1; b=2') === null);
   });
-  check('extractRegistrableDomain 子域命中', function () {
-    CF_assert(CF.extractRegistrableDomain('www.example.com', ['example.com']) === 'example.com');
+  check('registrableDomain 子域归一', function () {
+    CF_assert(CF.registrableDomain('www.example.com') === 'example.com');
   });
-  check('extractRegistrableDomain 防前缀混淆', function () {
-    CF_assert(CF.extractRegistrableDomain('notexample.com', ['example.com']) === null);
+  check('registrableDomain 根域不变', function () {
+    CF_assert(CF.registrableDomain('example.com') === 'example.com');
   });
   check('mergeClearance 覆盖旧值', function () {
     CF_assert(CF.mergeClearance('cf_clearance=OLD; k=v', 'NEW') === 'k=v; cf_clearance=NEW');
