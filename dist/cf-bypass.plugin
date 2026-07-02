@@ -1,6 +1,6 @@
-#!name = Cloudflare Clearance 绕过
+#!name = CAT-FK-CF
 #!version = 1.0.0
-#!desc = 手动过盾 + cf_clearance 缓存复用；在 [Script]/[mitm] 配置目标域名
+#!desc = 猫源过盾器
 #!author =
 #!icon = shield.lefthalf.filled
 #!homepage =
