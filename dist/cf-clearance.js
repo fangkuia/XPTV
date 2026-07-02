@@ -31,7 +31,7 @@ CF.CONFIG = {
   // Safari 导航请求标准 header（注入分支强制覆盖，伪装成浏览器避免指纹检测）。
   // 值取自真实 Safari 导航抓包；iOS/Safari 升级后可能需更新。
   SAFARI_NAV_HEADERS: {
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
     'Accept-Language': 'zh-CN,zh-Hans;q=0.9',
     'Accept-Encoding': 'gzip, deflate, br, zstd',
     'Sec-Fetch-Dest': 'document',
