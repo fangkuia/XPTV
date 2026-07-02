@@ -24,6 +24,10 @@ CF.CONFIG = {
   CHALLENGE_HEADER_KEY: 'cf-mitigated',
   CHALLENGE_HEADER_VALUE: 'challenge',
   NOTIFY_TITLE: 'CF 盾',
+  // challenge 后保护窗口：新 cookie 在该时长内刚入库时，不清缓存。
+  // 防止过盾后刚存的新 token 被仍在路上的旧 403 响应反复 clearCookie 清掉，
+  // 导致注入分支读不到 cookie 而持续裸奔 403（只有重启 App 才恢复）。
+  PROTECT_WINDOW: 30000,
   // Safari 导航请求标准 header（注入分支强制覆盖，伪装成浏览器避免指纹检测）。
   // 值取自真实 Safari 导航抓包；iOS/Safari 升级后可能需更新。
   SAFARI_NAV_HEADERS: {
@@ -260,19 +264,29 @@ CF.handleRequest = function (domain) {
 
 // ============ 响应分支：失效检测 ============
 
-// 命中则清该域缓存 + 通知 + 放行原响应。
-// domain 可为清单归一化主域，也可为非清单域名的原始 host（响应阶段对任意
-// 被触发的域名都做检测）；clearCookie 对无缓存域名为 no-op，安全。
+// 命中则（按保护窗口）清该域缓存 + 通知 + 放行原响应。
+// domain 为归一化主域，作存储 key；通知标题与 attach URL 用「触发盾的子域名 host」。
+// attach 必须是干净可打开的子域名根 URL：触发盾的多是带长 query 的深层 API/子资源
+// 请求，用 $request.url 做 attach 会让 Loon 回退显示脚本执行简报。
 // 刻意不伪造响应，让 Safari 显示盾页以便用户当场过盾。
 CF.handleResponse = function (domain) {
   // Loon 的 $response.status 可能是数字、字符串，甚至 "403 Forbidden" 完整状态行
   var status = parseInt($response && $response.status, 10) || 0;
 
   if (CF.isChallenge(status)) {
-    CF.clearCookie(domain);
-    // 点击通知直接打开触发盾的页面，方便用户在 Safari 重新过盾
-    var openUrl = ($request && $request.url) ? $request.url : ('https://' + domain);
-    CF.notify('CF 盾失效 ' + domain,
+    // 保护窗口：新 cookie 刚入库（窗口内）不清，避免与旧 403 响应竞态把新 token 清掉。
+    // 无缓存 / 老 cookie（无 savedAt）/ 入库已超出窗口 → 正常清。
+    var cached = CF.loadCookie(domain);
+    var now = Date.now();
+    var fresh = cached && cached.savedAt &&
+                (now - cached.savedAt) <= CF.CONFIG.PROTECT_WINDOW;
+    if (!fresh) {
+      CF.clearCookie(domain);
+    }
+    // 跳转目标用触发盾的子域名根（CF 盾常挂在子域上，跳裸主域可能再撞盾）。
+    var host = CF.hostFromUrl($request && $request.url) || domain;
+    var openUrl = 'https://' + host + '/';
+    CF.notify('CF 盾失效 ' + host,
       '检测到 challenge，点击此处用 Safari 重新过盾，Loon 将自动捕获新 cookie',
       openUrl);
   }
