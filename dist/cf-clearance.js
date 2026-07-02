@@ -33,7 +33,9 @@ CF.CONFIG = {
   SAFARI_NAV_HEADERS: {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
     'Accept-Language': 'zh-CN,zh-Hans;q=0.9',
-    'Accept-Encoding': 'gzip, deflate, br, zstd',
+    // 注：只用 gzip, deflate。真 Safari 导航虽带 br/zstd，但第三方 App 多只能解 gzip，
+    // 覆盖成 br/zstd 会让服务器返回 App 解不开的编码 → 页面乱码。gzip 仍是 Safari 合法值。
+    'Accept-Encoding': 'gzip, deflate',
     'Sec-Fetch-Dest': 'document',
     'Sec-Fetch-Mode': 'navigate',
     'Sec-Fetch-Site': 'none',
