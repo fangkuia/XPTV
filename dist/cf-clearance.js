@@ -30,6 +30,8 @@ CF.CONFIG = {
   PROTECT_WINDOW: 30000,
   // Safari 导航请求标准 header（注入分支强制覆盖，伪装成浏览器避免指纹检测）。
   // 值取自真实 Safari 导航抓包；iOS/Safari 升级后可能需更新。
+  // 注：不含 Sec-Fetch-User —— 真实 Safari 顶层导航抓包里并不发送该头，
+  // 加上反而是伪造指纹的破绽。
   SAFARI_NAV_HEADERS: {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
     'Accept-Language': 'zh-CN,zh-Hans;q=0.9',
@@ -39,9 +41,26 @@ CF.CONFIG = {
     'Sec-Fetch-Dest': 'document',
     'Sec-Fetch-Mode': 'navigate',
     'Sec-Fetch-Site': 'none',
-    'Sec-Fetch-User': '?1',
     'Priority': 'u=0, i'
   },
+  // 注入分支白名单：仅保留这些请求头，其余 App/HTTP 库特征头一律删除。
+  // 真实 Safari 导航请求是「干净」的；App HTTP 库会注入大量非浏览器特征头
+  // （Connection: close、Content-Length: 0、Cache-Control、Upgrade-Insecure-Requests、
+  // DNT、Referer、Pragma 等）。仅覆盖无法消除它们，且会产生语义矛盾 —— 典型如
+  // Sec-Fetch-Site: none 却同时带 Referer，浏览器里不可能成立，CF 一眼识破。
+  // 大小写不敏感匹配；未列出的头（含未知自定义头）一律丢弃。
+  HEADER_WHITELIST: [
+    'host',
+    'cookie',
+    'user-agent',
+    'accept',
+    'accept-language',
+    'accept-encoding',
+    'sec-fetch-dest',
+    'sec-fetch-mode',
+    'sec-fetch-site',
+    'priority'
+  ],
   // UA 兜底（$loon 取不到系统版本时）
   FALLBACK_UA_VERSION: '17_0',
   FALLBACK_UA_VERSION_DOTTED: '17.0'
@@ -227,9 +246,10 @@ CF.handleRequest = function (domain) {
     return;
   }
 
-  // ---- 注入分支：无 cf_clearance，用缓存覆盖请求头 ----
-  // 全量覆盖 Cookie 头为存储的 cookies 串（含 cf_clearance + 其他 cookie），
-  // UA 用存储的 Safari UA 覆盖。原理：cf_clearance 绑定「过盾时的 UA + IP」，
+  // ---- 注入分支：无 cf_clearance，白名单重建请求头 ----
+  // 从空对象起按白名单重建一份干净的 Safari 导航头：Cookie 全量覆盖为缓存值
+  // （含 cf_clearance + 过盾时的其他 cookie），UA 用存储的 Safari UA 覆盖，
+  // 其余浏览器头强制为 Safari 标准值。原理：cf_clearance 绑定「过盾时的 UA + IP」，
   // Loon 重写整个请求头让 CF 看到 Safari 身份从而放行；其余 cookie 一并复用，
   // 让第三方 App 拿到过盾时的完整身份。
   var cached = CF.loadCookie(domain);
@@ -246,20 +266,29 @@ CF.handleRequest = function (domain) {
     return;
   }
 
-  // 全量覆盖 Cookie 头 + 强制伪装 Safari 导航 header，消除 App 请求头指纹矛盾
-  var newHeaders = CF.shallowCopy(headers);
+  // 白名单重建：只保留浏览器导航该有的头，消除 App/HTTP 库注入的非浏览器特征头。
+  // 原生 Safari 导航是「干净」的；App 库会塞入 Connection: close、Content-Length: 0、
+  // Cache-Control、Upgrade-Insecure-Requests、DNT、Referer、Pragma 等。仅覆盖无法删除它们，
+  // 且会产生语义矛盾（Sec-Fetch-Site: none 却带 Referer，浏览器里不可能同时成立，
+  // CF 一眼识破）。故从空对象起，按白名单重建一份干净的 Safari 导航头。
+  var newHeaders = {};
+  var whitelist = CF.CONFIG.HEADER_WHITELIST;
+  var srcKeys = Object.keys(headers);
+  for (var i = 0; i < srcKeys.length; i++) {
+    var key = srcKeys[i];
+    if (whitelist.indexOf(key.toLowerCase()) >= 0) {
+      newHeaders[key] = headers[key];
+    }
+  }
+  // Cookie 全量覆盖为缓存值（含 cf_clearance + 过盾时的其他 cookie）
   newHeaders['Cookie'] = cached.cookies || ('cf_clearance=' + cached.cf_clearance);
+  // UA 用过盾时的 Safari UA 覆盖（cf_clearance 绑定过盾 UA）
   newHeaders['User-Agent'] = cached.ua || uaHeader;
-  // 强制覆盖 Safari 导航标准 header（App 原带的 HTTP 库特征会暴露指纹）
+  // 强制覆盖 Safari 导航标准 header（覆盖掉 App 原带的非 Safari 值）
   var navHeaders = CF.CONFIG.SAFARI_NAV_HEADERS;
   var navKeys = Object.keys(navHeaders);
-  for (var i = 0; i < navKeys.length; i++) {
-    newHeaders[navKeys[i]] = navHeaders[navKeys[i]];
-  }
-  // 删除 Content-Length（GET 导航请求不该有；大小写不敏感）
-  var ck = Object.keys(newHeaders);
-  for (var j = 0; j < ck.length; j++) {
-    if (ck[j].toLowerCase() === 'content-length') delete newHeaders[ck[j]];
+  for (var j = 0; j < navKeys.length; j++) {
+    newHeaders[navKeys[j]] = navHeaders[navKeys[j]];
   }
   $done({ headers: newHeaders });
 };
