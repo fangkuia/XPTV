@@ -1,4 +1,5 @@
 const cheerio = createCheerio()
+const CryptoJS = createCryptoJS()
 
 const UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_2 like Mac OS X) AppleWebKit/604.1.14 (KHTML, like Gecko)'
 const appConfig = {
@@ -70,15 +71,15 @@ async function getCards(ext) {
 
     const $ = cheerio.load(data)
     const t1 = $('title').text()
-      if (t1 === 'Just a moment...') {
+    if (t1 === 'Just a moment...') {
         $utils.openSafari(appConfig.site, UA)
-      }
+    }
 
     const videos = $('.post')
     videos.each((_, e) => {
         const href = $(e).find('a').attr('href')
         const title = $(e).find('a').attr('title')
-        const cover = $(e).find('a img').attr('src').replace('!320x216.jpg', '')
+        const cover = $(e).find('a img').attr('data-original').replace('!320x216.jpg', '')
         const remarks = $(e).find('.con .meta .date').text()
 
         cards.push({
@@ -148,55 +149,78 @@ async function getPlayinfo(ext) {
     let playUrl = ''
 
     if (name === 'TV') {
-        const config = res.data
-            .match(/decodeURIComponent\(escape\(r\)\)\}(.*)\)/)[1]
-            .replace(/["\(\)]/g, '')
-            .split(',')
+        const url = res.data.match(/var\s+urlPlay\s*=\s*['"]([^'"]+)['"]/)[1]
 
-        const decrypted = decrypt(...config)
-        playUrl = decrypted.match(/var urlPlay = '(.*?)';/)[1]
+        playUrl = url
 
-        function decrypt(h, u, n, t, e, r) {
-            r = ''
-            for (var i = 0, len = h.length; i < len; i++) {
-                var s = ''
-                while (h[i] !== n[e]) {
-                    s += h[i]
-                    i++
-                }
-                for (var j = 0; j < n.length; j++) s = s.replace(new RegExp(n[j], 'g'), j)
-                r += String.fromCharCode(_0xe99c(s, e, 10) - t)
-            }
-            return decodeURIComponent(escape(r))
-        }
+        // function decrypt(h, u, n, t, e, r) {
+        //     r = ''
+        //     for (var i = 0, len = h.length; i < len; i++) {
+        //         var s = ''
+        //         while (h[i] !== n[e]) {
+        //             s += h[i]
+        //             i++
+        //         }
+        //         for (var j = 0; j < n.length; j++) s = s.replace(new RegExp(n[j], 'g'), j)
+        //         r += String.fromCharCode(_0xe99c(s, e, 10) - t)
+        //     }
+        //     return decodeURIComponent(escape(r))
+        // }
 
-        function _0xe99c(d, e, f) {
-            let str = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+/'
-            var g = str.split('')
-            var h = g.slice(0, e)
-            var i = g.slice(0, f)
-            var j = d
-                .split('')
-                .reverse()
-                .reduce(function (a, b, c) {
-                    if (h.indexOf(b) !== -1) return (a += h.indexOf(b) * Math.pow(e, c))
-                }, 0)
-            var k = ''
-            while (j > 0) {
-                k = i[j % f] + k
-                j = (j - (j % f)) / f
-            }
-            return k || '0'
-        }
+        // function _0xe99c(d, e, f) {
+        //     let str = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+/'
+        //     var g = str.split('')
+        //     var h = g.slice(0, e)
+        //     var i = g.slice(0, f)
+        //     var j = d
+        //         .split('')
+        //         .reverse()
+        //         .reduce(function (a, b, c) {
+        //             if (h.indexOf(b) !== -1) return (a += h.indexOf(b) * Math.pow(e, c))
+        //         }, 0)
+        //     var k = ''
+        //     while (j > 0) {
+        //         k = i[j % f] + k
+        //         j = (j - (j % f)) / f
+        //     }
+        //     return k || '0'
+        // }
     } else if (name === 'FST') {
-        const $ = cheerio.load(res.data)
-        $('script').each((_, e) => {
-            if ($(e).text().includes('eval')) {
-                const script = $(e).text().replace('eval', '')
-                const result = eval(script)
-                playUrl = result.match(/sources:\[\{file:"(.*?)"\}\]/)[1]
+        try {
+            const $ = cheerio.load(res.data)
+            let decoded = ''
+            let script = $('script:contains(eval)').html() || ''
+            const packed = script.replace(/^\s*eval\s*\(/, '').replace(/\)\s*;?\s*$/, '')
+            decoded = Function(`return ${packed}`)()
+
+            const match = decoded.match(/var\s+links\s*=\s*(\{[\s\S]*?\})\s*;/)
+            const links = match ? JSON.parse(match[1]) : {}
+
+            playUrl = links.hls4 || links.hls3 || links.hls2
+            if (decoded.includes('fc2stream')) {
+                return jsonify({ urls: [playUrl], headers: [{ 'User-Agent': UA, Referer: 'https://fc2stream.tv/' }] })
             }
-        })
+            // $('script').each((_, el) => {
+            //     const code = $(el).html() || ''
+
+            //     if (code.includes('eval(function(p, a, c, k, e, d)')) {
+            //         const packed = code.replace(/^\s*eval\s*\(/, '').replace(/\)\s*;?\s*$/, '')
+
+            //         decoded = Function(`return ${packed}`)()
+            //     }
+            // })
+
+            // $print(decoded)
+            // $('script').each((_, e) => {
+            //     if ($(e).text().includes('eval')) {
+            //         const script = $(e).text().replace('eval', '')
+            //         const result = eval(script)
+            //         playUrl = result.match(/sources:\[\{file:"(.*?)"\}\]/)[1]
+            //     }
+            // })
+        } catch (e) {
+            $print(e)
+        }
     } else if (name === 'ST') {
         const $ = cheerio.load(res.data)
         let robot = $('#robotlink').text()
@@ -215,7 +239,24 @@ async function getPlayinfo(ext) {
                 'User-Agent': UA,
             },
         })
-        playUrl = locres.data.match(/prompt\("Node", "(.*?)"\);/)[1]
+        const payload = JSON.parse(locres.data.match(/<script type="application\/json">(.*?)<\/script>/s)[1])[0]
+
+        const rot13 = (s) =>
+            s.replace(/[a-zA-Z]/g, (c) => {
+                const b = c <= 'Z' ? 65 : 97
+                return String.fromCharCode(b + ((c.charCodeAt(0) - b + 13) % 26))
+            })
+        const b64decode = (s) => CryptoJS.enc.Latin1.stringify(CryptoJS.enc.Base64.parse(s)) // atob
+        const seps = ['@$', '^^', '~@', '%?', '*~', '!!', '#&']
+
+        let s = rot13(payload)
+        for (const t of seps) s = s.split(t).join('')
+        let b = b64decode(s)
+        b = Array.from(b, (ch) => String.fromCharCode(ch.charCodeAt(0) - 3)).join('')
+        b = b.split('').reverse().join('')
+        const config = JSON.parse(b64decode(b))
+        playUrl = config.source
+        // playUrl = locres.data.match(/prompt\("Node", "(.*?)"\);/)[1]
     }
 
     return jsonify({ urls: [playUrl] })
