@@ -173,6 +173,12 @@
             "type": 3,
             "api": "csp_mitaotun",
             "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/js/mitaotun.js"
+        },
+        {
+            "name": "黃果短劇",
+            "type": 3,
+            "api": "csp_huangguo",
+            "ext": "https://ghp.xptvhelper.link/https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/main/js/huangguo.js"
         }
     ]
 }
