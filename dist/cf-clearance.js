@@ -1,4 +1,4 @@
-// cf-clearance.js v1.1.0
+// cf-clearance.js v1.2.0
 // Cloudflare Clearance 绕过脚本 for Loon
 // 配套插件：cf-bypass.plugin
 //
@@ -8,10 +8,15 @@
 // - http-response 检测分支：响应命中 challenge → 清缓存 + 通知用户重新过盾
 
 var CF = {};
-CF.VERSION = '1.1.0';
+CF.VERSION = '1.2.0';
 
 CF.CONFIG = {
   STORE_PREFIX: 'cf_clearance_',
+  // 失效通知节流窗口：同一主域在窗口内最多推送一次「CF 盾失效」通知。
+  // 页面多资源并发触发 challenge 时（403/503 轰炸），不加节流会连弹十几条通知。
+  // 保护窗口（PROTECT_WINDOW）只决定「清不清缓存」，与通知节流相互独立：
+  // 缓存清理照样按保护窗口判定，只是通知本身被限流。
+  NOTIFY_THROTTLE_MS: 60000,
   // challenge 检测：仅按状态码判定（requires-body=false，无 body 可查特征）。
   // 目标站的 403/503 直接视为 CF challenge。
   CHALLENGE_STATUS: [403, 503],
@@ -130,14 +135,6 @@ CF.getHeaderCI = function (headers, name) {
   return '';
 };
 
-CF.shallowCopy = function (obj) {
-  var copy = {};
-  if (!obj) return copy;
-  var keys = Object.keys(obj);
-  for (var i = 0; i < keys.length; i++) copy[keys[i]] = obj[keys[i]];
-  return copy;
-};
-
 // ============ host 解析 / 归一化 ============
 
 // 轻量 eTLD+1 归一化：取 host 最后两段作存储主域（无外部依赖、无配置）。
@@ -231,22 +228,38 @@ CF.deriveSecFetchSite = function (refererHeader, originHeader, targetHost) {
 
 // ============ cf_clearance 提取 / 合并 ============
 
+// 同域「首次访问」引导标记 key（cf_visit_<主域>）。缓存失效清空后，
+// 该标记被 clearCookie 联动清掉，可再次引导用户过盾。
+CF.visitKey = function (domain) {
+  return 'cf_visit_' + domain.replace(/\./g, '_');
+};
+
+// 同一域在 NOTIFY_THROTTLE_MS 内的失效通知去重 key（值存时间戳）。页面多请求并发
+// 触发 challenge 时只弹一次，避免 403 轰炸刷屏。
+CF.notifyThrottleKey = function (domain) {
+  return 'cf_notify_' + domain.replace(/\./g, '_');
+};
+
+// 按域名节流失效通知：同域 NOTIFY_THROTTLE_MS 内只推一次（返回 false 表示应跳过）。
+// 用 $persistentStore 记录上次通知时间戳；超时后自动过期重推。
+CF.notifyThrottled = function (domain) {
+  try {
+    var key = CF.notifyThrottleKey(domain);
+    var last = parseInt($persistentStore.read(key), 10) || 0;
+    var now = Date.now();
+    if (now - last < CF.CONFIG.NOTIFY_THROTTLE_MS) return false;
+    $persistentStore.write(String(now), key);
+    return true;
+  } catch (e) {
+    return true;  // 存储异常时不节流（宁可多通知不可漏通知）
+  }
+};
+
 // 从 Cookie header 提取 cf_clearance 值；无则返回 null。
 CF.extractClearance = function (cookieHeader) {
   if (!cookieHeader || typeof cookieHeader !== 'string') return null;
   var m = cookieHeader.match(/cf_clearance=([^;]+)/);
   return m ? m[1] : null;
-};
-
-// 把 cf_clearance=<value> 合并进 cookieHeader：移除旧 cf_clearance，末尾追加新的。
-// value 为空则原样返回 cookieHeader（不注入）。
-CF.mergeClearance = function (cookieHeader, value) {
-  if (!value) return cookieHeader || '';
-  var base = cookieHeader || '';
-  base = base.replace(/(?:^|; )cf_clearance=[^;]*/g, '');
-  base = base.replace(/^;\s*/, '').trim();
-  if (base.length === 0) return 'cf_clearance=' + value;
-  return base + '; cf_clearance=' + value;
 };
 
 // 从 Cookie header 剔除黑名单 name 的键值对（大小写不敏感）。
@@ -290,16 +303,27 @@ CF.scrubCookie = function (cookieHeader) {
 // 未列出的头（未知自定义头）按原顺序追加到末尾，保守保留不丢。
 CF.orderHeaders = function (headers) {
   if (!headers) return {};
-  var order = CF.CONFIG.HEADER_ORDER;
-  var lowerOrder = {};
-  for (var i = 0; i < order.length; i++) lowerOrder[order[i].toLowerCase()] = i;
+  // 索引表只依赖 HEADER_ORDER，与入站头无关 → 建一次缓存，避免每次调用重建。
+  // （CONFIG 是静态的；若未来支持运行时改 CONFIG，此处需同步失效。）
+  var lowerOrder = CF.orderIndex;
+  var tail;
+  if (!lowerOrder) {
+    lowerOrder = {};
+    var order = CF.CONFIG.HEADER_ORDER;
+    for (var o = 0; o < order.length; o++) lowerOrder[order[o].toLowerCase()] = o;
+    tail = order.length;              // 未列出头的统一末位 index
+    CF.orderIndex = lowerOrder;
+    CF.orderTail = tail;
+  } else {
+    tail = CF.orderTail;
+  }
   // 按入站 key 的小写形式排序：在 order 表里的按 index 升序，不在的统一排在后面
   // （stable：保留原出现顺序）。
   var keys = Object.keys(headers);
   var indexed = [];
   for (var k = 0; k < keys.length; k++) {
     var lk = keys[k].toLowerCase();
-    indexed.push({ key: keys[k], idx: (lk in lowerOrder) ? lowerOrder[lk] : order.length });
+    indexed.push({ key: keys[k], idx: (lk in lowerOrder) ? lowerOrder[lk] : tail });
   }
   indexed.sort(function (a, b) {
     if (a.idx !== b.idx) return a.idx - b.idx;
@@ -371,6 +395,11 @@ CF.loadCookie = function (domain) {
 
 CF.clearCookie = function (domain) {
   $persistentStore.write('', CF.storeKey(domain));
+  // 联动清空「首次访问」引导标记：缓存失效后若用户没立刻过盾，后续裸奔 403 时
+  // 应能再次收到引导提示，而不是被上次的 visit 标记永久沉默。
+  try {
+    $persistentStore.write('', 'cf_visit_' + domain.replace(/\./g, '_'));
+  } catch (e) {}
 };
 
 // ============ 通知 ============
@@ -494,18 +523,34 @@ CF.handleRequest = function (domain) {
   // ---- 学习分支：请求已带 cf_clearance（刚过盾）----
   if (existing) {
     var prev = CF.loadCookie(domain);
-    // 只在首次获取或 token 变化时通知，避免页面多请求重复弹窗
-    if (!prev || prev.cf_clearance !== existing) {
-      CF.saveCookie(domain, {
+    // 重存条件：首次获取 / token 变化 / 完整 cookie 串变化 / UA 变化。
+    // 只重存并通知「token 变化」的情况 —— 若只是 cookies/UA 变化（token 未变），
+    // 静默刷新缓存即可：新 cookie 集合里 cf_clearance 仍是同一个 token，
+    // 但完整身份（如过期后重新拿到的同 token）应同步到注入分支。
+    // 避免旧实现「token 未变只更新时间戳」导致 cookies 永远停留在首次过盾时的旧值，
+    // 站点 set 的 cookie 更新后注入分支仍发旧串。
+    var changed = !prev ||
+      prev.cf_clearance !== existing ||
+      (prev.cookies || '') !== (cookieHeader || '') ||
+      (prev.ua || '') !== (uaHeader || '');
+    if (changed) {
+      var saved = CF.saveCookie(domain, {
         cf_clearance: existing,
         cookies: cookieHeader,   // 完整 Cookie 头，注入时全量复用
         ua: uaHeader,            // ground truth：过盾请求的实际 UA
         savedAt: Date.now(),
         domain: domain
       });
-      CF.notify('获取成功 ' + domain, '已捕获 cf_clearance');
+      // 仅 token 变化才弹通知；cookies/UA 变化静默（避免反复弹窗干扰）
+      if (!prev || prev.cf_clearance !== existing) {
+        CF.notify('获取成功 ' + domain, '已捕获 cf_clearance');
+      }
+      if (!saved) {
+        // 存储失败：通知用户，否则注入分支一直拿不到 token（静默失败隐患）
+        CF.notify(domain + ' 存储失败', 'cf_clearance 未能写入持久化存储，请检查存储空间');
+      }
     } else {
-      // token 未变，仅更新时间戳，不通知
+      // 完全未变，仅更新时间戳（刷新保护窗口），不重写存储
       prev.savedAt = Date.now();
       CF.saveCookie(domain, prev);
     }
@@ -526,7 +571,7 @@ CF.handleRequest = function (domain) {
   var cached = CF.loadCookie(domain);
   if (!cached || !cached.cf_clearance) {
     // 首次访问引导：该域无缓存 token，提示用户 Safari 手动过盾（仅一次，免重复打扰）
-    var visitKey = 'cf_visit_' + domain.replace(/\./g, '_');
+    var visitKey = CF.visitKey(domain);
     try {
       if (!$persistentStore.read(visitKey)) {
         CF.notify('首次访问 ' + domain, '无缓存 cf_clearance，请在 Safari 打开该站点完成 CF 验证');
@@ -541,9 +586,18 @@ CF.handleRequest = function (domain) {
   // 头清理逻辑（白名单/nav/派生/裁剪/order/scrub）由 CF.buildCleanHeaders 统一处理，
   // 与学习分支共用，确保两个分支输出的头都是干净的 Safari 导航头。
   // 此分支通过 overrides 把 Cookie/UA 覆盖成缓存值，让 CF 看到过盾时的身份。
+  // UA 兜底链：缓存 UA（过盾时 ground truth）→ 请求头 UA → buildSafariUA 动态构造
+  // （$loon 设备版本）。前两者都缺失时才构造 —— 此时学习分支从未捕获过该域，
+  // 但缓存里可能有旧格式 token；构造 Safari UA 至少让指纹接近真实浏览器。
+  var fallbackUA = '';
+  if (!cached.ua) {
+    try {
+      fallbackUA = CF.buildSafariUA().ua;
+    } catch (e) { fallbackUA = ''; }
+  }
   var injectHeaders = CF.buildCleanHeaders(req, {
     cookie: cached.cookies || ('cf_clearance=' + cached.cf_clearance),
-    ua: cached.ua || uaHeader
+    ua: cached.ua || uaHeader || fallbackUA
   });
   $done({ headers: injectHeaders });
 };
@@ -568,13 +622,17 @@ CF.handleResponse = function (domain) {
     if (!fresh) {
       CF.clearCookie(domain);
     }
-    // 标题显示触发盾的子域名 host；attach 跳转到原始请求 URL（含 path/query/fragment）。
-    // $request.url 缺失（不该发生但防御）时兜底为「https://<host>/」。
-    var host = CF.hostFromUrl($request && $request.url) || domain;
-    var openUrl = ($request && $request.url) || ('https://' + host + '/');
-    CF.notify('CF 盾失效 ' + host,
-      '检测到 challenge，点击此处用 Safari 重新过盾，Loon 将自动捕获新 cookie',
-      openUrl);
+    // 通知节流：同域 NOTIFY_THROTTLE_MS 内只推一次，防并发 403 刷屏。
+    // （缓存清理仍按保护窗口独立判定，节流只限通知。）
+    if (CF.notifyThrottled(domain)) {
+      // 标题显示触发盾的子域名 host；attach 跳转到原始请求 URL（含 path/query/fragment）。
+      // $request.url 缺失（不该发生但防御）时兜底为「https://<host>/」。
+      var host = CF.hostFromUrl($request && $request.url) || domain;
+      var openUrl = ($request && $request.url) || ('https://' + host + '/');
+      CF.notify('CF 盾失效 ' + host,
+        '检测到 challenge，点击此处用 Safari 重新过盾，Loon 将自动捕获新 cookie',
+        openUrl);
+    }
   }
   $done({});  // 放行原响应
 };
@@ -646,9 +704,6 @@ CF.selfTest = function () {
   });
   check('registrableDomain 根域不变', function () {
     CF_assert(CF.registrableDomain('example.com') === 'example.com');
-  });
-  check('mergeClearance 覆盖旧值', function () {
-    CF_assert(CF.mergeClearance('cf_clearance=OLD; k=v', 'NEW') === 'k=v; cf_clearance=NEW');
   });
   check('scrubCookie 剔除 _ym_isad', function () {
     CF_assert(CF.scrubCookie('a=1; _ym_isad=1; b=2') === 'a=1; b=2');
