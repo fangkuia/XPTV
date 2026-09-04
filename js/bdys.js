@@ -150,7 +150,19 @@ async function getCards(ext) {
             filter,
         })
     } else {
-        url = url.replace('/1', `/${page}`);
+        // 各 tab 的 ext.url 決定分類路徑（如 /s/all/1?type=0、/s/meiju/1），必須使用它；
+        // 舊碼寫死 /s/all 導致所有 tab 返回一樣內容。
+        let path = ext.url || `/s/all/1`;
+        if (typeof path === 'string') {
+            if (/\/\d+(\?|$)/.test(path)) {
+                path = path.replace(/\/\d+(\?|$)/, `/${page}$1`);
+            } else {
+                const q = path.indexOf('?');
+                if (q === -1) path = `${path.replace(/\/$/, '')}/${page}`;
+                else path = `${path.slice(0, q).replace(/\/$/, '')}/${page}${path.slice(q)}`;
+            }
+        }
+        url = path.startsWith('http') ? path : `${appConfig.site}${path}`;
 
         cards = await extractCards(url);
 
